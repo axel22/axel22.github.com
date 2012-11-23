@@ -65,11 +65,13 @@ h1 {
 }
 
 h2 {
+  color: #505050;
   padding-top: 10px;
   font-size: 24px;
 }
 
 h3 {
+  color: #303030;
   padding-top: 6px;
   font-size: 15px;
 }
@@ -103,7 +105,7 @@ a:hover {
 }
 
 #wrap {
-  background-image: url('../images/content3.png');
+  background-image: url('/resources/images/content3.png');
   background-repeat: repeat;
   min-height: 100%;
 }
@@ -295,22 +297,22 @@ hr.footer {
 
 div.footer a:link {
   text-decoration: none;
-  color: #b0b0aa;
+  color: #c0c0ca;
 }
 
 div.footer a:visited {
   text-decoration: none;
-  color: #b0b0aa;
+  color: #c0c0ca;
 }
 
 div.footer a:active {
   text-decoration: none;
-  color: #b0b0aa;
+  color: #c0c0ca;
 }
 
 div.footer a:hover {
   text-decoration: underline;
-  color: #b0b0aa;
+  color: #c0c0ca;
 }
 
 img.footer {
@@ -318,12 +320,21 @@ img.footer {
 }
 
 .footer {
-  color: #b0b0aa;
+  color: #c0c0ca;
   font-size: 12px;
 }
 
 .quote {
   text-align: right;
+}
+
+.bigquote {
+  padding: 6px;
+  border: 1px solid #c0c0c0;
+  background: #f8f8f8;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 20px;
 }
 
 .bigheader {

@@ -5,6 +5,8 @@ permalink: /blog/index.html
 ---
 
 
+Coming soon!
+
 
 
 

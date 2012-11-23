@@ -6,6 +6,9 @@ permalink: /personal/index.html
 
 
 
+Coming soon.
+
+
 
 
 
