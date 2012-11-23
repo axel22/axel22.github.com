@@ -17,7 +17,7 @@
       <div class="container_12">
         <div class="grid_12">
           <ul class="horizmenu">
-            <li><a href="/" style="font-size: 24px;">Alex Prokopec</a></li>
+            <li><a href="/" style="font-size: 24px;">Aleksandar Prokopec</a></li>
             <li><a href="/home/professional">CV</a></li>
             <li><a href="/home/blog">Blog</a></li>
             <li><a href="/home/links">Links</a></li>
@@ -28,8 +28,8 @@
       </div>
     </div>
 
-    <div class="lightdivider"></div>
-
+    <div class="darkdivider"></div>
+    <div class="lightbluedivider"></div>
 
     {{ content }}
 
@@ -40,8 +40,24 @@
     <div class="lightdivider"></div>
   
     <div id="footercontent" class="container_16">
-      <div class="grid_8 footer">&copy; 2012 Aleksandar Prokopec</div>
-      <div class="grid_8 footer"></div>
+      <div class="grid_2 footer">
+        Hope you like the Quote of the Day.
+      </div>
+      <div class="grid_14 footer quote">
+        {% capture day %}
+          {{ site.time | date: "%d" }}
+        {% endcapture %}
+        {% capture quote_file %}
+          {% include quotes.json %}
+        {% endcapture %}
+        {% jsonball quotes from var quote_file %}
+        {% assign index = day | modulo: quotes.size %}
+        {% assign quote = quotes[index] %}
+
+        {{ quote.text }}
+        <br/>
+        {{ quote.author }}
+      </div>
     </div>
   </div>
 

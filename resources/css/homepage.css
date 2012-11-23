@@ -56,8 +56,8 @@ body, html {
 
 h1 {
   font-family: Titillium;
-  color: #101010;
-  text-shadow: 1px 1px #000000;
+  color: #808080;
+  text-shadow: 1px 1px #d0d0d0;
 }
 
 h1 {
@@ -112,17 +112,17 @@ a:hover {
   background-repeat: repeat-x;
   height: 40px;
 
-  background-image: linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 44%, rgb(50, 50, 50) 95%);
-  background-image: -o-linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 44%, rgb(50, 50, 50) 95%);
-  background-image: -moz-linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 44%, rgb(50, 50, 50) 95%);
-  background-image: -ms-linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 44%, rgb(50, 50, 50) 95%);
+  background-image: linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 55%, rgb(50, 50, 50) 95%);
+  background-image: -o-linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 55%, rgb(50, 50, 50) 95%);
+  background-image: -moz-linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 55%, rgb(50, 50, 50) 95%);
+  background-image: -ms-linear-gradient(bottom, rgb(5, 5, 5) 16%, rgb(30, 30, 30) 55%, rgb(50, 50, 50) 95%);
 
   background-image: -webkit-gradient(
     linear,
     left bottom,
     left top,
     color-stop(0.95, rgb(50, 50, 50)),
-    color-stop(0.44, rgb(30, 30, 30)),
+    color-stop(0.50, rgb(35, 35, 35)),
     color-stop(0.16, rgb(5, 5, 5))
   );
 }
@@ -182,12 +182,17 @@ div.imageframe img {
 }
 
 .lightdivider {
-  background: #6a4040;
+  background: #505050;
+  height: 1px;
+}
+
+.lightbluedivider {
+  background: #405570;
   height: 1px;
 }
 
 .darkdivider {
-  background: #6a3131;
+  background: #212121;
   height: 1px;
 }
 
@@ -203,21 +208,21 @@ div.imageframe img {
 }
 
 #header {
-  background-image: url('../images/header3.png');
+  background-image: url('../images/header.png');
   background-repeat: repeat-x;
-  height: 52px;
+  height: 18px;
 }
 
 .titlebar {
-  font-family: Titillium;
-  font-size: 33px;
-  color: #dddddd;
+  font-family: DejaVuSansMono;
+  font-size: 16px;
+  color: #bbccdd;
   text-shadow: 1px 1px #000000;
 }
 
 #content {
   padding: 20px;
-  padding-bottom: 176px;
+  padding-bottom: 42px;
   overflow: auto;
 }
 
@@ -264,14 +269,14 @@ p.remarktitle {
 #footer {
   background-image: url('../images/footer4.png');
   background-repeat: repeat-x;
-  height: 28px;
-  margin-top: -28px;
+  height: 42px;
+  margin-top: -42px;
   position: relative;
   clear: both;
 }
 
 #footercontent {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 h2.footer {
@@ -315,6 +320,10 @@ img.footer {
 .footer {
   color: #b0b0aa;
   font-size: 12px;
+}
+
+.quote {
+  text-align: right;
 }
 
 .bigheader {
