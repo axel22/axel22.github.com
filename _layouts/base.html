@@ -44,19 +44,6 @@
         Hope you like the Quote of the Day.
       </div>
       <div class="grid_14 footer quote">
-        {% capture day %}
-          {{ site.time | date: "%d" }}
-        {% endcapture %}
-        {% capture quote_file %}
-          {% include quotes.json %}
-        {% endcapture %}
-        {% jsonball quotes from var quote_file %}
-        {% assign index = day | modulo: quotes.size %}
-        {% assign quote = quotes[index] %}
-
-        {{ quote.text }}
-        <br/>
-        {{ quote.author }}
       </div>
     </div>
   </div>
