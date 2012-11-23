@@ -8,7 +8,6 @@ permalink: /quote/index.html
 <br/>
 <br/>
 <br/>
-<br/>
 
 
 Here is the selected quote for today:
@@ -30,5 +29,5 @@ Here is the selected quote for today:
 </div>
 
 
-Disagree? [Let me know](/home/contact/).
+Agree? Disagree? [Let me know](/home/contact/).
 

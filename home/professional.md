@@ -204,6 +204,8 @@ I've TA'd on the following courses:
 
 # Miscellanous
 
+You can find my [reading journal here](/home/reading/).
+
 {% include technologies.htm %}
 
 
