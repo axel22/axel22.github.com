@@ -31,13 +31,13 @@ Office: +41 21 69 31 226
 
 # ![im](/resources/images/im.png) Instant messaging
 
-![im](/resources/images/gtalk.png) GTalk: aco.prokopec (chat only, no e-mails)
+![gtalk](/resources/images/gtalk.png) GTalk: aco.prokopec (chat only, no e-mails)
 
-![im](/resources/images/icq.png) ICQ: 364354877
+![icqim](/resources/images/icq.png) ICQ: 364354877
 
-![im](/resources/images/msn.png) MSN: aco.prokopec (chat only, not e-mails)
+![msnim](/resources/images/msn.png) MSN: aco.prokopec (chat only, not e-mails)
 
-![im](/resources/images/skype.png) Skype: burazburke
+![skype](/resources/images/skype.png) Skype: burazburke
 
 
 

@@ -83,22 +83,22 @@ blockquote {
 }
 
 a:link {
-  color: #b61a00;
+  color: #005aa6;
   text-decoration: none;
 }
 
 a:visited {
-  color: #b61a00;
+  color: #005aa6;
   text-decoration: none;
 }
 
 a:active {
-  color: #f67a00;
+  color: #008aff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #f67a00;
+  color: #008aff;
   text-decoration: none;
 }
 
@@ -222,7 +222,7 @@ div.imageframe img {
 
 #content {
   padding: 20px;
-  padding-bottom: 42px;
+  padding-bottom: 64px;
   overflow: auto;
 }
 
@@ -351,6 +351,11 @@ img.footer {
   font-size: 24px;
   color: #cfcab0;
   text-shadow: 1px 1px #000000;
+}
+
+table.spaced td {
+  padding: 8px;
+  padding-top: 12px;
 }
 
 

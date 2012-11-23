@@ -8,20 +8,7 @@
   <link rel="stylesheet" href="/resources/js/styles/monokai2.css">
   <script src="/resources/js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  <script>
-    Date.prototype.getDOY = function() {
-      var onejan = new Date(this.getFullYear(),0,1);
-      return Math.ceil((this - onejan) / 86400000);
-    }
-
-    function fetchQuote() {
-      var quotes = {% include quotes.json %};
-      var today = new Date();
-      var day = today.getDOY();
-      var index = day % quotes.length;
-      return quotes[index];
-    }
-  </script>
+  <script src="/resources/js/quotes.js"></script>
 </head>
 <body>
 
