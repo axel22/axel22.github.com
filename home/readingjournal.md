@@ -88,6 +88,10 @@ I also recommend these books.
 * Meyers: Effective STL
 
 
+### 2005
+
+* Sribar, Motik: C++ Demystified
+
 
 
 
