@@ -185,7 +185,7 @@ Unless you sanction this group's actions, they will spread their
 views further, grow their impact in the society and attain
 more recruits.
 Once they reach a critical mass, they will start executing their
-ideas by spreading violence on the targeted groups.
+ideas by spreading violence at the targeted groups.
 Streets will become less safe, people will get hurt.
 The global social happiness level will become lower, and lower is definitely
 not optimal.
