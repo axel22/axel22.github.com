@@ -48,8 +48,8 @@ He says:
 The thesis is that the modern society cannot tolerate any kind of speech
 that might challenge a certain group's opinion or values (think about feminism,
 religion, homosexuality, certain racial or ethnic groups, etc.).
-These opinions and values are for some reason legitimate solely
-on the basis that they exist.
+These opinions and values are for some reason legitimate and
+unquestionable solely on the basis that they exist.
 In the same time, challenging the accepted political values, doctrines
 and social taboos is exactly what freedom of speech is supposed
 to be about.
