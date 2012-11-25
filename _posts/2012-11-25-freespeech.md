@@ -185,10 +185,13 @@ Unless you sanction this group's actions, they will spread their
 views further, grow their impact in the society and attain
 more recruits.
 Once they reach a critical mass, they will start executing their
-ideas by spreading violence.
-People will get hurt.
+ideas by spreading violence on the targeted groups.
+Streets will become less safe, people will get hurt.
 The global social happiness level will become lower, and lower is definitely
 not optimal.
+
+If reaching optimal global happiness is the desired effect,
+then people like shouldn't have their say.
 
 Another example are referendums.
 I consider this a form of speech, since you very precisely state your opinion
@@ -269,9 +272,9 @@ It's safe to ignore it.
 
 Also, in most situations you're better of not saying anything at all and,
 amazingly, you can get very far by not sharing your opinion at all.
-This is very interesting, because although freedom of speech is possibly
-important for the society as a whole, for you as an individual it is mostly
-irrelevant today -- often you're just better off keeping your mouth shut.
+This is interesting, because although freedom of speech is possibly
+important for the society as a whole, for an individual it could be mostly
+irrelevant -- often you're just better off keeping your mouth shut.
 
 So let me end this with a short quote:
 
