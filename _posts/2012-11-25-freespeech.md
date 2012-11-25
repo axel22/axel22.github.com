@@ -218,7 +218,7 @@ the probability of reaching a decision which increases global happiness.
 The math behind this is simple.
 
 Rest assured -- in achieving the optimal global social happiness,
-it's best that some people just don't saying anything at all.
+it's best that some people just don't say anything at all.
 
 But, if that's so, why is everyone's vote equally important then?
 There is one problem we've overlooked here.
