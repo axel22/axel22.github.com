@@ -107,7 +107,7 @@ The bottomline is, to maintain control and order sometimes it's necessary to lim
 This is nothing new and is well-known as the *social contract* -- individuals surrender some
 of their rights and freedoms in exchange for the protection of the remaining ones.
 What the rights are exactly depends on the time, culture, region and so on.
-To think that we are somehow *different* or *better* today than the people 200 hundred years
+To think that we are somehow *different* or *better* today than the people two hundred years
 ago is misguided.
 We have our own set of taboos, restraints and limitations in perceiving the world,
 it's just that we're not aware of them in the day-to-day life.
