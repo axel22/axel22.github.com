@@ -191,7 +191,7 @@ The global social happiness level will become lower, and lower is definitely
 not optimal.
 
 If reaching optimal global happiness is the desired effect,
-then people like shouldn't have their say.
+then people like these shouldn't have their say.
 
 Another example are referendums.
 I consider this a form of speech, since you very precisely state your opinion
