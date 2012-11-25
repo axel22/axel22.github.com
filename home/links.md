@@ -13,7 +13,7 @@ permalink: /links/index.html
 
 The following is a list of possibly interesting links on various topics.
 
-* [XKCD](xkcd.com)
+* [XKCD](http://xkcd.com)
 
 * [Pianofiles](http://www.pianofiles.com/)
 

@@ -9,7 +9,9 @@ permalink: /contact/index.html
 
 The preferred way to contact me is through e-mail:
 
-> my firstname then a dot my surname then a monkey gmail then a dot com
+<blockquote style="text-align: left;">
+  my firstname then a dot my surname then a monkey gmail then a dot com
+</blockquote>
 
 
 # ![post](/resources/images/post.png) Mail
@@ -17,11 +19,13 @@ The preferred way to contact me is through e-mail:
 If you want to send a letter or a physical item, use the following address:
 
 
-> Aleksandar Prokopec
->
-> EPFL IC IIF LAMP, BC 360 (Bâtiment BC), Station 14
->
-> 1015 Lausanne, Switzerland
+<blockquote style="text-align: left;">
+  Aleksandar Prokopec
+  <br/>
+  EPFL IC IIF LAMP, BC 360 (Bâtiment BC), Station 14
+  <br/>
+  1015 Lausanne, Switzerland
+</blockquote>
 
 
 # ![phone](/resources/images/phone.png) Phone

@@ -71,9 +71,9 @@ the parallel and sequential implementation of a collection easily.
 ## ![gaide](/resources/images/ga_ide_big.png) Evolutionary Computing IDE
 
 Algorithms in the domain of evolutionary computing often require a large amount of experiments.
-Experiments often require tuning a number of parameters to find the optimal set of parameters
+Experiments involve tuning a number of parameters to find the optimal set of parameters
 for a given problem or a given instance of the problem.
-To ease their development, the Evolutionary Computing IDE provides a graphical user interface
+To ease algorithm development, the Evolutionary Computing IDE provides a graphical user interface
 which allows tweaking the parameters, testing and visualizing the algorithm, running batch jobs
 and producing performance graphs.
 
@@ -97,7 +97,7 @@ It is devised to soften the learning curve of students who are being introduced 
 
 * **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
 Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
-[The 25th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://www.kasahara.cs.waseda.ac.jp/lcpc2012/)<br/>
+[The 25th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2012)](http://www.kasahara.cs.waseda.ac.jp/lcpc2012/)<br/>
 Tokyo, Japan, September 2012<br/>
 \[[PDF](/resources/docs/lcpc2012.pdf)\]
 
