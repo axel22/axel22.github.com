@@ -122,7 +122,8 @@ It's interesting to see that the emphasis on what is being said is so great toda
 with the information saturation effect overflowing everybody with so much facts
 that nobody seems to care anymore.
 Perhaps this is exactly why the society/system cares -- with the ability to spread ideas so easily with the help of
-technology, the bar on who gets to say what has to be adjusted, so that the intended information can reach everyone.
+technology, the bar on who gets to say what has to be adjusted, otherwise the information that the system intends to
+spread becomes dilluted by all the noise every individual is spreading.
 In any case, I've been ranting for far too long about the first question.
 
 Now comes a more controversial question, one that I personally find much more interesting.
@@ -140,6 +141,9 @@ So, lets imagine that the intended effect is global social happiness.
 Most people will agree on that.
 But, what does global social happiness even mean?
 How do you even measure happiness of an individual?
+Global social happiness could be something like the average hapiness
+in the entire society.
+How you would measure this escapes me.
 Although this remains a moot point, we can still roughly disambiguate
 the global social happiness of several groups -- e.g. a group of schoolkids
 about to go on a field trip is happier than a group of prisoners being lead
