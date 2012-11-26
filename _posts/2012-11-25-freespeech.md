@@ -122,7 +122,8 @@ It's interesting to see that the emphasis on what is being said is so great toda
 with the information saturation effect overflowing everybody with so much facts
 that nobody seems to care anymore.
 Perhaps this is exactly why the society/system cares -- with the ability to spread ideas so easily with the help of
-technology, the bar on who gets to say what has to be adjusted, so that the intended information can reach everyone.
+technology, the bar on who gets to say what has to be adjusted, otherwise the information that the system intends to
+spread becomes dilluted by all the noise every individual is spreading.
 In any case, I've been ranting for far too long about the first question.
 
 Now comes a more controversial question, one that I personally find much more interesting.
