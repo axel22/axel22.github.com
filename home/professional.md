@@ -15,7 +15,41 @@ My research interests include programming languages, software engineering,
 concurrency and parallelism. 
 
 
-# Projects
+# <a id="publications">Publications</a>
+
+* **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
+Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
+[The 25th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2012)](http://www.kasahara.cs.waseda.ac.jp/lcpc2012/)<br/>
+Tokyo, Japan, September 2012<br/>
+\[[PDF](/resources/docs/lcpc2012.pdf)\]
+
+* **Concurrent Tries with Efficient Non-blocking Snapshots**<br/>
+Aleksandar Prokopec, Nathan Bronson, Phil Bagwell, Martin Odersky<br/>
+[17th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2012)](http://dynopt.org/ppopp-2012)<br/>
+New Orleans, Louisiana, February 2012<br/>
+\[[PDF](/resources/docs/ctries-snapshot.pdf)\]
+
+* **Lock-Free Resizeable Concurrent Tries**<br/>
+Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
+[The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)
+Fort Collins, Colorado, September 2011<br/>
+*Best Paper Presentation Award*<br/>
+\[[PDF](/resources/docs/ctries-techreport.pdf)\]
+
+* **A Generic Parallel Collection Framework**<br/>
+Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, Martin Odersky<br/>
+[Euro-Par 2011](http://europar2011.bordeaux.inria.fr)<br/>
+Bordeaux, France, September 2011<br/>
+\[[PDF](/resources/docs/techrep.pdf)\]
+
+* **Adaptive Mutation Operator Cycling**<br/>
+Aleksandar Prokopec, Marin Golub<br/>
+[The Second International Conference on the Applications of Digital Information and Web Technologies  (ICADIWT 2009)](http://www.dirf.org/diwt2009/)<br/>
+London, UK, August 2009<br/>
+\[[PDF](/resources/docs/icadiwt_atga.pdf)\]
+
+
+# <a id="projects">Projects</a>
 
 This section shortly describes some of the projects I've been working on.
 
@@ -93,41 +127,7 @@ It is devised to soften the learning curve of students who are being introduced 
 * [Rector Award Writeup](/resources/docs/vhdllab-rad.pdf) (in Croatian) -- VHDLLab report that won the University of Zagreb Rector Award
 
 
-# Publications
-
-* **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
-Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
-[The 25th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2012)](http://www.kasahara.cs.waseda.ac.jp/lcpc2012/)<br/>
-Tokyo, Japan, September 2012<br/>
-\[[PDF](/resources/docs/lcpc2012.pdf)\]
-
-* **Concurrent Tries with Efficient Non-blocking Snapshots**<br/>
-Aleksandar Prokopec, Nathan Bronson, Phil Bagwell, Martin Odersky<br/>
-[17th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2012)](http://dynopt.org/ppopp-2012)<br/>
-New Orleans, Louisiana, February 2012<br/>
-\[[PDF](/resources/docs/ctries-snapshot.pdf)\]
-
-* **Lock-Free Resizeable Concurrent Tries**<br/>
-Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
-[The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)
-Fort Collins, Colorado, September 2011<br/>
-*Best Paper Presentation Award*<br/>
-\[[PDF](/resources/docs/ctries-techreport.pdf)\]
-
-* **A Generic Parallel Collection Framework**<br/>
-Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, Martin Odersky<br/>
-[Euro-Par 2011](http://europar2011.bordeaux.inria.fr)<br/>
-Bordeaux, France, September 2011<br/>
-\[[PDF](/resources/docs/techrep.pdf)\]
-
-* **Adaptive Mutation Operator Cycling**<br/>
-Aleksandar Prokopec, Marin Golub<br/>
-[The Second International Conference on the Applications of Digital Information and Web Technologies  (ICADIWT 2009)](http://www.dirf.org/diwt2009/)<br/>
-London, UK, August 2009<br/>
-\[[PDF](/resources/docs/icadiwt_atga.pdf)\]
-
-
-# Talks
+# <a id="talks">Talks</a>
 
 ### ScalaMeter
 
@@ -178,7 +178,7 @@ France, March 2011
 \[[PPT](/resources/docs/introscala.rar)\]
 
 
-# Articles and writeups
+# <a id="articles">Articles and writeups</a>
 
 * [ScalaMeter Introduction](http://axel22.github.com/scalameter/home/gettingstarted/)<br/>
 Aleksandar Prokopec<br/>
@@ -193,7 +193,7 @@ Philipp Haller, Aleksandar Prokopec, Heather Miller, Viktor Klang, Roland Kuhn, 
 Lausanne, Switzerland, January 2012
 
 
-# Teaching
+# <a id="teaching">Teaching</a>
 
 I've TA'd on the following courses:
 
@@ -202,7 +202,7 @@ I've TA'd on the following courses:
 * [Advanced Programming 2010](http://lamp.epfl.ch/teaching/proga)
 
 
-# Miscellanous
+# <a id="misc">Miscellanous</a>
 
 You can find my [reading journal here](/home/reading/).
 

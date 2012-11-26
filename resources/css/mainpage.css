@@ -1,0 +1,68 @@
+
+
+
+
+
+
+div.group {
+  margin: 1px;
+  padding: 3px;
+  background: #eeeeee;
+  border: 1px solid #bbbbbb;
+  height: 345px;
+
+  filter: saturate(20%);
+  
+  -webkit-filter: saturate(20%);
+  -moz-filter: saturate(20%);
+  -o-filter: saturate(20%);
+  -ms-filter: saturate(20%);  
+}
+
+div.group span.maincategory {
+  font-size: 24px;
+  font-family: Exo;
+  color: #4c4c5c;
+  text-shadow: 1px 1px #aabbbb;
+}
+
+div.group:hover {
+  filter: saturate(100%);
+  
+  -webkit-filter: saturate(100%);
+  -moz-filter: saturate(100%);
+  -o-filter: saturate(100%);
+  -ms-filter: saturate(100%);  
+}
+
+div.group:hover span.maincategory {
+  color: #008aff;
+}
+
+div.picblog {
+  background: #ffffff;
+  background-image: url('/resources/images/quill-feather.jpg');
+  background-repeat: no-repeat;
+}
+
+div.picprojects {
+  background: #ffffff;
+  background-image: url('/resources/images/keyboard.jpg');
+  background-repeat: no-repeat;
+}
+
+div.picpersonal {
+  background: #ffffff;
+  background-image: url('/resources/images/forest.jpg');
+  background-repeat: no-repeat;
+}
+
+div.picpro {
+  background: #ffffff;
+  background-image: url('/resources/images/professional.jpg');
+  background-repeat: no-repeat;
+}
+
+
+
+

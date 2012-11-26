@@ -48,8 +48,8 @@ He says:
 The thesis is that the modern society cannot tolerate any kind of speech
 that might challenge a certain group's opinion or values (think about feminism,
 religion, homosexuality, certain racial or ethnic groups, etc.).
-These opinions and values are for some reason legitimate solely
-on the basis that they exist.
+These opinions and values are for some reason legitimate and
+unquestionable solely on the basis that they exist.
 In the same time, challenging the accepted political values, doctrines
 and social taboos is exactly what freedom of speech is supposed
 to be about.
@@ -107,7 +107,7 @@ The bottomline is, to maintain control and order sometimes it's necessary to lim
 This is nothing new and is well-known as the *social contract* -- individuals surrender some
 of their rights and freedoms in exchange for the protection of the remaining ones.
 What the rights are exactly depends on the time, culture, region and so on.
-To think that we are somehow *different* or *better* today than the people 200 hundred years
+To think that we are somehow *different* or *better* today than the people two hundred years
 ago is misguided.
 We have our own set of taboos, restraints and limitations in perceiving the world,
 it's just that we're not aware of them in the day-to-day life.
@@ -122,7 +122,8 @@ It's interesting to see that the emphasis on what is being said is so great toda
 with the information saturation effect overflowing everybody with so much facts
 that nobody seems to care anymore.
 Perhaps this is exactly why the society/system cares -- with the ability to spread ideas so easily with the help of
-technology, the bar on who gets to say what has to be adjusted, so that the intended information can reach everyone.
+technology, the bar on who gets to say what has to be adjusted, otherwise the information that the system intends to
+spread becomes dilluted by all the noise every individual is spreading.
 In any case, I've been ranting for far too long about the first question.
 
 Now comes a more controversial question, one that I personally find much more interesting.
@@ -140,6 +141,9 @@ So, lets imagine that the intended effect is global social happiness.
 Most people will agree on that.
 But, what does global social happiness even mean?
 How do you even measure happiness of an individual?
+Global social happiness could be something like the average hapiness
+in the entire society.
+How you would measure this escapes me.
 Although this remains a moot point, we can still roughly disambiguate
 the global social happiness of several groups -- e.g. a group of schoolkids
 about to go on a field trip is happier than a group of prisoners being lead
@@ -185,10 +189,13 @@ Unless you sanction this group's actions, they will spread their
 views further, grow their impact in the society and attain
 more recruits.
 Once they reach a critical mass, they will start executing their
-ideas by spreading violence.
-People will get hurt.
+ideas by spreading violence at the targeted groups.
+Streets will become less safe, people will get hurt.
 The global social happiness level will become lower, and lower is definitely
 not optimal.
+
+If reaching optimal global happiness is the desired effect,
+then people like these shouldn't have their say.
 
 Another example are referendums.
 I consider this a form of speech, since you very precisely state your opinion
@@ -218,7 +225,7 @@ the probability of reaching a decision which increases global happiness.
 The math behind this is simple.
 
 Rest assured -- in achieving the optimal global social happiness,
-it's best that some people just don't saying anything at all.
+it's best that some people just don't say anything at all.
 
 But, if that's so, why is everyone's vote equally important then?
 There is one problem we've overlooked here.
@@ -269,9 +276,9 @@ It's safe to ignore it.
 
 Also, in most situations you're better of not saying anything at all and,
 amazingly, you can get very far by not sharing your opinion at all.
-This is very interesting, because although freedom of speech is possibly
-important for the society as a whole, for you as an individual it is mostly
-irrelevant today -- often you're just better off keeping your mouth shut.
+This is interesting, because although freedom of speech is possibly
+important for the society as a whole, for an individual it could be mostly
+irrelevant -- often you're just better off keeping your mouth shut.
 
 So let me end this with a short quote:
 
