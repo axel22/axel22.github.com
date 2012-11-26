@@ -1,0 +1,30 @@
+
+
+
+
+
+
+div.group {
+  margin: 1px;
+  padding: 0px;
+  background: #eeeeee;
+  border: 1px solid #bbbbbb;
+}
+
+div.group span.maincategory {
+  font-size: 24px;
+  font-family: Exo;
+  color: #4c4c5c;
+  text-shadow: 1px 1px #aabbbb;
+}
+
+div.group:hover {
+  background: #fafafa;
+}
+
+div.group:hover span.maincategory {
+  color: #008aff;
+}
+
+
+

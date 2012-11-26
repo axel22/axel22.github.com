@@ -15,7 +15,7 @@ My research interests include programming languages, software engineering,
 concurrency and parallelism. 
 
 
-# Projects
+# <a id="projects">Projects</a>
 
 This section shortly describes some of the projects I've been working on.
 
@@ -93,7 +93,7 @@ It is devised to soften the learning curve of students who are being introduced 
 * [Rector Award Writeup](/resources/docs/vhdllab-rad.pdf) (in Croatian) -- VHDLLab report that won the University of Zagreb Rector Award
 
 
-# Publications
+# <a id="publications">Publications</a>
 
 * **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
 Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
@@ -127,7 +127,7 @@ London, UK, August 2009<br/>
 \[[PDF](/resources/docs/icadiwt_atga.pdf)\]
 
 
-# Talks
+# <a id="talks">Talks</a>
 
 ### ScalaMeter
 
@@ -178,7 +178,7 @@ France, March 2011
 \[[PPT](/resources/docs/introscala.rar)\]
 
 
-# Articles and writeups
+# <a id="articles">Articles and writeups</a>
 
 * [ScalaMeter Introduction](http://axel22.github.com/scalameter/home/gettingstarted/)<br/>
 Aleksandar Prokopec<br/>
@@ -193,7 +193,7 @@ Philipp Haller, Aleksandar Prokopec, Heather Miller, Viktor Klang, Roland Kuhn, 
 Lausanne, Switzerland, January 2012
 
 
-# Teaching
+# <a id="teaching">Teaching</a>
 
 I've TA'd on the following courses:
 
@@ -202,7 +202,7 @@ I've TA'd on the following courses:
 * [Advanced Programming 2010](http://lamp.epfl.ch/teaching/proga)
 
 
-# Miscellanous
+# <a id="misc">Miscellanous</a>
 
 You can find my [reading journal here](/home/reading/).
 

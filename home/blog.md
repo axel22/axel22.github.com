@@ -45,7 +45,7 @@ something like that](/2012/11/25/freespeech.html)?
       <table>
         <tr>
           <td>
-            <img src="{{ thumbnail }}"/>
+            <img src="{{ thumbnail }}" class="fixedheight"/>
           </td>
           <td>
             <span class="entrytitle">{{ post.title }}</span>
