@@ -140,6 +140,9 @@ So, lets imagine that the intended effect is global social happiness.
 Most people will agree on that.
 But, what does global social happiness even mean?
 How do you even measure happiness of an individual?
+Global social happiness could be something like the average hapiness
+in the entire society.
+How you would measure this escapes me.
 Although this remains a moot point, we can still roughly disambiguate
 the global social happiness of several groups -- e.g. a group of schoolkids
 about to go on a field trip is happier than a group of prisoners being lead
