@@ -22,6 +22,8 @@ The following is a list of possibly interesting links on various topics.
 
 The following is a list of possibly useful links on various computer science topics.
 
+* [Inside the Hotspot VM: Clocks, Timers and Scheduling Events](https://blogs.oracle.com/dholmes/entry/inside_the_hotspot_vm_clocks) - an overview of clocks and timers on the JVM and how they work
+
 * [Inigo Quilez - strawberry](http://www.iquilezles.org/www/index.htm) - a set of computer graphics tutorials
 
 * [OpenGL Shadow Mapping](http://www.paulsprojects.net/tutorials/smt/smt.html) - a nice shadow mapping tutorial which deserves to be mentioned
