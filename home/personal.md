@@ -6,7 +6,11 @@ permalink: /personal/index.html
 
 
 
-Coming soon.
+That's me.
+
+<img src="/resources/images/winter.jpg" width="300" height="400" class="imageinline"/>
+
+More coming soon.
 
 
 
