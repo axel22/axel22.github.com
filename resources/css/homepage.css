@@ -452,6 +452,13 @@ ul.entries li:hover img {
   border: 1px solid #bbbbbb;
 }
 
+.imageinlineright {
+  float: right;
+  margin: 10px;
+  padding: 2px;
+  border: 1px solid #bbbbbb;
+}
+
 a:link img.hoverimage, a:visited img.hoverimage {
   filter: saturate(30%);
   
