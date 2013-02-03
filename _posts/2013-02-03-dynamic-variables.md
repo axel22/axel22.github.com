@@ -23,6 +23,6 @@ Alas, the approach is totally inapplicable to the JVM, where there is no concept
 particularly of local stack variable addressing.
 The more troubling issue is that the `use` statement they describe has linear complexity in the number of currently
 used dynamic variables, and the only proposed mechanism to address this is maintaining a hash table,
-bringing us back to square one and `ThreadLocal`s.
-Ironically, their implementation relies on the use of a thread-local `current` variable, thus relying
+bringing us back to square one and `ThreadLocal`s. 
+And ironically, their implementation relies on the use of a thread-local `current` variable, thus relying
 on the very mechanism they are trying to implement.
