@@ -19,8 +19,8 @@ would otherwise be heavy on parameters.
 Other use case examples are outlined in the [paper](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.20.6982)
 by Hanson and Proebsting.
 Their paper describes a nice mechanism to implement dynamic variables in a language such as C or C++.
-Alas, the approach is totally inapplicable to the JVM, where there is not concept of pointers, and
-particularly of local stack variables addressing.
+Alas, the approach is totally inapplicable to the JVM, where there is no concept of pointers, and
+particularly of local stack variable addressing.
 The more troubling issue is that the `use` statement they describe has linear complexity in the number of currently
 used dynamic variables, and the only proposed mechanism to address this is maintaining a hash table,
 bringing us back to square one and `ThreadLocal`s.
