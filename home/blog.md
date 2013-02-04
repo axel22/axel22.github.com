@@ -9,6 +9,7 @@ permalink: /blog/index.html
 Here's my blog.
 I rant about all kinds of stuff here.
 
+[![RSS](/resources/images/rss-icon.png)](/feed.xml)
 
 <h1>Posts</h1>
 
