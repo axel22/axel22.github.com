@@ -251,7 +251,7 @@ will ever finish executing a program, or continue executing it forever.
 Knowing an answer to this would require a hypothetical oracle device
 which can decide if a program ever ends or executes forever.
 Programmers have developed heuristics, approximation mechanisms, that
-are able to only approximately answer if the programs executes forever
+are able to only approximately answer if the program executes forever
 or not.
 
 Different societies, unable to find a proper arbiter (or oracle), apply different
