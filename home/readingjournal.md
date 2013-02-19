@@ -42,6 +42,11 @@ I also recommend these books.
 ## Technical
 
 
+### 2013
+
+* De Berg, Cheong, Kreveld, Overmars: Computational Geometry -- Algorithms and Applications
+
+
 ### 2012
 
 * Rost, Licea-Kane, et al.: OpenGL Shading Language
