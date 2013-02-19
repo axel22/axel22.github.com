@@ -197,6 +197,7 @@ Lausanne, Switzerland, January 2012
 
 I've TA'd on the following courses:
 
+* [Programming Principles 2013] (spring) - also hosted at [Coursera](https://www.coursera.org/course/progfun)
 * [Programming Principles 2012](http://lamp.epfl.ch/teaching/progp) - also hosted at [Coursera](https://www.coursera.org/course/progfun)
 * [Advanced Programming 2011](http://lamp.epfl.ch/teaching/proga)
 * [Advanced Programming 2010](http://lamp.epfl.ch/teaching/proga)
