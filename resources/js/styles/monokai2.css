@@ -5,7 +5,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 
 
 pre code {
-  background: #bfeffe;
+  background: #efeffe;
   border: 1px solid #a0a0c0;
   display: block;
   padding: 0.5em;
@@ -14,7 +14,7 @@ pre code {
 }
 
 code {
-  background: #bfeffe;
+  background: #efeffe;
   border: 1px solid #a0a0c0;
   margin: 2px;
   -moz-border-radius: 3px;
