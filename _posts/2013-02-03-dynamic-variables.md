@@ -6,10 +6,30 @@ poster: Alex
 
 
 There does not seem to be an efficient way to implement a dynamic variable on the JVM.
+What do I mean by this?
+There is no efficient way to do the following:
+
+    val dv = new DynamicVariable[String]("initial value")
+
+    def call() {
+      println(dv())
+    }
+
+    call() // prints `initial value`
+    dv := "new value"
+    call() // prints `new value`
+    
+where efficient means that the read `dv()` is as efficient as reading an object instance field.
+
+You could use a global variable, but if your application is multithreaded, it won't work correctly.
 The best thing people have come up with is using a [`ThreadLocal`](http://docs.oracle.com/javase/7/docs/api/java/lang/ThreadLocal.html)
 to simulate a dynamically scoped variable.
+Indeed, this is how Scala does it.
 Unfortunately, while a lot of effort was invested to make these efficient in mainstream JVMs,
 they are not as [performant as one would like them to be](http://stackoverflow.com/questions/609826/performance-of-threadlocal-variable).
+Alternatively, you could pass a `ThreadContext` as an additional argument to every method as is done in JRuby.
+Or you could try to enforce that every thread is an instance of a special class and cast `currentThread` to that class.
+Neither are appealing.
 
 Why are they important in the first place?
 There are many reasons, customizing the execution environment being one of the important applications -- think of
