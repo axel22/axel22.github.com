@@ -5,7 +5,7 @@ Monokai style - ported by Luigi Maselli - http://grigio.org
 
 
 pre code {
-  background: #efeffe;
+  background: #bfeffe;
   border: 1px solid #a0a0c0;
   display: block;
   padding: 0.5em;
@@ -14,7 +14,7 @@ pre code {
 }
 
 code {
-  background: #efeffe;
+  background: #bfeffe;
   border: 1px solid #a0a0c0;
   margin: 2px;
   -moz-border-radius: 3px;
@@ -32,13 +32,13 @@ pre .lisp .title,
 pre .clojure .built_in,
 pre .nginx .title,
 pre .tex .special {
-  color: #b91612;
+  color: #2916b2;
 }
 
 pre code {
   font-family: DejaVuSansMono;
   font-size: 13px;
-  color: #441a00;
+  color: #041a40;
 }
 
 pre code .constant {
@@ -54,7 +54,7 @@ pre .symbol,
 pre .symbol .string,
 pre .value,
 pre .regexp {
-	color: #441a00;
+	color: #041a40;
 }
 
 pre .tag .value,
@@ -82,7 +82,7 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
-  color: #da5a00;
+  color: #0a5ad0;
 }
 
 pre .comment,
@@ -95,7 +95,7 @@ pre .deletion,
 pre .shebang,
 pre .apache .sqbracket,
 pre .tex .formula {
-  color: #75715E;
+  color: #35719E;
 }
 
 pre .keyword,
