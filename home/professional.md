@@ -18,7 +18,7 @@ concurrency and parallelism.
 # <a id="publications">Publications</a>
 
 * **Composition and Reuse with Compiled Domain-Specific Languages**<br/>
-Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Victoria Popic, Michael Wu, Aleksander Prokopec, Vojin Jovanovic, Martin Odersky, Kunle Olukotun<br/>
+Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Victoria Popic, Michael Wu, Aleksandar Prokopec, Vojin Jovanovic, Martin Odersky, Kunle Olukotun<br/>
 [The European Conference on Object-Oriented Programming (ECOOP 2013)](http://www.lirmm.fr/ecoop13/)<br/>
 Montpellier, France, July 2013<br/>
 \[[PDF]()\]
