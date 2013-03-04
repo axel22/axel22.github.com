@@ -20,7 +20,7 @@ concurrency and parallelism.
 * **Composition and Reuse with Compiled Domain-Specific Languages**<br/>
 Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Victoria Popic, Michael Wu, Aleksander Prokopec, Vojin Jovanovic, Martin Odersky, Kunle Olukotun<br/>
 [The European Conference on Object-Oriented Programming (ECOOP 2013)](http://www.lirmm.fr/ecoop13/)<br/>
-Montpellier, France, July 2012<br/>
+Montpellier, France, July 2013<br/>
 \[[PDF]()\]
 
 * **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
