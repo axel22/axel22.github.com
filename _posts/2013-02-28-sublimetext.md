@@ -10,7 +10,7 @@ For those not using the Sublime Text editor, [here](http://www.sublimetext.com/)
 In short, it's a powerful and, in the same time, lightweight text editor that supports a variety of programming languages and text formats,
 fast file selection, fast search within current file, within all files, a completion-based command-palette to quickly
 access various commands and options, a Python-based plugin system, a variety of different plugins (like editing over SSH,
-Git support, variety of different color schemes, even a GDB interface), a macro system for defining new commands and
+Git support, LaTeX support, variety of different color schemes, even a GDB interface), a macro system for defining new commands and
 much more.
 
 Its design is minimalistic, but much of the effort has been put into making coding in it simple and practical.
