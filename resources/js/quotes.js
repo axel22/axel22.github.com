@@ -9,7 +9,7 @@ Date.prototype.getDOY = function() {
 function fetchQuote() {
 	var quotes = {% include quotes.json %};
 	var today = new Date();
-	var day = today.getDOY() + 1;
+	var day = today.getDOY() + 2;
 	var index = day % quotes.length;
 	return quotes[index];
 }
