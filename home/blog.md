@@ -6,18 +6,39 @@ permalink: /blog/index.html
 
 
 
-[![RSS](/resources/images/rss-icon.png)](/feed.xml)
 Here's my blog.
 I rant about all kinds of stuff here.
 
+[![RSS](/resources/images/rss-icon.png)](/feed.xml)
 
-<h1>Posts</h1>
+<br/>
+<br/>
+
+{% for post in site.posts limit:3 %}
+
+<h1 class="entrytitle">{{post.title}}</h1>
+<span class="entryinfo">
+  {% if post.poster %}
+    posted by {{ post.poster }},
+  {% endif %}
+  {% if post.date %}
+    {{ post.date | date: "%d.%m.%Y." }}
+  {% endif %}
+</span>
+{{ post.content }}
+
+<br/>
+<br/>
+
+{% endfor %}
+
+
+<h1>All posts</h1>
 
 <ul class="entries">
   {% for post in site.posts %}
   <a href="{{ post.url }}">
     <li>
-
       {% capture thumbnail %}
         {% if post.image %}
           {{ post.image }}

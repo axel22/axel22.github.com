@@ -411,7 +411,7 @@ ul.entries a:hover li, ul.entries a:active li {
 }
 
 ul.entries li span.entrytitle {
-  font-size: 24px;
+  font-size: 20px;
   text-shadow: 1px 1px #aabbbb;  
 }
 
@@ -420,7 +420,7 @@ ul.entries li:hover {
 }
 
 ul.entries img.fixedheight {
-  height: 64px;
+  height: 48px;
 }
 
 ul.entries img {
