@@ -11,34 +11,6 @@ This is especially true for technical literature, while in the case of fiction t
 I also recommend these books.
 
 
-## Literature
-
-
-### 2012
-
-* Choden: Dawa - The Story of a Stray Dog in Bhutan
-* Martin: A Game of Thrones
-
-
-### 2011
-
-* Salvatore: The Sellswords
-* Stead: My Name Was Judas
-* Salvatore: Orc King
-* Greenwood: Making of a Mage
-* Greenwood: Elminster in Myth Drannor
-* Herbert: Dune
-
-
-### 2010
-
-* Salvatore: Icewind Dale Trilogy
-* Salvatore: Legacy of the Drow
-* Salvatore: Paths of Darkness
-* Salvatore: Cleric's Quintet
-* Salvatore: Hunter's Blades Trilogy
-
-
 ## Technical
 
 
@@ -97,6 +69,34 @@ I also recommend these books.
 
 * Sribar, Motik: C++ Demystified
 
+
+
+## Literature
+
+
+### 2012
+
+* Choden: Dawa - The Story of a Stray Dog in Bhutan
+* Martin: A Game of Thrones
+
+
+### 2011
+
+* Salvatore: The Sellswords
+* Stead: My Name Was Judas
+* Salvatore: Orc King
+* Greenwood: Making of a Mage
+* Greenwood: Elminster in Myth Drannor
+* Herbert: Dune
+
+
+### 2010
+
+* Salvatore: Icewind Dale Trilogy
+* Salvatore: Legacy of the Drow
+* Salvatore: Paths of Darkness
+* Salvatore: Cleric's Quintet
+* Salvatore: Hunter's Blades Trilogy
 
 
 
