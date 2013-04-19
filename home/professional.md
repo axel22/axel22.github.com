@@ -204,8 +204,8 @@ Lausanne, Switzerland, January 2012
 ### Program Committees
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
-### Reviews
-- [ECOOP 2013 (external)](http://www.lirmm.fr/ecoop13/)
+### External Reviewing
+- [ECOOP 2013](http://www.lirmm.fr/ecoop13/)
 - [ScalaDays 2010](http://days2010.scala-lang.org/)
 - [ICADIWT 2009](http://www.dirf.org/diwt2009/)
 
