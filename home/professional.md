@@ -201,10 +201,13 @@ Lausanne, Switzerland, January 2012
 
 # <a id="committees">Conferences and Workshops</a>
 
-* program committees - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
+* program committees 
+  * [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
+  *
 * reviews
   * [ECOOP 2013 (external)](http://www.lirmm.fr/ecoop13/)
   * [ScalaDays 2010](http://days2010.scala-lang.org/)
+  * [ICADIWT 2009](http://www.dirf.org/diwt2009/)
 
 
 # <a id="teaching">Teaching</a>
