@@ -199,6 +199,17 @@ Philipp Haller, Aleksandar Prokopec, Heather Miller, Viktor Klang, Roland Kuhn, 
 Lausanne, Switzerland, January 2012
 
 
+# <a id="committees">Program Committees</a>
+
+* Scala 2013
+
+## Reviews
+
+* Scala 2013
+* ECOOP 2013 (external reviewer)
+* ScalaDays 2010
+
+
 # <a id="teaching">Teaching</a>
 
 I've TA'd on the following courses:
