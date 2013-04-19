@@ -203,6 +203,7 @@ Lausanne, Switzerland, January 2012
 
 * program committees
   * [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
+  * ...
 
 * reviews
   * [ECOOP 2013 (external)](http://www.lirmm.fr/ecoop13/)
