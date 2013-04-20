@@ -22,26 +22,26 @@ There are some screenshots below.
 <table>
 <tr>
 <td><a href="/resources/images/dungeon1.png">
-  <img src="/resources/images/dungeon1.png" height="205px" width="320px" class="image"></img>
+  <img src="/resources/images/dungeon1-small.png" height="205px" width="320px" class="image"></img>
 </a></td>
 <td><a href="/resources/images/dungeon2.png">
-  <img src="/resources/images/dungeon2.png" height="205px" width="320px" class="image"></img>
+  <img src="/resources/images/dungeon2-small.png" height="205px" width="320px" class="image"></img>
 </a></td>
 </tr>
 <tr>
 <td><a href="/resources/images/dungeon3.png">
-  <img src="/resources/images/dungeon3.png" height="205px" width="320px" class="image"></img>
+  <img src="/resources/images/dungeon3-small.png" height="205px" width="320px" class="image"></img>
 </a></td>
 <td><a href="/resources/images/dungeon4.png">
-  <img src="/resources/images/dungeon4.png" height="205px" width="320px" class="image"></img>
+  <img src="/resources/images/dungeon4-small.png" height="205px" width="320px" class="image"></img>
 </a></td>
 </tr>
 <tr>
 <td><a href="/resources/images/dungeon5.png">
-  <img src="/resources/images/dungeon5.png" height="205px" width="320px" class="image">
+  <img src="/resources/images/dungeon5-small.png" height="205px" width="320px" class="image">
 </a></td>
 <td><a href="/resources/images/dungeon6.png">
-  <img src="/resources/images/dungeon6.png" height="205px" width="320px" class="image">
+  <img src="/resources/images/dungeon6-small.png" height="205px" width="320px" class="image">
 </a></td>
 </tr>
 </table>
