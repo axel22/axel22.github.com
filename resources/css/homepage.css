@@ -445,6 +445,12 @@ ul.entries li:hover img {
   -ms-filter: saturate(100%);
 }
 
+.image {
+  margin: 2px;
+  padding: 2px;
+  border: 1px solid #bbbbbb;
+}
+
 .imageinline {
   float: left;
   margin: 10px;
