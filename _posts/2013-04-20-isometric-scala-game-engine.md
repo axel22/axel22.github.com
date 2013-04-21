@@ -74,7 +74,7 @@ As mentioned before, most of the game is sprite-based.
 <img src="/resources/images/org.brijest.storm.engine.model.characters.castle.FireplaceLeft.png" class="imageinlineright transparent"/>
 All sprites are rendered using 3ds MAX and then placed into appropriate positions by the
 game engine at runtime to produce the entire image.
-What are [sprites](http://en.wikipedia.org/wiki/Sprite_(computer_graphics))?
+What are <a href="http://en.wikipedia.org/wiki/Sprite_(computer_graphics)">sprites</a>?
 In short, these are two-dimensional images integrated into a larger scene.
 The scene is in this case what you see in the screenshots above.
 A sprite is just a relatively small PNG image with transparent background that you can blend into the scene.
