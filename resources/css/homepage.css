@@ -76,7 +76,7 @@ h2 {
 h3 {
   color: #303030;
   padding-top: 6px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 blockquote {
@@ -463,6 +463,11 @@ ul.entries li:hover img {
   margin: 10px;
   padding: 2px;
   border: 1px solid #bbbbbb;
+}
+
+img.transparent {
+  background-image: url('/resources/images/checkerboard.png');
+  background-repeat: repeat;
 }
 
 a:link img.hoverimage, a:visited img.hoverimage {
