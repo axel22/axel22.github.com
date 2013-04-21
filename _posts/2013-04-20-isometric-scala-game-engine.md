@@ -102,7 +102,7 @@ and the fireplace shown earlier occupies three tiles (1x3 sprite).
 The sprites can no longer be drawn going from one corner of the scene to another,
 so two simple `for` loops will not do.
 Lets focus on the following detail in one of the screenshots -- a dining table with chairs around it.
-<img src="/resources/images/dining-table.png" class="imageinline transparent"/>
+<img src="/resources/images/dining-table.png" class="imageinline"/>
 The dining table is something like a 7x3 sprite and each chair is a 1x1 sprite.
 If we render rows of tiles from the north-east going to south-west, and render tiles in each
 row going from north-west to south-east, then the chair on the head of the table will be rendered
