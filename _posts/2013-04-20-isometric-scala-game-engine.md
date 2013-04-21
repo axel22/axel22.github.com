@@ -97,7 +97,7 @@ through the rows of tiles in the scene and through the tiles in each row.
 However, when it comes to isometric tile-based engines where a sprite may occupy more than a single
 tile, things get a bit more convoluted.
 The chair on the left occupies a single tile (1x1 sprite),
-but the oak tree shown occupies four tiles (2x2 sprite)
+but the oak tree on the right occupies four tiles (2x2 sprite)
 and the fireplace shown earlier occupies three tiles (1x3 sprite).
 The sprites can no longer be drawn going from one corner of the scene to another,
 so two simple `for` loops will not do.
@@ -113,7 +113,7 @@ of the table will be drawn over it.
 The naive approach of sorting all the visible sprites in the scene (either by maintaining a binary
 search tree or sorting them just once before rendering) and then rendering them in that order
 won't work either.
-The problem is that the sprites that occupy rectangular areas do not for a *total order*
+The problem is that the sprites that occupy rectangular areas do not form a *total order* with respect to rendering
 (note that the more general problem of rendering sprites that occupy non-rectangular areas is not
 really solvable -- in this case sprites could overlap).
 Instead, they form a *partial order* -- given two sprites and their locations on the screen
