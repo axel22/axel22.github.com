@@ -14,7 +14,7 @@ development under the supervision of [dr. Martin Odersky](http://lampwww.epfl.ch
 Prior to that, I received my Master degree at the [Faculty of Electrical Engineering and Computing](http://www.fer.hr/)
 in Zagreb.
 My research interests are in the design and implementation of frameworks, languages and runtime support
-for development of concurrent and parallel software.
+for concurrent and parallel software development.
 
 
 # <a id="publications">Publications</a>

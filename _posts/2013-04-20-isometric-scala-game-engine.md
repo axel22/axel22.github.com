@@ -74,7 +74,7 @@ As mentioned before, most of the game is sprite-based.
 <img src="/resources/images/org.brijest.storm.engine.model.characters.castle.FireplaceLeft.png" class="imageinlineright transparent"/>
 All sprites are rendered using 3ds MAX and then placed into appropriate positions by the
 game engine at runtime to produce the entire image.
-What are [sprites](http://en.wikipedia.org/wiki/Sprite_(computer_graphics))?
+What are <a href="http://en.wikipedia.org/wiki/Sprite_(computer_graphics)">sprites</a>?
 In short, these are two-dimensional images integrated into a larger scene.
 The scene is in this case what you see in the screenshots above.
 A sprite is just a relatively small PNG image with transparent background that you can blend into the scene.
@@ -97,12 +97,12 @@ through the rows of tiles in the scene and through the tiles in each row.
 However, when it comes to isometric tile-based engines where a sprite may occupy more than a single
 tile, things get a bit more convoluted.
 The chair on the left occupies a single tile (1x1 sprite),
-but the oak tree shown occupies four tiles (2x2 sprite)
+but the oak tree on the right occupies four tiles (2x2 sprite)
 and the fireplace shown earlier occupies three tiles (1x3 sprite).
 The sprites can no longer be drawn going from one corner of the scene to another,
 so two simple `for` loops will not do.
 Lets focus on the following detail in one of the screenshots -- a dining table with chairs around it.
-<img src="/resources/images/dining-table.png" class="imageinline transparent"/>
+<img src="/resources/images/dining-table.png" class="imageinline"/>
 The dining table is something like a 7x3 sprite and each chair is a 1x1 sprite.
 If we render rows of tiles from the north-east going to south-west, and render tiles in each
 row going from north-west to south-east, then the chair on the head of the table will be rendered
@@ -113,14 +113,16 @@ of the table will be drawn over it.
 The naive approach of sorting all the visible sprites in the scene (either by maintaining a binary
 search tree or sorting them just once before rendering) and then rendering them in that order
 won't work either.
-The problem is that the sprites that occupy rectangular areas do not for a *total order*
+The problem is that the sprites that occupy rectangular areas do not form a *total order* with respect to rendering
 (note that the more general problem of rendering sprites that occupy non-rectangular areas is not
 really solvable -- in this case sprites could overlap).
 Instead, they form a *partial order* -- given two sprites and their locations on the screen
 you can only tell which should be rendered first if they overlap.
 Otherwise, their relative rendering order depends on other sprites that are potentially between them.
-This means that binary search trees or an efficient comparison sort won't help you.
-These approaches assume the existence of total order between the elements, although a quadratic complexity bubble sort might -- try to convince yourself of this.
+This means that binary search trees or an efficient comparison sort won't help you
+(although a quadratic complexity bubble sort might -- try to convince yourself of this).
+These approaches assume the existence of total order between the elements,
+without it the sprites would be spuriously rendered out of order.
 
 Another complicating factor is that the terrain is not just one huge flat area -- different terrain tiles can have different elevations.
 This design decision is meant to make the whole scene more realistic.
