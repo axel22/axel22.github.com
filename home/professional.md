@@ -13,7 +13,9 @@ working in the [LAMP](http://lamp.epfl.ch) laboratory on [Scala](http://www.scal
 development under the supervision of [dr. Martin Odersky](http://lampwww.epfl.ch/~odersky/).
 Prior to that, I received my Master degree at the [Faculty of Electrical Engineering and Computing](http://www.fer.hr/)
 in Zagreb.
-My research interests are in the design and implementation of frameworks, languages and runtime support
+My research interests include persistent and concurrent data structures,
+reactive programming and reactive data structures,
+and the design and implementation of frameworks, languages and runtime support
 for concurrent and parallel software development.
 
 
