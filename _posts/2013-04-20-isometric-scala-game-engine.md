@@ -119,8 +119,7 @@ really solvable -- in this case sprites could overlap).
 Instead, they form a *partial order* -- given two sprites and their locations on the screen
 you can only tell which should be rendered first if they overlap.
 Otherwise, their relative rendering order depends on other sprites that are potentially between them.
-This means that binary search trees or an efficient comparison sort won't help you
-(although a quadratic complexity bubble sort might -- try to convince yourself of this).
+This means that binary search trees or an efficient comparison sort won't help you.
 These approaches assume the existence of total order between the elements,
 without it the sprites would be spuriously rendered out of order.
 
