@@ -144,7 +144,7 @@ In this case there are no objects "behind" the chair, so it has no dependencies.
 On the image on the left we highlight the tiles the second chair depends on -- in this case those tiles contain the dinner table, and the chair has a direct dependency on it.
 The dinner table on the other hand has a dependency on the first chair, so there exists a transitive rendering dependency between the second and the first chair.
 Once the dependency graph is fully created a simple for-loop can be used to render all the tiles and the sprites on the screen by checking if all the dependencies have been rendered and rendering them when required.
-Note that in the worst case the complexity is still quadratic, but only if all the sprites have sizes proportional to the size of the screen, and no sprites are that big.
+Note that in the worst case the complexity is still quadratic, but only if all the sprites have sizes proportionate to the size of the screen, and no sprites are that big.
 
 To be continued ...
 
