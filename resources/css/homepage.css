@@ -107,6 +107,10 @@ a:hover {
   text-decoration: none;
 }
 
+p {
+  text-align: justify;
+}
+
 #wrap {
   background-image: url('/resources/images/content3.png');
   background-repeat: repeat;

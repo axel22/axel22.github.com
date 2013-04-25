@@ -127,8 +127,24 @@ Another complicating factor is that the terrain is not just one huge flat area -
 This design decision is meant to make the whole scene more realistic.
 Note, that the engine does not allow two tiles to be above each other, though, to keep things simpler.
 
-After having shown the difficulties of rendering in an isometric tile-based scene,
-lets show how our engine copes with this.
+After having shown the difficulties of rendering in an isometric tile-based scene, lets show how our engine copes with this.
+First of all, notice that while a classic comparison sort requires the elements to form a total order, comparing all the elements of the scene mutually can yield a proper rendering order (this is precisely what efficient comparison sorts were designed to avoid by relying on the transitivity property of the total order).
+We can compare each sprite X in the scene to each other sprite Y in the scene and store a dependency X->Y if Y should be rendered before X.
+This forms a directed acyclic graph (we have to be careful how exactly we define dependencies between sprites to guarantee this acyclicity).
+<img src="/resources/images/dining-table-2.png" class="imageinlineright"/>
+To render the sprite X we can then find all the sprites Y for which there is a dependency X->Y, and recursively render sprite Y if it has not been rendered yet -- only after all the dependencies have been rendered can X be rendered itself.
+Unfortunately, this also yields and `O(n^2)` asymptotic complexity when creating the dependency graph as the number of sprites `n` grows, which will typically happen as the screen resolution goes up.
+
+However, it is straightforward to see that we do not need to look for a dependency between all the sprite pairs.
+Most of the sprites have the property of being relatively small, so the sprites that they could overlap with should be somewhere in the immediate vicinity.
+In the image on the right the tiles that could contain sprites that the chair could possibly overlap with are highlighted.
+Note that we have to check only 7 tiles for objects instead of thousands of them.
+In this case there are no objects "behind" the chair, so it has no dependencies.
+<img src="/resources/images/dining-table-3.png" class="imageinline"/>
+On the image on the left we highlight the tiles the second chair depends on -- in this case those tiles contain the dinner table, and the chair has a direct dependency on it.
+The dinner table on the other hand has a dependency on the first chair, so there exists a transitive rendering dependency between the second and the first chair.
+Once the dependency graph is fully created a simple for-loop can be used to render all the tiles and the sprites on the screen by checking if all the dependencies have been rendered and rendering them when required.
+Note that in the worst case the complexity is still quadratic, but only if all the sprites have sizes proportional to the size of the screen, and no sprites are that big.
 
 To be continued ...
 
