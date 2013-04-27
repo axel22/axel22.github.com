@@ -184,6 +184,7 @@ To allocate a `DepNode` object we do the following:
           freeList = depnode.freeNext
         } else {
           depnode.next.freeNext = depnode.freeNext
+          freeList = depnode.next
           depnode.next = null
         }
         depnode.freeNext = null
