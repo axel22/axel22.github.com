@@ -1,5 +1,4 @@
 
-
 @font-face {
   font-family: Iceland;
   src: url('../fonts/Iceland-Regular.ttf');
@@ -424,7 +423,7 @@ ul.entries li:hover {
 }
 
 ul.entries img.fixedheight {
-  height: 48px;
+  height: 64px;
 }
 
 ul.entries img {
