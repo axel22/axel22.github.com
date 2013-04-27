@@ -208,7 +208,7 @@ Keeping a two-dimensional free list like this makes the deallocations really fas
 Not having a two-dimensional free list would require deallocating every unrolled linked list node by traversing the list, and `O(n)` operation for each list -- although most sprites will not have many dependencies, this would still be slower.
 
 Once all the sprites are rendered we end up with a nice-looking scene, although somewhat flat.
-The scene will be flat and lacking depth.
+Such a scene will be lacking depth -- if you played Crusader in the 90s you'll know what I'm talking about.
 To overcome this and add more realism, we do something untypical for most sprite-based engines -- we employ [shadow-mapping](http://en.wikipedia.org/wiki/Shadow_mapping) so that the objects cast shadows.
 Shadow-mapping is a technique that requires a 3D representation of the scene, which the sprites lack.
 In the next post in this series I will describe how we achieve shadow mapping.
