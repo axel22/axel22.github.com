@@ -146,11 +146,75 @@ The dinner table on the other hand has a dependency on the first chair, so there
 Once the dependency graph is fully created a simple for-loop can be used to render all the tiles and the sprites on the screen by checking if all the dependencies have been rendered and rendering them when required.
 Note that in the worst case the complexity is still quadratic, but only if all the sprites have sizes proportionate to the size of the screen, and no sprites are that big.
 
-To be continued ...
+Note that each sprite has multiple dependencies -- this means we cannot tightly encode all the dependencies within a single object, because there is a variable number of them.
+We could use a dynamically growing array to store the dependencies, but then we have to dynamically reallocate the array and copy dependencies.
+We could use linked lists to avoid this, but allocating a node for each link increases the memory footprint, the amount of work and also creates a pressure on the garbage collector.
+Instead, we use something in between arrays and linked lists -- an [unrolled linked list](http://en.wikipedia.org/wiki/Unrolled_linked_list).
+Instead of each node holding a single dependency, it holds several of them, in our case up to 32.
+Once a node is filled, an additional dependency node is allocated.
+We encode this as follows:
+
+    final class DepNode {
+      val deps = new Array[Int](32)
+      var sz = 0
+      var next: DepNode = null
+      var freeNext: DepNode = null
+    }
+
+The `deps` array contains the dependencies for the current sprite encoded as tile coordinates, while the `sz` field denotes how many entries in the array `deps` should be considered -- the array may not be full.
+Adding a new dependency amounts to writing to the array and incrementing `sz`.
+Once `sz` is equal to `32` we allocate a new `DepNode` object and assign it to `next`.
+We will come back to describing what the `freeNext` field is used for.
+To traverse all the dependencies, we have to traverse the `deps` array, and the `next` node recursively if it is non-`null`.
+This way the unrolled linked list traversal performance can be made arbitrary close to that of a regular array traversal, and it has nice locality properties as well.
+
+Interestingly, while this decreases the memory footprint on the JVM, the actual performance difference between unrolled linked lists and regular linked lists is not that big.
+This is partly because the GC has to do approximately the same amount of work when collecting the unrolled linked list nodes as linked list nodes, and partly because each time an array for the unrolled linked list is allocated, it has to be cleared first.
+Although object pooling on the JVM is generally not recommended, we can avoid these two costs in this case by maintaining a variant of a [free list](http://en.wikipedia.org/wiki/Free_list) memory pool implementation.
+We maintain a separate singly linked list of `DepNode` objects, linked together using the `freeNext` field.
+To allocate a `DepNode` object we do the following:
+
+    var freeList: DepNode = initialPool()
+
+    def alloc(): DepNode = {
+      if (freeList == null) new DepNode()
+      else {
+        val depnode = freeList
+        if (depnode.next == null) {
+          freeList = depnode.freeNext
+        } else {
+          depnode.next.freeNext = depnode.freeNext
+          depnode.next = null
+        }
+        depnode.freeNext = null
+        depnode.sz = 0
+        depnode
+      }
+    }
+
+Essentially, we create an object if there are no free objects left in the free list.
+Otherwise, we return the first object on the free list.
+If the first object had its `next` field set to `null`, then the free list head becomes the next object in the free list as denoted by the `freeNext` field.
+Otherwise, the `next` node in the unrolled list that `depnode` was previously a part of becomes the head of the free list.
+
+Once the frame is rendered, all the sprites in the scene have to have their dependency lists deallocated by calling `dealloc`.
+Keeping a two-dimensional free list like this makes the deallocations really fast:
+
+    def dealloc(depnode: DepNode) {
+      depnode.freeNext = freeList
+      freeList = depnode
+    }
+
+Not having a two-dimensional free list would require deallocating every unrolled linked list node by traversing the list, and `O(n)` operation for each list -- although most sprites will not have many dependencies, this would still be slower.
+
+Once all the sprites are rendered we end up with a nice-looking scene, although somewhat flat.
+The scene will be flat and lacking depth.
+To overcome this and add more realism, we do something untypical for most sprite-based engines -- we employ [shadow-mapping](http://en.wikipedia.org/wiki/Shadow_mapping) so that the objects cast shadows.
+Shadow-mapping is a technique that requires a 3D representation of the scene, which the sprites lack.
+In the next post in this series I will describe how we achieve shadow mapping.
+
 
 <!--
-about the architecture - how do we render
-
 on opengl wrapper
 
 future - radiosity or something similar
