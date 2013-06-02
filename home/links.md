@@ -22,6 +22,8 @@ The following is a list of possibly interesting links on various topics.
 
 The following is a list of possibly useful links on various computer science topics.
 
+* [OpenGL Transformation](http://www.songho.ca/opengl/gl_transform.html) - a nice overview of OpenGL transformation matrices.
+
 * [False Sharing Induced By Card Marking](https://blogs.oracle.com/dave/entry/false_sharing_induced_by_card) - for all those who plan to implement a performance-critical concurrent algorithm on the JVM
 
 * [Inside the Hotspot VM: Clocks, Timers and Scheduling Events](https://blogs.oracle.com/dholmes/entry/inside_the_hotspot_vm_clocks) - an overview of clocks and timers on the JVM and how they work
