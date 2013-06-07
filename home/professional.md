@@ -190,6 +190,10 @@ France, March 2011
 
 # <a id="articles">Articles and writeups</a>
 
+* [SIP-20: Improved Lazy Val Initialization](http://docs.scala-lang.org/sips/pending/improved-lazy-val-initialization.html)<br/>
+Aleksandar Prokopec, Miguel Garcia, Jason Zaugg, Hubert Plociniczak, Viktor Klang, Martin Odersky<br/>
+Lausanne, Switzerland, May 2013
+
 * [ScalaMeter Introduction](http://axel22.github.com/scalameter/home/gettingstarted/)<br/>
 Aleksandar Prokopec<br/>
 Lausanne, Switzerland, November 2012
