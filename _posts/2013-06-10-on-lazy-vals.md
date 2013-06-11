@@ -25,7 +25,7 @@ Here's an example:
 
 The program prints `Computing x.` first due to the `lazy` modifier on `x`.
 It prints `Getting initialized...` only once -- after initialization the value is cached, so to speak.
-Notice the wording above "thread of control".
+Notice the wording "thread of control" above.
 Indeed, the field `x` could have been accessed by different threads
 and as the above example shows, the so-called lazy val initializer block can have side-effects.
 If multiple threads were allowed to run the initializer block, program semantics would be non-deterministic.
