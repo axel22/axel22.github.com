@@ -249,7 +249,7 @@ on the object's `identityHashCode` value.
     }
 
 This seems better than the list approach, because it only allocates the dummies only once.
-This is ok, since the number of threads causing contention on the dummies is
+Also, the number of threads causing contention on the dummies at a single point in time is
 at runtime bound by the number of processors.
 And indeed, by tweaking the `N` and relating it to the number of processors `P`
 we can decrease the probability of contention on a dummy synchronization object arbitrarily,
