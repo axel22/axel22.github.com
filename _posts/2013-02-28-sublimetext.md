@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Bought Sublime Text 3 license
+title: Bought Sublime Text 3 License
 poster: Alex
 ---
 
