@@ -33,10 +33,12 @@ Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Vi
 Montpellier, France, July 2013<br/>
 \[[PDF]()\]
 
+<!--
 * **Multi-Lane FlowPools: A detailed look**<br/>
 Tobias Schlatter, Aleksandar Prokopec, Heather Miller, Philipp Haller, Martin Odersky<br/>
 [EPFL Tech Report](http://infoscience.epfl.ch/)<br/>
 \[[PDF](/resources/docs/multilane-flowpools.pdf)\]
+-->
 
 * **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
 Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
