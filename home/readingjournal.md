@@ -74,6 +74,11 @@ I also recommend these books.
 ## Literature
 
 
+### 2013
+
+* Martin: A Clash of Kings
+
+
 ### 2012
 
 * Choden: Dawa - The Story of a Stray Dog in Bhutan

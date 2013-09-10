@@ -25,7 +25,7 @@ Here's an example:
 
 The program prints `Computing x.` first due to the `lazy` modifier on `x`.
 It prints `Getting initialized...` only once -- after initialization the value is cached, so to speak.
-Notice the wording above "thread of control".
+Notice the wording "thread of control" above.
 Indeed, the field `x` could have been accessed by different threads
 and as the above example shows, the so-called lazy val initializer block can have side-effects.
 If multiple threads were allowed to run the initializer block, program semantics would be non-deterministic.
@@ -249,7 +249,7 @@ on the object's `identityHashCode` value.
     }
 
 This seems better than the list approach, because it only allocates the dummies only once.
-This is ok, since the number of threads causing contention on the dummies is
+Also, the number of threads causing contention on the dummies at a single point in time is
 at runtime bound by the number of processors.
 And indeed, by tweaking the `N` and relating it to the number of processors `P`
 we can decrease the probability of contention on a dummy synchronization object arbitrarily,

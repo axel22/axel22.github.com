@@ -21,11 +21,22 @@ for concurrent and parallel software development.
 
 # <a id="publications">Publications</a>
 
+* **Near Optimal Work-Stealing Tree Scheduler for Highly Irregular Data-Parallel Workloads **<br/>
+Aleksandar Prokopec, Martin Odersky<br/>
+[The 26th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2013)](https://parasol.tamu.edu/lcpc2013/index.html)<br/>
+Santa Clara, California, September 2013<br/>
+\[[PDF]()\]
+
 * **Composition and Reuse with Compiled Domain-Specific Languages**<br/>
 Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Victoria Popic, Michael Wu, Aleksandar Prokopec, Vojin Jovanovic, Martin Odersky, Kunle Olukotun<br/>
 [The European Conference on Object-Oriented Programming (ECOOP 2013)](http://www.lirmm.fr/ecoop13/)<br/>
 Montpellier, France, July 2013<br/>
 \[[PDF]()\]
+
+* **Multi-Lane FlowPools: A detailed look**<br/>
+Tobias Schlatter, Aleksandar Prokopec, Heather Miller, Philipp Haller, Martin Odersky<br/>
+[EPFL Tech Report](http://infoscience.epfl.ch/)<br/>
+\[[PDF](/resources/docs/multilane-flowpools.pdf)\]
 
 * **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
 Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
@@ -222,6 +233,7 @@ Lausanne, Switzerland, January 2012
 
 I've TA'd on the following courses:
 
+* [Programming Principles 2013](http://lamp.epfl.ch/teaching/progp) - also hosted at [Coursera](https://www.coursera.org/course/progfun)
 * Programming Principles 2013 (spring) - hosted at [Coursera](https://www.coursera.org/course/progfun)
 * [Programming Principles 2012](http://lamp.epfl.ch/teaching/progp) - also hosted at [Coursera](https://www.coursera.org/course/progfun)
 * [Advanced Programming 2011](http://lamp.epfl.ch/teaching/proga)

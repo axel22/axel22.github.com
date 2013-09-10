@@ -22,6 +22,8 @@ The following is a list of possibly interesting links on various topics.
 
 The following is a list of possibly useful links on various computer science topics.
 
+* [AutoHotKey](http://www.autohotkey.com/) - I use several OSs and this really saved me when I upgraded to Windows 7.
+
 * [OpenGL Transformation](http://www.songho.ca/opengl/gl_transform.html) - a nice overview of OpenGL transformation matrices.
 
 * [False Sharing Induced By Card Marking](https://blogs.oracle.com/dave/entry/false_sharing_induced_by_card) - for all those who plan to implement a performance-critical concurrent algorithm on the JVM
