@@ -194,10 +194,14 @@ Palo Alto, California, US, June 2011
 Lausanne, Switzerland, April 2010
 
 
-### Introduction To Scala
+### Scala
 
-* Java User Group Grenoble,
-France, March 2011
+* "Scala as a Research Tool", ECOOP 2013,
+Montpellier, France, July 2013
+\[[HTTP](http://www.lirmm.fr/ec-montpellier-2013/?id=158#tutorial3)\]
+
+* "Introduction to Scala", Java User Group Grenoble,
+Grenoble, France, March 2011
 \[[PPT](/resources/docs/introscala.rar)\]
 
 
