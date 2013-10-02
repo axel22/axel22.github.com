@@ -76,6 +76,7 @@ I also recommend these books.
 
 ### 2013
 
+* Martin: A Storm of Swords
 * Martin: A Clash of Kings
 
 
