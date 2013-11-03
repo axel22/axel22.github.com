@@ -18,7 +18,7 @@ Sometimes, these are just unresolved bugs.
 Here are some tips and tricks that might help you.
 
 
-## Know the fineprint about method specialization
+## Know the conditions for method specialization
 
 Perhaps you're not aware of this, but even if a method is a part of a specialized class and contains specializable code,
 it will not really be specialized unless the specialized type appears in its argument list or its return type.
