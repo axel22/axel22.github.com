@@ -44,7 +44,7 @@ If you want `reset` to be specialized, do something like this:
 > Be aware that for a method to be specialized, it must either take an argument of specializable type from its environment, or it must return a value of such a type.
 
 
-## Instantiating another specialized value in the constructor
+## Initialize specialized values outside constructor body
 
 Specialization in 2.10 has a problem of specializing constructors in some cases.
 Lets say you want to track different method invocations until seeing a specific value `stopKey`
