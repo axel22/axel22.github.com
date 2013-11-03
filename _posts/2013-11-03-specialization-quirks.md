@@ -2,11 +2,12 @@
 layout: blog
 title: Quirks of Scala Specialization
 poster: Alex
+image: /resources/images/scala-programming-language.jpg
 ---
 
 
 Having used specialization a lot and having fixed some of its issues,
-here are a couple useful trick I want to document both for myself and others.
+I came across a couple of useful tricks -- I want to document them both for myself and others.
 Specialization is the feature that allows you to generate separate versions of generic classes for primitive types,
 thus avoiding boxing in most cases.
 First introduced in Scala 2.8 by Iulian Dragos, by Scala 2.11 specialization has become a pretty robust language feature,
