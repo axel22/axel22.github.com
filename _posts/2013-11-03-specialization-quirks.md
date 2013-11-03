@@ -37,8 +37,8 @@ At some point you could arrive at classes `Traversable`, `Traversable.Buffer` an
     }
 
     class Actions[@specialized(Int, Long) K, V](val stopKey: K) {
-      private val insertsBuffer: Traversable.Buffer[(K, V)] = new Traversable.Buffer[(K, V)]
-      private val clearsBuffer: Traversable.Buffer[Unit] = new Traversable.Buffer[Unit]
+      private val insertsBuffer = new Traversable.Buffer[(K, V)]
+      private val clearsBuffer = new Traversable.Buffer[Unit]
     
       def inserts: Traversable[(K, V)] = insertsBuffer
       def clears: Traversable[Unit] = clearsBuffer
