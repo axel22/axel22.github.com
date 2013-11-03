@@ -131,13 +131,13 @@ Well, traits are problematic.
 They are not supported natively on the JVM, so the compiler has to generate a lot of bridge methods each time
 an abstract or a concrete class extend a trait.
 If you take a look at the standard collections code, there are classes like `AbstractSeq` which serve no
-purpose other than to force the compiler to spit out all the bridge methods into the base class `AbstractSeq`
-so that the subclasses of `AbstractSeq` don't have to have all the bridge methods for `Seq` -- instead,
-they inherit them the normal JVM way from `AbstractSeq`.
-I've handwaved the details here -- the important thing is that this technique reduces the standard library
+purpose other than to force the compiler to spit out all the bridge methods into a base class like `AbstractSeq`
+so that its subclasses don't have to have all the bridge methods -- instead,
+they inherit them the normal JVM way from this base class, e.g. `AbstractSeq`.
+I've handwaved the details away here -- the important thing is that this technique reduces the standard library
 size significantly.
 
-Now, thinking in terms of specialization -- a specialized method (one inside a specialized class
+Now, thinking in terms of specialization -- a specialized method (one inside a specialized class)
 will have at most 9 bridges for a single specialized type parameter.
 Obviously, you want to extend specialized traits as least as possible.
 In many cases you will extend a specialized class only for a concrete type and not for all possible types.
