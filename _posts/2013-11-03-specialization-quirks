@@ -129,12 +129,50 @@ and you won't lose specialized methods as described in the previous hint.
 
 ## Make your classes as flat as possible
 
+Specialization is getting more robust, but make no mistakes about it -- sometimes it interacts weirdly with some Scala features.
+Sometimes this is due to bugs, sometimes due to some more fundamental issues.
+
+One important consideration are nested and inner classes.
+Avoid them!
+You could write:
+
+    trait View[@specialized T] {
+      self =>
+      def foreach(f: T => Unit): Unit
+      def filter(p: T => Boolean) = {
+        new View {
+          def foreach(f: T => Unit) = for (v <- self) if (p(v)) f(v)
+        }
+      }
+    }
+
+Instead, write:
+
+    trait View[@specialized T] {
+      self =>
+      def foreach(f: T => Unit): Unit
+      def filter(p: T => Boolean) = {
+        new View.Filtered[T](self, p)
+      }
+    }
+    
+    object View {
+      class Filtered[@specialized T](val self: View[T], val p: T => Boolean) extends View[T] {
+        def foreach(f: T => Unit) = for (v <- self) if (p(v)) f(v)
+      }
+    }
+
+Sometimes the specialization phase of the compiler will fail to reproduce the correct flattening of the nested classes, so you need to do it yourself.
+The particular example in this hint might even work, but in general avoid nesting specialized stuff in specialized stuff.
+In the best case, you will receive a warning about some members of the enclosing class not being accessible or not existing.
+
 
 ## Avoid `super` calls
 
 Qualified `super` calls are (perhaps fundamentally) broken with specialization.
 Rewiring the super-accessor methods properly in the specialization phase is a nightmare that has not been solved so far.
 So, avoid them like the plague, at least for now.
+In particular, don't rely that stackable modifications pattern will work with it well (as if anybody's using that one anyway).
 
 
 ## Think about the primitive types you really care about
