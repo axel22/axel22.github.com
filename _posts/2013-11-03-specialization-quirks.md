@@ -99,7 +99,7 @@ Here is the pattern to solve the above issues - create a method `init` in which 
 
 Make sure that the `init` method takes an argument of the specialized type.
 This will enforce proper specialization and accessing the fields properly.
-Not that I spent some time minimizing the above example from real, bigger codebase, and it's not really that easy to trigger it.
+Note that I spent some time minimizing the above example from real, bigger codebase, and it's not really that easy to trigger it.
 I won't get into the precise conditions for this issue to happen, as this is buggy behaviour anyway -- the important thing is to know how to solve these kind of `IllegalAccessError`s if you run into them.
 
 > When initializing more complex specialized classes, consider creating an `init` method to initialize specializable fields.
