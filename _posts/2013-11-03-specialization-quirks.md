@@ -158,7 +158,8 @@ Instead, write:
     }
     
     object View {
-      class Filtered[@specialized T](val self: View[T], val p: T => Boolean) extends View[T] {
+      class Filtered[@specialized T](val self: View[T], val p: T => Boolean)
+      extends View[T] {
         def foreach(f: T => Unit) = for (v <- self) if (p(v)) f(v)
       }
     }
