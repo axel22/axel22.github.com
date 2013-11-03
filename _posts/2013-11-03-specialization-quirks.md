@@ -52,7 +52,7 @@ If you try to instantiate `Actions`, you'll get:
       at org.test.Main.main(Main.scala)
 
 I won't get into why the above fails the way it fails - suffices to say that the specialization creates specialized fields in the specialized variants of the class 
-and does not properly rewire the bridges for the method fields correctly.
+and does not properly rewire the bridges for the field accessor methods correctly.
 Here is the pattern to solve the above issues - create a method `init` in which you initialize the troublesome fields
 are initialized:
 
