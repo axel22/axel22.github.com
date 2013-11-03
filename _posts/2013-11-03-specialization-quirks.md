@@ -17,6 +17,33 @@ that are not expected.
 Sometimes, these are just unresolved bugs.
 Here are some tips and tricks that might help you.
 
+
+## Know the fineprint about method specialization
+
+Perhaps you're not aware of this, but even if a method is a part of a specialized class and contains specializable code,
+it will not really be specialized unless the specialized type appears in its argument list or its return type.
+For example:
+
+    def getValue[@specialized T]: T = ???
+
+    class Foo[@specialized T] {
+      var value: T = _
+      def reset() {
+        value = getValue
+      }
+    }
+
+Above, `reset` is not specialized. This is an elaborate design decision taken in specialization.
+If you want `reset` to be specialized, do something like this:
+
+    def reset(): T = {
+      value = getValue
+      value
+    }
+
+> Be aware that for a method to be specialized, it must either take an argument of specializable type from its environment, or it must return a value of such a type.
+
+
 ## Instantiating another specialized value in the constructor
 
 Specialization in 2.10 has a problem of specializing constructors in some cases.
@@ -44,7 +71,7 @@ At some point you could arrive at classes `Traversable`, `Traversable.Buffer` an
       def clears: Traversable[Unit] = clearsBuffer
     }
 
-If you try to instantiate `Actions`, you'll get:
+If you try to instantiate `Actions` in Scala 2.10.1, you'll get:
 
     Exception in thread "main" java.lang.IllegalAccessError
       at org.test.Actions$mcI$sp.<init>(Main.scala:57)
@@ -53,8 +80,7 @@ If you try to instantiate `Actions`, you'll get:
 
 I won't get into why the above fails the way it fails - suffices to say that the specialization creates specialized fields in the specialized variants of the class 
 and does not properly rewire the bridges for the field accessor methods in the constructor body correctly.
-Here is the pattern to solve the above issues - create a method `init` in which you initialize the troublesome fields
-are initialized:
+Here is the pattern to solve the above issues - create a method `init` in which you initialize the troublesome fields:
 
     class Actions[@specialized(Int, Long) K, V](val stopKey: K) {
       private var insertsBuffer: Traversable.Buffer[(K, V)] = null
@@ -71,7 +97,12 @@ are initialized:
       def clears: Traversable[Unit] = clearsBuffer
     }
 
+Make sure that the `init` method takes an argument of the specialized type.
 This will enforce proper specialization and accessing the fields properly.
+Not that I spent some time minimizing the above example from real, bigger codebase, and it's not really that easy to trigger it.
+I won't get into the precise conditions for this issue to happen, as this is buggy behaviour anyway -- the important thing is to know how to solve these kind of `IllegalAccessError`s if you run into them.
+
+> When initializing more complex specialized classes, consider creating an `init` method to initialize specializable fields.
 
 
 ## Use `trait`s where possible
@@ -89,6 +120,8 @@ Dropping the specialized class means you will lose specializations of some metho
 
 Bottomline is, use traits with specialization if you need to extend specialized classes - they allow multiple inheritance
 and you won't lose specialized method versions from the hierarchy.
+
+> Use traits in specialized class hierarchies to ensure that all the specialized methods are correctly inherited.
 
 
 ## Avoid `trait`s where possible
@@ -124,8 +157,10 @@ You would typically extend it for particular types `T` as an anonymous class:
 
 Why have `Observer` as a trait then and generate hundreds of bridge methods everywhere?
 Instantiate a specialized abstract class `AbstractObserver[@specialized T]`.
-Extending it for a single type, e.g. `Int`, will inherit the specialized `AbstractObserver$mcI$sp`
+Extending it for a single type, e.g. `Int`, will inherit the specialized variant `AbstractObserver$mcI$sp`
 and you won't lose specialized methods as described in the previous hint.
+
+> Use abstract specialized superclasses for anonymous classes and classes extending superclasses with a concrete specialized type parameter to save compilation time and make compiler output smaller.
 
 
 ## Make your classes as flat as possible
@@ -168,6 +203,8 @@ Sometimes the specialization phase of the compiler will fail to reproduce the co
 The particular example in this hint might even work, but in general avoid nesting specialized stuff in specialized stuff.
 In the best case, you will receive a warning about some members of the enclosing class not being accessible or not existing.
 
+> In general, avoid nesting specialized classes.
+
 
 ## Avoid `super` calls
 
@@ -175,6 +212,8 @@ Qualified `super` calls are (perhaps fundamentally) broken with specialization.
 Rewiring the super-accessor methods properly in the specialization phase is a nightmare that has not been solved so far.
 So, avoid them like the plague, at least for now.
 In particular, don't rely that stackable modifications pattern will work with it well (as if anybody's using that one anyway).
+
+> Avoid `super` calls.
 
 
 ## Think about the primitive types you really care about
@@ -186,6 +225,9 @@ So, think about which primitive types your application(s) will actually use.
 I usually specialize on `Int`, `Long` and `Double`, in many cases that's enough:
 
     class Foo[@specialized(Int, Long, Double) T]
+
+> Restrict your specialized primitive types to ensure shorter compilation times and make compiler output smaller.
+
 
 I hope this summarizes some of the useful guidelines when dealing with Scala specialization.
 I'll add more tips here if I remember some or run into them.
