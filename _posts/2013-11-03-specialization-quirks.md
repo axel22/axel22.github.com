@@ -14,7 +14,7 @@ First introduced in Scala 2.8 by Iulian Dragos, by Scala 2.11 specialization has
 and a lot of its issues have been fixed, but there are places where it might stab you in the back if you don't watch out.
 Problem is, specialization interacts with a huge bunch of edge-cases in the language and obscure language features in ways
 that are not expected.
-Sometimes, it's just unresolved bugs.
+Sometimes, these are just unresolved bugs.
 Here are some tips and tricks that might help you.
 
 ## Instantiating another specialized value in the constructor
