@@ -2,6 +2,7 @@
 layout: blog
 title: On the Future of Lazy Vals In Scala
 poster: Alex
+image: /resources/images/scala-programming-language.jpg
 ---
 
 
