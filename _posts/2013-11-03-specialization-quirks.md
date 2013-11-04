@@ -105,6 +105,31 @@ I won't get into the precise conditions for this issue to happen, as this is bug
 > When initializing more complex specialized classes, consider creating an `init` method to initialize specializable fields.
 
 
+## Resolve access problems using the `package`-`private` modifier
+
+When you instantiate an anonymous class inside a specialized class and the
+anonymous class accesses private members of the surrounding specialized class,
+you might get a compiler error message telling you that the member cannot be accessed.
+In the following example:
+
+    class Buffer[@specialized T] {
+      private var array: Array[T] = ???
+      def iterator = new Iterator[T] {
+        var i = 0
+        def hasNext = i < array.length
+        def next() = ???
+      }
+    }
+
+an anonymous iterator should have access to the specialized array of the surrounding buffer.
+Normally, the compiler should remove the `private` modifier of the surrounding class,
+so that those fields don't end up `private` at the bytecode level (this is the case for both Scala and Java, I believe).
+With specialization this sometimes does not happen.
+Solution -- just make the problematic members `package`-`private`.
+
+> Use the `package-private` modifier for fields meant to be private to resolve access problems in inner classes.
+
+
 ## Use `trait`s where possible
 
 For each specialized class `C[@specialized T]`, specialization creates its normal generic version `C[T]`
