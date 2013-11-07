@@ -22,6 +22,8 @@ The following is a list of possibly interesting links on various topics.
 
 The following is a list of possibly useful links on various computer science topics.
 
+* [Windows, Cygwin and Jekyll](http://matt.scharley.me/2012/03/10/windows-cygwin-and-jekyll.html) - useful blogpost on installing Jekyll on Windows.
+
 * [AutoHotKey](http://www.autohotkey.com/) - I use several OSs and this really saved me when I upgraded to Windows 7.
 
 * [OpenGL Transformation](http://www.songho.ca/opengl/gl_transform.html) - a nice overview of OpenGL transformation matrices.
