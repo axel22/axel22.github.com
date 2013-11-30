@@ -25,7 +25,7 @@ for concurrent and parallel software development.
 Aleksandar Prokopec, Martin Odersky<br/>
 [The 26th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2013)](https://parasol.tamu.edu/lcpc2013/index.html)<br/>
 Santa Clara, California, September 2013<br/>
-\[[PDF]()\]
+\[[PDF](/resources/docs/lcpc2013_submission_6.pdf)\]
 
 * **Composition and Reuse with Compiled Domain-Specific Languages**<br/>
 Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Victoria Popic, Michael Wu, Aleksandar Prokopec, Vojin Jovanovic, Martin Odersky, Kunle Olukotun<br/>
