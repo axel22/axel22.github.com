@@ -77,6 +77,15 @@ London, UK, August 2009<br/>
 This section shortly describes some of the projects I've been working on.
 
 
+## ![scalablitz](/resources/images/chess-knight-logo.png) ScalaBlitz
+
+A data-parallel programming framework that optimizes collection operations
+and offers superior performance to that provided by the Scala standard library collections.
+
+* [Project website](http://scala-blitz.github.io/)
+* [Source code](https://github.com/scala-blitz/scala-blitz)
+
+
 ## ![scalameter](/resources/images/scalameter-small.png) ScalaMeter
 
 ScalaMeter is a microbenchmarking and performance regression testing framework
