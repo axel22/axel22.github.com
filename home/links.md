@@ -85,7 +85,7 @@ Online communities, services and networks I am a part of.
   <img class="hoverimage" src="/resources/images/picasa_32.png" alt="Picasa albums for axel22" title="Picasa albums for axel22"/>
 </a>
 
-<a href="https://twitter.com/__axel22">
+<a href="https://twitter.com/_axel22_">
   <img class="hoverimage" src="/resources/images/twitter-32.png"/>
 </a>
 
