@@ -241,6 +241,22 @@ In particular, don't rely that stackable modifications pattern will work with it
 > Avoid `super` calls.
 
 
+## Be wary of `var`s
+
+Be aware that `var`s with specializable types may result in an increase in memory footprint. Namely, because of the limitations of the JVM in combination with the current specialization design in which subclasses are specializations of the generic class, the following class:
+
+    class Foo[@specialized(Int) T](var x: T)
+
+will result in a generic class `Foo` with one field `x`, and a specialized class `Foo$mcI$sp` with **an additional field** `x$mcI$sp`:
+
+    class Foo$mcI$sp(var x$mcI$sp: Int)
+    extends Foo[Int](null)
+
+The original field `x` is initialized to `null` in a specialized subclass.
+
+> Avoid or minimize `var`s in specialized classes if memory footprint is a concern.
+
+
 ## Think about the primitive types you really care about
 
 Blindly specializing on all your primitive types is both unnecessary
@@ -250,6 +266,8 @@ So, think about which primitive types your application(s) will actually use.
 I usually specialize on `Int`, `Long` and `Double`, in many cases that's enough:
 
     class Foo[@specialized(Int, Long, Double) T]
+
+In fact, you will find that the `FunctionN` classes in the Scala standard library are specialized only for specific types. And the higher the arity, the less they're specialized.
 
 > Restrict your specialized primitive types to ensure shorter compilation times and make compiler output smaller.
 
