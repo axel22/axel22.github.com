@@ -256,6 +256,45 @@ The original field `x` is initialized to `null` in a specialized subclass.
 
 > Avoid or minimize `var`s in specialized classes if memory footprint is a concern.
 
+So what can you do if you still need those `var`s but want to reduce memory footprint?
+You can use the following trick.
+Lets say that you are implementing a closed addressing hash table and need an `Entry` object for each key.
+Normally, you'd declare a specialized class `Entry` with a `key` field that would be duplicated.
+Instead, you can declare a trait:
+
+    trait Entry[@specialized(Int, Long) K] {
+      def key: K
+      def key_=(k: K): Unit
+    }
+
+Now, you can have concrete implementations of that trait:
+
+    final class AnyRefEntry[K](var key: K) extends Entry[K]
+    final class IntEntry(var key: Int) extends Entry[Int]
+    final class LongEntry(var key: Long) extends Entyr[Long]
+
+Each of these concrete entries will have only a single field.
+To instantiate the correct `Entry` implementation in the hash table implementation,
+use a typeclass resolved when the hash table is instantiated:
+
+    trait Entryable[@specialized(Int, Long) K] {
+      def newEntry(k: K): Entry[K]
+    }
+    
+    implicit def anyRefEntryable[K] = new Entryable[K] {
+      def newEntry(k: K) = new AnyRefEntry(k)
+    }
+    
+    implicit def intEntryable = new Entryable[Int] {
+      def newEntry(k: Int) = new IntEntry(k)
+    }
+    
+    class HashTable[@specialized(Int, Long) K]
+      (implicit val e: Entryable[K])
+    
+The most specific implicit is then resolved when
+calling `new HashTable`.
+
 
 ## Think about the primitive types you really care about
 
