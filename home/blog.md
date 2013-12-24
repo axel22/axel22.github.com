@@ -17,14 +17,7 @@ I rant about all kinds of stuff here.
 {% for post in site.posts limit:3 %}
 
 <h1 class="entrytitle">{{post.title}}</h1>
-<span class="entryinfo">
-  {% if post.poster %}
-    posted by {{ post.poster }},
-  {% endif %}
-  {% if post.date %}
-    {{ post.date | date: "%d.%m.%Y." }}
-  {% endif %}
-</span>
+<span class="entryinfo">{% if post.poster %}posted by {{ post.poster }},{% endif %}{% if post.date %}{{ post.date | date: "%d.%m.%Y." }}{% endif %}</span>
 {{ post.content }}
 
 <br/>
