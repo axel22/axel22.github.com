@@ -271,7 +271,7 @@ Now, you can have concrete implementations of that trait:
 
     final class AnyRefEntry[K](var key: K) extends Entry[K]
     final class IntEntry(var key: Int) extends Entry[Int]
-    final class LongEntry(var key: Long) extends Entyr[Long]
+    final class LongEntry(var key: Long) extends Entry[Long]
 
 Each of these concrete entries will have only a single field.
 To instantiate the correct `Entry` implementation in the hash table implementation,
