@@ -43,6 +43,31 @@ If you want `reset` to be specialized, do something like this:
 
 > Be aware that for a method to be specialized, it must either take an argument of specializable type from its environment, or it must return a value of such a type.
 
+But that's not all. If more than one type-parameter is specialized, then specialized class instances are created only if all the specialized type parameters are instantiated at a primitive type. Here's a quiz:
+
+    class Foo[@specialized T, @specialized S, R] {
+      var tv: T = _
+      var sv: S = _
+      var rv: R = _
+    }
+    val x = new Foo[Int, String, String]
+    val y = new Foo[Int, Long, String]
+
+Will `x` and/or `y` refer to a specialized object?
+
+Specialization never generates a specialized class that is a combination of specialized and generic type parameters that have been annotated with `@specialized`.
+The compiler will "rewrite" the last 2 lines to:
+
+    val x = new Foo[java.lang.Integer, String, String]
+    val y = new Foo$mcIJ$sp
+
+So, `y` is instantiated with a specialized class `Foo$mcIJ$sp` because both `T` and `S` are instantiated at primitive types `Int` and `Long`, but `x` refers to a generic object.
+
+> Specialization has an all-or-nothing semantics when picking a specialized implementation -- all the `@specialized`-annotated type parameters must be instantiated as primitive types to yield a specialized object.
+
+Don't be surprised if half-specialized constructor invocations end up creating object instances that box everything.
+This applies to methods as well as constructor invocations.
+
 
 ## Initialize specialized values outside constructor body
 
