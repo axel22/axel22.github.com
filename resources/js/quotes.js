@@ -13,3 +13,15 @@ function fetchQuote() {
 	var index = day % quotes.length;
 	return quotes[index];
 }
+
+function setBigQuoteBox() {
+	var quotebox = document.getElementById("bigquotebox");
+	var quote = fetchQuote();
+	var textnode = document.createElement("p");
+	textnode.appendChild(document.createTextNode(quote.text));
+	var authornode = document.createElement("p");
+	authornode.appendChild(document.createTextNode(quote.author));
+	authornode.setAttribute("style", "text-align: right;");
+	quotebox.appendChild(textnode);
+	quotebox.appendChild(authornode);
+}
