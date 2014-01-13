@@ -13,6 +13,8 @@ The preferred way to contact me is through e-mail:
   my firstname then a dot my surname then a monkey gmail then a dot com
 </blockquote>
 
+Please, **never** use my EPFL address.
+
 
 # ![post](/resources/images/post.png) Mail
 
