@@ -9,7 +9,7 @@ developer, computer graphics hobbyist and a doctoral assistant at [EPFL](http://
 
 I am currently working on a doctorate as a research assistant in the School of Computer
 and Communication Sciences at the [EPFL](http://www.epfl.ch) in Switzerland,
-working in the [LAMP](http://lamp.epfl.ch) laboratory on [Scala](http://www.scala-lang.org)
+in the [LAMP](http://lamp.epfl.ch) laboratory on [Scala](http://www.scala-lang.org)
 development under the supervision of [dr. Martin Odersky](http://lampwww.epfl.ch/~odersky/).
 Prior to that, I received my Master degree at the [Faculty of Electrical Engineering and Computing](http://www.fer.hr/)
 in Zagreb.
