@@ -31,14 +31,7 @@ Santa Clara, California, September 2013<br/>
 Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Victoria Popic, Michael Wu, Aleksandar Prokopec, Vojin Jovanovic, Martin Odersky, Kunle Olukotun<br/>
 [The European Conference on Object-Oriented Programming (ECOOP 2013)](http://www.lirmm.fr/ecoop13/)<br/>
 Montpellier, France, July 2013<br/>
-\[[PDF]()\]
-
-<!--
-* **Multi-Lane FlowPools: A detailed look**<br/>
-Tobias Schlatter, Aleksandar Prokopec, Heather Miller, Philipp Haller, Martin Odersky<br/>
-[EPFL Tech Report](http://infoscience.epfl.ch/)<br/>
-\[[PDF](/resources/docs/multilane-flowpools.pdf)\]
--->
+\[[PDF](/resources/docs/ecoop13_sujeeth.pdf)\]
 
 * **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
 Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
@@ -161,6 +154,18 @@ It is devised to soften the learning curve of students who are being introduced 
 
 # <a id="talks">Talks</a>
 
+
+### ScalaBlitz
+
+* [LCPC 2013](http://lcpc11.cs.colostate.edu/),
+San Jose, California, September 2013
+\[[PPT](/resources/docs/lcpc13.ppt)\]
+* [Scala eXchange 2013](http://skillsmatter.com/event/scala/scala-exchange-2013),
+London, UK, December 2013
+\[[PPT](/resources/docs/scalablitz.pdf)\]
+\[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
+
+
 ### ScalaMeter
 
 * [Scala eXchange 2012](http://skillsmatter.com/event/scala/scala-exchange-2012),
@@ -258,6 +263,8 @@ I worked on the following courses:
 # <a id="misc">Miscellanous</a>
 
 You can find my [reading journal here](/home/reading/).
+
+You can see a list of my [awards and honours here](/home/awards/).
 
 {% include technologies.htm %}
 
