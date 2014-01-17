@@ -157,13 +157,13 @@ It is devised to soften the learning curve of students who are being introduced 
 
 ### ScalaBlitz
 
-* [LCPC 2013](http://lcpc11.cs.colostate.edu/),
-San Jose, California, September 2013
-\[[PPT](/resources/docs/lcpc13.ppt)\]
 * [Scala eXchange 2013](http://skillsmatter.com/event/scala/scala-exchange-2013),
 London, UK, December 2013
 \[[PPT](/resources/docs/scalablitz.pdf)\]
 \[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
+* [LCPC 2013](http://lcpc11.cs.colostate.edu/),
+San Jose, California, September 2013
+\[[PPT](/resources/docs/lcpc13.ppt)\]
 
 
 ### ScalaMeter
