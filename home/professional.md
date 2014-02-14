@@ -90,7 +90,7 @@ multiple configurable JVM microbenchmarking methodologies,
 concise DSL for performance tests and input data generation,
 automated regression detection and configurable performance test reporting.
 
-* [Project website](http://axel22.github.com/scalameter/)
+* [Project website](http://scalameter.github.io/)
 * [Source code](https://github.com/axel22/scalameter)
 
 
