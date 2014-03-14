@@ -12,10 +12,13 @@ Specialization is the feature that allows you to generate separate versions of g
 thus avoiding boxing in most cases.
 First introduced in Scala 2.8 by Iulian Dragos, by Scala 2.11 specialization has become a pretty robust language feature,
 and a lot of its issues have been fixed, but there are places where it might stab you in the back if you don't watch out.
-Problem is, specialization interacts with a huge bunch of edge-cases in the language and obscure language features in ways
+Problem is, specialization interacts with a some edge-cases in the language and obscure language features in ways
 that are not expected.
 Sometimes, these are just unresolved bugs.
 Here are some tips and tricks that might help you.
+
+Note: when used correctly, this is a powerful and extremely useful feature few JVM languages (if any) can parallel these days.
+Don't get scared by these tips.
 
 
 ## Know the conditions for method specialization
@@ -334,6 +337,25 @@ I usually specialize on `Int`, `Long` and `Double`, in many cases that's enough:
 In fact, you will find that the `FunctionN` classes in the Scala standard library are specialized only for specific types. And the higher the arity, the less they're specialized.
 
 > Restrict your specialized primitive types to ensure shorter compilation times and make compiler output smaller.
+
+
+## Avoid using specialization and implicit classes
+
+Instead of:
+
+    implicit class MyTupleOps[@specialized T, @specialized S](tuple: (T, S)) {
+      def reverse: (S, T) = (tuple._2, tuple._1)
+    }
+
+Do this:
+
+    class MyTupleOps[@specialized T, @specialized S](val tuple: (T, S)) {
+      def reverse: (S, T) = (tuple._2, tuple._1)
+    }
+    implicit def tupleOps[@specialized T, @specialized S](tuple: (T, S)) = new MyTupleOps[T, S](tuple)
+
+I've ran across situations when specialized implicit classes compiled in a separate compilation run do not pickle the symbols correctly.
+While this will probably be fixed in the future, if you run into error messages telling you that the `MyTupleOps` symbol is not available, the above is likely to solve the issue.
 
 
 I hope this summarizes some of the useful guidelines when dealing with Scala specialization.
