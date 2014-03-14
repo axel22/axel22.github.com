@@ -352,7 +352,8 @@ Do this:
     class MyTupleOps[@specialized T, @specialized S](val tuple: (T, S)) {
       def reverse: (S, T) = (tuple._2, tuple._1)
     }
-    implicit def tupleOps[@specialized T, @specialized S](tuple: (T, S)) = new MyTupleOps[T, S](tuple)
+    implicit def tupleOps[@specialized T, @specialized S](tuple: (T, S)) =
+      new MyTupleOps[T, S](tuple)
 
 I've ran across situations when specialized implicit classes compiled in a separate compilation run do not pickle the symbols correctly.
 While this will probably be fixed in the future, if you run into error messages telling you that the `MyTupleOps` symbol is not available, the above is likely to solve the issue.
