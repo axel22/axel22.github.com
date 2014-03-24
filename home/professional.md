@@ -240,6 +240,7 @@ Lausanne, Switzerland, January 2012
 # <a id="committees">Conferences and Workshops</a>
 
 ### Program Committees
+- [Scala 2014](http://lampwww.epfl.ch/~hmiller/scala2014/index.html)
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
 ### External Reviewing
