@@ -163,7 +163,7 @@ London, UK, December 2013
 \[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
 * [LCPC 2013](http://lcpc11.cs.colostate.edu/),
 San Jose, California, September 2013
-\[[PPT](/resources/docs/lcpc13.ppt)\]
+\[[PPT](/resources/docs/lcpc13.pptx)\]
 
 
 ### ScalaMeter
