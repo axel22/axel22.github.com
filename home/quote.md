@@ -16,7 +16,7 @@ Here is the selected quote for today:
 
 <div class="bigquote">
   <div id="bigquotebox">
-    <script src="resources/js/callSetBigQuoteBox.js">
+    <script src="/resources/js/callSetBigQuoteBox.js">
     </script>
   </div>
 </div>
