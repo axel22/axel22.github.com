@@ -4,3 +4,4 @@ name: The axel22 blog
 description: Personal blog of axel22
 url: http://axel22.github.com/home/blog/
 baseUrl: http://axel22.github.com/
+markdown: kramdown
