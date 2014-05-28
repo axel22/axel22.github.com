@@ -10,7 +10,7 @@ permalink: /awards/index.html
 <br/>
 
 
-Here is a list of my awards and honous:
+Here is a list of my awards and honours:
 
 * Outstanding Teaching Assistant Award,
   IC EPFL, Lausanne, 2013.
