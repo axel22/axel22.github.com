@@ -47,7 +47,7 @@ New Orleans, Louisiana, February 2012<br/>
 
 * **Lock-Free Resizeable Concurrent Tries**<br/>
 Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
-[The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)
+[The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)<br/>
 Fort Collins, Colorado, September 2011<br/>
 *Best Paper Presentation Award*<br/>
 \[[PDF](/resources/docs/ctries-techreport.pdf)\]
@@ -90,7 +90,7 @@ multiple configurable JVM microbenchmarking methodologies,
 concise DSL for performance tests and input data generation,
 automated regression detection and configurable performance test reporting.
 
-* [Project website](http://axel22.github.com/scalameter/)
+* [Project website](http://scalameter.github.io/)
 * [Source code](https://github.com/axel22/scalameter)
 
 
@@ -163,7 +163,7 @@ London, UK, December 2013
 \[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
 * [LCPC 2013](http://lcpc11.cs.colostate.edu/),
 San Jose, California, September 2013
-\[[PPT](/resources/docs/lcpc13.ppt)\]
+\[[PPT](/resources/docs/lcpc13.pptx)\]
 
 
 ### ScalaMeter
@@ -240,9 +240,11 @@ Lausanne, Switzerland, January 2012
 # <a id="committees">Conferences and Workshops</a>
 
 ### Program Committees
+- [Scala 2014](http://lampwww.epfl.ch/~hmiller/scala2014/index.html)
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
 ### External Reviewing
+- [HLPP 2014](https://sites.google.com/site/hlpp2014amsterdam/)
 - [ECOOP 2013](http://www.lirmm.fr/ecoop13/)
 - [ScalaDays 2010](http://days2010.scala-lang.org/)
 - [ICADIWT 2009](http://www.dirf.org/diwt2009/)
