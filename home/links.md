@@ -68,25 +68,23 @@ Online communities, services and networks I am a part of.
 <a href="http://www.amazon.com/gp/registry/wishlist/1L7QE0GKUUG7A">
   <img class="hoverimage" src="/resources/images/amazon_32_black.png" alt="Amazon wishlist for axel22" title="Amazon wishlist for axel22"/>
 </a>
-
 <a href="http://ch.linkedin.com/pub/aleksandar-prokopec/11/87b/887" >
   <img class="hoverimage" src="/resources/images/linkedin_32.png" alt="View Aleksandar Prokopec's profile on LinkedIn"/>
 </a>
-
 <a href="http://stackexchange.com/users/7ec3739be38b40fcaa675e82f9524758">
   <img class="hoverimage" src="/resources/images/stackoverflow_32.png" alt="profile for axel22 on Stack Exchange" title="profile for axel22 on Stack Exchange"/>
 </a>
-
 <a href="http://github.com/axel22">
   <img class="hoverimage" src="/resources/images/github_32.png" alt="GitHub profile for axel22" title="GitHub profile for axel22"/>
 </a>
-
 <a href="http://picasaweb.google.com/116308712016730295956">
   <img class="hoverimage" src="/resources/images/picasa_32.png" alt="Picasa albums for axel22" title="Picasa albums for axel22"/>
 </a>
-
 <a href="https://twitter.com/_axel22_">
   <img class="hoverimage" src="/resources/images/twitter-32.png"/>
+</a>
+<a href="https://facebook.com/aleksandar.prokopec">
+  <img class="hoverimage" src="/resources/images/facebook-32.png"/>
 </a>
 
 
