@@ -27,6 +27,6 @@ Here is a list of my awards and honous:
 * 1st Place in the National Physics Competition (Finals),
   Croatia 2004.
 * Participation in the National Physics Competition (Finals),
-  Croatia 2004.
+  Croatia 2002.
 * Participation in the National Physics Competition (Finals),
-  Croatia 2004.
+  Croatia 2001.
