@@ -88,6 +88,9 @@ Online communities, services and networks I am a part of.
 <td><a href="https://facebook.com/aleksandar.prokopec">
   <img class="hoverimage" src="/resources/images/facebook-32.png"/>
 </a></td>
+<td><a href="https://plus.google.com/+AleksandarProkopec/posts">
+  <img class="hoverimage" src="/resources/images/gplus-32.png"/>
+</a></td>
 </tr>
 </table>
 
