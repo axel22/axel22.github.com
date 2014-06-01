@@ -156,6 +156,7 @@ ul.horizmenu li img {
   padding-right: 7px;
   display: inline;
   vertical-align: bottom;
+  margin: 0px;
 }
 
 ul.horizmenu li a:link {
