@@ -141,11 +141,13 @@ p {
   margin: 2px;
   float: right;
   text-shadow: 1px 1px #000000;
+  vertical-align: middle;
 }
 
 ul.horizmenu li {
   padding-right: 7px;
   display: inline;
+  vertical-align: middle;
 }
 
 ul.horizmenu li a:link {
