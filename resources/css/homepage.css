@@ -146,6 +146,7 @@ p {
 ul.horizmenu li {
   padding-right: 7px;
   display: inline;
+  vertical-align: middle;
 }
 
 ul.horizmenu li img {
