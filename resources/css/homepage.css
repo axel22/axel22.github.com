@@ -151,7 +151,7 @@ ul.horizmenu li {
 
 ul.horizmenu li img {
   padding-top: 8px;
-  padding-bottom: 4px;
+  padding-bottom: -2px;
   padding-right: 7px;
   display: inline;
 }
