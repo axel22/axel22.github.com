@@ -147,7 +147,7 @@ p {
 ul.horizmenu li {
   padding-right: 7px;
   display: inline;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 ul.horizmenu li a:link {
