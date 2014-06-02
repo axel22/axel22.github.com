@@ -264,7 +264,7 @@ In the best case, you will receive a warning about some members of the enclosing
 Qualified `super` calls are (perhaps fundamentally) broken with specialization.
 Rewiring the super-accessor methods properly in the specialization phase is a nightmare that has not been solved so far.
 So, avoid them like the plague, at least for now.
-In particular, don't rely that stackable modifications pattern will work with it well (as if anybody's using that one anyway).
+In particular, stackable modifications pattern will not work with it well.
 
 > Avoid `super` calls.
 
