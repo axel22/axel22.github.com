@@ -21,6 +21,13 @@ for concurrent and parallel software development.
 
 # <a id="publications">Publications</a>
 
+* **Containers and Aggregates, Mutators and Isolates for Reactive Programming**<br/>
+Aleksandar Prokopec, Philipp Haller, Martin Odersky<br/>
+[The 5th Annual Scala Workshop (Scala 2014)](http://lampwww.epfl.ch/~hmiller/scala2014/)<br/>
+Uppsala, Sweden, July 2014<br/>
+\[[PDF](/resources/docs/reactives-and-isolates.pdf)\]
+
+
 * **Near Optimal Work-Stealing Tree Scheduler for Highly Irregular Data-Parallel Workloads **<br/>
 Aleksandar Prokopec, Martin Odersky<br/>
 [The 26th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2013)](https://parasol.tamu.edu/lcpc2013/index.html)<br/>
