@@ -14,6 +14,11 @@ I also recommend these books.
 ## Technical
 
 
+### 2014
+
+* Russell, Norvig -- Artificial Intelligence: A Modern Approach
+
+
 ### 2013
 
 * De Berg, Cheong, Kreveld, Overmars: Computational Geometry -- Algorithms and Applications
@@ -75,6 +80,12 @@ I also recommend these books.
 
 
 ## Literature
+
+
+### 2014
+
+* Martin -- A Dance with Dragons
+* Martin -- A Feast for Crows
 
 
 ### 2013
