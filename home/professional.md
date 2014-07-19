@@ -162,6 +162,12 @@ It is devised to soften the learning curve of students who are being introduced 
 # <a id="talks">Talks</a>
 
 
+### Reactive Collections and Game Engine Design
+
+* [ScalaDays 2014](http://www.scaladays.org/#schedule/Experiment--A-Reactive--D-Game-Engine-in-Scala)
+\[[SlideShare](http://www.slideshare.net/AleksandarProkopec/scaladays-2014-reactive-scala-3d-game-engine)\]
+\[[Video](http://www.parleys.com/play/53a7d2cde4b0543940d9e561/chapter1/about)\]
+
 ### ScalaBlitz
 
 * [Scala eXchange 2013](http://skillsmatter.com/event/scala/scala-exchange-2013),
