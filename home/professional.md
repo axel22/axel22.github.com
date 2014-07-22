@@ -237,7 +237,7 @@ Grenoble, France, March 2011
 Aleksandar Prokopec, Miguel Garcia, Jason Zaugg, Hubert Plociniczak, Viktor Klang, Martin Odersky<br/>
 Lausanne, Switzerland, May 2013
 
-* [ScalaMeter Introduction](http://axel22.github.com/scalameter/home/gettingstarted/)<br/>
+* [ScalaMeter Introduction](http://scalameter.github.io/home/gettingstarted/0.5/)<br/>
 Aleksandar Prokopec<br/>
 Lausanne, Switzerland, November 2012
 
