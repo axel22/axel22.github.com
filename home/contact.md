@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact
-permalink: /contact/index.html
+permalink: /home/contact/index.html
 ---
 
 
