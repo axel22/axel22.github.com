@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Ithaca
-permalink: /ithaca/index.html
+permalink: /home/ithaca/index.html
 ---
 
 ## Ithaca
