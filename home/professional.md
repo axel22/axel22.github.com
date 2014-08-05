@@ -21,6 +21,25 @@ for concurrent and parallel software development.
 
 # <a id="publications">Publications</a>
 
+
+## PhD Thesis
+
+* **Data Structures and Algorithms for Data-Parallel Computing in a Managed Runtime**<br/>
+Aleksandar Prokopec<br/>
+[LAMP, Faculté Informatique et Communications, École Polytechnique Fédérale de Lausanne](http://lamp.epfl.ch/)<br/>
+Lausanne, Switzerland, July 2014<br/>
+\[[PDF](/resources/docs/my_thesis.pdf)\]
+
+
+## Conference Papers
+
+* **Containers and Aggregates, Mutators and Isolates for Reactive Programming**<br/>
+Aleksandar Prokopec, Philipp Haller, Martin Odersky<br/>
+[The 5th Annual Scala Workshop (Scala 2014)](http://lampwww.epfl.ch/~hmiller/scala2014/)<br/>
+Uppsala, Sweden, July 2014<br/>
+\[[PDF](/resources/docs/reactives-and-isolates.pdf)\]
+
+
 * **Containers and Aggregates, Mutators and Isolates for Reactive Programming**<br/>
 Aleksandar Prokopec, Philipp Haller, Martin Odersky<br/>
 [The 5th Annual Scala Workshop (Scala 2014)](http://lampwww.epfl.ch/~hmiller/scala2014/)<br/>
