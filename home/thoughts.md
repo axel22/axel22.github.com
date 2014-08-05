@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Watch your thoughts
-permalink: /thoughts/index.html
+permalink: /home/thoughts/index.html
 ---
 
 
