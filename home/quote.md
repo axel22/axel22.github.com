@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quote of the Day
-permalink: /quote/index.html
+permalink: /home/quote/index.html
 ---
 
 
