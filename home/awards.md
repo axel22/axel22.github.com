@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Awards and Honours
-permalink: /awards/index.html
+permalink: /home/awards/index.html
 ---
 
 
