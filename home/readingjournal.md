@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reading journal
-permalink: /reading/index.html
+permalink: /home/reading/index.html
 ---
 
 These is a list of books I've read through the years. There are technical books here, as well as other literature.
