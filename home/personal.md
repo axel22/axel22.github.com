@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Personal
-permalink: /personal/index.html
+permalink: /home/personal/index.html
 ---
 
 
