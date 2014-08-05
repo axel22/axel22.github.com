@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Professional info
-permalink: /professional/index.html
+permalink: /home/professional/index.html
 ---
 
 I am a programming languages and parallel computing researcher,
