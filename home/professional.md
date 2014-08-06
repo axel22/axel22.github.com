@@ -83,6 +83,16 @@ London, UK, August 2009<br/>
 \[[PDF](/resources/docs/icadiwt_atga.pdf)\]
 
 
+## Master Thesis
+
+* **Prilagodljivi genetski Algoritam**<br/>
+Aleksandar Prokopec<br/>
+[Faculty of Electrical Engineering and Computing](http://www.fer.unizg.hr/)<br/>
+Zagreb, Croatia, May 2009<br/>
+\[[PDF](/resources/docs/diplomski.pdf)\] (in Croatian)
+
+
+
 # <a id="projects">Projects</a>
 
 This section shortly describes some of the projects I've been working on.
