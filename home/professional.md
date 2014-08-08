@@ -85,7 +85,7 @@ London, UK, August 2009<br/>
 
 ## Master Thesis
 
-* **Prilagodljivi genetski Algoritam**<br/>
+* **Prilagodljivi genetski algoritam (Adaptive Genetic Algorithm)**<br/>
 Aleksandar Prokopec<br/>
 [Faculty of Electrical Engineering and Computing](http://www.fer.unizg.hr/)<br/>
 Zagreb, Croatia, May 2009<br/>
