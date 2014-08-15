@@ -38,5 +38,4 @@ Agree? Disagree? [Let me know](/home/contact/).
 <br/>
 <br/>
 
-<img align="middle" src="/resources/images/mountain.png">
-</img>
+<img align="middle" src="/resources/images/mountain.png"/>
