@@ -56,6 +56,7 @@ Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Marti
 [The 25th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2012)](http://www.kasahara.cs.waseda.ac.jp/lcpc2012/)<br/>
 Tokyo, Japan, September 2012<br/>
 \[[PDF](/resources/docs/lcpc2012.pdf)\]
+\[[Link](/publications/flowpools-lock-free-dataflow)\]
 
 * **Concurrent Tries with Efficient Non-blocking Snapshots**<br/>
 Aleksandar Prokopec, Nathan Bronson, Phil Bagwell, Martin Odersky<br/>
