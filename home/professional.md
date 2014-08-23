@@ -69,12 +69,14 @@ Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
 Fort Collins, Colorado, September 2011<br/>
 *Best Paper Presentation Award*<br/>
 \[[PDF](/resources/docs/ctries-techreport.pdf)\]
+\[[Link](/publications/lock-free-resizeable-concurrent-tries)\]
 
 * **A Generic Parallel Collection Framework**<br/>
 Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, Martin Odersky<br/>
 [Euro-Par 2011](http://europar2011.bordeaux.inria.fr)<br/>
 Bordeaux, France, September 2011<br/>
 \[[PDF](/resources/docs/techrep.pdf)\]
+\[[Link](/publications/generic-parallel-collection-framework)\]
 
 * **Adaptive Mutation Operator Cycling**<br/>
 Aleksandar Prokopec, Marin Golub<br/>
