@@ -504,7 +504,7 @@ a:hover img.hoverimage, a:active img.hoverimage {
 
 
 .pub-authors {
-  font-weight: 200;
+  font-weight: bold;
 }
 
 .pub-venue {
