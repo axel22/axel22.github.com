@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Data Structures and Algorithms for Data-Parallel Computing in a Managed Runtime
+title: PhD Thesis - Data Structures and Algorithms for Data-Parallel Computing in a Managed Runtime
 authors: Aleksandar Prokopec
 venue: EPFL
 permalink: /publications/data-structures-and-algorithms-for-data-parallel-computing/index.html
@@ -64,6 +64,7 @@ validating their correctness, identifying linearization points and showing their
 ## Links
 
 \[[PDF](/resources/docs/my_thesis.pdf)\]
+\[[Infoscience](http://infoscience.epfl.ch)\]
 
 
 
