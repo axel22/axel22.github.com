@@ -2,7 +2,7 @@
 layout: publication
 title: Generic Parallel Collection Framework
 authors: Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, Martin Odersky
-venue: 
+venue: EuroPar 2011
 permalink: /publications/generic-parallel-collection-framework/index.html
 ---
 

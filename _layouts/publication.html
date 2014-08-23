@@ -9,16 +9,24 @@
 </head>
 <body>
 
-  <h1>{{ page.title }}</h1>
+  <div id="wrap">
 
-  <p>
-    {{ page.authors }}
-    <br/>
-    {{ page.venue }}
-  </p>
+    <div id="top">
+    </div>
 
-  {{ content }}
+    <h1>{{ page.title }}</h1>
 
+    <p>
+      {{ page.authors }}
+      <br/>
+      {{ page.venue }}
+    </p>
+
+    {{ content }}
+  </div>
+
+  <div id="footer">
+  </div>
 
 </body>
 </html>
