@@ -11,21 +11,22 @@
 
   <div id="wrap">
 
-    <div id="top">
+
+    <div id="main" class="container_16">
+
+      <div class="grid_16">
+        <h1>{{ page.title }}</h1>
+
+        <p>
+          {{ page.authors }}
+          <br/>
+          {{ page.venue }}
+        </p>
+
+        {{ content }}
+      </div>
     </div>
 
-    <h1>{{ page.title }}</h1>
-
-    <p>
-      {{ page.authors }}
-      <br/>
-      {{ page.venue }}
-    </p>
-
-    {{ content }}
-  </div>
-
-  <div id="footer">
   </div>
 
 </body>

@@ -15,7 +15,7 @@ We present an approach to parallelizing collection operations in a generic way, 
 
 ## Links
 
-\[[Full text](/resources/docs/techrep.pdf)\]
+\[[PDF](/resources/docs/techrep.pdf)\]
 
 
 ## References
