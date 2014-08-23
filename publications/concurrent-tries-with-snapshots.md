@@ -70,6 +70,6 @@ William Pugh: Concurrent maintenance of skip lists, University of Maryland at Co
   
 William Pugh: Skip lists: a probabilistic alternative to balanced trees, Communications of the ACM, v.33 n.6, p.668-676, June 1990 
   
-The Scala Programming Language Homepage. http://www.scalalang.org/
+The Scala Programming Language Homepage. http://www.scala-lang.org/
   
 Ori Shalev, Nir Shavit: Split-ordered lists: Lock-free extensible hash tables, Journal of the ACM (JACM), v.53 n.3, p.379-405, May 2006 
