@@ -62,6 +62,7 @@ Aleksandar Prokopec, Nathan Bronson, Phil Bagwell, Martin Odersky<br/>
 [17th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2012)](http://dynopt.org/ppopp-2012)<br/>
 New Orleans, Louisiana, February 2012<br/>
 \[[PDF](/resources/docs/ctries-snapshot.pdf)\]
+\[[Link](/publications/concurrent-tries-with-snapshots)\]
 
 * **Lock-Free Resizeable Concurrent Tries**<br/>
 Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
