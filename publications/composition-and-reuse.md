@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: FlowPools -- A Lock-Free Deterministic Concurrent Dataflow Abstraction
+title: FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction
 authors: Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, Martin Odersky
 venue: LCPC 2012
 permalink: /publications/flowpools-lock-free-dataflow/index.html
