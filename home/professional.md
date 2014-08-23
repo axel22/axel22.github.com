@@ -29,6 +29,7 @@ Aleksandar Prokopec<br/>
 [LAMP, Faculté Informatique et Communications, École Polytechnique Fédérale de Lausanne](http://lamp.epfl.ch/)<br/>
 Lausanne, Switzerland, July 2014<br/>
 \[[PDF](/resources/docs/my_thesis.pdf)\]
+\[[Link](/publications/data-structures-and-algorithms-for-data-parallel-computing)\]
 
 
 ## Conference Papers

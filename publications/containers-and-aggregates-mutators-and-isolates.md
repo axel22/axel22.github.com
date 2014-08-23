@@ -49,7 +49,7 @@ E. Meijer, M. M. Fokkinga, and R. Paterson. Functional programming with bananas,
 
 M. Odersky and A. Moors. Fighting bit rot with types (experience report: Scala collections). In FSTTCS, 2009.
 
-K. Pinte, A. Lombide Carreton, E. Gonzalez Boix, and W. Meuter. Ambient clouds: Reactive asynchronous collections for mobile ad hoc network applications. In J. Dowling and F. Taïani, editors, Distributed Applications and Interoperable Systems, volume 7891 of Lecture Notes in Computer Science, pages 85–98. Springer Berlin Heidelberg, 2013. ISBN 978-3-642-38540-7. . URL http://dx.doi.org/10. 1007/978-3-642-38541-4_7.
+K. Pinte, A. Lombide Carreton, E. Gonzalez Boix, and W. Meuter. Ambient clouds: Reactive asynchronous collections for mobile ad hoc network applications. In J. Dowling and F. Taïani, editors, Distributed Applications and Interoperable Systems, volume 7891 of Lecture Notes in Computer Science, pages 85–98. Springer Berlin Heidelberg, 2013. ISBN 978-3-642-38540-7.
 
 A. Prokopec, P. Bagwell, T. Rompf, and M. Odersky. A generic parallel collection framework. In EuroPar, 2011.
 
