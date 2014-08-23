@@ -50,6 +50,7 @@ Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown, HyoukJoong Lee, Hassan Chafi, Vi
 [The European Conference on Object-Oriented Programming (ECOOP 2013)](http://www.lirmm.fr/ecoop13/)<br/>
 Montpellier, France, July 2013<br/>
 \[[PDF](/resources/docs/ecoop13_sujeeth.pdf)\]
+\[[Link](/publications/composition-and-reuse)\]
 
 * **FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction**<br/>
 Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, and Martin Odersky<br/>
