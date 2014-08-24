@@ -16,6 +16,7 @@ I also recommend these books.
 
 ### 2014
 
+* Lynch -- Distributed Algorithms
 * Russell, Norvig -- Artificial Intelligence: A Modern Approach
 
 
