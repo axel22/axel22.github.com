@@ -30,6 +30,7 @@ We show examples that our programming model is efficient and convenient to use.
 ## Links
 
 \[[PDF](/resources/docs/reactives-and-isolates.pdf)\]
+\[[BibTex](/resources/docs/bibtex/reactive-containers.bib)\]
 \[[ACM DL](http://dl.acm.org/citation.cfm?id=2637656)\]
 
 

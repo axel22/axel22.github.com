@@ -15,6 +15,7 @@ Programmers who need high performance currently rely on low-level, architecture-
 ## Links
 
 \[[PDF](/resources/docs/ecoop13_sujeeth.pdf)\]
+\[[BibTex](/resources/docs/bibtex/composition-reuse.bib)\]
 \[[Springer](http://link.springer.com/chapter/10.1007%2F978-3-642-39038-8_3)\]
 
 

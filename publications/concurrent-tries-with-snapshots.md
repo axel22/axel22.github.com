@@ -17,6 +17,7 @@ We show how to implement an efficient lock-free snapshot operation for concurren
 ## Links
 
 \[[PDF](/resources/docs/ctries-snapshot.pdf)\]
+\[[BibTex](/resources/docs/bibtex/ctries-snapshots.bib)\]
 \[[ACM DL](http://dl.acm.org/citation.cfm?id=2145836)\]
 
 

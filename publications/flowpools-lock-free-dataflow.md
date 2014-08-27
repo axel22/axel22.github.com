@@ -28,6 +28,7 @@ structures in the Java standard library.
 ## Links
 
 \[[PDF](/resources/docs/lcpc2012.pdf)\]
+\[[BibTex](/resources/docs/bibtex/flowpools.bib)\]
 \[[Springer](http://link.springer.com/chapter/10.1007%2F978-3-642-37658-0_11)\]
 
 

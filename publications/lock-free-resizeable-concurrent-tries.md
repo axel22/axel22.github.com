@@ -15,6 +15,7 @@ This paper describes an implementation of a non-blocking concurrent hash trie ba
 ## Links
 
 \[[PDF](/resources/docs/lcpc-ctries.pdf)\]
+\[[BibTex](/resources/docs/bibtex/ctries.bib)\]
 \[[Springer](http://link.springer.com/chapter/10.1007%2F978-3-642-36036-7_11)\]
 
 
