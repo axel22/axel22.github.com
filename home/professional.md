@@ -193,9 +193,11 @@ It is devised to soften the learning curve of students who are being introduced 
 
 ### Reactive Collections and Game Engine Design
 
-* [Scala Workshop 2014](http://lampwww.epfl.ch/~hmiller/scala2014/)
+* [Scala Workshop 2014](http://lampwww.epfl.ch/~hmiller/scala2014/),
+Uppsala, Sweden, July 2014
 \[[SlideShare](http://www.slideshare.net/AleksandarProkopec/reactive-collections)\]
-* [ScalaDays 2014](http://www.scaladays.org/#schedule/Experiment--A-Reactive--D-Game-Engine-in-Scala)
+* [ScalaDays 2014](http://www.scaladays.org/#schedule/Experiment--A-Reactive--D-Game-Engine-in-Scala),
+Berlin, Germany, June 2014
 \[[SlideShare](http://www.slideshare.net/AleksandarProkopec/scaladays-2014-reactive-scala-3d-game-engine)\]
 \[[Video](http://www.parleys.com/play/53a7d2cde4b0543940d9e561/chapter1/about)\]
 
@@ -203,7 +205,7 @@ It is devised to soften the learning curve of students who are being introduced 
 ### ScalaBlitz
 
 * [Scala eXchange 2013](http://skillsmatter.com/event/scala/scala-exchange-2013),
-London, UK, December 2013
+London, UK, December 2014
 \[[PPT](/resources/docs/scalablitz.pdf)\]
 \[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
 * [LCPC 2013](http://lcpc11.cs.colostate.edu/),
