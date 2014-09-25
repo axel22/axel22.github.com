@@ -195,7 +195,6 @@ It is devised to soften the learning curve of students who are being introduced 
 
 * [Scala Workshop 2014](http://lampwww.epfl.ch/~hmiller/scala2014/)
 \[[SlideShare](http://www.slideshare.net/AleksandarProkopec/reactive-collections)\]
-
 * [ScalaDays 2014](http://www.scaladays.org/#schedule/Experiment--A-Reactive--D-Game-Engine-in-Scala)
 \[[SlideShare](http://www.slideshare.net/AleksandarProkopec/scaladays-2014-reactive-scala-3d-game-engine)\]
 \[[Video](http://www.parleys.com/play/53a7d2cde4b0543940d9e561/chapter1/about)\]
