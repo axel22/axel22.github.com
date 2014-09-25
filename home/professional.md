@@ -207,7 +207,6 @@ It is devised to soften the learning curve of students who are being introduced 
 London, UK, December 2013
 \[[PPT](/resources/docs/scalablitz.pdf)\]
 \[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
-
 * [LCPC 2013](http://lcpc11.cs.colostate.edu/),
 San Jose, California, September 2013
 \[[PPT](/resources/docs/lcpc13.pptx)\]
@@ -218,7 +217,6 @@ San Jose, California, September 2013
 * [Oracle VM Meetup 2014](),
 Zurich, Switzerland, November 2014
 \[[Speaker Deck](https://speakerdeck.com/axel22/scalameter-in-2014)\]
-
 * [Scala eXchange 2012](http://skillsmatter.com/event/scala/scala-exchange-2012),
 London, UK, November 2012
 \[[PPT](/resources/docs/scalameter.ppt)\]
@@ -231,14 +229,11 @@ London, UK, November 2012
 London, UK, April 2012
 \[[Video](http://skillsmatter.com/podcast/scala/parallel-concurrent-hash-tries)\]
 \[[Source](https://github.com/axel22/ScalaDays2012-TrieMap)\]
-
 * [Croatian IEEE Computer Chapter](http://www.ieee.hr/ieeesection/odjeli_chapteri/c16),
 Zagreb, Croatia, April 2012
-
 * [PPOPP 2012](http://dynopt.org/ppopp-2012/),
 New Orleans, Louisiana, February 2012
 \[[PPT](/resources/docs/ctries-snapshots.pptx)\]
-
 * [LCPC 2011](http://lcpc11.cs.colostate.edu/),
 Fort Collins, Colorado, September 2011
 \[[PPT](/resources/docs/lcpc-ctries.ppt)\]
@@ -248,19 +243,16 @@ Fort Collins, Colorado, September 2011
 
 * [Euro-Par 2011](http://europar2011.bordeaux.inria.fr/),
 Bordeaux, France, September 2011
-
 * [Scala eXchange 2011](http://skillsmatter.com/event/scala/scala-exchange-2011),
 London, UK, June 2011
 \[[PPT](/resources/docs/parcolls.ppt)\]
 \[[Video](http://skillsmatter.com/podcast/scala/parallel-collections)\]
 \[[Source](https://github.com/axel22/ScalaDays2011-PC)\]
-
 * [ScalaDays 2011](http://days2011.scala-lang.org/),
 Palo Alto, California, US, June 2011
 \[[PPT](/resources/docs/parcolls.ppt)\]
 \[[Video](http://days2011.scala-lang.org/node/138/272)\]
 \[[Source](https://github.com/axel22/ScalaDays2011-PC)\]
-
 * [ScalaDays 2010](http://days2010.scala-lang.org/),
 Lausanne, Switzerland, April 2010
 
@@ -270,7 +262,6 @@ Lausanne, Switzerland, April 2010
 * "Scala as a Research Tool", ECOOP 2013,
 Montpellier, France, July 2013
 \[[HTTP](http://www.lirmm.fr/ec-montpellier-2013/?id=158#tutorial3)\]
-
 * "Introduction to Scala", Java User Group Grenoble,
 Grenoble, France, March 2011
 \[[PPT](/resources/docs/introscala.rar)\]
