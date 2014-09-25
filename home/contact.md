@@ -14,6 +14,7 @@ The preferred way to contact me is through e-mail:
 </blockquote>
 
 Please, **never** use my EPFL address.
+If you really must, use `my name then a dot my surname at alumni dot epfl dot ch`.
 
 
 # ![post](/resources/images/post.png) Mail
