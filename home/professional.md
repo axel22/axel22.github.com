@@ -206,7 +206,7 @@ Berlin, Germany, June 2014
 
 * [Scala eXchange 2013](http://skillsmatter.com/event/scala/scala-exchange-2013),
 London, UK, December 2014
-\[[PPT](/resources/docs/scalablitz.pdf)\]
+\[[PDF](/resources/docs/scalablitz.pdf)\]
 \[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
 * [LCPC 2013](http://lcpc11.cs.colostate.edu/),
 San Jose, California, September 2013
