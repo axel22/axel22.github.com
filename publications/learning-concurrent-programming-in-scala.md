@@ -22,11 +22,13 @@ A must-have tutorial for software developers aiming to write concurrent programs
 This book is intended for Scala programmers that have no prior knowledge about concurrent programming, as well as those seeking to broaden their existing knowledge about concurrency. Basic knowledge of the Scala programming language will be helpful and readers with a solid knowledge in another programming language, such as Java, should find this book easily accessible.
 
 
-<img src="/resources/images/concurrency-scala-book.jpg" />
-
-
 ## Links
 
 \[[Packt](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)\]
 \[[Amazon](http://www.amazon.com/Learning-Concurrent-Programming-Aleksandar-Prokopec/dp/1783281413/)\]
+
+
+
+<img src="/resources/images/concurrency-scala-book.jpg" />
+
 
