@@ -32,6 +32,16 @@ Lausanne, Switzerland, July 2014<br/>
 \[[Link](/publications/data-structures-and-algorithms-for-data-parallel-computing)\]
 
 
+## Book
+
+* **Learning Concurrent Programming in Scala**<br/>
+Aleksandar Prokopec<br/>
+[Packt Publishing](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)<br/>
+London, UK, November 2014<br/>
+\[[Link](/publications/learning-concurrent-programming-in-scala)\]
+
+
+
 ## Conference Papers
 
 * **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
