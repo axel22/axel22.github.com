@@ -34,6 +34,13 @@ Lausanne, Switzerland, July 2014<br/>
 
 ## Conference Papers
 
+* **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
+Aleksandar Prokopec, Dmitry Petrashko, Martin Odersky<br/>
+[Parallel, Distributed, and Network-Based Processing 2015 (PDP 2015)](http://www.pdp2015.org/)<br/>
+Turku, Finland<br/>
+\[[PDF]()\]
+\[[Link](/publications/efficient-lock-free-work-stealing-iterators)\]
+
 * **Containers and Aggregates, Mutators and Isolates for Reactive Programming** <br/>
 Aleksandar Prokopec, Philipp Haller, Martin Odersky<br/>
 [The 5th Annual Scala Workshop (Scala 2014)](http://lampwww.epfl.ch/~hmiller/scala2014/)<br/>
