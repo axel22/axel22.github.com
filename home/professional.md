@@ -35,18 +35,11 @@ Lausanne, Switzerland, July 2014<br/>
 
 ## Book
 
-<table><tr>
-<td>
-<img src="/resources/images/small-concurrency-scala-book.jpg" />
-</td>
-<td>
 * **Learning Concurrent Programming in Scala**<br/>
 Aleksandar Prokopec<br/>
 [Packt Publishing](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)<br/>
 London, UK, November 2014<br/>
-\[[Link](/publications/learning-concurrent-programming-in-scala)\]
-</td>
-</tr></table>
+\[[Link](/publications/learning-concurrent-programming-in-scala)\]<img src="/resources/images/small-concurrency-scala-book.jpg" />
 
 
 ## Conference Papers
