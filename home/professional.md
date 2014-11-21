@@ -37,7 +37,7 @@ Lausanne, Switzerland, July 2014<br/>
 * **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
 Aleksandar Prokopec, Dmitry Petrashko, Martin Odersky<br/>
 [Parallel, Distributed, and Network-Based Processing 2015 (PDP 2015)](http://www.pdp2015.org/)<br/>
-Turku, Finland<br/>
+Turku, Finland, March 2015<br/>
 \[[PDF]()\]
 \[[Link](/publications/efficient-lock-free-work-stealing-iterators)\]
 
