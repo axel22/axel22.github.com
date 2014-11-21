@@ -4,6 +4,7 @@ title: Professional info
 permalink: /home/professional/index.html
 ---
 
+
 I am a programming languages and parallel computing researcher,
 developer, computer graphics hobbyist and a doctoral assistant at [EPFL](http://www.epfl.ch).
 
