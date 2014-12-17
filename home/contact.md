@@ -14,7 +14,7 @@ The preferred way to contact me is through e-mail:
 </blockquote>
 
 Please, **never** use my EPFL address.
-If you really must, use:
+If you really must, use the *alumni* address:
 
 <blockquote style="text-align: left;">
   my name then a dot my surname then a monkey alumni dot epfl dot ch
@@ -25,7 +25,6 @@ If you really must, use:
 # ![post](/resources/images/post.png) Mail
 
 If you want to send a letter or a physical item, use the following address:
-
 
 <blockquote style="text-align: left;">
   Aleksandar Prokopec
@@ -51,6 +50,9 @@ Office: +41 21 69 31 226
 
 ![skype](/resources/images/skype.png) Skype: brijest
 
+Please, avoid using SMS and Whatsapp, as I don't use them lately:
+
+![no-whatsapp](/resources/images/no-whatsapp.png) ![no-sms](/resources/images/no-sms.png)
 
 
 
