@@ -125,7 +125,7 @@ Zagreb, Croatia, May 2009<br/>
 This section shortly describes some of the projects I've been working on.
 
 
-## ![reactive-collections](/resources/images/reactress-gradient.png) Reactive Collections
+## ![reactive-collections](/resources/images/reactress-gradient-small.png) Reactive Collections
 
 An event-based programming framework based on event streams, reactive collections
 and concurrent isolates.
