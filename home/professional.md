@@ -125,6 +125,15 @@ Zagreb, Croatia, May 2009<br/>
 This section shortly describes some of the projects I've been working on.
 
 
+## ![reactive-collections](/resources/images/reactress-gradient.png) Reactive Collections
+
+An event-based programming framework based on event streams, reactive collections
+and concurrent isolates.
+
+* [Project website](http://reactive-collections.com/)
+* [Source code](https://github.com/storm-enroute/reactive-collections/)
+
+
 ## ![scalablitz](/resources/images/chess-knight-logo.png) ScalaBlitz
 
 A data-parallel programming framework that optimizes collection operations
