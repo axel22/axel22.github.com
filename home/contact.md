@@ -42,7 +42,7 @@ Office: +41 21 69 31 226
 
 # ![im](/resources/images/im.png) Instant messaging
 
-![gtalk](/resources/images/gtalk.png) GTalk: aco.prokopec (chat only, no e-mails)
+![gtalk](/resources/images/gtalk.png) Hangouts: same as my e-mail
 
 ![icqim](/resources/images/icq.png) ICQ: 364354877
 
