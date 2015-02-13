@@ -31,7 +31,7 @@ Aleksandar Prokopec<br/>
 Lausanne, Switzerland, July 2014<br/>
 \[[PDF](/resources/docs/my_thesis.pdf)\]
 \[[Link](/publications/data-structures-and-algorithms-for-data-parallel-computing)\]
-
+\[[General Public Presentation](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
 
 ## Book
 
@@ -218,6 +218,11 @@ It is devised to soften the learning curve of students who are being introduced 
 
 # <a id="talks">Talks</a>
 
+
+### Thesis Defense
+
+* [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
+EPFL, Lausanne, Switzerland, September 2014
 
 ### Reactive Collections and Game Engine Design
 
