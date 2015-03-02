@@ -16,7 +16,7 @@ I also recommend these books.
 
 ### 2015
 
-Chiusano, Bjarnason -- Functional Programming in Scala
+* Chiusano, Bjarnason -- Functional Programming in Scala
 
 
 ### 2014
