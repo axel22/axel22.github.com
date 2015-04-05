@@ -48,7 +48,7 @@ Office: +41 21 69 31 226
 
 ![msnim](/resources/images/msn.png) MSN: aco.prokopec (chat only, not e-mails)
 
-![skype](/resources/images/skype.png) Skype: brijest
+![skype](/resources/images/skype.png) Skype: aleksandarprokopec
 
 Please, avoid using SMS and Whatsapp, as I don't use them lately:
 
