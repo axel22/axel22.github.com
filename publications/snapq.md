@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: SnapQueue -- Lock-Free Queue with Constant Time Snapshots
+title: SnapQueue - Lock-Free Queue with Constant Time Snapshots
 authors: Aleksandar Prokopec
 venue: Scala Symposium 2015
 permalink: /publications/snapqueue/index.html
