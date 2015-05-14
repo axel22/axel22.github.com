@@ -46,6 +46,13 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **SnapQueue: Lock-Free Queue with Constant Time Snapshots** <br/>
+Aleksandar Prokopec<br/>
+[Scala Symposium 2015 (PDP 2015)](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
+Portland, Oregon, June 2015<br/>
+\[[PDF]()\]
+\[[Link](/publications/snapqueue)\]
+
 * **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
 Aleksandar Prokopec, Dmitry Petrashko, Martin Odersky<br/>
 [Parallel, Distributed, and Network-Based Processing 2015 (PDP 2015)](http://www.pdp2015.org/)<br/>
