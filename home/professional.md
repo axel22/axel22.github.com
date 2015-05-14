@@ -51,7 +51,7 @@ Aleksandar Prokopec<br/>
 [Scala Symposium 2015 (PDP 2015)](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
 Portland, Oregon, June 2015<br/>
 \[[PDF]()\]
-\[[Link](/publications/snapqueue)\]
+\[[Link](/publications/snapq)\]
 
 * **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
 Aleksandar Prokopec, Dmitry Petrashko, Martin Odersky<br/>
