@@ -21,7 +21,7 @@ and drives its performance characteristics.
 The design allows reasoning about concurrent operation running time in a functional way,
 absent from concurrency considerations.
 We present a support data structure that enables
-O(1) queue operations, O(1) snapshot and O(\log n) atomic concurrent concatenation.
+O(1) queue operations, O(1) snapshot and O(log n) atomic concurrent concatenation.
 We show that the SnapQueue enqueue operation achieves up to 25% higher performance,
 while the dequeue operation has performance identical
 to standard lock-free concurrent queues.
