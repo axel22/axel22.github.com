@@ -20,6 +20,7 @@ This book is a must-have tutorial for software developers aiming to write concur
 
 ## Links
 
+\[[Book Website](http://concurrent-programming-in-scala.github.io/)\]
 \[[Packt](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)\]
 \[[Amazon](http://www.amazon.com/Learning-Concurrent-Programming-Aleksandar-Prokopec/dp/1783281413/)\]
 
