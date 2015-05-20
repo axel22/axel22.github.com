@@ -20,8 +20,8 @@ By eliminating abstraction penalties and making work-stealing data-structure-awa
 
 ## Links
 
-\[[PDF]()]
-\[[BibTex]()\]
+\[[PDF](/resources/docs/pdp.pdf)]
+\[[BibTex](/resources/docs/bibtex/pdp.bib)\]
 \[[IEEE Xplore](http://ieeexplore.ieee.org/Xplore/home.jsp)\]
 
 
