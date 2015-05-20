@@ -31,7 +31,7 @@ Aleksandar Prokopec<br/>
 Lausanne, Switzerland, July 2014<br/>
 \[[PDF](/resources/docs/my_thesis.pdf)\]
 \[[Link](/publications/data-structures-and-algorithms-for-data-parallel-computing)\]
-
+\[[General Public Presentation](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
 
 ## Book
 
@@ -45,6 +45,13 @@ London, UK, November 2014<br/>
 
 
 ## Conference Papers
+
+* **SnapQueue: Lock-Free Queue with Constant Time Snapshots** <br/>
+Aleksandar Prokopec<br/>
+[Scala Symposium 2015 (Scala 2015)](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
+Portland, Oregon, June 2015<br/>
+\[[PDF]()\]
+\[[Link](/publications/snapqueue)\]
 
 * **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
 Aleksandar Prokopec, Dmitry Petrashko, Martin Odersky<br/>
@@ -218,6 +225,11 @@ It is devised to soften the learning curve of students who are being introduced 
 
 # <a id="talks">Talks</a>
 
+
+### Thesis Defense
+
+* [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
+EPFL, Lausanne, Switzerland, September 2014
 
 ### Reactive Collections and Game Engine Design
 

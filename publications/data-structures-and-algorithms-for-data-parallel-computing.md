@@ -64,8 +64,8 @@ validating their correctness, identifying linearization points and showing their
 ## Links
 
 \[[PDF](/resources/docs/my_thesis.pdf)\]
-\[[Infoscience](http://infoscience.epfl.ch)\]
-
+\[[Infoscience](http://infoscience.epfl.ch/record/200977?ln=en)\]
+\[[General Public Presentation](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
 
 
 ## References

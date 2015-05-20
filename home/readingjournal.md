@@ -14,6 +14,11 @@ I also recommend these books.
 ## Technical
 
 
+### 2015
+
+* Chiusano, Bjarnason -- Functional Programming in Scala
+
+
 ### 2014
 
 * Lynch -- Distributed Algorithms
@@ -81,6 +86,12 @@ I also recommend these books.
 
 
 ## Literature
+
+
+### 2015
+
+* Brooks -- Elfstones of Shannara
+* Brooks -- Sword of Shannara
 
 
 ### 2014
