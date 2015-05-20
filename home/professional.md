@@ -57,7 +57,7 @@ Portland, Oregon, June 2015<br/>
 Aleksandar Prokopec, Dmitry Petrashko, Martin Odersky<br/>
 [Parallel, Distributed, and Network-Based Processing 2015 (PDP 2015)](http://www.pdp2015.org/)<br/>
 Turku, Finland, March 2015<br/>
-\[[PDF]()\]
+\[[PDF](/resources/docs/pdp.pdf)\]
 \[[Link](/publications/efficient-lock-free-work-stealing-iterators)\]
 
 * **Containers and Aggregates, Mutators and Isolates for Reactive Programming** <br/>
