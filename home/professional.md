@@ -48,7 +48,7 @@ London, UK, November 2014<br/>
 
 * **SnapQueue: Lock-Free Queue with Constant Time Snapshots** <br/>
 Aleksandar Prokopec<br/>
-[Scala Symposium 2015 (Scala 2015)](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
+[Scala Symposium 2015 (Scala 2015), collocated with PLDI](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
 Portland, Oregon, June 2015<br/>
 \[[PDF](/resources/docs/pdp.pdf)\]
 \[[Link](/publications/snapqueue)\]
@@ -62,7 +62,7 @@ Turku, Finland, March 2015<br/>
 
 * **Containers and Aggregates, Mutators and Isolates for Reactive Programming** <br/>
 Aleksandar Prokopec, Philipp Haller, Martin Odersky<br/>
-[The 5th Annual Scala Workshop (Scala 2014)](http://lampwww.epfl.ch/~hmiller/scala2014/)<br/>
+[The 5th Annual Scala Workshop (Scala 2014), collocated with ECOOP](http://lampwww.epfl.ch/~hmiller/scala2014/)<br/>
 Uppsala, Sweden, July 2014<br/>
 \[[PDF](/resources/docs/reactives-and-isolates.pdf)\]
 \[[Link](/publications/containers-and-aggregates-mutators-and-isolates)\]
