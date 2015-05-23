@@ -132,7 +132,7 @@ Zagreb, Croatia, May 2009<br/>
 This section shortly describes some of the projects I've been working on.
 
 
-## ![mecha](/resources/images/mecha-logo-64.png) Reactive Collections
+## ![mecha](/resources/images/mecha-logo-64.png) Mecha
 
 SBT plugin for workflow automation.
 
