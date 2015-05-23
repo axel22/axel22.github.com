@@ -132,6 +132,14 @@ Zagreb, Croatia, May 2009<br/>
 This section shortly describes some of the projects I've been working on.
 
 
+## ![mecha](/resources/images/mecha-logo-64.png) Reactive Collections
+
+SBT plugin for workflow automation.
+
+* [Project website](https://github.com/storm-enroute/mecha/blob/master/README.md)
+* [Source code](https://github.com/storm-enroute/mecha/)
+
+
 ## ![reactive-collections](/resources/images/reactress-gradient-small.png) Reactive Collections
 
 An event-based programming framework based on event streams, reactive collections
