@@ -136,7 +136,7 @@ This section shortly describes some of the projects I've been working on.
 
 SBT plugin for workflow automation.
 
-* [Project website](https://github.com/storm-enroute/mecha/blob/master/README.md)
+* [Project website](https://storm-enroute/mecha)
 * [Source code](https://github.com/storm-enroute/mecha/)
 
 
