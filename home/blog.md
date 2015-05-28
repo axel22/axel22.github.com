@@ -8,6 +8,9 @@ permalink: /home/blog/index.html
 
 Here's my blog.
 I rant about all kinds of stuff here.
+When I don't find time to rant, I tweet.
+
+Opinions are my own.
 
 [![RSS](/resources/images/rss-icon.png)](/feed.xml)
 
