@@ -41,6 +41,7 @@ Lausanne, Switzerland, July 2014<br/>
 Aleksandar Prokopec<br/>
 [Packt Publishing](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)<br/>
 London, UK, November 2014<br/>
+\[[Book Website](http://concurrent-programming-in-scala.github.io/)\]
 \[[Link](/publications/learning-concurrent-programming-in-scala)\]
 
 
