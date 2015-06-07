@@ -41,6 +41,7 @@ Lausanne, Switzerland, July 2014<br/>
 Aleksandar Prokopec<br/>
 [Packt Publishing](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)<br/>
 London, UK, November 2014<br/>
+\[[Book Website](http://concurrent-programming-in-scala.github.io/)\]
 \[[Link](/publications/learning-concurrent-programming-in-scala)\]
 
 
@@ -50,7 +51,7 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec<br/>
 [Scala Symposium 2015, co-located with PLDI](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
 Portland, Oregon, June 2015<br/>
-\[[PDF](/resources/docs/pdp.pdf)\]
+\[[PDF]()\]
 \[[Link](/publications/snapqueue)\]
 
 * **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
@@ -136,7 +137,7 @@ This section shortly describes some of the projects I've been working on.
 
 SBT plugin for workflow automation.
 
-* [Project website](https://github.com/storm-enroute/mecha/blob/master/README.md)
+* [Project website](http://storm-enroute.com/mecha)
 * [Source code](https://github.com/storm-enroute/mecha/)
 
 
