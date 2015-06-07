@@ -179,17 +179,49 @@
           <img src="img/snapq/empty.svg" height="250px" class="fragment"/>
 
           <ul>
-            <li class="fragment"><code>head</code> - points to the first element in the queue</li>
-            <li class="fragment"><code>last</code> - maybe points to the first empty entry</li>
+            <li class="fragment"><code>head</code> - position of the first element in the queue</li>
+            <li class="fragment"><code>last</code> - position less than or equal to the first empty entry</li>
           </ul>
         </section>
 
         <section style="text-align: left;">
-          <h3>Single-Shot Queues</h3>
+          <h3>Single-Shot Queues - Enqueue</h3>
 
           <img src="img/snapq/empty.svg" height="250px" />
           <img src="img/snapq/enq.svg" height="250px" class="fragment"/>
           <img src="img/snapq/enq-last.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/enq-more.svg" height="250px" class="fragment"/>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Single-Shot Queues - Dequeue</h3>
+
+          <img src="img/snapq/deq-start.svg" height="250px" />
+          <img src="img/snapq/deq.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/deq-remove.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/deq-more.svg" height="250px" class="fragment"/>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Correctness</h3>
+
+          <img src="img/snapq/correct-enq.svg" height="250px" />
+          <img src="img/snapq/correct-deq.svg" height="250px" class="fragment"/>
+          <ul>
+            <li class="fragment">Every array entry is initially <code>null</code>, then some element, and finally the special value <code>REMOVED</code></li>
+            <li class="fragment">The numbers in <code>head</code> increase monotonically from 0 until the array length</li>
+          </ul>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Eventual Correctness</h3>
+
+          <img src="img/snapq/eventual-speed.svg" height="250px" />
+          <img src="img/snapq/eventual-memory.svg" height="250px" class="fragment"/>
+          <ul>
+            <li class="fragment">Assuming no contention, <code>last</code> eventually points to the first empty entry</li>
+            <li class="fragment">Eventually, the reference to the removed element is released</li>
+          </ul>
         </section>
 
 			</div>
