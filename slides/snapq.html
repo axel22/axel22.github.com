@@ -229,7 +229,33 @@
 
           <img src="img/snapq/freeze.svg" height="250px" />
           <img src="img/snapq/freeze-head.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/freeze-last.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/freeze-done.svg" height="250px" class="fragment"/>
+        </section>
 
+        <section data-markdown style="text-align: left;">
+          <script type="text/template">
+            ### Single-Shot SnapQueue Properties
+
+            - enqueue and dequeue operations
+            <!-- .element: class="fragment" -->
+            - snapshot operation (freeze is as good as snapshot)
+            <!-- .element: class="fragment" -->
+            - near-optimal memory footprint
+            <!-- .element: class="fragment" -->
+            - bounded - can only fit L elements
+            <!-- .element: class="fragment" style="color: #b00;" -->
+            - enqueue and dequeue can only be invoked up to L times
+            <!-- .element: class="fragment" style="color: #b00;" -->
+          </script>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue</h3>
+
+          <p>
+            Reallocate the single-shot queue when it becomes full.
+          </p>
         </section>
 
 			</div>

@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="freeze-head.svg">
+   sodipodi:docname="freeze-done.svg">
   <defs
      id="defs4">
     <marker
@@ -1685,7 +1685,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1744,14 +1744,14 @@
     <text
        sodipodi:linespacing="125%"
        id="text5454"
-       y="650.86365"
-       x="347.11774"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="653.05682"
+       x="238.28557"
+       style="font-style:normal;font-weight:normal;font-size:42.88658524px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
-         y="650.86365"
-         x="347.11774"
+         y="653.05682"
+         x="238.28557"
          id="tspan5456"
-         sodipodi:role="line">head</tspan></text>
+         sodipodi:role="line">head &lt; 0</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 71.13972,867.79387 108.5777,-108.5777"
@@ -1766,11 +1766,6 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5284-3)"
        d="m 12.942522,0 0,84.4898"
        id="path159061"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.98843934;marker-end:url(#marker228837)"
-       d="m 661.34025,662.78451 0,84.4898"
-       id="path159467"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
@@ -1796,17 +1791,6 @@
          x="441.43152"
          id="tspan231565"
          sodipodi:role="line">w</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text232953"
-       y="650.86365"
-       x="645.68921"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:0.97687857;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         y="650.86365"
-         x="645.68921"
-         id="tspan232955"
-         sodipodi:role="line">last</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path238645"
@@ -1841,23 +1825,16 @@
          x="555.43152"
          y="1015.9427"
          style="font-size:35px">v</tspan></text>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#cb0000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker89090)"
-       d="m 117.97909,673.57981 c 28.85626,-26.26726 131.75037,-44.85633 215.63198,-35.76505"
-       id="path4171"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
     <text
-       sodipodi:linespacing="125%"
-       id="text88920"
-       y="728.52911"
-       x="-0.67465317"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#c30000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-size:60px;fill:#c30000;fill-opacity:1"
-         y="728.52911"
-         x="-0.67465317"
-         id="tspan88922"
-         sodipodi:role="line">CAS(h, -h - 1)</tspan></text>
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:104.84121704px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="646.52496"
+       y="853.79077"
+       id="text3587"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3589"
+         x="646.52496"
+         y="853.79077">F</tspan></text>
   </g>
 </svg>

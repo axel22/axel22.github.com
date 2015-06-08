@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="freeze-head.svg">
+   sodipodi:docname="freeze-last.svg">
   <defs
      id="defs4">
     <marker
@@ -1843,21 +1843,32 @@
          style="font-size:35px">v</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#cb0000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker89090)"
-       d="m 117.97909,673.57981 c 28.85626,-26.26726 131.75037,-44.85633 215.63198,-35.76505"
+       d="M 236.55052,953.57981 C 240.87083,921.9498 347.39988,874.05064 431.43755,925.93235 600.42351,1030.258 640.50873,959.04539 672.1825,886.38619"
        id="path4171"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="csc" />
     <text
        sodipodi:linespacing="125%"
        id="text88920"
-       y="728.52911"
-       x="-0.67465317"
+       y="1018.5291"
+       x="20.753918"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#c30000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-size:60px;fill:#c30000;fill-opacity:1"
-         y="728.52911"
-         x="-0.67465317"
+         y="1018.5291"
+         x="20.753918"
          id="tspan88922"
-         sodipodi:role="line">CAS(h, -h - 1)</tspan></text>
+         sodipodi:role="line">CAS(null, F)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:104.84121704px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="646.52496"
+       y="853.79077"
+       id="text3587"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3589"
+         x="646.52496"
+         y="853.79077">F</tspan></text>
   </g>
 </svg>
