@@ -219,9 +219,17 @@
           <img src="img/snapq/eventual-speed.svg" height="250px" />
           <img src="img/snapq/eventual-memory.svg" height="250px" class="fragment"/>
           <ul>
-            <li class="fragment">Assuming no contention, <code>last</code> eventually points to the first empty entry</li>
-            <li class="fragment">Eventually, the reference to the removed element is released</li>
+            <li class="fragment">Assuming no contention, <code>last</code> eventually points to the first empty entry (eventually fast)</li>
+            <li class="fragment">Eventually, the reference to the removed element is released (eventual reclamation)</li>
           </ul>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Single-Shot Queue Freeze Operation</h3>
+
+          <img src="img/snapq/freeze.svg" height="250px" />
+          <img src="img/snapq/freeze-head.svg" height="250px" class="fragment"/>
+
         </section>
 
 			</div>
