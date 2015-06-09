@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>SnapQueue</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -50,7 +50,7 @@
           <p>
             <small>
               <a href="https://github.com/storm-enroute/reactive-collections/blob/master/reactive-collections-core/src/main/scala/scala/reactive/core/concurrent/SnapQueue.scala">
-                <img src="img/github.png" height="64px"/>
+                <img src="img/github.png" height="64px" />
               </a>
             </small>
           </p>
@@ -175,8 +175,8 @@
         <section style="text-align: left;">
           <h3>Single-Shot Queues</h3>
 
-          <img src="img/snapq/empty-noptr.svg" height="250px"/>
-          <img src="img/snapq/empty.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/empty-noptr.svg" height="250px" />
+          <img src="img/snapq/empty.svg" height="250px" class="fragment" />
 
           <ul>
             <li class="fragment"><code>head</code> - position of the first element in the queue</li>
@@ -188,25 +188,25 @@
           <h3>Single-Shot Queues - Enqueue</h3>
 
           <img src="img/snapq/empty.svg" height="250px" />
-          <img src="img/snapq/enq.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/enq-last.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/enq-more.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/enq.svg" height="250px" class="fragment" />
+          <img src="img/snapq/enq-last.svg" height="250px" class="fragment" />
+          <img src="img/snapq/enq-more.svg" height="250px" class="fragment" />
         </section>
 
         <section style="text-align: left;">
           <h3>Single-Shot Queues - Dequeue</h3>
 
           <img src="img/snapq/deq-start.svg" height="250px" />
-          <img src="img/snapq/deq.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/deq-remove.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/deq-more.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/deq.svg" height="250px" class="fragment" />
+          <img src="img/snapq/deq-remove.svg" height="250px" class="fragment" />
+          <img src="img/snapq/deq-more.svg" height="250px" class="fragment" />
         </section>
 
         <section style="text-align: left;">
           <h3>Correctness</h3>
 
           <img src="img/snapq/correct-enq.svg" height="250px" />
-          <img src="img/snapq/correct-deq.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/correct-deq.svg" height="250px" class="fragment" />
           <ul>
             <li class="fragment">Every array entry is initially <code>null</code>, then some element, and finally the special value <code>REMOVED</code></li>
             <li class="fragment">The numbers in <code>head</code> increase monotonically from 0 until the array length</li>
@@ -217,7 +217,7 @@
           <h3>Eventual Correctness</h3>
 
           <img src="img/snapq/eventual-speed.svg" height="250px" />
-          <img src="img/snapq/eventual-memory.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/eventual-memory.svg" height="250px" class="fragment" />
           <ul>
             <li class="fragment">Assuming no contention, <code>last</code> eventually points to the first empty entry (eventually fast)</li>
             <li class="fragment">Eventually, the reference to the removed element is released (eventual reclamation)</li>
@@ -228,39 +228,158 @@
           <h3>Single-Shot Queue Freeze Operation</h3>
 
           <img src="img/snapq/freeze.svg" height="250px" />
-          <img src="img/snapq/freeze-head.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/freeze-last.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/freeze-done.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/freeze-head.svg" height="250px" class="fragment" />
+          <img src="img/snapq/freeze-last.svg" height="250px" class="fragment" />
+          <img src="img/snapq/freeze-done.svg" height="250px" class="fragment" />
         </section>
 
         <section data-markdown style="text-align: left;">
           <script type="text/template">
-            ### Single-Shot SnapQueue Properties
+            ### Single-Shot Queue Properties
 
             - enqueue and dequeue operations
             <!-- .element: class="fragment" -->
             - snapshot operation (freeze is as good as snapshot)
             <!-- .element: class="fragment" -->
-            - near-optimal memory footprint
-            <!-- .element: class="fragment" -->
             - bounded - can only fit L elements
             <!-- .element: class="fragment" style="color: #b00;" -->
             - enqueue and dequeue can only be invoked up to L times
             <!-- .element: class="fragment" style="color: #b00;" -->
+            - simple and... fast
+            <!-- .element: class="fragment" -->
           </script>
+        </section>
+
+        <section style="text-align: left;">
+          <img src="img/kodak.png" height="620px" />
+        </section>
+
+        <section style="text-align: left;">
+          <img src="img/nikon.png" height="620px" />
         </section>
 
         <section style="text-align: left;">
           <h3>SnapQueue</h3>
 
-          <p>
-            Initially, just a pointer to a single-shot queue.
-          </p>
-
           <img src="img/snapq/snapq.svg" height="250px" />
-          <img src="img/snapq/snapq-full.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/snapq.svg" height="250px" class="fragment"/>
-          <img src="img/snapq/snapq.svg" height="250px" class="fragment"/>
+          <img src="img/snapq/snapq-full.svg" height="250px" class="fragment" />
+          <img src="img/snapq/snapq-expanded.svg" height="250px" class="fragment" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Enqueue</h3>
+
+          <img src="img/snapq/snapq-expanded-full.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Enqueue</h3>
+
+          <img src="img/snapq/snapq-enqueue.svg" height="250px" />
+
+          <p class="fragment">
+            Support data structure is some immutable data structure
+            into which we can push single-shot queues.
+          </p>
+          <p class="fragment">
+            The support data structure must retain order.
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Dequeue</h3>
+
+          <img src="img/snapq/snapq-empty.svg" height="250px" />
+          <p class="fragment">
+            Dequeue must occasionally steal the support data structure
+            from the producer side of the queue.
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Dequeue</h3>
+
+          <img src="img/snapq/snapq-dequeue.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Dequeue</h3>
+
+          <img src="img/snapq/snapq-dequeue1.svg" height="250px" />
+          <p class="fragment">
+            When there are more single-shot queues inside the support structure,
+            dequeue does not need to steal from the producer side of the queue.
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Dequeue</h3>
+
+          <img src="img/snapq/snapq-dequeue2.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Freeze</h3>
+
+          <img src="img/snapq/snapq-freeze.svg" height="250px" />
+          
+          <p>
+            How to atomically prevent subsequent enqueue and dequeue operations?
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Freeze</h3>
+
+          <img src="img/snapq/snapq-freeze.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Freeze</h3>
+
+          <img src="img/snapq/snapq-freeze1.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Freeze</h3>
+
+          <img src="img/snapq/snapq-freeze2.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Freeze</h3>
+
+          <img src="img/snapq/snapq-freeze3.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <img src="img/butterfly-fly.png" height="550px" />
+
+          <p class="fragment">
+            It's hard to get a consistent view of a fast-moving object...
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <img src="img/butterfly-ice.png" height="550px" />
+
+          <p>
+            ...unless you can freeze it.
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Freeze</h3>
+
+          <img src="img/snapq/snapq-freeze3.svg" height="250px" />
+
+          <p>
+            The freeze operation is as good as a snapshot.
+          </p>
+          <p class="fragment">
+            After a freeze, the previously mutable data structure
+            becomes an immutable data structure.
+          </p>
         </section>
 
 			</div>
