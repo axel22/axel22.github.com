@@ -51,7 +51,7 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec<br/>
 [Scala Symposium 2015, co-located with PLDI](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
 Portland, Oregon, June 2015<br/>
-\[[PDF]()\]
+\[[PDF](/resources/docs/snapqueue.pdf)\]
 \[[Link](/publications/snapqueue)\]
 
 * **Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections** <br/>
@@ -239,6 +239,13 @@ It is devised to soften the learning curve of students who are being introduced 
 
 * [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
 EPFL, Lausanne, Switzerland, September 2014
+
+
+### SnapQueue
+
+* [Scala Symposium 2015](http://lampwww.epfl.ch/~hmiller/scala2015/),
+Portland, Oregon, June 2015
+\[[Slides](/slides/snapq.html)\]
 
 ### Reactive Collections and Game Engine Design
 

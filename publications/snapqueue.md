@@ -30,8 +30,8 @@ to standard lock-free concurrent queues.
 
 ## Links
 
-\[[PDF]()\]
-\[[BibTex](/resources/docs/bibtex/snapq.bib)\]
+\[[PDF](/resources/docs/snapqueue.pdf)\]
+\[[BibTex](/resources/docs/bibtex/snapqueue.bib)\]
 \[[ACM DL]()\]
 
 
