@@ -97,52 +97,9 @@
 
         <section data-markdown style="text-align: left;">
           <script type="text/template">
-            ### Advanced Use-Cases - Persistence
-
-            Save the actor state and the contents of the mailbox (i.e. message queue).
-
-            ```
-            class MapActor extends Actor {
-              val state = mutable.Map[String, String]()
-              def receive = {
-                case (key: String, value: String) => state(key) = value
-              }
-            }
-            ```
-            <!-- .element: class="fragment" -->
-
-            Goal: snapshot the message queue in constant time.
-            <!-- .element: class="fragment" -->
-          </script>
-        </section>
-
-        <section data-markdown style="text-align: left;">
-          <script type="text/template">
-            ### Advanced Use-Cases - Forking
-
-            Unix-style `fork` statement that duplicates an actor.
-
-            ```
-            class MapActor extends Actor {
-              val state = mutable.Map[String, String]()
-              def receive = {
-                case "fork" => fork()
-              }
-            }
-            ```
-            <!-- .element: class="fragment" -->
-
-            Goal: snapshot the message queue in constant time.
-            <!-- .element: class="fragment" -->
-          </script>
-        </section>
-
-        <section data-markdown style="text-align: left;">
-          <script type="text/template">
             ### Existing Queue Implementations
 
             Lock-Free Concurrent Linked Queue (JDK) -- a linked list of nodes.
-            <!-- .element: class="fragment" -->
 
             Figure
             <!-- .element: class="fragment" -->
@@ -392,8 +349,50 @@
         <section style="text-align: left;">
           <h3>SnapQueue Concatenation</h3>
 
-          <img src="img/snapq/snapq-concat1.svg" height="250px" />
           <img src="img/snapq/snapq-concat2.svg" height="250px" class="fragment" />
+          <img src="img/snapq/snapq-concat1.svg" height="250px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Concatenation</h3>
+
+          <img src="img/snapq/snapq-concat2.svg" height="250px" />
+
+          <p>
+            If we can find an immutable data structure that:
+          </p>
+
+          <ul>
+            <li class="fragment">has efficient push-right and pop-left operations</li>
+            <li class="fragment">has efficient concatenation</li>
+          </ul>
+
+          <p class="fragment">
+            Then we have an efficient lock-free concatenation operation.
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>SnapQueue Concatenation</h3>
+
+          <img src="img/snapq/snapq-concat2.svg" height="250px" />
+
+          <p>
+            Conc-Trees as the support data structure:
+          </p>
+          <ul>
+            <li>O(1) pop-left and push-right</li>
+            <li>O(log n) concatenation</li>
+          </ul>
+          <p class="fragment">
+            More information in the <a href="http://axel22.github.io/resources/docs/snapqueue.pdf">paper</a>.
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Performance</h3>
+
+          <img src="img/snapq/snapq-concat2.svg" height="250px" />
         </section>
 
 			</div>

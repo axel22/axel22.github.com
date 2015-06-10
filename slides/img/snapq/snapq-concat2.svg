@@ -2582,10 +2582,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1600"
-     inkscape:window-height="877"
-     inkscape:window-x="-4"
-     inkscape:window-y="-4"
+     inkscape:window-width="1680"
+     inkscape:window-height="1028"
+     inkscape:window-x="3355"
+     inkscape:window-y="-5"
      inkscape:window-maximized="1"
      units="px"
      showguides="false" />
@@ -2597,7 +2597,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2612,14 +2612,14 @@
        height="53.04879"
        width="53.04879"
        id="rect4146"
-       style="fill:#000000;fill-opacity:0.32947975;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="fill:#2a7fff;fill-opacity:0.68235296;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkscape:connector-curvature="0"
        id="path5187"
        d="m 841.8404,640.69094 0,57.36845"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5189);marker-end:url(#marker5193)" />
     <rect
-       style="fill:#000000;fill-opacity:0.30635837;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#2a7fff;fill-opacity:0.68235296;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect11556"
        width="77.098816"
        height="77.098816"
@@ -2631,7 +2631,7 @@
        height="77.098816"
        width="77.098816"
        id="rect11558"
-       style="fill:#000000;fill-opacity:0.30635837;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="fill:#2a7fff;fill-opacity:0.68235296;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5.0007;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker4902);marker-end:url(#marker4906)"
        d="m 803.5547,746.79735 -474.48477,20.465"
@@ -2703,7 +2703,7 @@
        height="44.551834"
        width="117.38293"
        id="rect3852-7"
-       style="fill:#000000;fill-opacity:0.30635837;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="fill:#2a7fff;fill-opacity:0.68235296;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        inkscape:connector-curvature="0"
        id="path39889-6"
@@ -2753,7 +2753,7 @@
          y="121.21268"
          style="font-size:24.53144264px;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none">e</tspan></text>
     <rect
-       style="fill:#000000;fill-opacity:0.30635837;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#2a7fff;fill-opacity:0.68235296;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4553"
        width="117.38293"
        height="44.551834"
