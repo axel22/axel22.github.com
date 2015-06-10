@@ -56,17 +56,17 @@
           </p>
 				</section>
 
-        <section data-markdown style="text-align: left;">
+        <section data-markdown>
           <script type="text/template">
             ## Why Queues?
+
+            <img src="img/mint.jpg" class="fragment" />
           </script>
         </section>
 
         <section data-markdown style="text-align: left;">
           <script type="text/template">
             ### Advanced Use-Cases - Optimization
-
-            Optimize dataflow graphs during runtime.
 
             ```
             prices: Events[Double]
@@ -77,13 +77,9 @@
             ```
             <!-- .element: class="fragment" -->
 
-            Figure
-            <!-- .element: class="fragment" -->
-
             ```
-            val avg = prices.emitOnReact {
-              var total = 0
-              var avg = initialPrice
+            val avg = prices.emit {
+              var (total, avg) = (0, initialPrice)
               (emitter, x) => {
                 avg += x
                 total += 1
@@ -91,6 +87,12 @@
               }
             }
             ```
+            <!-- .element: class="fragment" -->
+
+            ![](img/snapq/fusion.svg)
+            <!-- .element: class="fragment" -->
+
+            Fuse the code and concatenate the intermediate queues.
             <!-- .element: class="fragment" -->
           </script>
         </section>
@@ -101,15 +103,9 @@
 
             Lock-Free Concurrent Linked Queue (JDK) -- a linked list of nodes.
 
-            Figure
-            <!-- .element: class="fragment" -->
-    
-            Disadvantages:
-            <!-- .element: class="fragment" -->
-            - linear-time queue snapshot
-            <!-- .element: class="fragment" -->
-            - non-optimal memory footprint
-            <!-- .element: class="fragment" -->
+            *Iterators are weakly consistent,
+            returning elements reflecting the state of the queue
+            at some point at or since the creation of the iterator.*
           </script>
         </section>
 
@@ -390,9 +386,46 @@
         </section>
 
         <section style="text-align: left;">
-          <h3>Performance</h3>
+          <h3>Performance - 1 Thread Enqueue</h3>
 
-          <img src="img/snapq/snapq-concat2.svg" height="250px" />
+          <img src="img/snapq/snapq-1-enqueue.svg" height="450px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Performance - N Thread Enqueue</h3>
+
+          <img src="img/snapq/snapq-n-enqueue.svg" height="450px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Performance - 1 Thread Dequeue</h3>
+
+          <img src="img/snapq/snapq-1-dequeue.svg" height="450px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Performance - N Thread Dequeue</h3>
+
+          <img src="img/snapq/snapq-n-dequeue.svg" height="450px" />
+        </section>
+
+        <section style="text-align: left;">
+          <h3>Performance - Segment Length</h3>
+
+          <img src="img/snapq/snapq-segment-length.svg" height="450px" />
+        </section>
+
+        <section>
+          <p>
+            Conclusion: immutable data structures are crucial
+            for concurrent data structure design.
+          </p>
+
+          <br/>
+
+          <h2>
+            The End
+          </h2>
         </section>
 
 			</div>
