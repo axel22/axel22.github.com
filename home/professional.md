@@ -239,6 +239,7 @@ It is devised to soften the learning curve of students who are being introduced 
 
 * [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
 EPFL, Lausanne, Switzerland, September 2014
+\[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
 
 
 ### SnapQueue
