@@ -2338,11 +2338,11 @@
        id="rect4136"
        width="77.098816"
        height="77.098816"
-       x="176.39513"
+       x="166.39513"
        y="888.4715" />
     <rect
        y="888.4715"
-       x="253.4939"
+       x="243.4939"
        height="77.098816"
        width="77.098816"
        id="rect4138"
@@ -2352,11 +2352,11 @@
        id="rect4140"
        width="77.098816"
        height="77.098816"
-       x="330.59274"
+       x="320.59274"
        y="888.4715" />
     <rect
        y="888.4715"
-       x="408.0921"
+       x="398.0921"
        height="77.098816"
        width="77.098816"
        id="rect4142"
@@ -2366,7 +2366,7 @@
        id="rect4144"
        width="77.098816"
        height="77.098816"
-       x="485.19089"
+       x="475.19089"
        y="888.4715" />
     <rect
        y="611.40912"
@@ -2388,7 +2388,7 @@
          sodipodi:role="line">root</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 176.19265,965.37231 76.10193,-76.10194"
+       d="m 166.19265,965.37231 76.10193,-76.10194"
        id="path58321"
        inkscape:connector-curvature="0" />
     <path
@@ -2789,21 +2789,21 @@
     <path
        inkscape:connector-curvature="0"
        id="path84950"
-       d="m 254.98455,965.37231 76.10193,-76.10194"
+       d="m 244.98455,965.37231 76.10193,-76.10194"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 330.74599,965.37231 76.10193,-76.10194"
+       d="m 320.74599,965.37231 76.10193,-76.10194"
        id="path84952"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
        id="path84954"
-       d="m 407.51758,965.37231 76.10193,-76.10194"
+       d="m 397.51758,965.37231 76.10193,-76.10194"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 485.29933,965.37231 76.10193,-76.10194"
+       d="m 475.29933,965.37231 76.10193,-76.10194"
        id="path84956"
        inkscape:connector-curvature="0" />
   </g>
