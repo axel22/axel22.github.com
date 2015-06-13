@@ -241,7 +241,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="414.97571"
+     inkscape:cx="112.9401"
      inkscape:cy="312.16718"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -261,7 +261,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -270,6 +270,18 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-602.36216)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:33.01121521px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#c30000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-0.88895929"
+       y="731.96088"
+       id="text4167"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4169"
+         x="-0.88895929"
+         y="731.96088"
+         style="font-size:49.516819px;fill:#c30000;fill-opacity:1">CAS(0,1)</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:0.15606935;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4136"
@@ -342,11 +354,11 @@
        sodipodi:linespacing="125%"
        id="text5454"
        y="650.86365"
-       x="153.11775"
+       x="225.11775"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="650.86365"
-         x="153.11775"
+         x="225.11775"
          id="tspan5456"
          sodipodi:role="line">head</tspan></text>
     <rect
@@ -416,21 +428,9 @@
          x="337.43152"
          y="1015.9427"
          style="font-size:35px">z</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#c30000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="34.562996"
-       y="738.19806"
-       id="text4167"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4169"
-         x="34.562996"
-         y="738.19806"
-         style="font-size:60px;fill:#c30000;fill-opacity:1">CAS</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#cb0000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4433-88)"
-       d="m 68.5739,683.24882 c 17.070532,-33.05298 47.82179,-34.14204 73.13198,-37.90791"
+       d="m 134.5739,677.24882 c 17.07053,-33.05298 47.82179,-34.14204 73.13198,-37.90791"
        id="path4171"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />

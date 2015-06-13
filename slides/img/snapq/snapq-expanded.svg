@@ -2162,15 +2162,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70000001"
-     inkscape:cx="810.07644"
-     inkscape:cy="241.52519"
+     inkscape:cx="795.07644"
+     inkscape:cy="211.52519"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1680"
-     inkscape:window-height="1028"
-     inkscape:window-x="1675"
-     inkscape:window-y="-5"
+     inkscape:window-width="1600"
+     inkscape:window-height="877"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
      inkscape:window-maximized="1"
      units="px"
      showguides="false" />
@@ -2514,5 +2514,27 @@
        id="path47529"
        d="m 963.74429,836.34855 c -20.10056,14.21024 -45.76327,28.89864 -58.97394,66.08509 -8.86551,24.95533 -9.27678,78.98586 -9.27678,78.98586"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5, 15;stroke-opacity:1;marker-start:url(#marker47531);stroke-dashoffset:0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:53.95036697px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1192.9233"
+       y="684.38971"
+       id="text6125"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6127"
+         x="1192.9233"
+         y="684.38971">Producer side</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text6129"
+       y="684.38971"
+       x="57.494785"
+       style="font-style:normal;font-weight:normal;font-size:53.95036697px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="684.38971"
+         x="57.494785"
+         id="tspan6131"
+         sodipodi:role="line">Consumer side</tspan></text>
   </g>
 </svg>

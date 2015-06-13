@@ -64,30 +64,50 @@
           </script>
         </section>
 
+        <section data-markdown>
+          <script type="text/template">
+            ## Why Queues?
+
+            <img src="img/mint-api.png" />
+          </script>
+        </section>
+
         <section data-markdown style="text-align: left;">
           <script type="text/template">
             ### Advanced Use-Cases - Optimization
 
             ```
-            prices: Events[Double]
-            // ...
-            val avg = prices
+            val avg = (prices: Events[Double])
               .scanPast((initialPrice, 1))((a, x) => (a._1 + x, a._2 + 1))
               .map(a => a._1 / a._2)
             ```
             <!-- .element: class="fragment" -->
 
+            ![](img/snapq/scanpast-map.svg)
+            <!-- .element: class="fragment" -->
+          </script>
+        </section>
+
+        <section data-markdown style="text-align: left;">
+          <script type="text/template">
+            ### Advanced Use-Cases - Optimization
+
+            ```
+            val avg = (prices: Events[Double])
+              .scanPast((initialPrice, 1))((a, x) => (a._1 + x, a._2 + 1))
+              .map(a => a._1 / a._2)
+            ```
+
             ```
             val avg = prices.emit {
-              var (total, avg) = (0, initialPrice)
+              var (sum, num) = (initialPrice, 1)
               (emitter, x) => {
-                avg += x
-                total += 1
-                emitter.react(avg / total)
+                sum += x
+                num += 1
+                emitter.react(sum / num)
               }
             }
             ```
-            <!-- .element: class="fragment" -->
 
             ![](img/snapq/fusion.svg)
             <!-- .element: class="fragment" -->
@@ -101,7 +121,7 @@
           <script type="text/template">
             ### Existing Queue Implementations
 
-            Lock-Free Concurrent Linked Queue (JDK) -- a linked list of nodes.
+            From the JDK Lock-Free Concurrent Linked Queue JavaDoc:
 
             *Iterators are weakly consistent,
             returning elements reflecting the state of the queue
@@ -159,10 +179,10 @@
           <h3>Correctness</h3>
 
           <img src="img/snapq/correct-enq.svg" height="250px" />
-          <img src="img/snapq/correct-deq.svg" height="250px" class="fragment" />
+          <img src="img/snapq/correct-deq.svg" height="250px" class="fragment" data-fragment-index="2" />
           <ul>
-            <li class="fragment">Every array entry is initially <code>null</code>, then some element, and finally the special value <code>REMOVED</code></li>
-            <li class="fragment">The numbers in <code>head</code> increase monotonically from 0 until the array length</li>
+            <li class="fragment" data-fragment-index="1">Every array entry is initially <code>null</code>, then some element, and finally the special value <code>REMOVED</code></li>
+            <li class="fragment" data-fragment-index="3">The numbers in <code>head</code> increase monotonically from 0 until the array length</li>
           </ul>
         </section>
 
@@ -170,10 +190,10 @@
           <h3>Eventual Correctness</h3>
 
           <img src="img/snapq/eventual-speed.svg" height="250px" />
-          <img src="img/snapq/eventual-memory.svg" height="250px" class="fragment" />
+          <img src="img/snapq/eventual-memory.svg" height="250px" class="fragment" data-fragment-index="2" />
           <ul>
-            <li class="fragment">Assuming no contention, <code>last</code> eventually points to the first empty entry (eventually fast)</li>
-            <li class="fragment">Eventually, the reference to the removed element is released (eventual reclamation)</li>
+            <li class="fragment" data-fragment-index="1">Assuming no contention, <code>last</code> eventually points to the first empty entry (eventually fast)</li>
+            <li class="fragment" data-fragment-index="3">Eventually, the reference to the removed element is released (eventual reclamation)</li>
           </ul>
         </section>
 
@@ -190,16 +210,16 @@
           <script type="text/template">
             ### Single-Shot Queue Properties
 
-            - enqueue and dequeue operations
+            - atomic, lock-free enqueue and dequeue operations
             <!-- .element: class="fragment" -->
-            - snapshot operation (freeze is as good as snapshot)
+            - atomic, lock-free freeze operation
+            <!-- .element: class="fragment" -->
+            - simple and... fast
             <!-- .element: class="fragment" -->
             - bounded - can only fit L elements
             <!-- .element: class="fragment" style="color: #b00;" -->
             - enqueue and dequeue can only be invoked up to L times
             <!-- .element: class="fragment" style="color: #b00;" -->
-            - simple and... fast
-            <!-- .element: class="fragment" -->
           </script>
         </section>
 
@@ -231,11 +251,12 @@
           <img src="img/snapq/snapq-enqueue.svg" height="250px" />
 
           <p class="fragment">
-            Support data structure is some immutable data structure
+            Support data structure is any immutable data structure
             into which we can push single-shot queues.
           </p>
           <p class="fragment">
-            The support data structure must retain order.
+            The support data structure must be a sequence,
+            i.e. it must retain order.
           </p>
         </section>
 
@@ -245,7 +266,7 @@
           <img src="img/snapq/snapq-empty.svg" height="250px" />
           <p class="fragment">
             Dequeue must occasionally steal the support data structure
-            from the producer side of the queue.
+            from the enqueue (right) side.
           </p>
         </section>
 
@@ -260,8 +281,8 @@
 
           <img src="img/snapq/snapq-dequeue1.svg" height="250px" />
           <p class="fragment">
-            When there are more single-shot queues inside the support structure,
-            dequeue does not need to steal from the producer side of the queue.
+            Left support structure non-empty,
+            no need to steal.
           </p>
         </section>
 
@@ -269,6 +290,10 @@
           <h3>SnapQueue Dequeue</h3>
 
           <img src="img/snapq/snapq-dequeue2.svg" height="250px" />
+
+          <p class="fragment">
+            What about snapshots?
+          </p>
         </section>
 
         <section style="text-align: left;">
@@ -389,6 +414,10 @@
           <h3>Performance - 1 Thread Enqueue</h3>
 
           <img src="img/snapq/snapq-1-enqueue.svg" height="450px" />
+
+          <small>
+            segment = single-shot queue
+          </small>
         </section>
 
         <section style="text-align: left;">
@@ -401,6 +430,10 @@
           <h3>Performance - 1 Thread Dequeue</h3>
 
           <img src="img/snapq/snapq-1-dequeue.svg" height="450px" />
+
+          <small>
+            segment = single-shot queue
+          </small>
         </section>
 
         <section style="text-align: left;">
@@ -416,8 +449,10 @@
         </section>
 
         <section>
+          <br/>
+
           <p>
-            Immutable data structures are important
+            Immutable data structures are useful
             for concurrent data structure design.
           </p>
 
