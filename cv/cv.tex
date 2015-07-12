@@ -1,0 +1,954 @@
+%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Original by Kieran Healy <kjhealy@gmail.com>
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements (should be included in a modern tex distribution):
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medksip,
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+\documentclass[9pt]{article}
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{Aleksandar Prokopec}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Google Inc.}
+\def\myaddress{Brandschenkestrasse 110, 8002 Zürich}
+\def\myemail{aleksandar.prokopec@gmail.com}
+\def\myweb{http://axel22.github.io}
+%\def\myfax{}
+\def\myphone{+41 78 9489 347}
+\def\myversion{}
+\def\myrevision{}
+
+
+\def\myaffiliation{Google Inc.}
+\def\myauthor{Aleksandar Prokopec}
+\date{} % not used (revision control instead)
+\def\mykeywords{Aleksandar, Prokopec, Aleksandar Prokopec, Vita, CV, Resume, Scala,
+Programming Languages, Parallelism, Concurrency, Distributed Programming}
+
+%%%------------------------------------------------------------------------
+%%% Git version tracking
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%\immediate\write18{sh ./vc}
+%\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Required style files
+%%%------------------------------------------------------------------------
+
+\usepackage{url,fancyhdr}
+\usepackage[ampersand]{easylist}
+%%\usepackage{revnum}
+% for reverse-numbered publications (revnumerate environment) if needed.
+
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkBlue}{HTML}{365FA0}
+
+%% hyperlinks
+\usepackage[xetex,
+  colorlinks=true,
+  urlcolor=DarkBlue,
+  plainpages=false,
+    pdfpagelabels,
+    bookmarksnumbered,
+    pdftitle={\mytitle},
+    pagebackref,
+    pdfauthor={\myauthor},
+    pdfkeywords={\mykeywords}
+    ]{hyperref}
+
+\usepackage{marvosym}
+
+% \usepackage{showframe}
+\usepackage[width=4.825in,top=1.7in]{geometry}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe.
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro}
+\setsansfont[Mapping=tex-text,Colour=AA0000]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]
+{\marginpar{\textsf{{\normalsize\vspace{-1em}\flushright #1}}}}
+
+\newcommand{\dates}[1]{\hfill \emph{#1}}
+
+%% custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}
+{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~}
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rhead{{\scriptsize\thepage}}
+
+% \setlength{\headsep}{12pt}
+\textheight=580pt
+\raggedbottom
+\thispagestyle{fancy}
+
+%% git revision control footer
+%\rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}
+% git revision info inserted via external script -- see docs for vc package for details.
+%comment out this line if you're not using vc, also remove the \input{vc} line above.
+
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+% \begin{absolutelynopagebreak}
+\begin{minipage}[t]{2.45in}
+ \flushright \href{http://www.google.com/about/company/}{Google Zürich}
+   {\footnotesize 
+   \\ \vspace{-0.03in} Brandschenkestrasse 110
+   \\ \vspace{-0.03in} 8002 Zürich \\ \vspace{-0.05in} Switzerland}
+
+\end{minipage}
+\hfill
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{2.1in}
+  \flushright \footnotesize Phone: \myphone \\
+  E-mail: \texttt{\href{mailto:\myemail}{\myemail}} \\
+  Website: \vspace{-0.03in} \texttt{\href{\myweb}{\myweb}}
+\end{minipage}
+
+
+\medskip
+\medskip
+\medskip
+
+%% Name
+\noindent{\huge {\textsc{aleksandar prokopec}}}
+\reversemarginpar
+
+\medskip
+
+%% Citizenship
+\medskip
+\marginhead{Citizenship}
+
+\noindent Slovenian
+
+\bigskip
+
+
+%% Education
+\marginhead{Education}
+
+\noindent{\bf \em École Polytechnique Fédérale de Lausanne},
+\emph{Lausanne, Switzerland} \vspace{0.01in} \dates{2009 -- 2014}
+\newline Ph.D. in Computer Science
+\newline Advisor: Martin Odersky
+\bigskip
+
+\noindent{\bf \em Faculty of Electrical Engineering and Computing},
+\emph{Zagreb, Croatia} \vspace{0.01in}
+\dates{2004 -- 2009}
+\newline\noindent M.A. in Computer Science, {\em June 2009}
+\bigskip
+
+%% Professional Experience
+\medskip
+\marginhead{Professional \newline Experience}
+
+\noindent {\bf Software Engineer}, {\bf \em Google Inc.}, \emph{Zürich, Switzerland}
+\vspace{0.01in} \dates{2014 -- }
+\newline\noindent Product area: Geo
+\begin{easylist}[itemize]
+& Maintained distributed logging infrastructure for Google Maps products.
+& Worked on a massively distributed system used to analyze Geo product usage.
+& Lead the implementation of a real-time distributed pipeline for spam detection.
+  \newline Awarded a \emph{Google Spot Bonus} for this effort.
+& Designed and implemented a test automation suite for product documentation.
+& Main organizer of the team-internal monthly Hackathon events.
+  \newline Awarded a \emph{Google Peer Bonus} for this effort.
+\end{easylist}
+\bigskip
+
+%% Teaching Experience
+\medskip
+\marginhead{Teaching \newline Experience}
+
+% \begin{minipage}{\linewidth}
+\noindent {\bf External Lecturer, Co-Organizer},
+{\em Reactive Programming \& Parallelism}
+\dates{2015}
+\newline\noindent Co-organized, prepared materials and exercises, lead teaching staff on
+\newline\noindent the undergraduate course on parallel, distributed, and asynchronous
+\newline\noindent programming at EPFL, \textasciitilde90 students.
+\bigskip
+
+\noindent {\bf Lecturer, Co-Organizer},
+{\em Parallel Programming \& Data Analysis}
+\dates{2015}
+\newline\noindent Coursera MOOC on parallel, distributed, and asynchronous
+\newline\noindent programming, release planned in December 2015.
+\bigskip
+
+\noindent {\bf Lead Organizer},
+{\em Principles of Reactive Programming}
+\dates{2013}
+\newline\noindent Coursera MOOC on reactive programming in Scala, with 2 iterations
+\newline\noindent and >60,000 participants to date.
+\vspace{0.05in}
+\begin{easylist}[itemize]
+& Coordinated a team of three lecturers during recording and
+\newline the preparing of lecture materials.
+
+& Lead teaching staff composed of graduate students,
+\newline directing content production, designing and implementing exercise
+\newline materials, managing the production of lecture videos,
+\newline organizing community TAs on Coursera.
+
+& Received the \emph{EPFL IC Teaching Award} for this effort.
+\end{easylist}
+\bigskip
+
+\noindent {\bf Teaching Assistant}, {\em Functional Programming in Scala}
+\dates{2010-2013}
+\newline\noindent Required EPFL undergraduate course on functional programming
+\newline\noindent (\textasciitilde160 students)
+\medskip
+% \bigskip
+
+
+% \noindent {\bf Teaching Assistant}, {\em Programming Principles} \dates{2011, 2014}
+% \newline\noindent Required EPFL Undergraduate course on functional and logic programming
+% \newline\noindent (\textasciitilde160 students)
+% \bigskip
+
+%% Research Interests
+\textheight=580pt
+\marginhead{{\vskip 0.3em}Research \newline Interests}
+% \medskip
+
+\noindent
+My research interests include persistent and concurrent data structures,
+reactive programming and reactive data structures,
+and the design and implementation of frameworks,
+languages and runtime support for concurrent, parallel and distributed
+software development,
+with the Scala programming language as the underlying platform.
+\bigskip
+
+% Programming language support for concurrent and distributed programming; \\type systems; non-standard uses of types for data-centric programming and big data; language and library design
+
+
+% \bigskip
+
+\marginhead{{\vskip 0.4em}Thesis}
+\medskip
+
+\noindent\href{http://infoscience.epfl.ch/record/200977/files/EPFL_TH6264.pdf}
+{\bf Data Structures and Algorithms for Data-Parallel Computing }
+\dates{EPFL 2014}
+\newline
+\noindent\href{http://infoscience.epfl.ch/record/200977/files/EPFL_TH6264.pdf}
+{\bf in a Managed Runtime}
+\newline
+\noindent Aleksandar Prokopec
+\bigskip
+
+
+\marginhead{{\vskip 0.4em}Books}
+\medskip
+
+\noindent\href{http://www.amazon.com/Learning-Concurrent-Programming-Aleksandar-Prokopec/dp/1783281413/}
+{\bf Learning Concurrent Programming in Scala }
+\dates{Packt 2014}
+\newline
+\noindent Aleksandar Prokopec
+\bigskip
+
+
+%% Publications
+\marginhead{Publications}
+% \medskip
+
+%% Use revnumerate environment if numbered publications are needed.
+%% (Include it above in the preamble).
+%% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+%% \begin{revnumerate}
+
+\noindent\href{http://axel22.github.io/resources/docs/snapqueue.pdf}
+{\bf SnapQueue: Lock-Free Queue with Constant Time Snapshots}
+\dates{SCALA 2015}
+\newline
+\noindent Aleksandar Prokopec
+\newline
+\dates{Scala Symposium 2015, co-located with PLDI}
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/pdp.pdf}
+{\bf Efficient Lock-Free Work-stealing Iterators for Data-Parallel Collections}
+\dates{PDP 2015}
+\newline
+\noindent Aleksandar Prokopec, Dmitry Petrashko, Martin Odersky
+\newline
+\dates{Parallel, Distributed and Network-Based Processing 2015}
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/reactives-and-isolates.pdf}
+{\bf Containers and Aggregates, Mutators and Isolates}
+\dates{SCALA 2014}
+\newline
+\noindent\href{http://axel22.github.io/resources/docs/reactives-and-isolates.pdf}
+{\bf for Reactive Programming}
+\newline
+\noindent Aleksandar Prokopec, Philipp Haller, Martin Odersky
+\newline
+\dates{Annual Scala Workshop 2014, co-located with ECOOP}
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/lcpc2013_submission_6.pdf}
+{\bf Near Optimal Work-Stealing Tree Scheduler }
+\dates{LCPC 2013}
+\newline
+\noindent\href{http://axel22.github.io/resources/docs/lcpc2013_submission_6.pdf}
+{\bf for Highly Irregular Data-Parallel Workloads}
+\newline
+\noindent Aleksandar Prokopec, Martin Odersky
+\newline
+\dates{Languages and Compilers for Parallel Computing 2013}
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/ecoop13_sujeeth.pdf}
+{\bf Composition and Reuse with Compiled Domain-Specific Languages}
+\dates{ECOOP 2013}
+\newline
+\noindent Arvind K. Sujeeth, Tiark Rompf, Kevin J. Brown,
+\newline
+\noindent HyoukJoong Lee,
+          Hassan Chafi, Victoria Popic, Michael Wu,
+\newline
+\noindent Aleksandar Prokopec,
+          Vojin Jovanovic, Martin Odersky, Kunle Olukotun
+\newline
+\dates{European Conference on Object-Oriented Programming 2013}
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/lcpc2012.pdf}
+{\bf FlowPools: A Lock-Free Deterministic Concurrent }
+\dates{LCPC 2012}
+\newline
+\noindent\href{http://axel22.github.io/resources/docs/lcpc2012.pdf}
+{\bf Dataflow Abstraction}
+\newline
+\noindent Aleksandar Prokopec, Heather Miller, Tobias Schlatter
+\newline
+\noindent Philipp Haller, Martin Odersky
+\newline
+\dates{Languages and Compilers for Parallel Computing 2012}
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/ctries-snapshot.pdf}
+{\bf Concurrent Tries with Efficient Non-blocking Snapshots}
+\dates{PPOPP 2012}
+\newline
+\noindent Aleksandar Prokopec, Nathan Bronson, Phil Bagwell, Martin Odersky
+\newline
+\dates{Symposium on Principles and Practice of Parallel Programming 2012}
+\bigskip
+
+\noindent\href{http://lampwww.epfl.ch/~prokopec/lcpc_ctries.pdf}
+{\bf Lock-Free Resizeable Concurrent Tries}
+\dates{LCPC 2011}
+\newline
+\noindent Aleksandar Prokopec, Phil Bagwell, Martin Odersky
+\newline
+\dates{Languages and Compilers for Parallel Computing 2011}
+\bigskip
+
+\noindent\href{http://infoscience.epfl.ch/record/165523/files/techrep.pdf}
+{\bf A Generic Parallel Collection Framework}
+\dates{Euro-Par 2011}
+\newline
+\noindent Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, Martin Odersky
+\newline
+\dates{Euro-Par 2011}
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/icadiwt_atga.pdf}
+{\bf Adaptive Mutation Operator Cycling}
+\dates{ICADIWT 2009}
+\newline
+\noindent Aleksandar Prokopec, Marin Golub
+\newline
+\dates{International Conference on the Applications }
+\newline
+\dates{of Digital Information and Web Technologies 2009}
+\bigskip
+
+%% In Progress
+\marginhead{{\vskip 0.4em}Submitted/In Preparation}
+\medskip
+
+%% Use revnumerate environment if numbered publications are needed.
+%% (Include it above in the preamble).
+%% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+%% \begin{revnumerate}
+
+% \noindent\href{http://infoscience.epfl.ch/record/191239}{\bf Function-Passing Style: Typed, Distributed}\dates{}\vspace{-0.03in}
+% \newline\noindent\href{http://infoscience.epfl.ch/record/191239}{\bf Functional Programming}
+\noindent{\bf Isolates, Channels and Event Streams for
+              Composable Distributed Programming}\dates{}
+% \newline\noindent{\bf Functional Programming}
+% \smallskip
+\newline\noindent Aleksandar Prokopec, Martin Odersky
+% \bigskip
+\medskip
+
+\noindent{\bf Conc-Trees for Functional and Parallel Programming}\dates{}
+\newline\noindent Aleksandar Prokopec, Martin Odersky
+% \bigskip
+\medskip
+
+%% Selected Tech Reports
+\marginhead{{\vskip 0.3em}Selected \newline Tech Reports}
+% \medskip
+
+%% Use revnumerate environment if numbered publications are needed.
+%% (Include it above in the preamble).
+%% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+%% \begin{revnumerate}
+
+\noindent\href{http://infoscience.epfl.ch/record/186071}
+{\bf  Achieving Efficient Work-Stealing for Data-Parallel Collections}
+\dates{}
+% \smallskip
+\newline\noindent Aleksandar Prokopec, Martin Odersky
+\newline\noindent\emph{April 2013}
+% \bigskip
+\medskip
+
+\noindent\href{http://infoscience.epfl.ch/record/181098}
+{\bf  FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction -- Proofs}
+\dates{}
+% \smallskip
+\newline\noindent Aleksandar Prokopec, Heather Miller, Philipp Haller
+\newline\noindent\emph{June 2012}
+% \bigskip
+\medskip
+
+\noindent\href{http://infoscience.epfl.ch/record/166908/files/ctries-techreport.pdf}
+{\bf Cache-Aware Lock-Free Concurrent Hash Tries}
+\dates{}
+% \smallskip
+\newline\noindent Aleksandar Prokopec, Phil Bagwell, Martin Odersky
+\newline\noindent\emph{June 2011}
+% \bigskip
+\medskip
+
+%% Open Source
+\medskip
+\marginhead{{\vskip 0.1em}Open Source}
+
+\vspace{0.01in}
+\noindent {\bf Scala Programming Language}, {\em Scala team member} \dates{2009 --}
+
+\vspace{0.05in}
+\begin{easylist}[itemize]
+& \href{http://reactive-collections.com/}
+{{\bf Reactive Collections Distributed Programming Framework}},
+{\bf \em lead}
+\newline Reactive programming framework aimed at building asynchronous,
+\newline composable, distributed systems.
+
+& \href{http://scala-blitz.github.io/}
+{{\bf Scala-Blitz -- High-Performance Data-Parallelism Framework}},
+{\bf \em lead}
+\newline Scala module for highly efficient data-parallel programming.
+
+& \href{http://scalameter.github.io/}
+{{\bf ScalaMeter Benchmarking Framework}},
+{\bf \em lead}
+\newline Microbenchmarking and performance regression testing framework
+\newline for Scala and JVM.
+
+& \href{http://docs.scala-lang.org/sips/completed/futures-promises.html}
+{{\bf Scala Futures \& Promises} (Scala Improvement Proposal 14)},
+{\bf \em team member}
+\newline Asynchronous programming framework for Scala, used as a
+\newline basic building block for other concurrency frameworks within
+\newline the Scala ecosystem.
+
+& \href{http://docs.scala-lang.org/overviews/parallel-collections/overview.html}
+{{\bf Parallel Collections Framework}},
+{\bf \em lead}
+\newline Scala standard library module for data-parallel programming,
+\newline which became a part of the standard Scala distribution in 2011.
+\end{easylist}
+
+\bigskip
+
+%% Honors
+\medskip
+\medskip
+\medskip
+
+\marginhead{Honors}
+
+\noindent Google Spot Bonus for the Distributed Real-Time Spam Detection Project
+\dates{2015}
+\newline\noindent Google Peer Bonus for the Team Hackathon Initiative \dates{2015}
+\newline\noindent Nominated for the Patrick Denantes Doctoral Thesis Award \dates{2014}
+\newline\noindent EPFL Outstanding Teaching Assistant Award \dates{2013}
+\newline\noindent LCPC Best Paper Presentation Award \dates{2011}
+\newline\noindent EPFL Computer Science Fellowship \dates{2009 -- 2010}
+\newline\noindent University of Zagreb Rector Award for Best Projects \dates{2008}
+\newline\noindent Faculty of Electrical Engineering and Computing Josip Loncar Award
+                  \dates{2007}
+\newline\noindent Faculty of Electrical Engineering and Computing Josip Loncar Award
+                  \dates{2006}
+\newline\noindent Participation in the International Physics Olympiad (IPhO)
+                  \dates{2004}
+\newline\noindent 1st Place in the Croatian National Physics Competition (Finals)
+\dates{2004}
+\newline\noindent Participation in the Croatian National Physics Competition (Finals)
+\dates{2002}
+\newline\noindent Participation in the Croatian National Physics Competition (Finals)
+\dates{2001}
+
+\bigskip
+
+%% Talks
+\medskip
+\marginhead{Selected Talks}
+
+\vspace{-0.02in}
+
+\noindent\href{http://axel22.github.io/slides/snapq.html#/}
+{\bf SnapQueue: Lock-Free Queue with Constant Time Snapshots}
+\dates{SCALA 2015}\vspace{-0.03in}
+\newline\noindent Academic Conference Talk
+\dates{}
+\linebreak\noindent Portland, Oregon, USA, June 13, 2015
+\bigskip
+
+\noindent\href{https://speakerdeck.com/axel22/scalameter-in-2014}
+{\bf ScalaMeter -- Performance Regression Testing Framework}
+\dates{Oracle VM Meetup 2014}\vspace{-0.03in}
+\newline\noindent Academic Meetup Talk
+\dates{}
+\linebreak\noindent ETH, Zürich, Switzerland, September 11, 2014
+\bigskip
+
+\noindent\href{https://www.parleys.com/tutorial/53a7d2cde4b0543940d9e561/chapter1/about}
+{\bf Reactive Collections and 3D Engine Design}
+\dates{ScalaDays 2014}\vspace{-0.03in}
+\newline\noindent Industrial Conference Talk
+\dates{}
+\linebreak\noindent Berlin, Germany, June 24, 2014
+\bigskip
+
+\noindent
+\href{http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections}
+{\bf Macro-based Scala Parallel Collections}
+\dates{Scala eXchange 2013}\vspace{-0.03in}
+\newline\noindent Industrial Conference Talk
+\dates{}
+\linebreak\noindent London, UK, December 2, 2013
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/lcpc13.pptx}
+{\bf Work-Stealing Tree Scheduling}
+\dates{LCPC 2013}\vspace{-0.03in}
+\newline\noindent Academic Conference Talk
+\dates{}
+\linebreak\noindent San Jose, CA, USA, September 26, 2013
+\bigskip
+
+\noindent
+{\bf Scala as a Research Tool}
+\dates{ECOOP 2013}\vspace{-0.03in}
+\newline\noindent ECOOP Tutorial
+                  (w/ Heather Miller and Philipp Haller)
+\dates{}
+\linebreak\noindent Montpellier, France, July 1, 2013
+\bigskip
+
+\noindent
+\href{https://skillsmatter.com/skillscasts/3701-scala-performance-regression-testing}
+{\bf Scala Performance Regression Testing}
+\dates{Scala eXchange 2012}\vspace{-0.03in}
+\newline\noindent Industrial Conference Talk
+\dates{}
+\linebreak\noindent London, UK, November 19, 2012
+\bigskip
+
+\noindent\href{https://skillsmatter.com/skillscasts/3234-parallel-concurrent-hash-tries}
+{\bf Parallel Concurrent Hash Tries}
+\dates{ScalaDays 2012}\vspace{-0.03in}
+\newline\noindent Industrial Conference Talk
+\dates{}
+\linebreak\noindent London, UK, April 18, 2012
+\bigskip
+
+\noindent\href{http://axel22.github.io/resources/docs/ctries-snapshots.pptx}
+{\bf Concurrent Tries with Efficient Non-Blocking Snapshots}
+\dates{PPOPP 2012}\vspace{-0.03in}
+\newline\noindent Academic Conference Talk
+\dates{}
+\linebreak\noindent New Orleans, Louisiana, USA, February 29, 2012
+\bigskip
+
+\noindent
+\href{http://lcpc11.cs.colostate.edu/}
+{\bf Lock-Free Resizeable Concurrent Tries}
+\dates{LCPC 2011}\vspace{-0.03in}
+\newline\noindent Academic Conference Talk
+\dates{}
+\linebreak\noindent Fort Collins, CO, USA, September 9, 2011
+\bigskip
+
+\noindent
+\href{http://europar2011.bordeaux.inria.fr/conference.php}
+{\bf Generic Parallel Collection Framework}
+\dates{Euro-Par 2011}\vspace{-0.03in}
+\newline\noindent Academic Conference Talk
+\dates{}
+\linebreak\noindent Bordeaux, France, September 2, 2011
+\bigskip
+
+\noindent\href{https://skillsmatter.com/skillscasts/2236-parallel-collections}
+{\bf Parallel Collections}
+\dates{Scala eXchange 2011}\vspace{-0.03in}
+\newline\noindent Industrial Conference Talk
+\dates{}
+\linebreak\noindent London, UK, June 15, 2011
+\bigskip
+
+\noindent
+\href{http://days2011.scala-lang.org/node/138/272/29.%20Parallel%20Collections.mp4}
+{\bf Scala Parallel Collections}
+\dates{ScalaDays 2011}\vspace{-0.03in}
+\newline\noindent Industrial Conference Talk
+\dates{}
+\linebreak\noindent Palo Alto, CA, USA, June 3, 2011
+\bigskip
+
+\noindent
+\href{http://www.slideshare.net/AleksandarProkopec/introduction-to-scala-39540464}
+{\bf Introduction to Scala}
+\dates{JUG Meetup 2011}\vspace{-0.03in}
+\newline\noindent Industrial Talk, Java User Group Grenoble
+\dates{}
+\linebreak\noindent Grenoble, France, March, 2011
+\bigskip
+
+
+
+\bigskip
+
+
+% %% Selected Broader Service
+% \medskip
+% \marginhead{Selected \newline Broader \newline Service}
+
+% \noindent \href{http://ic.epfl.ch/conseil-de-faculte}{\bf EPFL Computer Science Faculty Council}, {\bf \em PhD Student Representative} \dates{2012 --}
+% \newline\noindent Members include the dean of the faculty as well as representatives
+% \newline\noindent from every branch of the faculty, administrative, PhD, faculty, etc.
+% \newline\noindent Quarterly meetings to steer the faculty and introduce new initiatives.
+% \bigskip
+
+% \noindent \href{http://ic-gsa.epfl.ch/}{\bf EPFL CS Graduate Student Association}, {\bf \em President} \dates{2009 -- 2011}
+% \newline\noindent Volunteer student organization with a mission to foster a sense of
+% \newline\noindent community and collaboration between different research groups in
+% \newline\noindent the faculty. Initiatives led/introduced:
+% \vspace{0.05in}
+% \begin{easylist}[itemize]
+% & {\bf Research Day}: college-wide showcase of labs' research activities
+% & {\bf PhD Student Open House}: main recruiting event for CS doctoral program
+% & {\bf Social Events}: aper\'{o}s, ski trips, outings
+% \end{easylist}
+% \bigskip
+
+% \noindent {\bf EPFL CS Graduate Student Mentor} \dates{2010 -- 2012}
+% \newline\noindent One-on-one mentoring of incoming doctoral students, aided students in
+% \newline\noindent integrating into EPFL's research environment and Switzerland as a whole.
+% \vspace{0.05in}
+% \bigskip
+
+
+%% External Service
+\medskip
+\marginhead{External \newline Service}
+
+% \noindent {\bf Committees:}
+\noindent\newline\noindent {\bf Transactions on Computers 2015},
+journal submission reviewer \dates{2015}
+\newline\noindent {\bf Scala Workshop 2014},
+program committee member \dates{7/2014}
+\newline\noindent {\bf High-Level Parallel Programming and Applications 2014},
+external reviewer \dates{4/2014}
+\newline\noindent {\bf ECOOP 2013},
+external reviewer \dates{7/2013}
+\newline\noindent {\bf Scala Workshop 2013},
+program committee member (co-chair)\dates{7/2013}
+\newline\noindent {\bf ScalaDays 2010},
+external reviewer \dates{6/2010}
+\newline\noindent {\bf ICADIWT 2009},
+external reviewer \dates{8/2009}
+
+\bigskip
+
+% %% Service
+% \marginhead{Academic \newline Service}
+
+% \vspace{-0.02in}
+% \noindent{\bf Committees}: Curry On Prague (co-chair), Scala 2015 (co-chair), ECOOP 2015 organizing committee (sponsorship chair), POPL 2015 AEC, Scala 2014 (co-chair), Scala 2013 (co-chair)
+% \newline\noindent{\bf Reviewer} for: ECOOP 2013, Scala 2013
+
+% \bigskip
+
+%% Students Supervised
+\medskip
+\marginhead{Supervised \newline Projects\footnotemark[1]}
+\footnotetext[1]{EPFL research labs prepare projects for B.Sc./M.Sc.
+students to complete for credits.
+These projects are designed and supervised by EPFL doctoral assistants.}
+
+\noindent
+{\bf Joël Rossier},
+{\em MacroGL Scala.JS Backend}
+\dates{2/2014 -- 6/2014}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Sven Reber},
+{\em MacroGL API Extensions}
+\dates{2/2014 -- 6/2014}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Gwangbae Choi},
+{\em ScalaMeter Inline Benchmarking}
+\dates{2/2014 -- 6/2014}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Kristof Szabo},
+{\em ScalaMeter Java API}
+\dates{2/2014 -- 6/2014}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Nicolas Stucki},
+{\em Scala Multiset Collection}
+\dates{9/2013 -- 1/2014}
+\newline\noindent M.Sc. level
+\medskip
+
+\noindent
+{\bf Timo Babst},
+{\em Data-Parallel Raytracer}
+\dates{9/2013 -- 1/2014}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Clément Moutet},
+{\em Data-Parallel Flocking Algorithm}
+\dates{9/2013 -- 1/2014}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Roman Zoller},
+{\em ScalaMeter D3js Frontend}
+\dates{2/2013 -- 6/2013}
+\newline\noindent M.Sc. level
+\medskip
+
+\noindent
+{\bf Tobias Schlatter},
+{\em FlowSeqs: Barrier-Free ParSeqs}
+\dates{9/2012 -- 1/2013}
+\newline\noindent M.Sc. level, co-supervision w/ Philipp Haller \& Heather Miller
+\medskip
+
+\noindent
+{\bf Roger Vion},
+{\em Improvements to ScalaMeter}
+\dates{9/2012 -- 1/2013}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Tobias Schlatter},
+{\em Multi-Lane FlowPools}
+\dates{2/2012 -- 6/2012}
+\newline\noindent M.Sc. level, co-supervision w/ Philipp Haller \& Heather Miller
+\medskip
+
+\noindent
+{\bf Bruno Studer},
+{\em A Non-Blocking Concurrent Queue Algorithm}
+\dates{2/2012 -- 6/2012}
+\newline\noindent B.Sc. level
+\medskip
+
+\noindent
+{\bf Ngoc Duy Pham},
+{\em Scala Benchmarking Suite -- Performance}
+\dates{8/2011 -- 1/2012}
+\newline\noindent {\em Regression Pinpointing}
+\newline\noindent M.Sc. level
+\medskip
+
+\noindent
+{\bf Pamela Delgado},
+{\em Scala Invariant Verifier}
+\dates{8/2011 -- 1/2012}
+\newline\noindent M.Sc. level
+\medskip
+
+\bigskip
+
+\medskip
+\marginhead{GSoC \newline Projects\footnotemark[2]}
+\footnotetext[2]{The Scala Team is a regular host of Google Summer of Code Projects.
+These are 3-month paid projects offered to students all over the world,
+sponsored by Google and supervised by members of various open-source organizations.}
+
+\noindent
+{\bf Heather Miller},
+{\em Parallel Collections Extensions}
+\dates{5/2011 -- 9/2011}
+\medskip
+
+\noindent
+{\bf Ivan Oreskovic},
+{\em Porting Scala Parallel Collections to the }
+\dates{5/2012 -- 9/2012}
+\newline\noindent
+{\em Android Platform}
+\dates{}
+\medskip
+
+\noindent
+{\bf Dmitry Petrashko},
+{\em Specializing Parallel Collections with Scala Macros}
+\dates{5/2013 -- 9/2013}
+\medskip
+
+\noindent
+{\bf Krzysztof Janosz},
+{\em ScalaMeter –- Binary Compatible Serialization }
+\dates{5/2015 -- 9/2015}
+\newline\noindent
+{\em Format and Invocation Measurers}
+\dates{}
+\medskip
+
+
+\pagebreak
+%% References
+\medskip
+\marginhead{References}
+
+\noindent {\bf Martin Odersky}
+\newline\noindent {Faculty of Computer, Communication, and Information Science}
+\newline\noindent {\em \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne}
+\newline\noindent \Telefon~+41 21 693 68 63
+\newline\noindent \Letter~\href{mailto:martin.odersky@epfl.ch}{martin.odersky@epfl.ch}
+\medskip
+
+\noindent {\bf Doug Lea}
+\newline\noindent {Computer Science Department}
+\newline\noindent {\em State University of New York at Oswego}
+\newline\noindent \Telefon~+1-315-312-2688
+\newline\noindent \Letter~\href{mailto:dl@cs.oswego.edu}{dl@cs.oswego.edu}
+\medskip
+
+\noindent {\bf Philipp Haller}
+\newline\noindent {School of Computer Science and Communication}
+\newline\noindent {\em KTH Royal Institute of Technology}
+\newline\noindent \Telefon~+41 76 205 39 32
+\newline\noindent \Letter~\href{mailto:phaller@kth.se}{phaller@kth.se}
+\medskip
+
+
+
+\end{document}
