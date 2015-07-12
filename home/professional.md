@@ -265,7 +265,7 @@ Berlin, Germany, June 2014
 London, UK, December 2014
 \[[PDF](/resources/docs/scalablitz.pdf)\]
 \[[Video](http://skillsmatter.com/podcast/scala/macro-based-scala-parallel-collections)\]
-* [LCPC 2013](http://lcpc11.cs.colostate.edu/),
+* [LCPC 2013](https://parasol.tamu.edu/lcpc2013/),
 San Jose, California, September 2013
 \[[PPT](/resources/docs/lcpc13.pptx)\]
 
