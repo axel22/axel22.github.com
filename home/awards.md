@@ -22,7 +22,7 @@ Here is a list of my awards and honours:
   Faculty of Electrical Engineering and Computing, Zagreb 2007.
 * Josip Loncar Award for Excellence in Studies,
   Faculty of Electrical Engineering and Computing, Zagreb 2006.
-* Participation on the International Physics Olympiad,
+* Participation in the International Physics Olympiad,
   IPhO 2004, Pohang 2004.
 * 1st Place in the National Physics Competition (Finals),
   Croatia 2004.
