@@ -85,7 +85,7 @@ Programming Languages, Parallelism, Concurrency, Distributed Programming}
 %% color for the links
 % \usepackage[usenames,dvipsnames]{color}
 \usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{DarkBlue}{HTML}{165FC0}
+\definecolor{DarkBlue}{HTML}{365FA0}
 
 %% hyperlinks
 \usepackage[xetex,
@@ -117,7 +117,7 @@ Programming Languages, Parallelism, Concurrency, Distributed Programming}
 %% Consolas or inconsolata are good alternatives.
 \setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro}
 \setsansfont[Mapping=tex-text,Colour=AA0000]{Myriad Pro}
-\setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas}
 
 
 %%%------------------------------------------------------------------------
@@ -154,7 +154,7 @@ Programming Languages, Parallelism, Concurrency, Distributed Programming}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
 \fancyfoot{}
-\rhead{{\scriptsize\thepage}}
+\rfoot{{\scriptsize\thepage}}
 
 % \setlength{\headsep}{12pt}
 \textheight=580pt
@@ -171,11 +171,11 @@ Programming Languages, Parallelism, Concurrency, Distributed Programming}
 %%% Address and contact block
 %%%------------------------------------------------------------------------
 % \begin{absolutelynopagebreak}
-\begin{minipage}[t]{2.45in}
+\begin{minipage}[t]{1.55in}
  \flushright \href{http://www.google.com/about/company/}{Google Zürich}
-   {\footnotesize 
    \\ \vspace{-0.03in} Brandschenkestrasse 110
-   \\ \vspace{-0.03in} 8002 Zürich \\ \vspace{-0.05in} Switzerland}
+   \\ \vspace{-0.03in} 8002 Zürich
+   \\ \vspace{-0.03in} Switzerland
 
 \end{minipage}
 \hfill
@@ -183,10 +183,10 @@ Programming Languages, Parallelism, Concurrency, Distributed Programming}
 % dummy (needed here)
 %\end{minipage}
 \hfill
-\begin{minipage}[t]{2.1in}
-  \flushright \footnotesize Phone: \myphone \\
-  E-mail: \texttt{\href{mailto:\myemail}{\myemail}} \\
-  Website: \vspace{-0.03in} \texttt{\href{\myweb}{\myweb}}
+\begin{minipage}[t]{2.7in}
+  \flushright Phone: \myphone
+  \\ E-mail: \vspace{-0.03in} \texttt{\href{mailto:\myemail}{\myemail}}
+  \\ Website: \vspace{-0.03in} \texttt{\href{\myweb}{\myweb}}
 \end{minipage}
 
 
@@ -248,7 +248,7 @@ Programming Languages, Parallelism, Concurrency, Distributed Programming}
 
 % \begin{minipage}{\linewidth}
 \noindent {\bf External Lecturer, Co-Organizer},
-{\em Reactive Programming \& Parallelism}
+{\em Reactive Programming and Parallelism}
 \dates{2015}
 \newline\noindent Co-organized, prepared materials and exercises, led teaching staff on
 \newline\noindent the undergraduate course on parallel, distributed, and asynchronous
@@ -256,7 +256,7 @@ Programming Languages, Parallelism, Concurrency, Distributed Programming}
 \bigskip
 
 \noindent {\bf Lecturer, Co-Organizer},
-{\em Parallel Programming \& Data Analysis}
+{\em Parallel Programming and Data Analysis}
 \dates{2015}
 \newline\noindent Coursera MOOC on parallel, distributed, and asynchronous
 \newline\noindent programming, release planned in December 2015.
@@ -894,10 +894,20 @@ These projects are designed and supervised by EPFL doctoral assistants.}
 These are 3-month paid projects offered to students all over the world,
 sponsored by Google and supervised by members of various open-source organizations.}
 
+
 \noindent
-{\bf Heather Miller},
-{\em Parallel Collections Extensions}
-\dates{5/2011 -- 9/2011}
+{\bf Krzysztof Janosz},
+{\em ScalaMeter –- Binary Compatible Serialization }
+\dates{5/2015 -- 9/2015}
+\newline\noindent
+{\em Format and Invocation Measurers}
+\dates{}
+\medskip
+
+\noindent
+{\bf Dmitry Petrashko},
+{\em Specializing Parallel Collections with Scala Macros }
+\dates{5/2013 -- 9/2013}
 \medskip
 
 \noindent
@@ -910,18 +920,9 @@ sponsored by Google and supervised by members of various open-source organizatio
 \medskip
 
 \noindent
-{\bf Dmitry Petrashko},
-{\em Specializing Parallel Collections with Scala Macros}
-\dates{5/2013 -- 9/2013}
-\medskip
-
-\noindent
-{\bf Krzysztof Janosz},
-{\em ScalaMeter –- Binary Compatible Serialization }
-\dates{5/2015 -- 9/2015}
-\newline\noindent
-{\em Format and Invocation Measurers}
-\dates{}
+{\bf Heather Miller},
+{\em Parallel Collections Extensions }
+\dates{5/2011 -- 9/2011}
 \medskip
 
 
