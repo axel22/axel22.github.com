@@ -32,7 +32,7 @@ to standard lock-free concurrent queues.
 
 \[[PDF](/resources/docs/snapqueue.pdf)\]
 \[[BibTex](/resources/docs/bibtex/snapqueue.bib)\]
-\[[ACM DL]()\]
+\[[ACM DL](http://dl.acm.org/citation.cfm?id=2774976)\]
 
 
 ## References

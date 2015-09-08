@@ -16,6 +16,8 @@ I also recommend these books.
 
 ### 2015
 
+* Raymond -- The Cathedral and the Bazaar
+* Feibelman -- A PhD Is Not Enough!
 * Chiusano, Bjarnason -- Functional Programming in Scala
 
 
