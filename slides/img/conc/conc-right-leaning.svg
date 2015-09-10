@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.25"
-     inkscape:cx="1331.9055"
-     inkscape:cy="417.42201"
+     inkscape:cx="1321.9055"
+     inkscape:cy="341.42201"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -173,11 +173,11 @@
        sodipodi:linespacing="125%"
        id="text4492"
        y="399.95145"
-       x="524.06476"
+       x="540.06476"
        style="font-style:normal;font-weight:normal;font-size:64.78643799px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="399.95145"
-         x="524.06476"
+         x="540.06476"
          id="tspan4494"
          sodipodi:role="line">xs.right</tspan></text>
     <text
@@ -279,13 +279,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:45.25838852px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="715.95166"
+       x="725.95166"
        y="837.86121"
        id="text4643"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4645"
-         x="715.95166"
+         x="725.95166"
          y="837.86121">xs.right.right</tspan></text>
     <text
        xml:space="preserve"
@@ -365,11 +365,11 @@
        sodipodi:linespacing="125%"
        id="text4675"
        y="616.85681"
-       x="2819.9526"
+       x="2837.7197"
        style="font-style:normal;font-weight:normal;font-size:58.58003998px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="616.85681"
-         x="2819.9526"
+         x="2837.7197"
          id="tspan4677"
          sodipodi:role="line">e &lt;= d-2</tspan></text>
     <text
@@ -424,11 +424,11 @@
        sodipodi:linespacing="125%"
        id="text4695"
        y="532.72253"
-       x="2509.0017"
+       x="2519.0017"
        style="font-style:normal;font-weight:normal;font-size:45.25838852px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="532.72253"
-         x="2509.0017"
+         x="2519.0017"
          id="tspan4697"
          sodipodi:role="line">xs.right.right</tspan></text>
     <text

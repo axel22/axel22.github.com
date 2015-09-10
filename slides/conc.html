@@ -6,7 +6,7 @@
 
 		<title>Conc Trees</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="description" content="Conc-Trees for Functional and Parallel Programming">
 		<meta name="author" content="Aleksandar Prokopec">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -71,14 +71,14 @@
             <p class="fragment">The `flatMap` combinator is fairly general:</p>
 
             ```
-            xs.filter(p) =
-              xs.flatMap(x => if (p(x)) Seq(x) else Nil)
+            xs.map(f) = xs.flatMap(x => List(f(x)))
             ```
 
             <!-- .element: class="fragment" -->
 
             ```
-            xs.map(f) = xs.flatMap(x => List(f(x)))
+            xs.filter(p) =
+              xs.flatMap(x => if (p(x)) Seq(x) else Nil)
             ```
 
             <!-- .element: class="fragment" -->
@@ -111,7 +111,23 @@
 
         <section data-markdown>
           <script type="text/template">
-            TODO show growth figure
+            <img src="img/conc/array-growth-1.svg"/>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            <img src="img/conc/array-growth-2.svg"/>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            <img src="img/conc/array-growth-3.svg"/>
+
+            <p class="fragment">Adding an element is amortized O(1).</p>
+
+            <p class="fragment">1.5 - 3 writes per element.</p>
           </script>
         </section>
 
@@ -127,7 +143,7 @@
 
             <p>Parallel implementation:</p>
 
-            `conc(split(xs).map(p => p.flatMap(x)))`
+            `concat(split(xs).map(p => p.flatMap(x)))`
           </script>
         </section>
 
@@ -143,17 +159,39 @@
 
             <p>Parallel implementation:</p>
 
-            `conc(split(xs).par.map(p => p.flatMap(x)))`
+            `concat(split(xs).par.map(p => p.flatMap(x)))`
           </script>
         </section>
 
         <section data-markdown>
           <script type="text/template">
-            `conc(split(xs).par.map(p => p.flatMap(x)))`
+            `concat(split(xs).par.map(p => p.flatMap(x)))`
 
-            <img class="fragment" src="img/TODO"/>
+            <img src="img/conc/parallel-flatmap-1.svg"/>
+          </script>
+        </section>
 
-            TODO analyze writes
+        <section data-markdown>
+          <script type="text/template">
+            `concat(split(xs).par.map(p => p.flatMap(x)))`
+
+            <img src="img/conc/parallel-flatmap-2.svg"/>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            `concat(split(xs).par.map(p => p.flatMap(x)))`
+
+            <img src="img/conc/parallel-flatmap-3.svg"/>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            `concat(split(xs).par.map(p => p.flatMap(x)))`
+
+            <img src="img/conc/parallel-flatmap-4.svg"/>
           </script>
         </section>
 
@@ -163,7 +201,7 @@
             <br/>
             <br/>
             <br/>
-            Goal: turn this 2.5 - 3 writes to 1 write.
+            Goal: turn this 2.5 - 4 writes to 1 write.
           </script>
         </section>
 
@@ -253,13 +291,123 @@
 
         <section data-markdown>
           <script type="text/template">
-            
+            Step 2: change 1.5 - 3 writes to 1 write per element.
+
+            <img class="fragment" src="img/conc/parallel-flatmap-map.svg"/>
           </script>
         </section>
 
         <section data-markdown>
           <script type="text/template">
-            
+            Step 2: change 1.5 - 3 writes to 1 write per element.
+
+            <img src="img/conc/array-vs-tree.svg"/>
+
+            <p class="fragment">1.5 - 3 writes (average) vs. O(log n) writes</p>
+
+            <p class="fragment">Conc-Trees need an O(1) append operation.</p>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            <img src="img/conc/conc-binary.svg"/>
+
+            <ul class="fragment">
+              <li>To count up to N, we must flip digits O(n) times.</li>
+              <li>We need O(log n) binary digits to store N.</li>
+            </ul>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            <img src="img/conc/conc-binary-compare.svg"/>
+
+            <ul>
+              <li>To count up to N, we must flip digits O(n) times.</li>
+              <li>We need O(log n) binary digits to store N.</li>
+            </ul>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            <img src="img/conc/conc-binary-compare.svg"/>
+
+            <ul>
+              <li>To append N elements, we must link O(n) times.</li>
+              <li>We need O(log n) trees to store N elements.</li>
+            </ul>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            The O(1) append uses an alternative representation.
+
+            <img src="img/conc/conc-append.svg"/>
+
+            <p class="fragment">
+              Problem: `concat` does not work on this representation.
+            </p>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            Normalization - call `concat` on the trees in the list.
+
+            <img src="img/conc/conc-normalize.svg"/>
+
+            <p class="fragment">These O(log n) concats take O(log n) time.</p>
+
+            <p class="fragment">
+              <small>
+              O(log n<sub>4</sub>) - O(log n<sub>3</sub>) +
+              O(log n<sub>3</sub>) - O(log n<sub>2</sub>) +
+              O(log n<sub>2</sub>) - O(log n<sub>1</sub>) =
+              O(log n<sub>4</sub>) - O(log n<sub>1</sub>)
+              </small>
+            </p>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            Step 2: change 1.5 - 3 writes to 1 write.
+
+            <img src="img/conc/array-vs-append.svg"/>
+
+            <p class="fragment">
+              1.5 - 3 writes (average) vs. ~5 object allocations (average)
+            </p>
+
+            <p class="fragment">Object allocations are much more expensive!</p>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            Step 2: change 1.5 - 3 writes to 1 write.
+
+            <img src="img/conc/array-vs-chunk.svg"/>
+
+            <p class="fragment">
+              1.5 - 3 writes (average) vs. 1 write + (~5 objects) / k
+            </p>
+          </script>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template">
+            Map operation running time
+
+            <img src="img/conc/conc-map-time.svg"/>
+
+            <a href="http://scala-blitz.github.io/home/documentation//performance.html">
+              More benchmarks here.
+            </a>
           </script>
         </section>
 
