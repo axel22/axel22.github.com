@@ -49,7 +49,7 @@ London, UK, November 2014<br/>
 
 * **Conc-Trees for Functional and Parallel Programming** <br/>
 Aleksandar Prokopec, Martin Odersky<br/>
-[LCPC 2015](http://www.csc2.ncsu.edu/workshops/lcpc2015/)<br/>
+[The 28th International Workshop on Languages and Compilers for Parallel Computing](http://www.csc2.ncsu.edu/workshops/lcpc2015/)<br/>
 Raleigh, North Carolina, September 2015<br/>
 \[[PDF](http://axel22.github.io/resources/docs/lcpc-conc-trees.pdf)\]
 \[[Link](/publications/conc-trees)\]
