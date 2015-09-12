@@ -71,7 +71,7 @@
             <p class="fragment">The `flatMap` combinator is fairly general:</p>
 
             ```
-            xs.map(f) = xs.flatMap(x => List(f(x)))
+            xs.map(g) = xs.flatMap(x => List(g(x)))
             ```
 
             <!-- .element: class="fragment" -->
@@ -147,7 +147,7 @@
           </script>
         </section> -->
 
-        <section data-markdown>
+        <!-- <section data-markdown>
           <script type="text/template">
             ## Motivation
 
@@ -161,7 +161,7 @@
 
             `concat(split(xs).par.map(p => p.flatMap(x)))`
           </script>
-        </section>
+        </section> -->
 
         <section data-markdown>
           <script type="text/template">
