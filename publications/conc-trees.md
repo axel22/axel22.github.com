@@ -3,7 +3,7 @@ layout: publication
 title: Conc-Trees for Functional and Parallel Programming
 authors: Aleksandar Prokopec, Martin Odersky
 venue: LCPC 2015
-permalink: /publications/snapqueue/index.html
+permalink: /publications/conc-trees/index.html
 ---
 
 
