@@ -197,7 +197,7 @@ iterator or removing all the elements.
 * [Technical report](/resources/docs/ctries-techreport.pdf) -- pseudocode, performance tests and the correctness proof of the operations
 * [PPoPP paper](/resources/docs/ctries-snapshot.pdf) describes the snapshot operation in more depth
 * [Source code](https://github.com/axel22/Ctries) is also available in this repository and is available for pre-2.10.0 releases of Scala
-* [Scala 2.10.x standard library](https://github.com/scala/scala/tree/master/src/library/scala/collection/concurrent) introduced a concurrent tries implementation
+* [Scala 2.10.x standard library](https://github.com/scala/scala/tree/2.12.x/src/library/scala/collection/concurrent) introduced a concurrent tries implementation
 
 
 ## ![scala](/resources/images/scala-logo.png) Scala Parallel Collections
@@ -210,7 +210,7 @@ with the regular Scala Collection framework and allows the user to switch betwee
 the parallel and sequential implementation of a collection easily.
 
 * [Technical report](/resources/docs/techrep.pdf)
-* [Scala 2.9.x standard library](https://github.com/scala/scala/tree/master/src/library/scala/collection/parallel/) introduced parallel collections
+* [Scala 2.9.x standard library](https://github.com/scala/scala/tree/2.12.x/src/library/scala/collection/parallel/) introduced parallel collections
 
 
 
