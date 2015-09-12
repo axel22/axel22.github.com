@@ -47,6 +47,13 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Conc-Trees for Functional and Parallel Programming** <br/>
+Aleksandar Prokopec, Martin Odersky<br/>
+[LCPC 2015](http://www.csc2.ncsu.edu/workshops/lcpc2015/)<br/>
+Raleigh, North Carolina, September 2015<br/>
+\[[PDF](http://axel22.github.io/resources/docs/lcpc-conc-trees.pdf)\]
+\[[Link](/publications/conc-trees)\]
+
 * **SnapQueue: Lock-Free Queue with Constant Time Snapshots** <br/>
 Aleksandar Prokopec<br/>
 [Scala Symposium 2015, co-located with PLDI](http://lampwww.epfl.ch/~hmiller/scala2015/)<br/>
@@ -240,6 +247,13 @@ It is devised to soften the learning curve of students who are being introduced 
 * [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
 EPFL, Lausanne, Switzerland, September 2014
 \[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
+
+
+### Conc-Trees
+
+* [LCPC 2015](http://www.csc2.ncsu.edu/workshops/lcpc2015/),
+Raleigh, North Carolina, September 2015
+\[[Slides](/slides/conc.html)\]
 
 
 ### SnapQueue
