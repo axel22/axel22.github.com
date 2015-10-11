@@ -365,7 +365,8 @@ Lausanne, Switzerland, January 2012
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
 ### Reviewing
-- [Transactions on Computers](http://www.computer.org/web/tc)
+- [OPODIS 2015](https://opodis2015.irisa.fr/)
+- [Transactions on Computers (2015)](http://www.computer.org/web/tc)
 - [HLPP 2014](https://sites.google.com/site/hlpp2014amsterdam/)
 - [ECOOP 2013](http://www.lirmm.fr/ecoop13/)
 - [ScalaDays 2010](http://days2010.scala-lang.org/)
