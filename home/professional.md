@@ -149,7 +149,13 @@ This section shortly describes some of the projects I've been working on.
 
 ## ![coroutines](/resources/images/coroutines-64.png) Coroutines
 
-Scala programming languages extension for first-class coroutines
+Scala Coroutines is a library-level extension for the Scala programming language that introduces first-class coroutines.
+
+Coroutines are a language abstraction that generalizes subroutines
+(i.e. procedures, methods or functions).
+Unlike a subroutine, which is invoked once and executes until it completed,
+a coroutine can pause execution and yield control back to the caller,
+or another coroutine. The caller can then resume the coroutine when appropriate. 
 
 * [Project website](http://storm-enroute.com/coroutines)
 * [Source code](https://github.com/storm-enroute/coroutines/)
