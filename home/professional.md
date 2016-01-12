@@ -47,6 +47,13 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Isolates, Channels, and Event Streams for Composable Distributed Programming** <br/>
+Aleksandar Prokopec, Martin Odersky<br/>
+[Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program)<br/>
+Pittsburgh, Pennsylvania, October 2015<br/>
+\[[PDF](http://axel22.github.io/resources/docs/reactive-isolates.pdf)\]
+\[[Link](/publications/reactive-isolates)\]
+
 * **Conc-Trees for Functional and Parallel Programming** <br/>
 Aleksandar Prokopec, Martin Odersky<br/>
 [The 28th International Workshop on Languages and Compilers for Parallel Computing](http://www.csc2.ncsu.edu/workshops/lcpc2015/)<br/>
@@ -140,6 +147,14 @@ Zagreb, Croatia, May 2009<br/>
 This section shortly describes some of the projects I've been working on.
 
 
+## ![coroutines](/resources/images/coroutines-64.png) Coroutines
+
+Scala programming languages extension for first-class coroutines
+
+* [Project website](http://storm-enroute.com/coroutines)
+* [Source code](https://github.com/storm-enroute/coroutines/)
+
+
 ## ![mecha](/resources/images/mecha-logo-64.png) Mecha
 
 SBT plugin for workflow automation.
@@ -148,13 +163,13 @@ SBT plugin for workflow automation.
 * [Source code](https://github.com/storm-enroute/mecha/)
 
 
-## ![reactive-collections](/resources/images/reactress-gradient-small.png) Reactive Collections
+## ![reactors](/resources/images/reactress-gradient-small.png) Reactors
 
-An event-based programming framework based on event streams, reactive collections
-and concurrent isolates.
+An event-based framework for distributed programming
+based on event streams, channels and reactors.
 
-* [Project website](http://reactive-collections.com/)
-* [Source code](https://github.com/storm-enroute/reactive-collections/)
+* [Project website](http://reactors.io/)
+* [Source code](https://github.com/reactors-io/reactors/)
 
 
 ## ![scalablitz](/resources/images/chess-knight-logo.png) ScalaBlitz
@@ -249,6 +264,13 @@ EPFL, Lausanne, Switzerland, September 2014
 \[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
 
 
+### Reactors
+
+* [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program),
+Pittsburgh, Pennsylvania, USA, October 2015,
+\[[Slides](/resources/docs/onward15.pdf)\]
+
+
 ### Conc-Trees
 
 * [LCPC 2015](http://www.csc2.ncsu.edu/workshops/lcpc2015/),
@@ -261,6 +283,7 @@ Raleigh, North Carolina, September 2015
 * [Scala Symposium 2015](http://lampwww.epfl.ch/~hmiller/scala2015/),
 Portland, Oregon, June 2015
 \[[Slides](/slides/snapq.html)\]
+
 
 ### Reactive Collections and Game Engine Design
 
@@ -286,7 +309,7 @@ San Jose, California, September 2013
 
 ### ScalaMeter
 
-* [Oracle VM Meetup 2014](),
+* [Oracle VM Meetup 2014](http://vmmeetup.github.io/2014/),
 Zurich, Switzerland, November 2014
 \[[Speaker Deck](https://speakerdeck.com/axel22/scalameter-in-2014)\]
 * [Scala eXchange 2012](http://skillsmatter.com/event/scala/scala-exchange-2012),
@@ -331,6 +354,10 @@ Lausanne, Switzerland, April 2010
 
 ### Scala
 
+* "Scala -- The Learning Curve", Jazoon 2015,
+Zurich, Switzerland, October 2015
+\[[HTTP](http://jazoon.com/wp/)\]
+\[[PDF](/resources/docs/jazoon15.pdf)\]
 * "Scala as a Research Tool", ECOOP 2013,
 Montpellier, France, July 2013
 \[[HTTP](http://www.lirmm.fr/ec-montpellier-2013/?id=158#tutorial3)\]
@@ -361,6 +388,7 @@ Lausanne, Switzerland, January 2012
 # <a id="committees">Conferences and Workshops</a>
 
 ### Program Committees
+- [HLPP 2016](http://hlpp2016.uni-muenster.de/)
 - [Scala 2014](http://lampwww.epfl.ch/~hmiller/scala2014/index.html)
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
