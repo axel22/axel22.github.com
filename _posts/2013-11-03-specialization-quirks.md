@@ -383,8 +383,10 @@ The solution is to lift `new Observer[S]` to a helper method, which mentions `S`
       emit(obs)
     }
 
-In specialized subclasses of `Source`, the `newObserver` method will forward to `newObserver$mcI$sp`, so `trigger` itself does not need to be specialized.
+In specialized subclasses of `Source`, the `newObserver` method will forward to `newObserver$mcI$sp`, so `trigger` itself does not need to be specialized. For user-facing methods, a similar trick is to introduce a fake implicit parameter, just to mention the specialized type parameter.
 
+
+## Parting words
 
 I hope this summarizes some of the useful guidelines when dealing with Scala specialization.
 I'll add more tips here if I remember some or run into them.
