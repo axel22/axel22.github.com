@@ -339,7 +339,7 @@ In fact, you will find that the `FunctionN` classes in the Scala standard librar
 > Restrict your specialized primitive types to ensure shorter compilation times and make compiler output smaller.
 
 
-## Avoid using specialization and implicit classes
+## Avoid using specialization and implicit classes together
 
 Instead of:
 
@@ -359,6 +359,32 @@ I've ran across situations when specialized implicit classes compiled in a separ
 While this will probably be fixed in the future, if you run into error messages telling you that the `MyTupleOps` symbol is not available, the above is likely to solve the issue.
 
 
+## Lift expressions to methods to trigger specialization
+
+Remember, specialization of a method is triggered **when the all the specialized types are mentioned in the function signature**. Consider the following example:
+
+    class Source[T, @specialized(Int) S](val event: S) {
+      def emit(obs: Observer[S]): Unit = obs.onEvent(event)
+      def trigger(x: T): Unit = {
+        val obs = new Observer[S]
+        emit(obs)
+      }
+    }
+
+    class Observer[@specialized(Int) S] { def onEvent(e: S) {} }
+
+Above, in the `Source` subclass specialized for `Int`, i.e. in `Source$mcI$sp`, note that specialized `emit`, i.e. `emit$mcI$sp` will note be called. This is because `trigger` is **not specialized**, since it does not contain the specialized type `S` in its signature. This example will box the value `event` when trigger gets called.
+
+The solution is to lift `new Observer[S]` to a helper method, which mentions `S` in its return type.
+
+    def newObserver: Observer[S] = new Observer[S]
+    def trigger(x: T): Unit = {
+      val obs = newObserver
+      emit(obs)
+    }
+
+In specialized subclasses of `Source`, the `newObserver` method will forward to `newObserver$mcI$sp`, so `trigger` itself does not need to be specialized.
+
+
 I hope this summarizes some of the useful guidelines when dealing with Scala specialization.
 I'll add more tips here if I remember some or run into them.
-
