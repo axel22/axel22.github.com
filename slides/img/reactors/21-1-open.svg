@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="21-2-open.svg">
+   sodipodi:docname="21-1-open.svg">
   <defs
      id="defs4">
     <pattern
@@ -155,15 +155,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="739.00343"
+     inkscape:cx="329.30971"
      inkscape:cy="289.43235"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
-     inkscape:window-height="864"
+     inkscape:window-width="1600"
+     inkscape:window-height="900"
      inkscape:window-x="0"
-     inkscape:window-y="16"
+     inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -173,7 +173,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -204,6 +204,8 @@
          id="tspan8023"
          x="50.50761"
          y="442.23007"
-         style="font-size:70px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono">def open[T]: (Events[T], Channel[T])</tspan></text>
+         style="font-size:70px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+   style="fill:#0048f0;fill-opacity:1"
+   id="tspan18213">def</tspan> open[T]: (Events[T], Channel[T])</tspan></text>
   </g>
 </svg>

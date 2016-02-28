@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="21-2-open.svg">
+   sodipodi:docname="21-3-open.svg">
   <defs
      id="defs4">
     <pattern
@@ -155,15 +155,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="739.00343"
+     inkscape:cx="383.42974"
      inkscape:cy="289.43235"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
-     inkscape:window-height="864"
+     inkscape:window-width="1600"
+     inkscape:window-height="900"
      inkscape:window-x="0"
-     inkscape:window-y="16"
+     inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -173,7 +173,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -204,7 +204,9 @@
          id="tspan8023"
          x="50.50761"
          y="442.23007"
-         style="font-size:70px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono">def open[T]: (Events[T], Channel[T])</tspan></text>
+         style="font-size:70px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+   style="fill:#0048f0;fill-opacity:1"
+   id="tspan19329">def</tspan> open[T]: (Events[T], Channel[T])</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -243,7 +245,7 @@
        sodipodi:nodetypes="cc" />
     <path
        transform="matrix(0.79478364,0,0,0.79478364,828.05754,437.50513)"
-       d="m 470.73109,560.09131 a 46.467018,113.13708 0 1 1 -92.93404,0 46.467018,113.13708 0 1 1 92.93404,0 z"
+       d="m 470.73109,560.09131 c 0,62.48388 -20.804,113.13708 -46.46702,113.13708 -25.66303,0 -46.46702,-50.6532 -46.46702,-113.13708 0,-62.48388 20.80399,-113.13708 46.46702,-113.13708 25.66302,0 46.46702,50.6532 46.46702,113.13708 z"
        sodipodi:ry="113.13708"
        sodipodi:rx="46.467018"
        sodipodi:cy="560.09131"
@@ -269,7 +271,7 @@
        sodipodi:cy="560.09131"
        sodipodi:rx="46.467018"
        sodipodi:ry="113.13708"
-       d="m 470.73109,560.09131 a 46.467018,113.13708 0 1 1 -92.93404,0 46.467018,113.13708 0 1 1 92.93404,0 z"
+       d="m 470.73109,560.09131 c 0,62.48388 -20.804,113.13708 -46.46702,113.13708 -25.66303,0 -46.46702,-50.6532 -46.46702,-113.13708 0,-62.48388 20.80399,-113.13708 46.46702,-113.13708 25.66302,0 46.46702,50.6532 46.46702,113.13708 z"
        transform="matrix(0.74790864,0,0,0.74790864,846.77693,463.50687)" />
     <path
        sodipodi:type="arc"
@@ -279,7 +281,7 @@
        sodipodi:cy="560.09131"
        sodipodi:rx="46.467018"
        sodipodi:ry="113.13708"
-       d="m 470.73109,560.09131 a 46.467018,113.13708 0 1 1 -92.93404,0 46.467018,113.13708 0 1 1 92.93404,0 z"
+       d="m 470.73109,560.09131 c 0,62.48388 -20.804,113.13708 -46.46702,113.13708 -25.66303,0 -46.46702,-50.6532 -46.46702,-113.13708 0,-62.48388 20.80399,-113.13708 46.46702,-113.13708 25.66302,0 46.46702,50.6532 46.46702,113.13708 z"
        transform="matrix(0.79478364,0,0,0.79478364,143.17412,437.50513)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:20, 20;stroke-dashoffset:0"
