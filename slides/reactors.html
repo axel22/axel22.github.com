@@ -82,7 +82,6 @@
 <code><pre><span class="hljs-keyword">def</span> doc: List[String]
 doc.foreach { s =>
   $(<span class="hljs-string">"#editor"</span>).append(s) }</pre></code>
-          </pre>
           <img class="fragment" src="img/reactors/5-render.svg" height="500px"/>
         </section>
 
@@ -90,8 +89,169 @@ doc.foreach { s =>
 <code><pre><span class="hljs-keyword">def</span> doc: List[String]
 doc.foreach { s =>
   $(<span class="hljs-string">"#editor"</span>).append(s) }</pre></code>
-          </pre>
+          <img src="img/reactors/5-0-render.svg" height="500px"/>
+        </section>
+
+        <section>
+<code><pre><span class="hljs-keyword">def</span> doc: List[String]
+doc.foreach { s =>
+  $(<span class="hljs-string">"#editor"</span>).append(s) }</pre></code>
+          <img src="img/reactors/5-1-render.svg" height="500px"/>
+        </section>
+
+        <section>
+<code><pre><span class="hljs-keyword">def</span> doc: List[String]
+doc.foreach { s =>
+  $(<span class="hljs-string">"#editor"</span>).append(s) }</pre></code>
           <img src="img/reactors/5-2-render.svg" height="500px"/>
+        </section>
+
+        <section>
+<code><pre><span class="hljs-keyword">def</span> doc: List[String]
+doc.foreach { s =>
+  $(<span class="hljs-string">"#editor"</span>).append(s) }</pre></code>
+          <img src="img/reactors/5-3-render.svg" height="500px"/>
+        </section>
+
+        <section>
+<code><pre><span class="hljs-keyword">def</span> doc: List[String]
+doc.foreach { s =>
+  $(<span class="hljs-string">"#editor"</span>).append(s) }</pre></code>
+          <img src="img/reactors/5-4-render.svg" height="500px"/>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <h2>Collections have high-level operations.</h2>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-2-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-3-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-4-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-4-2-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-5-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-6-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/6-7-magnify.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/7-time.svg"/>
+          <code class="fragment"><pre><span class="hljs-keyword">def</span> time: Events[Int]</pre></code>
+          <br/>
+          <p class="fragment" style="font-family: SketchBlock; font-size: 75px;">Event stream</p>
+        </section>
+
+        <section>
+<code><pre><span class="hljs-keyword">def</span> time: Events[Int]
+
+
+time.onEvent { t =>
+  <span class="fragment">doc.foreach { s =>
+    $(<span class="hljs-string">"#editor"</span>).append(s) }</span>
+}</pre></code>
+
+          <img class="fragment" src="img/reactors/7-time.svg" height="200px"/>
+        </section>
+
+        <section>
+          <h2>Similarity</h2>
+          <br/>
+          <div class="fragment">
+            <p style="font-family: SketchBlock; font-size: 75px; text-align: right;">List</p>
+            <p style="font-family: SketchBlock; font-size: 50px; text-align: right";>exists somewhere</p>
+          </div>
+          <br/>
+          <div class="fragment">
+            <p style="font-family: SketchBlock; font-size: 75px; text-align: left;">Events</p>
+            <p style="font-family: SketchBlock; font-size: 50px; text-align: left;">happens sometime</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Equivalence</h2>
+          <br/>
+          <div class="fragment">
+            <code>onEvent</code> <span style="font-size: 50px;">~</span> <code>foreach</code>
+          </div>
+          <br/>
+          <code class="fragment">time.onEvent(t => renderHtml())</code>
+        </section>
+
+        <section>
+          <h2>Equivalence</h2>
+          <br/>
+          <div class="fragment">
+            <code>Events.filter</code> <span style="font-size: 50px;">~</span> <code>List.filter</code>
+          </div>
+          <br/>
+<code class="fragment"><pre><span class="hljs-keyword">val</span> frame: Events[Int] =
+  time.filter(t % 16 == 0)</pre></code>
+        </section>
+
+        <section>
+          <h2>Equivalence</h2>
+          <br/>
+          <div>
+            <code>Events.map</code> <span style="font-size: 50px;">~</span> <code>List.map</code>
+          </div>
+          <br/>
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> keys: Events[(Boolean, Char)]
+
+<span class="fragment"><span class="hljs-keyword">val</span> presses: Events[Char] =
+  keyboard.map(pc => pc._2)</pre></code></span>
+
+          <img src="img/reactors/12-keyboard.svg" height="150px"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/13-system.svg" height="600px"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/13-2-system.svg" height="600px"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/13-3-system.svg" height="600px"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/13-4-system.svg" height="600px"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/14-concurrency.svg" height="500px"/>
+          <p class="fragment">When, exactly, is sometime?</p>
+        </section>
+
+        <section>
+          <img src="img/reactors/15-serialization.svg" height="500px"/>
+          <p class="fragment">As most UI toolkits,<br/>event propagation is single-threaded.</p>
         </section>
 
         <section>

@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="6-magnify.svg">
+   sodipodi:docname="6-5-magnify.svg">
   <defs
      id="defs4">
     <marker
@@ -77,16 +77,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="572.83125"
-     inkscape:cy="382.96156"
+     inkscape:zoom="0.7"
+     inkscape:cx="464.17652"
+     inkscape:cy="349.89287"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1680"
-     inkscape:window-height="1050"
+     inkscape:window-width="1676"
+     inkscape:window-height="1014"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="16"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -107,7 +107,7 @@
      transform="translate(0,-308.2677)">
     <path
        sodipodi:type="arc"
-       style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:0.23744293;stroke-dasharray:none;stroke-dashoffset:0;opacity:0.44444444000000000"
        id="path8413"
        sodipodi:cx="798.57141"
        sodipodi:cy="182.66591"
@@ -123,20 +123,20 @@
        sodipodi:cy="182.66591"
        sodipodi:cx="798.57141"
        id="path8415"
-       style="fill:none;stroke:#000000;stroke-width:10.53319931;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#000000;stroke-width:10.53319931000000054;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:0.23744293;stroke-dasharray:none;stroke-dashoffset:0;opacity:0.44444444000000000"
        sodipodi:type="arc"
        sodipodi:start="1.1059083"
        sodipodi:end="7.1111211"
        sodipodi:open="true" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:8.65807629;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:8.65807629000000034;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.23744293;stroke-dasharray:none;opacity:0.44444444000000000"
        d="m 924.12586,494.89289 92.42894,67.99311 16.9384,-25.54571 -89.82751,-66.67346"
        id="path8417"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:0.50684929;stroke:none;font-family:Sans;opacity:0.99000000000000021"
        x="30.304575"
        y="388.69196"
        id="text3078"
@@ -145,13 +145,32 @@
          id="tspan3080"
          x="30.304575"
          y="388.69196"
-         style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono">doc.filter(s =&gt;</tspan><tspan
+         style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;fill:#808080;fill-opacity:0.50684929">doc.filter(s =&gt;</tspan><tspan
          sodipodi:role="line"
          x="30.304575"
          y="451.19196"
          id="tspan3082"
-         style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono">  s.contains(<tspan
-   style="fill:#d45500"
+         style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;fill:#808080;fill-opacity:0.50684929">  s.contains(<tspan
+   style="fill:#808080;fill-opacity:0.50684929"
    id="tspan3115">&quot;usable&quot;</tspan>))</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3103"
+       y="957.85077"
+       x="386.73331"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="957.85077"
+         x="386.73331"
+         id="tspan3105"
+         sodipodi:role="line">doc.map(s =&gt;</tspan><tspan
+         style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="1020.3508"
+         x="386.73331"
+         sodipodi:role="line"
+         id="tspan3109">  $(<tspan
+   style="fill:#d45500"
+   id="tspan3113">&quot;span&quot;</tspan>).append(s))</tspan></text>
   </g>
 </svg>

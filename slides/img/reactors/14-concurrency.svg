@@ -101,8 +101,8 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
-     inkscape:window-height="864"
+     inkscape:window-width="1676"
+     inkscape:window-height="1014"
      inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0" />
@@ -114,7 +114,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -131,7 +131,7 @@
        sodipodi:cy="182.66591"
        sodipodi:rx="117.14286"
        sodipodi:ry="117.14286"
-       d="m 915.71427,182.66591 a 117.14286,117.14286 0 1 1 -234.28572,0 117.14286,117.14286 0 1 1 234.28572,0 z"
+       d="m 915.71427,182.66591 c 0,64.69621 -52.44664,117.14286 -117.14286,117.14286 -64.69621,0 -117.14286,-52.44665 -117.14286,-117.14286 0,-64.69622 52.44665,-117.142862 117.14286,-117.142862 64.69622,0 117.14286,52.446642 117.14286,117.142862 z"
        transform="matrix(0.8966796,0,0,0.8966796,227.54717,-62.606881)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:9.22266674;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -335,5 +335,31 @@
        id="path5010"
        d="M 833.57961,206.50328 715.8289,301.8655 812.44009,312.01494 699.3994,403.56268"
        style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend-1)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa0000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="43.143761"
+       y="601.62915"
+       id="text5708"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.96321278,-0.26873992,0.26873992,0.96321278,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan5710"
+         x="43.143761"
+         y="601.62915"
+         style="font-size:75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#aa0000;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">READ</tspan></text>
+    <text
+       transform="matrix(0.94472619,0.32786037,-0.32786037,0.94472619,0,0)"
+       sodipodi:linespacing="125%"
+       id="text5712"
+       y="241.18552"
+       x="821.6781"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa0000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#aa0000;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         y="241.18552"
+         x="821.6781"
+         id="tspan5714"
+         sodipodi:role="line">WRITE</tspan></text>
   </g>
 </svg>
