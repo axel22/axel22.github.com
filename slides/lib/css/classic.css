@@ -72,7 +72,7 @@ based on dark.css by Ivan Sagalaev
 .ruby .hljs-symbol,
 .ruby .hljs-symbol .hljs-string,
 .ruby .hljs-string {
-  color: #DCA3A3;
+  color: #f80;
 }
 
 .diff .hljs-deletion,
@@ -92,7 +92,7 @@ based on dark.css by Ivan Sagalaev
 .apache .hljs-cbracket,
 .tex .hljs-formula,
 .coffeescript .hljs-attribute {
-  color: #CC9393;
+  color: #e80;
 }
 
 .hljs-shebang,

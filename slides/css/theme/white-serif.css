@@ -140,10 +140,10 @@ body {
   display: block;
   position: relative;
   width: 90%;
-  margin: 20px auto;
+  margin: 10px auto;
   margin-left: 200px;
   text-align: left;
-  font-size: 0.8em;
+  font-size: 1.0em;
   font-family: 'Andale Mono', monospace;
   line-height: 1.2em;
   word-wrap: break-word;
