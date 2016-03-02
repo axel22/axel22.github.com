@@ -428,7 +428,18 @@ frame.onEvent(render)</pre></code>
         </section>
 
         <section>
-          TODO
+<code><pre style="margin-left: 0px;"><span class="hljs-keyword">val</span> server:
+  Channel[(Id, Channel[List[String]])]
+
+</pre></code>
+<code class="fragment"><pre style="margin-left: 0px;"><span class="hljs-keyword">val</span> (updates, updatechan) = open[List[String]]
+</pre></code>
+<code class="fragment"><pre style="margin-left: 0px;">updates.onEvent { newDoc =>
+  doc = newDoc
+}
+</pre></code>
+<code class="fragment"><pre style="margin-left: 0px;">server ! (docId, updatechan)
+</pre></code>
         </section>
 
         <section>
@@ -519,6 +530,18 @@ frame.onEvent(render)</pre></code>
         </section>
 
         <section>
+          <br/>
+          <h3>Operations must be commutative.</h3>
+          <br/>
+          <br/>
+          <div class="fragment">
+            <code>insert((i1, x1), insert((i0, x0), doc))</code>
+            <p style="font-size: 80px;">=</p>
+            <code>insert((i0, x0), insert((i1, x1), doc))</code>
+          </div>
+        </section>
+
+        <section>
           <img src="img/reactors/28-1-uids.svg"/>
         </section>
 
@@ -532,10 +555,6 @@ frame.onEvent(render)</pre></code>
 
         <section>
           <img src="img/reactors/28-4-uids.svg"/>
-        </section>
-
-        <section>
-          TODO
         </section>
 
         <section>
@@ -606,7 +625,22 @@ frame.onEvent(render)</pre></code>
         </section>
 
         <section>
-          TODO
+<code><pre style="margin-left: -70px;">
+<span class="hljs-keyword">def</span> crdt[T](targets: Set[Channel[(Int, T)]]) = {
+  <span class="fragment"><span class="hljs-keyword">val</span> (receives, sendchan) = broadcast[(Uid, T)]</span>
+  <span class="fragment"><span class="hljs-keyword">val</span> root = <span class="hljs-keyword">new</span> Node</span>
+  <span class="fragment"><span class="hljs-keyword">val</span> (writes, writechan) = open[(Int, T)]</span>
+  <span class="fragment">writes.onEvent { <span class="hljs-keyword">case</span> (i, x) =>
+    sendchan ! (root.uid(i), x)
+  }</span>
+  <span class="fragment"><span class="hljs-keyword">val</span> (updates, updatechan) = open[List[String]]</span>
+  <span class="fragment">receives.onEvent { <span class="hljs-keyword">case</span> (uid, x) =>
+    root.insert(uid, x)
+    updatechan ! root.toList
+  }</span>
+  <span class="fragment">(updates, writechan)</span>
+}
+</pre></code>
         </section>
 
         <section>
@@ -614,15 +648,23 @@ frame.onEvent(render)</pre></code>
         </section>
 
         <section>
-          TODO
+          <br/>
+          <br/>
+          <h2>Why CRDT?</h2>
+          <br/>
+          <h3 class="fragment">Online collaborative editor prototype in 50 minutes.</h3>
         </section>
 
         <section>
+          <br/>
           <img src="img/reactors/38-1-system.svg"/>
         </section>
 
         <section>
-          TODO
+          <br/>
+          <br/>
+          <br/>
+          <h3>CRDT is a function.</h3>
         </section>
 
         <section>

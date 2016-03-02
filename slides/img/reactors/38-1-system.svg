@@ -95,14 +95,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.32"
-     inkscape:cx="1012.8757"
-     inkscape:cy="466.40521"
+     inkscape:zoom="0.45254834"
+     inkscape:cx="1202.8599"
+     inkscape:cy="344.93774"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
-     inkscape:window-height="864"
+     inkscape:window-width="1676"
+     inkscape:window-height="1014"
      inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0" />
@@ -114,7 +114,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -135,78 +135,74 @@
          id="tspan50835"
          x="1278.4318"
          y="60.579247"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#0048f0;fill-opacity:1;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#0048f0;fill-opacity:1;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
    id="tspan50837">val</tspan> (updates, inserts) = crdt[Char](peers)</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="107.66741"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan50928">updates.onEvent { d =&gt; doc = d }</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="154.75557"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         id="tspan50905"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#0048f0;fill-opacity:1;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-           id="tspan50907"></tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
+         id="tspan50905" /><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="201.84373"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan64976"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#0048f0;fill-opacity:1;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#0048f0;fill-opacity:1;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
    id="tspan64978">val</tspan> frame = time.filter(_ % 30 == 0)</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="248.93192"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan50851">frame on { render(doc) }</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="296.02008"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         id="tspan50859"><tspan
-           style="fill:#0048f0;fill-opacity:1"
-           id="tspan50861"></tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
+         id="tspan50859" /><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="343.10822"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan64970"><tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="fill:#0048f0;fill-opacity:1;font-size:35.00000004px"
    id="tspan64972">val</tspan> (keys, keychan) = open[(<tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="fill:#0048f0;fill-opacity:1;font-size:35.00000004px"
    id="tspan50885">Boolean</tspan>, <tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="fill:#0048f0;fill-opacity:1;font-size:35.00000004px"
    id="tspan50873">Char</tspan>)]</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="390.19641"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan50897">keyboard ! keychan</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="437.28458"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan50899">keys.filter(_._1).map(_._2).onEvent { c =&gt;</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="484.37274"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan50903">  inserts ! (pos, c)</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="531.46094"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan50901">}</tspan><tspan
          sodipodi:role="line"
          x="1278.4318"
          y="578.54901"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          id="tspan50936" /></text>
     <rect
-       style="opacity:0.50700001;fill:none;stroke:#000000;stroke-width:7.53410673;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:15.06821334, 7.53410667;stroke-dashoffset:0"
+       style="opacity:0.37860082000000000;fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12,6;stroke-dashoffset:0"
        id="rect51056"
        width="1085.7625"
        height="560.81213"
@@ -226,49 +222,49 @@
          id="tspan12004"
          x="1264.9355"
          y="665.10907"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
-   style="font-size:37.67053223px;fill:#0048f0;fill-opacity:1"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"><tspan
+   style="font-size:35.00000004px;fill:#0048f0;fill-opacity:1"
    id="tspan12642">def</tspan> broadcast[T](targets: Set[Channel[T]]) = {</tspan><tspan
          sodipodi:role="line"
          x="1264.9355"
          y="712.19727"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          id="tspan22675"><tspan
-   style="font-size:37.67053223px;fill:#0048f0;fill-opacity:1"
+   style="font-size:35.00000004px;fill:#0048f0;fill-opacity:1"
    id="tspan22677">  val</tspan> events = findSelfEventsIn(targets)</tspan><tspan
          sodipodi:role="line"
          x="1264.9355"
          y="759.2854"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          id="tspan22679"><tspan
-   style="font-size:37.67053223px;fill:#0048f0;fill-opacity:1"
+   style="font-size:35.00000004px;fill:#0048f0;fill-opacity:1"
    id="tspan22862">  val</tspan> (sends, sendchan) = open[T]</tspan><tspan
          sodipodi:role="line"
          x="1264.9355"
          y="806.3736"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          id="tspan22858">  sends.onEvent { x =&gt;</tspan><tspan
          sodipodi:role="line"
          x="1264.9355"
          y="853.46179"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          id="tspan23818"><tspan
-   style="font-size:37.67053223px;fill:#0048f0;fill-opacity:1"
+   style="font-size:35.00000004px;fill:#0048f0;fill-opacity:1"
    id="tspan24190">    for</tspan> (c &lt;- targets) c ! x</tspan><tspan
          sodipodi:role="line"
          x="1264.9355"
          y="900.54993"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          id="tspan23816">  }</tspan><tspan
          sodipodi:role="line"
          x="1264.9355"
          y="947.63812"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          id="tspan23820">  (events, sendchan)</tspan><tspan
          sodipodi:role="line"
          x="1264.9355"
          y="994.7262"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35.00000004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          id="tspan22095">}</tspan></text>
     <rect
        ry="10.430603"
@@ -278,7 +274,7 @@
        height="400.73984"
        width="1085.7626"
        id="rect52214"
-       style="opacity:0.50700001;fill:none;stroke:#000000;stroke-width:7.53410673;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:15.06821334, 7.53410667;stroke-dashoffset:0" />
+       style="opacity:0.37860082000000000;fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12,6;stroke-dashoffset:0" />
     <text
        sodipodi:linespacing="125%"
        id="text52239"
@@ -287,80 +283,80 @@
        style="font-size:37.67053223px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"
        transform="scale(1.0000496,0.9999504)"><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
          y="470.10257"
          x="105.17039"
          id="tspan52241"
          sodipodi:role="line"><tspan
    id="tspan52243"
-   style="font-size:37.67053223px;fill:#0048f0;fill-opacity:1">def</tspan> crdt[T](targets: Set[Channel[(Int, T)]]) = {</tspan><tspan
+   style="font-size:35px;fill:#0048f0;fill-opacity:1">def</tspan> crdt[T](targets: Set[Channel[(Int, T)]]) = {</tspan><tspan
          id="tspan52245"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="517.19073"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="513.85254"
          x="105.17039"
          sodipodi:role="line"><tspan
    id="tspan52247"
-   style="font-size:37.67053223px;fill:#0048f0;fill-opacity:1">  val</tspan> (receives, sendchan) = broadcast(targets)</tspan><tspan
+   style="font-size:35px;fill:#0048f0;fill-opacity:1">  val</tspan> (receives, sendchan) = broadcast(targets)</tspan><tspan
          id="tspan52249"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="564.27887"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="557.60254"
          x="105.17039"
          sodipodi:role="line"><tspan
    id="tspan52251"
-   style="font-size:37.67053223px;fill:#0048f0;fill-opacity:1">  val</tspan> root = <tspan
-   style="font-weight:bold;fill:#0048f0;fill-opacity:1;stroke:none"
+   style="font-size:35px;fill:#0048f0;fill-opacity:1">  val</tspan> root = <tspan
+   style="font-size:35px;font-weight:bold;fill:#0048f0;fill-opacity:1;stroke:none"
    id="tspan63807">new</tspan> Node</tspan><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="611.36707"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="601.35254"
          x="105.17039"
          sodipodi:role="line"
          id="tspan63841"><tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="font-size:35px;fill:#0048f0;fill-opacity:1"
    id="tspan63861">  val</tspan> (writes, writechan) = open[(Uid, T)]</tspan><tspan
          id="tspan52261"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="658.4552"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="645.10254"
          x="105.17039"
          sodipodi:role="line"><tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="font-size:35px;fill:#0048f0;fill-opacity:1"
    id="tspan63883">  val</tspan> (reads, readchan) = open[List[T]]</tspan><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="705.5434"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="688.85254"
          x="105.17039"
          sodipodi:role="line"
          id="tspan63905">  writes.onEvent(x =&gt; sendchan ! withUid(x))</tspan><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="752.63153"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="732.60254"
          x="105.17039"
          sodipodi:role="line"
          id="tspan63907">  receives.onEvent { x =&gt;</tspan><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="799.71967"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="776.35254"
          x="105.17039"
          sodipodi:role="line"
          id="tspan64964">    root.insert(x);</tspan><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="846.80786"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="820.10254"
          x="105.17039"
          sodipodi:role="line"
-         id="tspan64966">    readchan ! root.toList)</tspan><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="893.89606"
+         id="tspan64966">    readchan ! root.toList</tspan><tspan
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="863.85254"
          x="105.17039"
          sodipodi:role="line"
          id="tspan64968">  }</tspan><tspan
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="940.98419"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="907.60254"
          x="105.17039"
          sodipodi:role="line"
          id="tspan63909">  (reads, writes)</tspan><tspan
          id="tspan52263"
-         style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
-         y="988.07239"
+         style="font-size:35px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         y="951.35254"
          x="105.17039"
          sodipodi:role="line">}</tspan></text>
     <rect
-       style="opacity:0.50700001;fill:none;stroke:#000000;stroke-width:7.53410673;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:15.06821334, 7.53410667;stroke-dashoffset:0"
+       style="opacity:0.37860082000000000;fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12,6;stroke-dashoffset:0"
        id="rect64755"
        width="1125.7024"
        height="597.32025"
@@ -377,42 +373,42 @@
        xml:space="preserve"
        transform="scale(1.0000496,0.9999504)"><tspan
          id="tspan64787"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          y="60.579247"
          x="120.82203"
          sodipodi:role="line">addKeyLister(<tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="fill:#0048f0;fill-opacity:1;font-size:35.00000004px"
    id="tspan64944">new</tspan> KeyListenerAdapter() {</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          y="107.66741"
          x="120.82203"
          sodipodi:role="line"
          id="tspan64896"><tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="fill:#0048f0;fill-opacity:1;font-size:35.00000004px"
    id="tspan64922">  override def</tspan> keyReleased(KeyEvent e) {</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          y="154.75557"
          x="120.82203"
          sodipodi:role="line"
          id="tspan64890"><tspan
-   style="fill:#0048f0;fill-opacity:1"
+   style="fill:#0048f0;fill-opacity:1;font-size:35.00000004px"
    id="tspan64900">    for</tspan> (ch &lt;- channels) {</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          y="201.84373"
          x="120.82203"
          sodipodi:role="line"
          id="tspan64894">      ch ! (false, e.getKeyChar)</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          y="248.93192"
          x="120.82203"
          sodipodi:role="line"
          id="tspan64892">    }</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          y="296.02008"
          x="120.82203"
          sodipodi:role="line"
          id="tspan64898">  }</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono;font-size:35.00000004px"
          y="343.10822"
          x="120.82203"
          sodipodi:role="line"
@@ -425,7 +421,7 @@
        height="370.4133"
        width="1124.7838"
        id="rect64789"
-       style="opacity:0.50700001;fill:none;stroke:#000000;stroke-width:7.53410673;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:15.06821334, 7.53410667;stroke-dashoffset:0" />
+       style="opacity:0.37860082000000000;fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12,6;stroke-dashoffset:0" />
     <text
        xml:space="preserve"
        style="font-size:37.67053223px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;opacity:0.49382719;fill:#000000;fill-opacity:1;stroke:none;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
