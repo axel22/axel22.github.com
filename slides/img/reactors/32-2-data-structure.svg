@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="32-data-structure.svg">
+   sodipodi:docname="32-2-data-structure.svg">
   <defs
      id="defs4">
     <marker
@@ -347,14 +347,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="808.09722"
+     inkscape:cx="305.24008"
      inkscape:cy="625.65255"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
-     inkscape:window-height="864"
-     inkscape:window-x="0"
+     inkscape:window-width="836"
+     inkscape:window-height="1014"
+     inkscape:window-x="840"
      inkscape:window-y="16"
      inkscape:window-maximized="0" />
   <metadata
@@ -365,7 +365,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -417,7 +417,7 @@
            height="50.507626"
            x="1040.4572"
            y="419.6546" /></flowRegion><flowPara
-         id="flowPara28499"></flowPara></flowRoot>    <text
+         id="flowPara28499" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:59.47875214px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="1753.5944"
@@ -449,15 +449,15 @@
        height="193.12372"
        width="189.16785"
        id="rect8804"
-       style="fill:none;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:none;stroke:#940000;stroke-width:10;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        sodipodi:linespacing="125%"
        id="text8806"
        y="1.0447643"
        x="107.5304"
-       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa0000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
-         style="font-size:125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         style="font-size:125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block;fill:#aa0000"
          y="1.0447643"
          x="107.5304"
          id="tspan8808"

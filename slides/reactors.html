@@ -256,6 +256,384 @@ time.onEvent { t =>
 
         <section>
           <br/>
+          <p>Event streams are an abstraction for</p>
+          <h3>asynchronous programming.</h3>
+        </section>
+
+        <section>
+          <br/>
+          <h3 style="font-family: SketchBlock; font-size: 75px;">ASYNCHRONOUS</h3>
+          <h1>&#8800;</h1>
+          <br/>
+          <h3 style="font-family: SketchBlock; font-size: 75px;">CONCURRENT</h3>
+          <p class="fragment">concurrent - occurring at the same time</p>
+          <p class="fragment">asynchronous - not occurring at the same time</p>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-asynchronicity.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-2-asynchronicity.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-3-asynchronicity.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-4-asynchronicity.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-4-1-asynchronicity.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-5-asynchronicity.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-5-1-asynchronicity.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/18-6-asynchronicity.svg"/>
+          <br/>
+          <br/>
+          <div class="fragment">
+<code><pre><span class="hljs-keyword">val</span> frame =
+  time.filter(_ % 16 == 0)
+frame.onEvent(render)</pre></code>
+          </div>
+        </section>
+
+        <section>
+          <br/>
+          <p style="font-size: 65px;">
+            Asynchronicity without concurrency is convenient.
+          </p>
+          <br/>
+          <p class="fragment" style="font-size: 45px;">
+            Ensures that two executions never modify shared state.
+          </p>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <p style="font-size: 65px;">
+            Concurrency is another useful property.
+          </p>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-pre-reactors.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-reactors.svg"/>
+          <div class="fragment">
+<code><pre>time.onEvent(render)
+</pre></code>
+          </div>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-2-reactors.svg"/>
+<code><pre>Reactor {
+  time.onEvent(render)
+}</pre></code>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-3-reactors.svg"/>
+<code><pre>Reactor {
+  time.onEvent(render)
+  keys.map(_._2).onEvent(render)
+}</pre></code>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-4-reactors.svg"/>
+<code><pre>Reactor {
+  time.onEvent(render)
+  keys.map(_._2).onEvent(render)
+}</pre></code>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-5-reactors.svg"/>
+<code><pre>Reactor {
+  time.onEvent(render)
+  keys.map(_._2).onEvent(render)
+}</pre></code>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-6-reactors.svg"/>
+<code><pre>Reactor {
+  time.onEvent(render)
+  keys.map(_._2).onEvent(render)
+}</pre></code>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-7-reactors.svg"/>
+<code><pre>Reactor {
+  time.onEvent(render)
+  keys.map(_._2).onEvent(render)
+}</pre></code>
+        </section>
+
+        <section>
+          <img src="img/reactors/21-1-open.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/21-2-open.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/21-3-open.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/22-1-server.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/22-2-server.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/22-3-server.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/22-4-server.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/22-5-server.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/22-6-server.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/22-7-server.svg"/>
+        </section>
+
+        <section>
+          TODO
+        </section>
+
+        <section>
+          <img src="img/reactors/24-1-replication.svg"/>
+        </section> 
+
+        <section>
+          <img src="img/reactors/24-2-replication.svg"/>
+        </section> 
+
+        <section>
+          <img src="img/reactors/24-3-replication.svg"/>
+        </section> 
+
+        <section>
+          <img src="img/reactors/24-4-replication.svg"/>
+        </section> 
+
+        <section>
+          <p style="font-size: 100px;">Broadcast</p>
+          <br/>
+          <p style="font-size: 60px;">
+            Communication pattern in which the sender sends
+            the same message to multiple targets.
+          </p>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-1-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-2-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-3-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-4-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-4-2-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-5-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-6-broadcast.svg"/>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <h3>However, broadcast does not guarantee too much ordering.</h3>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-1-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-2-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-3-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-4-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-5-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-6-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-7-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-1-uids.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-2-uids.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-3-uids.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-4-uids.svg"/>
+        </section>
+
+        <section>
+          TODO
+        </section>
+
+        <section>
+          <img src="img/reactors/30-1-crdt.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-2-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-3-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-4-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-5-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/33-1-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-1-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-2-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-3-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-4-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-5-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-6-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-7-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-8-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-9-data-structure.svg"/>
+        </section>
+
+        <section>
+          <br/>
+          <h2>Observation</h2>
+          <br/>
+          <h3>An insert by process X has a UID that ends with X.</h3>
+        </section>
+
+        <section>
+          TODO
+        </section>
+
+        <section>
+          <img src="img/reactors/36-1-system.svg" height="600px"/>
+        </section>
+
+        <section>
+          TODO
+        </section>
+
+        <section>
+          <img src="img/reactors/38-1-system.svg"/>
+        </section>
+
+        <section>
+          TODO
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <br/>
+          <code><span class="hljs-keyword">import</span> replication.crdt</code>
+        </section>
+
+       <section>
+          <br/>
           <br/>
           <br/>
 

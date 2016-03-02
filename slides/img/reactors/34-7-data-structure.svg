@@ -30,10 +30,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
-     inkscape:window-height="864"
+     inkscape:window-width="1680"
+     inkscape:window-height="1050"
      inkscape:window-x="0"
-     inkscape:window-y="16"
+     inkscape:window-y="0"
      inkscape:window-maximized="0" />
   <defs
      id="defs4">
@@ -393,7 +393,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1014,13 +1014,13 @@
        sodipodi:linespacing="125%"
        id="text38677"
        y="433.83612"
-       x="1632.08"
+       x="1530.08"
        style="font-size:24.59850121px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:82.71356964px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
          id="tspan38679"
          y="433.83612"
-         x="1632.08"
+         x="1530.08"
          sodipodi:role="line">e</tspan></text>
     <text
        sodipodi:linespacing="125%"
@@ -1149,12 +1149,12 @@
     <text
        xml:space="preserve"
        style="font-size:24.59850121px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="1735.1155"
+       x="1633.1155"
        y="829.81592"
        id="text39159"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="1735.1155"
+         x="1633.1155"
          y="829.81592"
          id="tspan39161"
          style="font-size:82.71356964px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">r</tspan></text>
@@ -1193,13 +1193,13 @@
          y="890.73779"
          x="1117.2286"
          id="tspan40843"
-         sodipodi:role="line">11B</tspan></text>
+         sodipodi:role="line">11A</tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path40845"
-       d="m 1280.8734,942.91363 c 157.5838,-113.13708 315.1676,-139.40106 430.325,-28.28427"
-       style="stroke-linejoin:miter;marker-end:url(#marker28342f);stroke-opacity:1;stroke:#2700cd;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:8;fill:none"
+       d="m 1280.8734,942.91363 c 157.5838,-113.13708 261.1676,-139.40106 376.325,-28.28427"
+       style="fill:none;stroke:#2700cd;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker28342f)"
        transform="translate(0,-197.63782)" />
     <text
        xml:space="preserve"
@@ -1212,10 +1212,10 @@
          id="tspan42321"
          x="1212.183"
          y="92.717285"
-         style="font-size:160px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">1B</tspan></text>
+         style="font-size:160px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000080;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">1A</tspan></text>
     <path
        style="fill:none;stroke:#2700cd;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#marker28342f)"
-       d="m 1406.1323,86.656355 c 81.586,7.806012 196.5862,85.605845 236.3757,228.294475"
+       d="m 1406.1323,86.656355 c 81.586,7.806012 112.5862,85.605845 152.3757,228.294475"
        id="path42323"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
