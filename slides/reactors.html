@@ -357,7 +357,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-3-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -365,7 +365,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-4-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -373,7 +373,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-5-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -381,7 +381,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-6-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -389,7 +389,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-7-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -632,7 +632,7 @@ frame.onEvent(render)</pre></code>
 
         <section>
 <code><pre style="margin-left: -70px;">
-<span class="hljs-keyword">def</span> crdt[T](targets: Set[Channel[(Int, T)]]) = {
+<span class="hljs-keyword">def</span> crdt[T](targets: Set[Channel[(Uid, T)]]) = {
   <span class="fragment"><span class="hljs-keyword">val</span> (receives, sendchan) = broadcast[(Uid, T)]</span>
   <span class="fragment"><span class="hljs-keyword">val</span> root = <span class="hljs-keyword">new</span> Node</span>
   <span class="fragment"><span class="hljs-keyword">val</span> (writes, writechan) = open[(Int, T)]</span>

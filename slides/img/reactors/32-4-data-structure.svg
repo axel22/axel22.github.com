@@ -365,7 +365,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -417,7 +417,7 @@
            height="50.507626"
            x="1040.4572"
            y="419.6546" /></flowRegion><flowPara
-         id="flowPara28499"></flowPara></flowRoot>    <text
+         id="flowPara28499" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:59.47875214px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="1753.5944"
@@ -702,7 +702,7 @@
        style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotM);marker-end:url(#StopL)" />
     <text
        xml:space="preserve"
-       style="font-size:31.73514557px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:31.73514557000000025px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d40000;fill-opacity:1;stroke:none;font-family:Sans"
        x="438.87866"
        y="657.92578"
        id="text31698"
@@ -711,7 +711,7 @@
          x="438.87866"
          y="657.92578"
          id="tspan31700"
-         style="font-size:106.71086121px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">B</tspan></text>
+         style="font-size:106.71086120999999025px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block;fill:#d40000">B</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:21.34217262px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
