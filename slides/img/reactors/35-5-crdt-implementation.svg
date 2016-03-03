@@ -16,7 +16,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="35-6-crdt-implementation.svg">
+   sodipodi:docname="35-5-crdt-implementation.svg">
   <defs
      id="defs4">
     <pattern
@@ -547,11 +547,11 @@
        sodipodi:cy="322.67996"
        sodipodi:rx="54.548237"
        sodipodi:ry="54.548237"
-       d="m 1652.6095,322.67996 a 54.548237,54.548237 0 1 1 -109.0965,0 54.548237,54.548237 0 1 1 109.0965,0 z"
+       d="m 1652.6095,322.67996 c 0,30.12616 -24.4221,54.54824 -54.5482,54.54824 -30.1262,0 -54.5483,-24.42208 -54.5483,-54.54824 0,-30.12616 24.4221,-54.54823 54.5483,-54.54823 30.1261,0 54.5482,24.42207 54.5482,54.54823 z"
        transform="translate(-31.567235,-201.38607)" />
     <path
        transform="translate(101.28266,46.30954)"
-       d="m 1652.6095,322.67996 a 54.548237,54.548237 0 1 1 -109.0965,0 54.548237,54.548237 0 1 1 109.0965,0 z"
+       d="m 1652.6095,322.67996 c 0,30.12616 -24.4221,54.54824 -54.5482,54.54824 -30.1262,0 -54.5483,-24.42208 -54.5483,-54.54824 0,-30.12616 24.4221,-54.54823 54.5483,-54.54823 30.1261,0 54.5482,24.42207 54.5482,54.54823 z"
        sodipodi:ry="54.548237"
        sodipodi:rx="54.548237"
        sodipodi:cy="322.67996"
@@ -567,7 +567,7 @@
        sodipodi:cy="322.67996"
        sodipodi:rx="54.548237"
        sodipodi:ry="54.548237"
-       d="m 1652.6095,322.67996 a 54.548237,54.548237 0 1 1 -109.0965,0 54.548237,54.548237 0 1 1 109.0965,0 z"
+       d="m 1652.6095,322.67996 c 0,30.12616 -24.4221,54.54824 -54.5482,54.54824 -30.1262,0 -54.5483,-24.42208 -54.5483,-54.54824 0,-30.12616 24.4221,-54.54823 54.5483,-54.54823 30.1261,0 54.5482,24.42207 54.5482,54.54823 z"
        transform="translate(112.97376,361.50174)" />
     <text
        xml:space="preserve"
@@ -872,7 +872,7 @@
          style="font-size:75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Andale Mono;-inkscape-font-specification:Andale Mono">broadcast</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:10, 10;stroke-dashoffset:0;marker-end:url(#marker4707)"
-       d="m 1164.0565,850.42235 c -172.85959,60.04905 -372.73404,1.38931 -372.73404,1.38931"
+       d="M 1164.0565,850.42235 C 1068.3398,873.32854 982.75103,717.52595 982.75103,717.52595"
        id="path4602"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
