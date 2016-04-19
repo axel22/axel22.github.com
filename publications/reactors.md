@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Isolates, Channels, and Event Streams for Composable Distributed Programming
+title: Reactors, Channels, and Event Streams for Composable Distributed Programming
 authors: Aleksandar Prokopec, Martin Odersky
 venue: Onward! 2015
 permalink: /publications/reactors/index.html
