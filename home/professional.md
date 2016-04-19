@@ -51,8 +51,8 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec, Martin Odersky<br/>
 [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program)<br/>
 Pittsburgh, Pennsylvania, October 2015<br/>
-\[[PDF](http://axel22.github.io/resources/docs/reactive-isolates.pdf)\]
-\[[Link](/publications/reactive-isolates)\]
+\[[PDF](http://axel22.github.io/resources/docs/reactors.pdf)\]
+\[[Link](/publications/reactors)\]
 
 * **Conc-Trees for Functional and Parallel Programming** <br/>
 Aleksandar Prokopec, Martin Odersky<br/>
