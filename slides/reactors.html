@@ -210,6 +210,11 @@ time.onEvent { t =>
           <br/>
 <code class="fragment"><pre><span class="hljs-keyword">val</span> frame: Events[Int] =
   time.filter(t % 16 == 0)</pre></code>
+          <br/>
+          <div class="fragment">
+            <pre style="margin-left: 75px; font-family: SketchBlock; font-size: 50px; text-align: left;">0, 1, 2, 3, ..., 16, 17, 18, ..., 32, ...</pre>
+            <pre style="margin-left: 75px; font-family: SketchBlock; font-size: 50px; text-align: left;">0             16           32</pre>
+          </div>
         </section>
 
         <section>
@@ -219,11 +224,11 @@ time.onEvent { t =>
             <code>Events.map</code> <span style="font-size: 50px;">~</span> <code>List.map</code>
           </div>
           <br/>
-<code class="fragment"><pre>
+<code class="fragment"><pre style="margin-left: 75px;">
 <span class="hljs-keyword">val</span> keys: Events[(Boolean, Char)]
 
 <span class="fragment"><span class="hljs-keyword">val</span> presses: Events[Char] =
-  keyboard.map(pc => pc._2)</pre></code></span>
+  keys.filter(_._1).map(pc => pc._2)</pre></code></span>
 
           <img src="img/reactors/12-keyboard.svg" height="150px"/>
         </section>
@@ -316,7 +321,8 @@ frame.onEvent(render)</pre></code>
           </p>
           <br/>
           <p class="fragment" style="font-size: 45px;">
-            Ensures that two executions never modify shared state.
+            Decouples components in the system,
+            and prevents data races.
           </p>
         </section>
 
@@ -351,7 +357,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-3-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -359,7 +365,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-4-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -367,7 +373,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-5-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -375,7 +381,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-6-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -383,7 +389,7 @@ frame.onEvent(render)</pre></code>
           <img src="img/reactors/20-7-reactors.svg"/>
 <code><pre>Reactor {
   time.onEvent(render)
-  keys.map(_._2).onEvent(render)
+  keys.map(_._2).onEvent(update)
 }</pre></code>
         </section>
 
@@ -625,8 +631,32 @@ frame.onEvent(render)</pre></code>
         </section>
 
         <section>
+          <img src="img/reactors/35-1-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-2-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-3-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-4-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-5-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-6-crdt-implementation.svg"/>
+        </section>
+
+        <!--<section>
 <code><pre style="margin-left: -70px;">
-<span class="hljs-keyword">def</span> crdt[T](targets: Set[Channel[(Int, T)]]) = {
+<span class="hljs-keyword">def</span> crdt[T](targets: Set[Channel[(Uid, T)]]) = {
   <span class="fragment"><span class="hljs-keyword">val</span> (receives, sendchan) = broadcast[(Uid, T)]</span>
   <span class="fragment"><span class="hljs-keyword">val</span> root = <span class="hljs-keyword">new</span> Node</span>
   <span class="fragment"><span class="hljs-keyword">val</span> (writes, writechan) = open[(Int, T)]</span>
@@ -641,7 +671,7 @@ frame.onEvent(render)</pre></code>
   <span class="fragment">(updates, writechan)</span>
 }
 </pre></code>
-        </section>
+        </section>-->
 
         <section>
           <img src="img/reactors/36-1-system.svg" height="600px"/>
@@ -679,9 +709,15 @@ frame.onEvent(render)</pre></code>
           <br/>
           <br/>
 
-          <h2>
+          <h1>
             Thank you!
-          </h2>
+          </h1>
+          <br/>
+          <img src="img/reactors/reactress-gradient.png" height="140px"/>
+          <br/>
+          <a href="http://github.com/reactors-io/reactors" style="font-family: sans-serif; font-size: 35px;">
+            http://github.com/reactors-io/reactors
+          </a>
         </section>
 
 			</div>

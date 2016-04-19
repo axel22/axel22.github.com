@@ -352,9 +352,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
+     inkscape:window-width="796"
      inkscape:window-height="864"
-     inkscape:window-x="0"
+     inkscape:window-x="800"
      inkscape:window-y="16"
      inkscape:window-maximized="0" />
   <metadata
@@ -365,7 +365,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -417,7 +417,7 @@
            height="50.507626"
            x="1040.4572"
            y="419.6546" /></flowRegion><flowPara
-         id="flowPara28499"></flowPara></flowRoot>    <text
+         id="flowPara28499" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:59.47875214px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="1753.5944"
@@ -853,9 +853,9 @@
        id="text36564"
        y="433.83612"
        x="894.66852"
-       style="font-size:24.59850121px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:24.59850120999999845px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d40000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
-         style="font-size:82.71356964px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         style="font-size:82.71356964000000289px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block;fill:#d40000"
          id="tspan36566"
          y="433.83612"
          x="894.66852"

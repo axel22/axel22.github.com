@@ -352,7 +352,7 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1596"
+     inkscape:window-width="796"
      inkscape:window-height="864"
      inkscape:window-x="0"
      inkscape:window-y="16"
@@ -365,7 +365,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -417,7 +417,7 @@
            height="50.507626"
            x="1040.4572"
            y="419.6546" /></flowRegion><flowPara
-         id="flowPara28499"></flowPara></flowRoot>    <text
+         id="flowPara28499" /></flowRoot>    <text
        xml:space="preserve"
        style="font-size:59.47875214px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        x="1753.5944"
@@ -738,7 +738,7 @@
          sodipodi:role="line">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:31.73514557px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       style="font-size:31.73514557000000025px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa0000;fill-opacity:1;stroke:none;font-family:Sans"
        x="1004.593"
        y="206.49721"
        id="text32819"
@@ -747,6 +747,6 @@
          x="1004.593"
          y="206.49721"
          id="tspan32821"
-         style="font-size:106.71086121px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">t</tspan></text>
+         style="font-size:106.71086121000000446px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block;fill:#aa0000">t</tspan></text>
   </g>
 </svg>

@@ -96,13 +96,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="293.44416"
+     inkscape:cx="263.13958"
      inkscape:cy="476.46275"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1676"
-     inkscape:window-height="1014"
+     inkscape:window-width="1596"
+     inkscape:window-height="864"
      inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0" />
@@ -338,16 +338,16 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#aa0000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="43.143761"
-       y="601.62915"
+       x="-3.0904591"
+       y="588.72974"
        id="text5708"
        sodipodi:linespacing="125%"
        transform="matrix(0.96321278,-0.26873992,0.26873992,0.96321278,0,0)"><tspan
          sodipodi:role="line"
          id="tspan5710"
-         x="43.143761"
-         y="601.62915"
-         style="font-size:75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#aa0000;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">READ</tspan></text>
+         x="-3.0904591"
+         y="588.72974"
+         style="font-size:75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#aa0000;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">WRITE</tspan></text>
     <text
        transform="matrix(0.94472619,0.32786037,-0.32786037,0.94472619,0,0)"
        sodipodi:linespacing="125%"
@@ -360,6 +360,6 @@
          y="241.18552"
          x="821.6781"
          id="tspan5714"
-         sodipodi:role="line">WRITE</tspan></text>
+         sodipodi:role="line">READ</tspan></text>
   </g>
 </svg>
