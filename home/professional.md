@@ -48,7 +48,7 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
-* **Isolates, Channels, and Event Streams for Composable Distributed Programming** <br/>
+* **Reactors, Channels, and Event Streams for Composable Distributed Programming** <br/>
 Aleksandar Prokopec, Martin Odersky<br/>
 [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program)<br/>
 Pittsburgh, Pennsylvania, October 2015<br/>
