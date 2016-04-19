@@ -33,6 +33,7 @@ Lausanne, Switzerland, July 2014<br/>
 \[[Link](/publications/data-structures-and-algorithms-for-data-parallel-computing)\]
 \[[General Public Presentation](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
 
+
 ## Book
 
 * **Learning Concurrent Programming in Scala**
@@ -272,6 +273,10 @@ EPFL, Lausanne, Switzerland, September 2014
 
 ### Reactors
 
+* [VoxxedDays Zurich 2016](https://voxxeddays.com/zurich/),
+Zurich, Switzerland, September 2015
+\[[Slides](/slides/reactors.html)\]
+\[[Video](https://www.youtube.com/watch?v=w8B4bJ1XV2E)\]
 * [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program),
 Pittsburgh, Pennsylvania, USA, October 2015,
 \[[Slides](/resources/docs/onward15.pdf)\]
@@ -394,6 +399,7 @@ Lausanne, Switzerland, January 2012
 # <a id="committees">Conferences and Workshops</a>
 
 ### Program Committees
+- [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
 - [HLPP 2016](http://hlpp2016.uni-muenster.de/)
 - [Scala 2014](http://lampwww.epfl.ch/~hmiller/scala2014/index.html)
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
