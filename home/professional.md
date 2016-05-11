@@ -399,6 +399,7 @@ Lausanne, Switzerland, January 2012
 # <a id="committees">Conferences and Workshops</a>
 
 ### Program Committees
+- [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
 - [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
 - [HLPP 2016](http://hlpp2016.uni-muenster.de/)
 - [Scala 2014](http://lampwww.epfl.ch/~hmiller/scala2014/index.html)
