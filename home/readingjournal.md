@@ -14,6 +14,11 @@ I also recommend these books.
 ## Technical
 
 
+### 2016
+
+* Buck -- Mazes for Programmers
+
+
 ### 2015
 
 * Raymond -- The Cathedral and the Bazaar

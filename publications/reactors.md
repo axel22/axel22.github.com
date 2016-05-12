@@ -1,9 +1,9 @@
 ---
 layout: publication
-title: Isolates, Channels, and Event Streams for Composable Distributed Programming
+title: Reactors, Channels, and Event Streams for Composable Distributed Programming
 authors: Aleksandar Prokopec, Martin Odersky
 venue: Onward! 2015
-permalink: /publications/reactive-isolates/index.html
+permalink: /publications/reactors/index.html
 ---
 
 
@@ -19,9 +19,9 @@ Composing these protocols is the
 key to high-level abstractions. Unfortunately, it is difficult to
 reuse or compose message protocols with actors.
 
-Reactive  isolates,  proposed  in  this  paper,  simplify  protocol
+Reactors,  proposed  in  this  paper,  simplify  protocol
 composition with first-class typed channels and event
-streams. We compare reactive isolates and the actor model
+streams. We compare reactors and the actor model
 on concrete programs. We identify obstacles for composition
 in the classic actor model, and show how to overcome
 them. We then show how to build reusable, composable
@@ -30,7 +30,7 @@ distributed computing components in the new model.
 
 ## Links
 
-\[[PDF](/resources/docs/reactive-isolates.pdf)\]
+\[[PDF](/resources/docs/reactors.pdf)\]
 \[[BibTex](/resources/docs/bibtex/reactive-isolates.bib)\]
 \[[ACM](http://dl.acm.org/citation.cfm?id=2814245)\]
 
