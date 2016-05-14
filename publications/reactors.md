@@ -37,13 +37,13 @@ distributed computing components in the new model.
 
 ## References
 
-Dart programming language, 2011. http://www.dartlang.org/.
+Dart programming language, 2011. http://www.dartlang.org/
     
-Akka documentation, 2015. http://akka.io/docs/.
+Akka documentation, 2015. http://akka.io/docs/
     
-Erlang/OTP documentation, 2015. http://www.erlang.org/.
+Erlang/OTP documentation, 2015. http://www.erlang.org/
     
-Reactive Collections, 2015. https://reactive-collections.com.
+Reactors.IO, 2015. https://reactors.io
     
 Gul Agha, Actors: a model of concurrent computation in distributed systems, MIT Press, Cambridge, MA, 1986
     
