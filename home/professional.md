@@ -274,11 +274,11 @@ EPFL, Lausanne, Switzerland, September 2014
 ### Reactors
 
 * [VoxxedDays Zurich 2016](https://voxxeddays.com/zurich/),
-Zurich, Switzerland, September 2015
+Zurich, Switzerland, March 2016
 \[[Slides](/slides/reactors.html)\]
 \[[Video](https://www.youtube.com/watch?v=w8B4bJ1XV2E)\]
 * [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program),
-Pittsburgh, Pennsylvania, USA, October 2015,
+Pittsburgh, Pennsylvania, USA, October 2015
 \[[Slides](/resources/docs/onward15.pdf)\]
 
 
