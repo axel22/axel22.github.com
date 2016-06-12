@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reactor Model</title>
+
+		<meta name="description" content="Reactors -- Road to Composable Distributed Computing">
+		<meta name="author" content="Aleksandar Prokopec">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white-serif.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/classic.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section style="text-align: left;">
+					<h1>Reactors</h1>
+					<h3>Road to Composable Distributed Computing</h3>
+					<p>
+						<small><a href="http://axel22.github.io">Aleksandar Prokopec</a></small>
+            <small><a href="http://twitter.com/alexprokopec">/ @alexprokopec</a></small>
+					</p>
+          <p>
+            <small>
+              <a href="https://github.com/reactors-io/reactors">
+                <img src="img/github-black.png" height="64px" />
+              </a>
+            </small>
+          </p>
+				</section>
+
+        <section>
+          <br/>
+          <h3>What makes a good programming model?</h3>
+          <br/>
+          <br/>
+          <p class="fragment">
+            There are no standard metrics to agree on.
+          </p>
+        </section>
+
+        <section>
+          <h3>Comprehensible</h3>
+          <br/>
+          <br/>
+          <p class="fragment">
+            Sufficiently simple and minimal to be easily understandable.
+          </p>
+        </section>
+
+        <section>
+          <h3>x86 assembly</h3>
+          <code class="fragment"><pre>
+    mov $0x0C0C, %ax
+    mov $0x01, %bh
+    mov $0x0001, %cx
+    mov $0x0001, %dx
+    int $0x10
+    inc %cx
+    inc %dx
+    cmp $201, %dx
+    jz end
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>x86 assembly</h3>
+          <img src="img/reactors/ia32.png" />
+        </section>
+
+        <section>
+          <h3>Lambda calculus</h3>
+          <ul>
+            <li>
+              &#955; x. b <span style="color: #aaa">&nbsp; &nbsp; abstraction</span>
+            </li>
+            <li>
+              f x <span style="color: #aaa">&nbsp; &nbsp; &nbsp; &nbsp; application</span>
+            </li>
+            <li>
+              x <span style="color: #aaa">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; variable</span>
+            </li>
+          </ul>
+          <p class="fragment">
+            (&#955; x. x) t
+          </p>
+          <p class="fragment">
+            (<strike>&#955; x.</strike> x) t
+          </p>
+          <p class="fragment">
+            t
+          </p>
+        </section>
+
+        <section>
+          <h3>Concise</h3>
+          <br/>
+          <br/>
+          <p>
+            Programs written in the model must be quick and easy to understand.
+          </p>
+        </section>
+
+        <section>
+          <h3>Lambda calculus</h3>
+          <br/>
+          <br/>
+          <p class="fragment">
+            &#955; b. (&#955; c.  &#955; t. &#955; f. c t f) b (&#955; x. &#955; y. y) (&#955; x. &#955; y. x)
+          </p>
+        </section>
+
+        <section>
+          <h3>High-level functional programming</h3>
+          <br/>
+          <br/>
+          <code><pre>
+b => <span class="hljs-keyword">if</span> (b) false <span class="hljs-keyword">else</span> true
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>High-level functional programming</h3>
+          <br/>
+          <br/>
+          <code><pre>
+(b: Boolean) => !b
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>Location-transparency</h3>
+          <br/>
+          <br/>
+          <p class="fragment">
+            The program must run correctly irrespective of the computers it is deployed
+            on, and their relationships.
+          </p>
+        </section>
+
+        <section>
+          <h3>Actor model</h3>
+            <code class="fragment"><pre>
+<span class="hljs-keyword">class</span> Ping <span class="hljs-keyword">extends</span> Actor {
+  <span class="hljs-keyword">def</span> receive = {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"pong"</span> => sender ! <span class="hljs-string">"ping"</span>
+  }
+}
+            </pre></code>
+            <img class="fragment" src="img/reactors/ping.svg" height="400px"/>
+        </section>
+
+        <section>
+          <h3>Actor model</h3>
+            <code><pre>
+<span class="hljs-keyword">class</span> Ping <span class="hljs-keyword">extends</span> Actor {
+  <span class="hljs-keyword">def</span> receive = {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"pong"</span> => sender ! <span class="hljs-string">"ping"</span>
+  }
+}
+            </pre></code>
+            <img src="img/reactors/ping-pong.svg" height="400px"/>
+        </section>
+
+        <section>
+          <h3>Actor model</h3>
+            <code><pre>
+<span class="hljs-keyword">class</span> Ping <span class="hljs-keyword">extends</span> Actor {
+  <span class="hljs-keyword">def</span> receive = {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"pong"</span> => sender ! <span class="hljs-string">"ping"</span>
+  }
+}
+            </pre></code>
+            <code><pre>
+<span class="hljs-keyword">class</span> Pong <span class="hljs-keyword">extends</span> Actor {
+  <span class="hljs-keyword">def</span> receive = {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"ping"</span> => sender ! <span class="hljs-string">"pong"</span>
+  }
+}
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>Composable</h3>
+          <br/>
+          <br/>
+          <p>
+            Programs can be built from smaller independent programs.
+          </p>
+        </section>
+
+        <section>
+          <h3>Generic Server</h3>
+          <code><pre>
+<span class="hljs-keyword">class</span> Server[T, S](f: T => S)
+<span class="hljs-keyword">extends</span> Actor <span class="fragment">{
+  <span class="hljs-keyword">def</span> receive = {
+    <span class="hljs-keyword">case</span> x: T => sender ! f(x)
+  }
+}</span>
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>Generic Client</h3>
+          <code><pre>
+<span class="hljs-keyword">class</span> Client[T, S](
+  server: ActorRef,
+  req: T,
+  action: S => Unit
+) <span class="hljs-keyword">extends</span> Actor <span class="fragment">{
+  server ! req</span><span class="fragment">
+  <span class="hljs-keyword">def</span> receive = {
+    <span class="hljs-keyword">case</span> x: S => action(x)
+  }
+}</span>
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>Name Server</h3>
+<code><pre>
+<span class="hljs-keyword">val</span> actors = Map[String, ActorRef]
+<span class="hljs-keyword">val</span> ns = actorOf(Server(actors))
+
+</pre></code>
+          <img src="img/reactors/name-server-1.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server</h3>
+<code><pre>
+<span class="hljs-keyword">val</span> actors = Map[String, ActorRef]
+<span class="hljs-keyword">val</span> ns = actorOf(Server(actors))
+actorOf(Client(ns, <span class="hljs-string">"p"</span>, println))
+</pre></code>
+          <img src="img/reactors/name-server-2.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server</h3>
+<code><pre>
+<span class="hljs-keyword">val</span> actors = Map[String, ActorRef]
+<span class="hljs-keyword">val</span> ns = actorOf(Server(actors))
+actorOf(Client(ns, <span class="hljs-string">"p"</span>, println))
+</pre></code>
+          <img src="img/reactors/name-server-3.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server</h3>
+<code><pre>
+<span class="hljs-keyword">val</span> actors = Map[String, ActorRef]
+<span class="hljs-keyword">val</span> ns = actorOf(Server(actors))
+actorOf(Client(ns, <span class="hljs-string">"p"</span>, println))
+</pre></code>
+          <img src="img/reactors/name-server-4.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server</h3>
+<code><pre>
+<span class="hljs-keyword">val</span> actors = Map[String, ActorRef]
+<span class="hljs-keyword">val</span> ns = actorOf(Server(actors))
+actorOf(Client(ns, <span class="hljs-string">"p"</span>, println))
+</pre></code>
+          <img src="img/reactors/name-server-5.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server Cache</h3>
+<code><pre>
+<span class="hljs-keyword">class</span> Cache(<span class="hljs-keyword">var</span> c: ActorRef = <span class="hljs-keyword">null</span>)
+<span class="hljs-keyword">extends</span> Client(ns, <span class="hljs-string">"p"</span>, r => c=r)
+
+
+
+
+</pre></code>
+
+          <img src="img/reactors/name-server-6.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server Cache</h3>
+<code><pre>
+<span class="hljs-keyword">class</span> Cache(<span class="hljs-keyword">var</span> c: ActorRef = <span class="hljs-keyword">null</span>)
+<span class="hljs-keyword">extends</span> Client(ns, <span class="hljs-string">"p"</span>, r => c=r)
+
+
+
+
+</pre></code>
+
+          <img src="img/reactors/name-server-7.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server Cache</h3>
+<code><pre>
+<span class="hljs-keyword">class</span> Cache(<span class="hljs-keyword">var</span> c: ActorRef = <span class="hljs-keyword">null</span>)
+<span class="hljs-keyword">extends</span> Client(ns, <span class="hljs-string">"p"</span>, r => c=r) {
+  <span class="hljs-keyword">def</span> receive = <span class="hljs-keyword">super</span>.receive orElse {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"p"</span> => sender ! c
+  }
+}
+</pre></code>
+
+          <img src="img/reactors/name-server-7.svg"/>
+        </section>
+
+        <section>
+          <h3>Name Server Cache</h3>
+<code><pre>
+<span class="hljs-keyword">class</span> Cache(<span class="hljs-keyword">var</span> c: ActorRef = <span class="hljs-keyword">null</span>)
+<span class="hljs-keyword">extends</span> Client(ns, <span class="hljs-string">"p"</span>, r => c=r) {
+  <span class="hljs-keyword">def</span> receive = <span class="hljs-keyword">super</span>.receive orElse {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">"p"</span> => sender ! c
+    <span class="hljs-keyword">case</span> ns: ActorRef => ns ! <span class="hljs-string">"p"</span>
+  }
+}
+</pre></code>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h3>Actor model does not compose well.</h3>
+        </section>
+
+        <section>
+          <h3>Reactor model</h3>
+          <ul>
+            <li class="fragment">
+              Expressing concurrency in the system
+            </li>
+            <li class="fragment">
+              Sending and receiving information
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <br/>
+          <h2>Expressing concurrency</h2>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <code><pre>
+<span class="hljs-keyword">class</span> Cache
+<span class="hljs-keyword">extends</span> Reactor[String] {
+  <span class="hljs-keyword">var</span> cached = _
+}
+          </pre></code>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <br/>
+          <h2>Sending and receiving information</h2>
+        </section>
+
+        <section>
+          <img src="img/reactors/21-1-open.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/21-2-open.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/21-3-open.svg"/>
+        </section>
+
+        <section>
+          <h3>Channels and event streams</h3>
+<code><pre style="margin-left: 100px">
+<span class="hljs-keyword">val</span> (events, ch) = open[String]
+
+<span class="fragment">events.onEvent {
+  s => println(s)
+}</span><span class="fragment">
+
+ch ! <span class="hljs-string">""</span></span>
+</pre></code>
+        </section>
+
+        <section>
+          <img src="img/reactors/20-7-reactors.svg"/>
+        </section>
+
+        <section>
+          <h3>Server protocol</h3>
+          <code><pre style="margin-left: 20px">
+<span class="hljs-keyword">type</span> Req[T, S] =
+  Channel[(T, Channel[S])]
+
+<span class="fragment"><span class="hljs-keyword">def</span> server[T, S](f: T => S): Req[T, S] = </span><span class="fragment">{
+  <span class="hljs-keyword">val</span> (ch, events) = open[(T, Channel[S])]<span class="fragment">
+  events onMatch {
+    case (x, sender) => sender ! f(x)
+  }</span><span class="fragment">
+  ch</span>
+}</span>
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>Client protocol</h3>
+          <code><pre style="margin-left: 20px">
+<span class="hljs-keyword">type</span> Req[T, S] =
+  Channel[(T, Channel[S])]
+
+<span class="fragment"><span class="hljs-keyword">def</span> ?[T, S](r: Req[T, S], x: T): Events[S] = </span><span class="fragment">{
+  <span class="hljs-keyword">val</span> (ch, events) = open[S]<span class="fragment">
+  r ! (x, ch)</span><span class="fragment">
+  events</span>
+}</span>
+          </pre></code>
+        </section>
+
+        <section>
+          <h3>Cache protocol</h3>
+          <code><pre style="margin-left: 100px">
+<span class="hljs-keyword">class</span> Cache
+<span class="hljs-keyword">extends</span> Server[String, Channel[_]] {
+  <span class="hljs-keyword">var</span> cached: Channel[_] = _
+
+  <span class="fragment">events.forward(server(x => cached))</span>
+
+  <span class="fragment">(server ? <span class="hljs-string">"p"</span>) onEvent {
+    ch => cached = ch
+  }</span>
+}
+          </pre></code>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <br/>
+          <h2>More complex protocols</h2>
+        </section>
+
+        <section>
+          <img src="img/reactors/24-0-replication.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/24-1-replication.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/24-2-replication.svg"/>
+        </section> 
+
+        <section>
+          <img src="img/reactors/24-3-replication.svg"/>
+        </section> 
+
+        <section>
+          <img src="img/reactors/24-4-replication.svg"/>
+        </section> 
+
+        <section>
+          <p style="font-size: 100px;">Broadcast</p>
+          <br/>
+          <p style="font-size: 60px;">
+            Communication pattern in which the sender sends
+            the same message to multiple targets.
+          </p>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-1-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-2-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-3-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-4-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-4-2-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-5-broadcast.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/25-6-broadcast.svg"/>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <h3>However, broadcast does not guarantee too much ordering.</h3>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-1-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-2-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-3-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-4-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-5-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-6-order.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/27-7-order.svg"/>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <br/>
+          <h3>Operations must be commutative.</h3>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-1-uids.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-2-uids.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-3-uids.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/28-4-uids.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/30-1-crdt.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-2-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-3-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-4-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/32-5-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/33-1-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-1-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-2-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-3-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-4-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-5-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-6-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-7-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-8-data-structure.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/34-9-data-structure.svg"/>
+        </section>
+
+        <section>
+          <br/>
+          <h2>Observation</h2>
+          <br/>
+          <h3>An insert by process X has a UID that ends with X.</h3>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-1-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-2-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-3-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-4-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-5-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+          <img src="img/reactors/35-6-crdt-implementation.svg"/>
+        </section>
+
+        <section>
+<code><pre style="margin-left: -70px;">
+<span class="hljs-keyword">def</span> crdt[T](targets: Set[Channel[(Uid, T)]]) = {
+  <span class="fragment"><span class="hljs-keyword">val</span> (receives, sendchan) = broadcast[(Uid, T)]</span>
+  <span class="fragment"><span class="hljs-keyword">val</span> root = <span class="hljs-keyword">new</span> Node</span>
+  <span class="fragment"><span class="hljs-keyword">val</span> (writes, writechan) = open[(Int, T)]</span>
+  <span class="fragment">writes.onEvent { <span class="hljs-keyword">case</span> (i, x) =>
+    sendchan ! (root.uid(i), x)
+  }</span>
+  <span class="fragment"><span class="hljs-keyword">val</span> (updates, updatechan) = open[List[String]]</span>
+  <span class="fragment">receives.onEvent { <span class="hljs-keyword">case</span> (uid, x) =>
+    root.insert(uid, x)
+    updatechan ! root.toList
+  }</span>
+  <span class="fragment">(updates, writechan)</span>
+}
+</pre></code>
+        </section>
+
+        <section>
+          <br/>
+          <br/>
+          <br/>
+          <code><span class="hljs-keyword">import</span> replication.crdt</code>
+        </section>
+
+       <section>
+          <img src="img/reactors/onions.png"/>
+        </section>
+
+       <section>
+          <img src="img/reactors/garlic.png"/>
+        </section>
+
+       <section>
+          <br/>
+          <br/>
+          <br/>
+
+          <h2>
+            Thank you!
+          </h2>
+          <br/>
+          <img src="img/reactors/reactress-gradient.png" height="140px"/>
+          <br/>
+          <a href="http://github.com/reactors-io/reactors" style="font-family: sans-serif; font-size: 35px;">
+            http://github.com/reactors-io/reactors
+          </a>
+        </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
