@@ -459,7 +459,7 @@ ch ! <span class="hljs-string">""</span></span>
 <span class="hljs-keyword">def</span> cache[T, S](s: Req[T, S], x: T): Req[T, S] = {
   <span class="fragment"><span class="hljs-keyword">var</span> cached: S = _</span>
 
-  <span class="fragment">(ns ? x) onEvent {
+  <span class="fragment">(s ? x) onEvent {
     y => cached = y
   }</span>
 
@@ -475,7 +475,7 @@ ch ! <span class="hljs-string">""</span></span>
 
 <span class="fragment"><span class="hljs-keyword">class</span> Cache
 <span class="hljs-keyword">extends</span> Server[String, Channel[_]] {
-  <span class="fragment">events.forward(cache(s, <span class="hljs-string">"p"</span>))</span>
+  <span class="fragment">events.forward(cache(ns, <span class="hljs-string">"p"</span>))</span>
 }</span>
           </pre></code>
         </section>
