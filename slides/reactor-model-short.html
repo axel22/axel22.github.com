@@ -364,7 +364,7 @@ actorOf(Client(ns, <span class="hljs-string">"p"</span>, println))
               Expressing concurrency in the system
             </li>
             <li class="fragment">
-              Sending and receiving information
+              Information exchange
             </li>
           </ul>
         </section>
@@ -441,11 +441,11 @@ ch ! <span class="hljs-string">""</span></span>
 
         <section>
           <h3>Client protocol</h3>
-          <code><pre style="margin-left: 20px">
+          <code><pre style="margin-left: 0px">
 <span class="hljs-keyword">type</span> Req[T, S] =
   Channel[(T, Channel[S])]
 
-<span class="fragment"><span class="hljs-keyword">def</span> ?[T, S](r: Req[T, S], x: T): Events[S] = </span><span class="fragment">{
+<span class="fragment"><span class="hljs-keyword">def</span> ?[T,S](r: Req[T, S], x: T): Events[S] =</span><span class="fragment">{
   <span class="hljs-keyword">val</span> (events, ch) = open[S]<span class="fragment">
   r ! (x, ch)</span><span class="fragment">
   events</span>
@@ -455,8 +455,8 @@ ch ! <span class="hljs-string">""</span></span>
 
         <section>
           <h3>Cache protocol</h3>
-          <code><pre style="margin-left: 100px">
-<span class="hljs-keyword">def</span> cache[T, S](s: Req[T, S], x: T): Req[T, S] = {
+          <code><pre style="margin-left: 0px">
+<span class="hljs-keyword">def</span> cache[T,S](s:Req[T,S], x:T): Req[T,S] = {
   <span class="fragment"><span class="hljs-keyword">var</span> cached: S = _</span>
 
   <span class="fragment">(s ? x) onEvent {
@@ -646,6 +646,7 @@ ch ! <span class="hljs-string">""</span></span>
 				progress: true,
 				history: true,
 				center: false,
+        width: "80%",
 
 				transition: 'fade', // none/fade/slide/convex/concave/zoom
 
