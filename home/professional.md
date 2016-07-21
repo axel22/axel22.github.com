@@ -4,20 +4,18 @@ title: Professional info
 permalink: /home/professional/index.html
 ---
 
+I am a principal researcher at Oracle Labs, working on the Graal language infrastructure project.
+My research is focused on composable, scalable and modular
+programming language abstractions for large-scale distributed computing,
+as well as implementation of frameworks, languages and runtimes for distributed programming.
 
-I am a programming languages and parallel computing researcher,
-developer, computer graphics hobbyist and a doctoral assistant at [EPFL](http://www.epfl.ch).
-
-I am currently working on a doctorate as a research assistant in the School of Computer
+Previously, I worked at Google on cloud computing infrastructure and big data analytics
+for Google Maps user traffic.
+Before that, I was working as a research assistant in the School of Computer
 and Communication Sciences at the [EPFL](http://www.epfl.ch) in Switzerland,
 in the [LAMP](http://lamp.epfl.ch) laboratory on [Scala](http://www.scala-lang.org)
-development under the supervision of [dr. Martin Odersky](http://lampwww.epfl.ch/~odersky/).
-Prior to that, I received my Master degree at the [Faculty of Electrical Engineering and Computing](http://www.fer.hr/)
-in Zagreb.
-My research interests include persistent and concurrent data structures,
-reactive programming and reactive data structures,
-and the design and implementation of frameworks, languages and runtime support
-for concurrent and parallel software development.
+development under the supervision of [dr. Martin Odersky](http://lampwww.epfl.ch/~odersky/),
+where I received a doctoral degree in 2014.
 
 
 # <a id="publications">Publications</a>
