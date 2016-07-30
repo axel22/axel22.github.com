@@ -271,6 +271,10 @@ EPFL, Lausanne, Switzerland, September 2014
 
 ### Reactors
 
+* [ScalaDays Berlin 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
+Berlin, Germany, June 2016
+\[[Slides](/slides/reactor-model-short.html)\]
+\[[Video](https://www.youtube.com/watch?v=7lulYWWD4Qo)\]
 * [VoxxedDays Zurich 2016](https://voxxeddays.com/zurich/),
 Zurich, Switzerland, March 2016
 \[[Slides](/slides/reactors.html)\]
