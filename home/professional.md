@@ -420,6 +420,7 @@ Lausanne, Switzerland, January 2012
 
 I worked on the following courses:
 
+* [Parallel Programming 2016](http://coursera.org/learn/parprog1), lecturer and course organizer at EPFL and [Coursera](http://coursera.org/learn/parprog1)
 * Principles of Reactive Programming 2013 - first iteration of the course at [Coursera](https://www.coursera.org/course/reactive)!
 * [Programming Principles 2013](http://lamp.epfl.ch/teaching/progp) - also at [Coursera](https://www.coursera.org/course/progfun)
 * Programming Principles 2013 (spring) - at [Coursera](https://www.coursera.org/course/progfun)
