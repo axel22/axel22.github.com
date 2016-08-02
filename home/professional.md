@@ -10,7 +10,7 @@ programming language abstractions for large-scale distributed computing,
 as well as implementation of frameworks, languages and runtimes for distributed programming.
 
 Previously, I worked at Google on cloud computing infrastructure and big data analytics
-for Google Maps user traffic.
+for Google Maps.
 Before that, I was working as a research assistant in the School of Computer
 and Communication Sciences at the [EPFL](http://www.epfl.ch) in Switzerland,
 in the [LAMP](http://lamp.epfl.ch) laboratory on [Scala](http://www.scala-lang.org)
