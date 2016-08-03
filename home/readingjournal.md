@@ -16,6 +16,7 @@ I also recommend these books.
 
 ### 2016
 
+* Millington - Artificial Intelligence for Games
 * Buck -- Mazes for Programmers
 
 
