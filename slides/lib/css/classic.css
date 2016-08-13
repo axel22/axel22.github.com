@@ -115,3 +115,20 @@ based on dark.css by Ivan Sagalaev
   opacity: 0.5;
 }
 
+.hljs-highlighted {
+  color: #f00;
+}
+
+.hljs-red {
+  font-weight: bold;
+  color: #f00;
+}
+
+.hljs-green {
+  font-weight: bold;
+  color: #090;
+}
+
+.hljs-singleton {
+  color: #909;
+}
