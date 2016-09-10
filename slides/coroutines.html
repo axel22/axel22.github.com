@@ -62,55 +62,184 @@
 				</section>
 
         <section>
-          <img src="img/coroutines/halo.jpg" height="700px" />
+          <img src="img/coroutines/halo.jpg" height="640px" />
         </section>
 
         <section>
           <h3>Behavior trees</h3>
+
+          <p class="fragment">
+            A planning model in which
+            an AI agent decides on the next action by traversing
+            a special data structure called a <i>behavior tree</i>.
+          </p>
+
+          <p class="fragment">
+            Every behavior tree is composed of two node types:<br/>
+            <i>task nodes</i> and <i>control nodes</i>.
+          </p>
         </section>
 
         <section>
-          <h3>Leaf nodes</h3>
+          <h3>Task nodes</h3>
+
+          <p class="fragment">
+            They execute a side-effect, and return 
+            <i>running</i>, <i>success</i> or <i>failure</i> status.
+          </p>
+
+          <p class="fragment">
+            They are the leaf nodes of the tree.
+          </p>
+
+          <p class="fragment">TODO: "move" node, and an agent moving towards target</p>
         </section>
 
         <section>
-          <h3>Inner control nodes</h3>
+          <h3>Control nodes</h3>
+
+          <p class="fragment">
+            Control nodes are inner nodes that bind subtrees together.
+          </p>
+
+          <p class="fragment">
+            Given a set of subtrees and their return values,
+            a control node decides whether to run some subtree,
+            or return a <i>success</i> or <i>failure</i> status.
+          </p>
+
+          <p class="fragment">
+            TODO: capture the flag = move node .. take the flag node
+          </p>
+
+          <p class="fragment">
+            TODO: play game = capture the flag node || defend the base node
+          </p>
         </section>
 
         <section>
-          <h3>Example behavior tree</h3>
-        </section>
+          <h3>Behavior trees can <i>compose</i></h3>
 
-        <section>
-          <h3>Behavior tree advantage</h3>
+          <p class="fragment">The main reason behind their popularity.</p>
+
+          TODO: show previous example
+
+          <p class="fragment">
+            Different subtrees can be developed, tuned and tested independently,
+            and then merged into larger functional units.
+          </p>
         </section>
 
         <section>
           <h3>Behavior tree extensions</h3>
+
+          <p>
+            The basic model can be extended with nodes such as<br/>
+            repeaters, randomizers or inverters.
+          </p>
+
+          TODO: show all three
         </section>
 
         <section>
           <h3>Behavior tree DSLs</h3>
+
+<code class="fragment"><pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;agent&gt;
+  &lt;selector&gt;
+    &lt;sequence name="capture-the-flag&gt;
+      &lt;task name="move"&gt;&lt;/task&gt;
+      &lt;task name="take-the-flag"&gt;&lt;/task&gt;
+    &lt;/sequence&gt;
+    &lt;module name="defend-the-base"&gt;
+    &lt;/module&gt;
+  &lt;/selector&gt;
+&lt;/agent&gt;
+</pre></code>
         </section>
 
         <section>
-          <h3>Does all this remind you of something?</h3>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h3 class="fragment">Remind you of another tree you know?</h3>
         </section>
 
         <section>
           <h3>Isomorphism</h3>
+
+          <p>
+            TODO: Draw BT on the left, AST on the right.
+          </p>
         </section>
 
         <section>
-          <img src="img/coroutines/wheel.jpg" height="700px" />
+          <img src="img/coroutines/wheel.jpg" height="640px" />
         </section>
 
         <section>
-          <h3>Whose fault is it?</h3>
+          TODO: disadvantages
+
+          - ...
+          - nobody likes XML
+          - essentially an AST interpreter - bad performance
+        </section>
+
+        <section>
+          <h3>Why not just use a programming language?</h3>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">def</span> agent() = {
+  captureTheFlag() || defendTheBase()
+}
+
+</pre></code>
+<code class="fragment"><pre>
+<span class="hljs-keyword">def</span> captureTheFlag(): <span class="hljs-keyword">Boolean</span> = {
+  move() && takeTheFlag()
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Why not just use a programming language?</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">def</span> agent() = {
+  captureTheFlag() || defendTheBase()
+}
+
+</pre></code>
+<code><pre>
+<span class="hljs-keyword">def</span> captureTheFlag(): <span class="hljs-keyword">Boolean</span> = {
+  <span class="hljs-highlighted">move()</span> && takeTheFlag()
+}
+</pre></code>
+
+          <p class="fragment">
+            <br/>
+            Most languages cannot suspend computation and resume it later.
+          </p>
         </section>
 
         <section>
           <h3>Coroutines - the missing link</h3>
+
+          <p>
+            A programming construct that allows suspending the computation,
+            and resuming it later from the point where it was suspended.
+          </p>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">def</span> captureTheFlag(): <span class="hljs-keyword">Boolean</span> = {
+  <span class="hljs-highlighted">suspend</span>(move()) && takeTheFlag()
+}
+</pre></code>
         </section>
 
         <section>

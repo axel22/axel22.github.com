@@ -115,3 +115,6 @@ based on dark.css by Ivan Sagalaev
   opacity: 0.5;
 }
 
+.hljs-highlighted {
+  color: #f00;
+}
