@@ -119,6 +119,16 @@ based on dark.css by Ivan Sagalaev
   color: #f00;
 }
 
+.hljs-red {
+  font-weight: bold;
+  color: #f00;
+}
+
+.hljs-green {
+  font-weight: bold;
+  color: #090;
+}
+
 .hljs-singleton {
   color: #909;
 }

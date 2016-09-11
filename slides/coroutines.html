@@ -89,10 +89,40 @@
           </p>
 
           <p class="fragment">
-            They are the leaf nodes of the tree.
+            They are the leaf nodes of a behavior tree.
           </p>
 
-          <p class="fragment">TODO: "move" node, and an agent moving towards target</p>
+          <img class="fragment" src="img/coroutines/task-node.svg" />
+        </section>
+
+        <section>
+          <h3>Task nodes</h3>
+
+          <p>
+            They execute a side-effect, and return 
+            <i>running</i>, <i>success</i> or <i>failure</i> status.
+          </p>
+
+          <p>
+            They are the leaf nodes of a behavior tree.
+          </p>
+
+          <img src="img/coroutines/task-node-2.svg" />
+        </section>
+
+        <section>
+          <h3>Task nodes</h3>
+
+          <p>
+            They execute a side-effect, and return 
+            <i>running</i>, <i>success</i> or <i>failure</i> status.
+          </p>
+
+          <p>
+            They are the leaf nodes of a behavior tree.
+          </p>
+
+          <img src="img/coroutines/task-node-3.svg" />
         </section>
 
         <section>
@@ -109,12 +139,28 @@
           </p>
 
           <p class="fragment">
-            TODO: capture the flag = move node .. take the flag node
+            Two basic control nodes: sequence and selector.
           </p>
+        </section>
 
-          <p class="fragment">
-            TODO: play game = capture the flag node || defend the base node
-          </p>
+        <section>
+          <img src="img/coroutines/capture-the-flag-1.svg" height="600px" />
+        </section>
+
+        <section>
+          <img src="img/coroutines/capture-the-flag-2.svg" height="600px" />
+        </section>
+
+        <section>
+          <img src="img/coroutines/capture-the-flag-3.svg" height="600px" />
+        </section>
+
+        <section>
+          <img src="img/coroutines/capture-the-flag-4.svg" height="600px" />
+        </section>
+
+        <section>
+          <img src="img/coroutines/capture-the-flag-5.svg" height="600px" />
         </section>
 
         <section>
@@ -122,7 +168,7 @@
 
           <p class="fragment">The main reason behind their popularity.</p>
 
-          TODO: show previous example
+          <img class="fragment" src="img/coroutines/behavior-tree-compose.svg" height="300px" />
 
           <p class="fragment">
             Different subtrees can be developed, tuned and tested independently,
@@ -138,7 +184,7 @@
             repeaters, randomizers or inverters.
           </p>
 
-          TODO: show all three
+          <img class="fragment" src="img/coroutines/behavior-tree-repeater.svg" height="400px" />
         </section>
 
         <section>
@@ -170,8 +216,10 @@
         <section>
           <h3>Isomorphism</h3>
 
-          <p>
-            TODO: Draw BT on the left, AST on the right.
+          <img src="img/coroutines/isomorphism.svg" />
+
+          <p class="fragment">
+            Behavior tree planner is nothing more than an AST interpreter.
           </p>
         </section>
 
@@ -180,12 +228,15 @@
         </section>
 
         <section>
-          <h3>Downsides</h3>
+          <h3>Behavior tree downsides</h3>
+
+          <p>AI researchers have been rediscovering the wheel.</p>
 
           <ul>
-            <li class="fragment">writing them unintuitive</li>
+            <li class="fragment">implementing behavior trees is unintuitive</li>
             <li class="fragment">nobody likes XML</li>
             <li class="fragment">essentially an AST interpreter - bad performance</li>
+            <li class="fragment">harder to debug</li>
           </ul>
         </section>
 
@@ -254,7 +305,7 @@
         </section>
 
         <section>
-          <h3>Functions</h3>
+          <h3>Subroutines</h3>
 
 <code class="fragment"><pre>
 
@@ -267,12 +318,58 @@ double(7)
         </section>
 
         <section>
-          <h3>Calling a function</h3>
+          <h3>Calling a subroutine</h3>
 
-          TODO: Show a diagram of function invocation
+          <img src="img/coroutines/function-invocation-1.svg" />
 
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> double = (x: Int) => x + x
+double(7)
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a subroutine</h3>
+
+          <img src="img/coroutines/function-invocation-2.svg" />
+
+<code><pre>
+<span class="hljs-comment">val double = (x: Int) => </span>7 + 7
+double(7)
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a subroutine</h3>
+
+          <img src="img/coroutines/function-invocation-3.svg" />
+
+<code><pre>
+<span class="hljs-comment">val double = (x: Int) => </span>14
+double(7)
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a subroutine</h3>
+
+          <img src="img/coroutines/function-invocation-4.svg" />
+
+<code><pre>
+<span class="hljs-comment">val double = ...</span>
+14
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a subroutine</h3>
+
+          <img src="img/coroutines/function-invocation-4.svg" />
+
+          <p>
+            A function invocation is an entity that exists during program execution.
+          </p>
           <p class="fragment">
-            A function invocation is an entity during the execution of the program.
             However, the callsite cannot <i>observe the existence</i> of that entity.
           </p>
         </section>
@@ -297,14 +394,17 @@ double(7)
 <span class="hljs-highlighted">}</span>
 </pre></code>
 
-<p class="fragment">
-  This coroutine does not <i>yield</i>.<br/>
-</p>
+          <p class="fragment">
+            This coroutine does not <i>yield</i>.<br/>
+          </p>
 
-<p class="fragment">
-  The <code>yieldval</code> construct suspends computation<br/>
-  and yields a value to the caller.
-</p>
+          <p class="fragment">
+            The <code>yieldval</code> construct suspends computation<br/>
+            and yields a value to the caller.
+          </p>
+
+          <p class="fragment">
+          </p>
         </section>
 
         <section>
@@ -317,10 +417,65 @@ double(7)
   yieldval(x)
 }
 </pre></code>
+        </section>
 
-<p class="fragment">
-  TODO: show control transfer
-</p>
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-1.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-2.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-3.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-4.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-5.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-6.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-7.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-8.svg" height="380px" />
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+          <img src="img/coroutines/coroutine-invocation-9.svg" height="380px" />
+
+          <p class="fragment">
+            Coroutine is resumed by the caller.<br/>
+            Therefore, it is an observable entity in the program.
+          </p>
         </section>
 
         <section>
@@ -370,6 +525,167 @@ double(7)
         </section>
 
         <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+ <span class="hljs-red">&uarr;</span>yieldval(x)
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))<span class="hljs-green">&uarr;</span>
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+ <span class="hljs-green">&uarr;</span>yieldval(x)
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-red">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-green">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value<span class="hljs-green">&uarr;</span> }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)<span class="hljs-green">&uarr;</span>
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-red">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-green">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value<span class="hljs-green">&uarr;</span> }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)<span class="hljs-green">&uarr;</span>
+}
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-red">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)
+}<span class="hljs-red">&uarr;</span>
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-green">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)
+}<span class="hljs-red">&uarr;</span>
+
+<span class="hljs-keyword">val</span> i = call(double(7))
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value }
+<span class="hljs-green">&uarr;</span>
+</pre></code>
+        </section>
+
+        <section>
           <h3>Coroutine instance operations</h3>
 
           <br/>
@@ -400,7 +716,7 @@ double(7)
 
 <code><pre>
 
-<span class="hljs-keyword">val</span> double<span class="hljs-highlighted">: Int ~~> (Int, Unit)</span> =
+<span class="hljs-keyword">val</span> double<span class="hljs-highlighted">: Int ~> (Int, Unit)</span> =
   coroutine { (x: Int) =>
     yieldval(x)
     yieldval(x)
@@ -436,7 +752,7 @@ double(7)
 
 <code class="fragment"><pre>
 
-  <span class="hljs-keyword">val</span> table: Array[List[T]]
+  <span class="hljs-keyword">val</span> array: Array[List[T]]
 </pre></code>
         </section>
 
@@ -498,7 +814,48 @@ double(7)
         <section>
           <h3>Coroutine composition</h3>
 
-          TODO: Show invocations and stacks.
+          <img src="img/coroutines/direct-calls-0.svg" height="400px" />
+        </section>
+
+        <section>
+          <h3>Coroutine composition</h3>
+
+          <img src="img/coroutines/direct-calls-1.svg" height="400px" />
+        </section>
+
+        <section>
+          <h3>Coroutine composition</h3>
+
+          <img src="img/coroutines/direct-calls-2.svg" height="400px" />
+        </section>
+
+        <section>
+          <h3>Coroutine composition</h3>
+
+          <img src="img/coroutines/direct-calls-3.svg" height="400px" />
+        </section>
+
+        <section>
+          <h3>Coroutine composition</h3>
+
+          <img src="img/coroutines/direct-calls-4.svg" height="400px" />
+        </section>
+
+        <section>
+          <h3>Coroutine composition</h3>
+
+          <img src="img/coroutines/direct-calls-5.svg" height="400px" />
+        </section>
+
+        <section>
+          <h3>Coroutine composition</h3>
+
+          <img src="img/coroutines/direct-calls-6.svg" height="400px" />
+
+          <p class="fragment">
+            The <i>direct call</i>
+            reuses the stack of the same coroutine instance.
+          </p>
         </section>
 
         <section>
@@ -937,7 +1294,12 @@ property {
 </pre></code>          
 <code class="fragment"><pre>
   CallbackStyleAPI => DirectStyleAPI
-</pre></code>          
+</pre></code>
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> aBitOfWork =
+  implicitly[TwentyLinesOfCode]
+</pre></code>
         </section>
 
         <section>
