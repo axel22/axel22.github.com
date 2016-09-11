@@ -639,6 +639,138 @@ async {
 
         <section>
           <h3>Direct-Style Reactors</h3>
+
+          <p>
+            An actor must declare all receive operations<br/>
+            in terms of a top-level <code>receive</code>.
+          </p>
+
+<code><pre>
+
+<span class="hljs-keyword">class</span> Printer <span class="hljs-keyword">extends</span> Actor {
+  <span class="hljs-keyword">def</span> receive = {
+    <span class="hljs-keyword">case</span> x: Int => println(x)
+  }
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Direct-Style Reactors</h3>
+
+          <p>
+            A reactor uses first-class events sources,<br/>
+            and receives by calling <code>onEvent</code>.
+          </p>
+
+<code><pre>
+
+<span class="hljs-keyword">class</span> Printer <span class="hljs-keyword">extends</span> Reactor[Int] {
+  main.events.onEvent { x =>
+    println(x)
+  }
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Direct-Style Reactors</h3>
+
+          <p>
+            A reactor uses first-class events sources,<br/>
+            and receives by calling <code>onEvent</code>.
+          </p>
+
+<code><pre>
+
+<span class="hljs-keyword">class</span> Adder <span class="hljs-keyword">extends</span> Reactor[Int] {
+  operands.onEvent { x =>
+    operands.onEvent { y =>
+      println(x + y)
+    }
+  }
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Direct-Style Reactors</h3>
+
+          <p>
+            This soon results in the <i>pyramid of doom</i>.<br/>
+            Instead, we want to write code without nesting.
+          </p>
+
+<code><pre>
+
+<span class="hljs-keyword">class</span> Adder <span class="hljs-keyword">extends</span> Reactor[Int] {
+  <span class="hljs-keyword">val</span> x = operands.get()
+  <span class="hljs-keyword">val</span> y = operands.get()
+  println(x + y)
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Direct-Style Reactors</h3>
+
+          <p>
+            Challenge: implement methods <code>react</code> and <code>get</code>,<br/>
+            that define a reactor, and extract an event from its event source.
+          </p>
+        </section>
+
+        <section>
+          <h3>Direct-Style Reactors</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">type</span> Obs = (() => Unit) => Unit
+</pre></code>
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">def</span> get: () ~> (Obs, T) =
+</pre></code>
+<code class="fragment"><pre>
+  coroutine { () =>
+    <span class="hljs-keyword">var</span> ret: T = _
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">val</span> obs = (cont: () => Unit) =>
+      onEvent(x => { ret = x; cont(x) })
+</pre></code>
+<code class="fragment"><pre>
+    yieldval(obs)
+</pre></code>
+<code class="fragment"><pre>
+    ret
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Direct-Style Reactors</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">type</span> Obs = (() => Unit) => Unit
+</pre></code>
+<code><pre>
+
+<span class="hljs-keyword">def</span> react[T](c: () ~> (Obs, Unit)) =
+</pre></code>
+<code class="fragment"><pre>
+  Reactor[T] {
+    <span class="hljs-keyword">val</span> i = call(c())
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">def</span> loop() =
+      <span class="hljs-keyword">if</span> (i.resume) i.value(loop)
+</pre></code>
+<code class="fragment"><pre>
+    loop()
+  }
+</pre></code>
         </section>
 
         <section>
@@ -647,10 +779,6 @@ async {
 
         <section>
           <h3>Equivalence with delimited continuations</h3>
-        </section>
-
-        <section>
-          <h3>Performance</h3>
         </section>
 
         <section>
@@ -665,6 +793,12 @@ async {
             http://github.com/storm-enroute/coroutines
           </a>
         </section>
+
+        <!-- <section>
+          <h3>Performance</h3>
+
+          TODO: Copy in the charts later if there's enough time.
+        </section> -->
 
 			</div>
 
