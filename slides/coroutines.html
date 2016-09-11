@@ -1185,7 +1185,7 @@ property(<span class="hljs-string">"comm"</span>) = {
 <code class="fragment"><pre>
 
 <span class="hljs-keyword">val</span> choose:
-  Seq[Int] ~> (Seq[() => Unit], Unit) =
+  Seq[Int] ~> (Seq[() => Unit], Int) =
 </pre></code>
 <code class="fragment"><pre>
   coroutine { (vals: Seq[Int]) =>
