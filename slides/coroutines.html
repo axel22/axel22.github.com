@@ -180,11 +180,13 @@
         </section>
 
         <section>
-          ## Behavior tree disadvantages
+          <h3>Downsides</h3>
 
-          - unintuitive
-          - nobody likes XML
-          - essentially an AST interpreter - bad performance
+          <ul>
+            <li class="fragment">writing them unintuitive</li>
+            <li class="fragment">nobody likes XML</li>
+            <li class="fragment">essentially an AST interpreter - bad performance</li>
+          </ul>
         </section>
 
         <section>
@@ -230,48 +232,242 @@
           <h3>Coroutines - the missing link</h3>
 
           <p>
-            A programming construct that allows suspending the computation,
+            A programming construct that allows suspending the computation (i.e. yielding),
             and resuming it later from the point where it was suspended.
           </p>
 
 <code class="fragment"><pre>
 
 <span class="hljs-keyword">def</span> captureTheFlag(): <span class="hljs-keyword">Boolean</span> = {
-  <span class="hljs-highlighted">suspend</span>(move()) && takeTheFlag()
+  <span class="hljs-highlighted">yield</span>(move()) && takeTheFlag()
 }
 </pre></code>
         </section>
 
         <section>
-          <h3>Goal of this talk</h3>
+          <h3>Goals of this talk</h3>
+
+          <ul>
+            <li class="fragment">Demonstrate how coroutines work in Scala</li>
+            <li class="fragment">Show how Scala coroutines generalize other approaches</li>
+          </ul>
         </section>
 
         <section>
-          <h3>Normal function definition</h3>
+          <h3>Functions</h3>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> double = (x: Int) => x + x
+</pre></code>
+<code class="fragment"><pre>
+
+double(7)
+</pre></code>
         </section>
 
         <section>
           <h3>Calling a function</h3>
+
+          TODO: Show a diagram of function invocation
+
+          <p class="fragment">
+            A function invocation is an entity during the execution of the program.
+            However, the callsite cannot <i>observe the existence</i> of that entity.
+          </p>
         </section>
 
         <section>
           <h3>Coroutine definition</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double =
+  (x: Int) => x + x
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Coroutine definition</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = <span class="hljs-highlighted">coroutine {</span>
+  (x: Int) => x + x
+<span class="hljs-highlighted">}</span>
+</pre></code>
+
+<p class="fragment">
+  This coroutine does not <i>yield</i>.<br/>
+</p>
+
+<p class="fragment">
+  The <code>yieldval</code> construct suspends computation<br/>
+  and yields a value to the caller.
+</p>
+        </section>
+
+        <section>
+          <h3>Coroutine definition</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)
+}
+</pre></code>
+
+<p class="fragment">
+  TODO: show control transfer
+</p>
         </section>
 
         <section>
           <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)
+}
+
+</pre></code>
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> i = <span class="hljs-highlighted">call</span>(double(7))
+</pre></code>
+
+          <p class="fragment">
+            A coroutine invocation <i>can</i> be observed by the callsite.
+          </p>
+
+          <p class="fragment">
+            Therefore, it must be a first-class object.
+          </p>
         </section>
 
         <section>
-          <h3>Resuming a coroutine</h3>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)
+}
+
+</pre></code>
+<code><pre>
+<span class="hljs-keyword">val</span> i = <span class="hljs-highlighted">call</span>(double(7))
+</pre></code>
+<code><pre>
+<span class="hljs-keyword">var</span> sum = 0
+</pre></code>
+<code class="fragment"><pre>
+<span class="hljs-keyword">while</span> (<span class="hljs-highlighted">i.resume</span>) { sum += <span class="hljs-highlighted">i.value</span> }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Coroutine instance operations</h3>
+
+          <br/>
+          <ul>
+            <li class="fragment"><code>call</code> - creates a coroutine instance</li>
+            <li class="fragment"><code>resume</code> - resumes a coroutine instance</li>
+            <li class="fragment"><code>value</code> - obtains the last yielded value</li>
+            <li class="fragment"><code>result</code> - obtains the result of the invocation</li>
+          </ul>
         </section>
 
         <section>
           <h3>Typing a coroutine</h3>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> double =
+  coroutine { (x: Int) =>
+    yieldval(x)
+    yieldval(x)
+  }
+
+</pre></code>
         </section>
 
         <section>
+          <h3>Typing a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double<span class="hljs-highlighted">: Int ~~> (Int, Unit)</span> =
+  coroutine { (x: Int) =>
+    yieldval(x)
+    yieldval(x)
+  }
+
+</pre></code>
+        </section>
+ 
+        <section>
           <h3>Composing coroutines</h3>
+
+          <br/>
+          <p class="fragment">
+            As coroutine definitions grow larger,<br/>
+            so does the need to decompose them into independent components.
+          </p>
+        </section>
+
+        <section>
+          <h3>Example: hash table</h3>
+
+            <br/>
+            <p>
+              A closed-addressing hash table is an array containing buckets.<br/>
+              A bucket is a list of elements.
+            </p>
+
+<code class="fragment"><pre>
+
+  <span class="hljs-keyword">val</span> table: Array[List[T]]
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Example: hash table</h3>
+
+          <p>
+            Assume that we know how to traverse a list of elements.
+          </p>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> bucket =
+  coroutine { (b: List[T]) =>
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">var</span> cur = b
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">while</span> (cur != <span class="hljs-singleton">Nil</span>) {
+</pre></code>
+<code class="fragment"><pre>
+      yieldval(cur.head)
+</pre></code>
+<code class="fragment"><pre>
+      cur = cur.tail
+    }
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Example: hash table</h3>
+
+          <p>
+            Then, we should be able to use that to traverse an array of lists.
+          </p>
         </section>
 
         <section>

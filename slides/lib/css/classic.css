@@ -118,3 +118,7 @@ based on dark.css by Ivan Sagalaev
 .hljs-highlighted {
   color: #f00;
 }
+
+.hljs-singleton {
+  color: #909;
+}
