@@ -407,6 +407,12 @@ double(7)
   }
 
 </pre></code>
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> i<span class="hljs-highlighted">: Int <~> Unit</span> =
+  call(double(7))
+
+</pre></code>
         </section>
  
         <section>
@@ -775,10 +781,163 @@ async {
 
         <section>
           <h3>Simpler ScalaCheck tests</h3>
+
+          <p>
+            ScalaCheck tests typically used generators to explore the input space.
+          </p>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> tuples: Gen[(Int, Int)] =
+  <span class="hljs-keyword">for</span> {
+    a <- choose(0, Int.MaxValue)
+    b <- choose(0, Int.MaxValue)
+  } <span class="hljs-keyword">yield</span> (a, b)
+</pre></code>
+<code class="fragment"><pre>
+
+property(<span class="hljs-string">"comm"</span>) = forAll(tuples) {
+  a + b == b + a
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Simpler ScalaCheck tests</h3>
+
+          <p>
+            More intuitive: backtracking without inversion of control.
+          </p>
+
+<code><pre>
+
+property(<span class="hljs-string">"comm"</span>) = {
+  <span class="hljs-keyword">val</span> a = choose(0 until Int.MaxValue)
+  <span class="hljs-keyword">val</span> b = choose(0 until Int.MaxValue)
+  a + b == b + a
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Simpler ScalaCheck tests</h3>
+
+<code><pre>
+<span class="hljs-keyword">type</span> Program = Seq[() => Unit] <~> Unit
+</pre></code>
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> choose:
+  Seq[Int] ~> (Seq[() => Unit], Unit) =
+</pre></code>
+<code class="fragment"><pre>
+  coroutine { (vals: Seq[Int]) =>
+    <span class="hljs-keyword">var</span> res: Int = _
+    yieldval(vals.map(x => () => res = x))
+</pre></code>
+<code class="fragment"><pre>
+    res
+  }
+</pre></code>
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Simpler ScalaCheck tests</h3>
+
+<code><pre>
+<span class="hljs-keyword">type</span> Program = Seq[() => Unit] <~> Unit
+</pre></code>
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> backtrack: Program ~> (Unit, Unit) =
+  coroutine { (p: Program) =>
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">if</span> (p.resume) {
+</pre></code>
+<code class="fragment"><pre>
+      <span class="hljs-keyword">for</span> (prepare <- p.value) {
+        prepare()
+</pre></code>
+<code class="fragment"><pre>
+        backtrack(i.<snap class="hljs-highlighted">snapshot</snap>)
+      }
+</pre></code>
+<code class="fragment"><pre>
+    } <span class="hljs-keyword">else</span> yieldval(())
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Simpler ScalaCheck tests</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">type</span> Test = () ~> (Seq[() => Unit], Unit)
+</pre></code>
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> forever =
+  coroutine { (test: Test) =>
+    <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+      <span class="hljs-keyword">val</span> p = call(test())
+      backtrack(p)
+    }
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Simpler ScalaCheck tests</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">def</span> property(t: Test) = {
+  <span class="hljs-keyword">val</span> i = call(forever(t))
+  <span class="hljs-keyword">for</span> (i <- 0 until MAX_TESTS) i.resume
+}
+</pre></code>
+<code class="fragment"><pre>
+
+property {
+  <span class="hljs-keyword">val</span> a = choose(0 until Int.MaxValue)
+  <span class="hljs-keyword">val</span> b = choose(0 until Int.MaxValue)
+  a + b == b + a
+}
+</pre></code>
         </section>
 
         <section>
           <h3>Equivalence with delimited continuations</h3>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">type</span> Shift = (() => Unit) => Unit
+
+<span class="hljs-keyword">def</span> reset(b: () ~> (Shift, Unit)) = {
+  <span class="hljs-keyword">def</span> continue(i: Shift <~> Unit) =
+    <span class="hljs-keyword">if</span> (i.resume)
+      i.value(() => continue(i.snapshot))
+  continue(call(b()))
+}
+<span class="hljs-keyword">def</span> shift: Shift ~> (Shift, Unit) =
+  coroutine { (b: Shift) =>
+    yieldval(b)
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>The most important type alias</h3>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">type</span> CoroutineAPI =
+</pre></code>          
+<code class="fragment"><pre>
+  CallbackStyleAPI => DirectStyleAPI
+</pre></code>          
         </section>
 
         <section>
