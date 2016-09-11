@@ -507,6 +507,22 @@ double(7)
         <section>
           <h3>Iterators</h3>
 
+<code><pre>
+
+<span class="hljs-keyword">def</span> iterator(tree: Tree) =
+  call(foreach(tree))
+</pre></code>
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> it = tree.iterator
+<span class="hljs-keyword">while</span> (it.resume)
+  println(it.value)
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Iterators</h3>
+
           <p>
             Iterators follow directly from <code>foreach</code> definitions.
           </p>
@@ -545,6 +561,80 @@ double(7)
 
         <section>
           <h3>Async-Await</h3>
+
+<code><pre>
+<span class="hljs-keyword">def</span> loginRequest(): Future[String]
+<span class="hljs-keyword">def</span> httpRequest(): Future[Page]
+
+</pre></code>
+<code class="fragment"><pre>
+async {
+  <span class="hljs-keyword">val</span> credential =
+    await { loginRequest() }
+  <span class="hljs-keyword">val</span> ui =
+    await { httpRequest(credential) }
+  ui.html
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Async-Await</h3>
+
+          <br/>
+          <br/>
+          <br/>
+          <p>
+            How do we define <code>async</code> and <code>await</code>
+            using coroutines?
+          </p>
+        </section>
+
+        <section>
+          <h3>Async-Await</h3>
+
+<code><pre>
+<span class="hljs-keyword">def</span> await[R]: Future[R] ~> (Future[R], R) =
+</pre></code>
+<code class="fragment"><pre>
+  coroutine { (f: Future[R]) =>
+</pre></code>
+<code class="fragment"><pre>
+    yieldval(f)
+</pre></code>
+<code class="fragment"><pre>
+    f.value.get.get
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Async-Await</h3>
+
+<code><pre>
+<span class="hljs-keyword">def</span> async[R](b: () ~> (Future[Any], R)) = {
+</pre></code>
+<code class="fragment"><pre>
+  <span class="hljs-keyword">val</span> i = call(b())
+</pre></code>
+<code class="fragment"><pre>
+  <span class="hljs-keyword">val</span> p = Promise[R]()
+</pre></code>
+<code class="fragment"><pre>
+  @tailrec <span class="hljs-keyword">def</span> loop(): Unit =
+    <span class="hljs-keyword">if</span> (i.resume)
+</pre></code>
+<code class="fragment"><pre>
+      i.value.onSuccess(loop)
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">else</span> p.success(i.result)
+</pre></code>
+<code class="fragment"><pre>
+  Future { loop() }
+  p.future
+}
+</pre></code>
         </section>
 
         <section>
