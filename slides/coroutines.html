@@ -410,7 +410,7 @@ double(7)
         </section>
  
         <section>
-          <h3>Composing coroutines</h3>
+          <h3>Coroutine composition</h3>
 
           <br/>
           <p class="fragment">
@@ -468,14 +468,79 @@ double(7)
           <p>
             Then, we should be able to use that to traverse an array of lists.
           </p>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> table =
+  coroutine { (t: Array[List[T]]) =>
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">var</span> i = 0
+</pre></code>
+<code class="fragment"><pre>
+    <span class="hljs-keyword">while</span> (i < t.length) {
+</pre></code>
+<code class="fragment"><pre>
+      <span class="hljs-highlighted">bucket</span>(t(i))
+</pre></code>
+<code class="fragment"><pre>
+      i += 1
+    }
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Coroutine composition</h3>
+
+          TODO: Show invocations and stacks.
         </section>
 
         <section>
           <h3>Use-cases</h3>
+
+          <br/>
+          <p>
+            How do Scala coroutines generalize other models?
+          </p>
         </section>
 
         <section>
-          <h3>Tree iterator</h3>
+          <h3>Iterators</h3>
+
+          <p>
+            Iterators follow directly from <code>foreach</code> definitions.
+          </p>
+
+<code class="fragment"><pre>
+
+<span class="hljs-keyword">val</span> foreach =
+  (t: Tree[T], f: T => Unit) =>
+    <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>) 
+      foreach(t.left)
+      f(t.elem)
+      foreach(t.right)
+    }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Iterators</h3>
+
+          <p>
+            Iterators follow directly from <code>foreach</code> definitions.
+          </p>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> foreach =
+  coroutine { (t: Tree[T]) =>
+    <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>) 
+      foreach(t.left)
+      <span class="hljs-highlighted">yieldval</span>(t.elem)
+      foreach(t.right)
+    }
+  }
+</pre></code>
         </section>
 
         <section>
