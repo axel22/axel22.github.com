@@ -408,6 +408,7 @@ Lausanne, Switzerland, January 2012
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
 ### Reviewing
+- [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
 - [POPL 2017](http://conf.researchr.org/home/POPL-2017)
 - [OPODIS 2015](https://opodis2015.irisa.fr/)
 - [Transactions on Computers (2015)](http://www.computer.org/web/tc)
