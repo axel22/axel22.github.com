@@ -262,13 +262,6 @@ It is devised to soften the learning curve of students who are being introduced 
 # <a id="talks">Talks</a>
 
 
-### Thesis Defense
-
-* [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
-EPFL, Lausanne, Switzerland, September 2014
-\[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
-
-
 ### Reactors
 
 * [ScalaDays Berlin 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
@@ -282,6 +275,20 @@ Zurich, Switzerland, March 2016
 * [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program),
 Pittsburgh, Pennsylvania, USA, October 2015
 \[[Slides](/resources/docs/onward15.pdf)\]
+
+
+### Coroutines
+
+* [Scala World 2016](https://scala.world/),
+Penrith, UK, September 2016
+\[[Slides](/slides/coroutines.html)\]
+
+
+### Thesis Defense
+
+* [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
+EPFL, Lausanne, Switzerland, September 2014
+\[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
 
 
 ### Conc-Trees
@@ -401,6 +408,7 @@ Lausanne, Switzerland, January 2012
 # <a id="committees">Conferences and Workshops</a>
 
 ### Program Committees
+
 - [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
 - [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
 - [HLPP 2016](http://hlpp2016.uni-muenster.de/)
@@ -408,8 +416,9 @@ Lausanne, Switzerland, January 2012
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
 ### Reviewing
-- [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
+
 - [POPL 2017](http://conf.researchr.org/home/POPL-2017)
+- [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
 - [OPODIS 2015](https://opodis2015.irisa.fr/)
 - [Transactions on Computers (2015)](http://www.computer.org/web/tc)
 - [HLPP 2014](https://sites.google.com/site/hlpp2014amsterdam/)
