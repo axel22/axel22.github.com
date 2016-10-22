@@ -292,6 +292,20 @@ Pittsburgh, Pennsylvania, USA, October 2015
 \[[Slides](/resources/docs/onward15.pdf)\]
 
 
+### Coroutines
+
+* [Scala World 2016](https://scala.world/),
+Penrith, UK, September 2016
+\[[Slides](/slides/coroutines.html)\]
+
+
+### Thesis Defense
+
+* [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
+EPFL, Lausanne, Switzerland, September 2014
+\[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
+
+
 ### Conc-Trees
 
 * [LCPC 2015](http://www.csc2.ncsu.edu/workshops/lcpc2015/),
@@ -419,6 +433,7 @@ Lausanne, Switzerland, January 2012
 ### Reviewing
 
 - [POPL 2017](http://conf.researchr.org/home/POPL-2017)
+- [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
 - [OPODIS 2015](https://opodis2015.irisa.fr/)
 - [Transactions on Computers (2015)](http://www.computer.org/web/tc)
 - [HLPP 2014](https://sites.google.com/site/hlpp2014amsterdam/)
