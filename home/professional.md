@@ -49,7 +49,7 @@ London, UK, November 2014<br/>
 * **Pluggable Scheduling for the Reactor Programming Model** <br/>
 Aleksandar Prokopec<br/>
 [AGERE 2016](http://conf.researchr.org/event/agere-2016/agere2016-pluggable-scheduling-for-the-reactor-programming-model)<br/>
-Amsterdam, Netherlands, October 2015<br/>
+Amsterdam, Netherlands, October 2016<br/>
 \[[PDF](http://axel22.github.io/resources/docs/reactor-scheduler.pdf)\]
 \[[Link](/publications/reactor-scheduler)\]
 
