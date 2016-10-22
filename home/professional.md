@@ -46,6 +46,13 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Pluggable Scheduling for the Reactor Programming Model** <br/>
+Aleksandar Prokopec<br/>
+[AGERE 2016](http://conf.researchr.org/event/agere-2016/agere2016-pluggable-scheduling-for-the-reactor-programming-model)<br/>
+Amsterdam, Netherlands, October 2015<br/>
+\[[PDF](http://axel22.github.io/resources/docs/reactors.pdf)\]
+\[[Link](/publications/reactors)\]
+
 * **Reactors, Channels, and Event Streams for Composable Distributed Programming** <br/>
 Aleksandar Prokopec, Martin Odersky<br/>
 [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program)<br/>
