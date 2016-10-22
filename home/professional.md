@@ -146,6 +146,15 @@ Zagreb, Croatia, May 2009<br/>
 This section shortly describes some of the projects I've been working on.
 
 
+## ![reactors](/resources/images/reactress-gradient-small.png) Reactors
+
+An event-based framework for distributed programming
+based on event streams, channels and reactors.
+
+* [Project website](http://reactors.io/)
+* [Source code](https://github.com/reactors-io/reactors/)
+
+
 ## ![coroutines](/resources/images/coroutines-64.png) Coroutines
 
 Scala Coroutines is a library-level extension for the Scala programming language that introduces first-class coroutines.
@@ -166,15 +175,6 @@ SBT plugin for workflow automation.
 
 * [Project website](http://storm-enroute.com/mecha)
 * [Source code](https://github.com/storm-enroute/mecha/)
-
-
-## ![reactors](/resources/images/reactress-gradient-small.png) Reactors
-
-An event-based framework for distributed programming
-based on event streams, channels and reactors.
-
-* [Project website](http://reactors.io/)
-* [Source code](https://github.com/reactors-io/reactors/)
 
 
 ## ![scalablitz](/resources/images/chess-knight-logo.png) ScalaBlitz
@@ -267,6 +267,14 @@ It is devised to soften the learning curve of students who are being introduced 
 * [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
 EPFL, Lausanne, Switzerland, September 2014
 \[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
+
+
+### Coroutines
+
+* [Scala World 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
+Berlin, Germany, June 2016
+\[[Slides](/slides/coroutines.html)\]
+\[[Video](https://www.youtube.com/watch?v=B3hKOUtc4e0)\]
 
 
 ### Reactors
@@ -401,6 +409,7 @@ Lausanne, Switzerland, January 2012
 # <a id="committees">Conferences and Workshops</a>
 
 ### Program Committees
+
 - [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
 - [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
 - [HLPP 2016](http://hlpp2016.uni-muenster.de/)
@@ -408,6 +417,7 @@ Lausanne, Switzerland, January 2012
 - [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
 
 ### Reviewing
+
 - [POPL 2017](http://conf.researchr.org/home/POPL-2017)
 - [OPODIS 2015](https://opodis2015.irisa.fr/)
 - [Transactions on Computers (2015)](http://www.computer.org/web/tc)
