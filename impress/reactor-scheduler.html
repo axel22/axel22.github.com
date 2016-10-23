@@ -188,11 +188,11 @@
       <q>Reactor scheduling algorithm</q>
     </div>
 
-    <div class="step" data-x="2000" data-y="180">
+    <div class="step" data-x="2000" data-y="120">
       <q>Properties of a scheduling algorithm</q>
     </div>
 
-    <div class="step" data-x="2000" data-y="240">
+    <div class="step" data-x="2000" data-y="180">
       <q>Performance evaluation</q>
     </div>
 
@@ -589,7 +589,7 @@ drain(c)
       <pre class="snippet"
         style="position: relative; left: -350px; top: 40px">
         <code class="scala">
-@tailrec def drain(c: Connector[_]) {
+@tailrec def drain(c: Connector) {
 
 
 
@@ -616,7 +616,7 @@ drain(c)
       <pre class="snippet"
         style="position: relative; left: -350px; top: 40px">
         <code class="scala">
-@tailrec def drain(c: Connector[_]) {
+@tailrec def drain(c: Connector) {
   val size = c.queue.dequeue()
   if (f.schedulerState.onBatch(c)) {
     if (size > 0) {
@@ -638,7 +638,7 @@ drain(c)
       <pre class="snippet"
         style="position: relative; left: -350px; top: 40px">
         <code class="scala">
-@tailrec def drain(c: Connector[_]) {
+@tailrec def drain(c: Connector) {
   val size = c.queue.dequeue()
   if (f.schedulerState.onBatch(c)) {
     if (size > 0) {
@@ -714,7 +714,7 @@ if (repeat) s.schedule(f)
       </q>
     </div>
 
-    <div class="step fadefuture" data-x="14200" data-y="10200" data-z="0">
+    <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
       <span style="position: relative; top: -180px; left: 50px;" class="sketch">Liveness</span>
       <span style="position: relative; top: -150px; left: 150px;" class="sketch">Fairness</span>
       <span style="position: relative; top: 150px; left: 0px;" class="sketch">Pluggability</span>
@@ -738,14 +738,19 @@ if (repeat) s.schedule(f)
     </div>
 
     <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
-      <img src="img/reactor-scheduler/savina.png"
-        style="position: relative; left: -250px; top: 0px; border: 1px solid #777;" />
+      <img height="500px" src="img/reactor-scheduler/savina.png"
+        style="position: relative; left: 0px; top: 0px; border: 1px solid #777;" />
     </div>
 
     <div class="step fadealways" data-x="14200" data-y="11200" data-z="400">
       <h1 style="position: relative; left: 200px;">
         Thank you!
       </h1>
+    </div>
+
+    <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
+      <img src="img/reactor-scheduler/savina-all.png"
+        style="position: relative; left: -250px; top: 0px; border: 1px solid #777;" />
     </div>
 </div>
 
