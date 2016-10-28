@@ -859,8 +859,7 @@ def initSchedule(f: Frame) =
   f.schedulerState = Thread {
     while(true) {
       f.lock.wait()
-      f.execute()
-    }
+      f.execute() }
   }
 def schedule(f: Frame) =
   f.lock(f.lock.notify())
