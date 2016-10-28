@@ -165,7 +165,7 @@
         It will not be rotated or scaled.
         
     -->
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="1000" data-y="0">
         <h1>Pluggable Scheduling</h1>
         <h2>for the Reactor Model</h2>
 
@@ -180,24 +180,24 @@
         </a>
     </div>
 
-    <div class="step" data-x="2000" data-y="0">
+    <div class="step" data-x="3000" data-y="0">
       <q>What is the reactor model?</q>
     </div>
 
-    <div class="step" data-x="2000" data-y="60">
+    <div class="step" data-x="3000" data-y="60">
       <q>Reactor scheduling algorithm</q>
     </div>
 
-    <div class="step" data-x="2000" data-y="120">
+    <div class="step" data-x="3000" data-y="120">
       <q>Properties of a scheduling algorithm</q>
     </div>
 
-    <div class="step" data-x="2000" data-y="180">
+    <div class="step" data-x="3000" data-y="180">
       <q>Performance evaluation</q>
     </div>
 
-    <div class="step" data-x="4000" data-y="0">
-      <q>What is the reactor model?</q>
+    <div class="step" data-x="4500" data-y="400">
+      <h1>The reactor model</h1>
     </div>
 
     <div class="step persistent" data-x="6000" data-y="2000">
@@ -331,9 +331,33 @@ sysEvents  // Events[SysEvent]
     <div class="step fadefuture" data-x="7400" data-y="2900" data-z="-6000">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-val stamped = open[(String, Long)]
+val server =
+  open[(String, Channel[Int])]
+server.events onMatch {
+  case (s, ch) => ch ! s.length
+}
 
-stamped.channel ! ("event", 1L)
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="7400" data-y="2900" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+val server =
+  open[(String, Channel[Int])]
+server.events onMatch {
+  case (s, ch) => ch ! s.length
+}
+
+val reply = open[Int]
+val req = ("hi", reply.channel)
+server.channel ! req
+reply.events.onEvent(println)
         </code>
       </pre>
     </div>
@@ -370,13 +394,13 @@ trait EventQueue[T] {
       <code class="snippet">spawn</code> starts a reactor.
       <br/>
 
-      <code class="snippet">Channel[T]</code> sends events.
+      <code class="snippet">Channel[T]</code> send an event.
       <br/>
 
       <code class="snippet">Events[T]</code> delivers events.
       <br/>
 
-      <code class="snippet">open[T]</code> opens channels.
+      <code class="snippet">open[T]</code> creates a channel.
       <br/>
     </div>
 
@@ -412,11 +436,11 @@ trait Scheduler {
         <code class="scala">
 class Frame {
   val uid: Long
+  val proto: Proto[_]
   var active: Boolean
   val pending: Queue[Connector[_]]
-  val lock: Lock
-  val proto: Proto[_]
   val schedulerState: State
+  val lock: Lock
 }
         </code>
       </pre>
@@ -490,7 +514,25 @@ trait EventQueue[T] {
   val size = c.queue.enqueue(x)
   var run = false
   if (size == 1) frame.lock {
-    frame.pending.enqueue(c.queue)
+    frame.pending.enqueue(c)
+
+
+
+
+  }
+  
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="14000" data-y="7000" data-z="0">
+      <pre class="snippet"
+        style="position: relative; left: 0px; top: 80px">
+        <code class="scala">
+  val size = c.queue.enqueue(x)
+  var run = false
+  if (size == 1) frame.lock {
+    frame.pending.enqueue(c)
     if (!frame.active) {
       frame.active = true
       run = true
@@ -508,7 +550,7 @@ trait EventQueue[T] {
   val size = c.queue.enqueue(x)
   var run = false
   if (size == 1) frame.lock {
-    frame.pending.enqueue(c.queue)
+    frame.pending.enqueue(c)
     if (!frame.active) {
       frame.active = true
       run = true
@@ -519,17 +561,47 @@ trait EventQueue[T] {
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="14600" data-y="7000" data-z="0">
+    <div class="step fadefuture" data-x="14500" data-y="7000" data-z="0">
       <ol class="small-font" style="position: relative; left: 300px;">
         <li>
           A non-empty event queue always ends up on the pending queue.
         </li>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </ol>
+    </div>
+
+    <div class="step fadefuture" data-x="14500" data-y="7000" data-z="0">
+      <ol class="small-font" style="position: relative; left: 300px;">
         <li>
-          A reactor with a non-empty pending queue always has <code class="snippet">active</code> set.
+          A reactor with a non-empty pending queue always gets the
+          <code class="snippet">active</code> field set.
         </li>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </ol>
+    </div>
+
+    <div class="step fadefuture" data-x="14500" data-y="7000" data-z="0">
+      <ol class="small-font" style="position: relative; left: 300px;">
         <li>
-          At most one thread sets <code class="snippet">active</code> set.
+          At most one thread sets <code class="snippet">active</code>.
         </li>
+        <br/>
+      </ol>
+    </div>
+
+    <div class="step fadefuture" data-x="14500" data-y="7000" data-z="0">
+      <ol class="small-font" style="position: relative; left: 300px;">
+        <br/>
         <li>
           A reactor with <code class="snippet">active</code> set always gets scheduled.
         </li>
@@ -538,7 +610,7 @@ trait EventQueue[T] {
 
     <div class="step fadefuture" data-x="14900" data-y="7250" data-z="0">
       <span>
-        At most one thread calls <code class="snippet">schedule</code>.
+        Theorem 1: At most one thread calls <code class="snippet">schedule</code>.
       </span>
     </div>
 
@@ -670,10 +742,10 @@ drain(c)
       if (nc != null) drain(c)
     }
   } else if (size > 0)
-    f.lock {
       f.pending.enqueue(c)
-    }
 }
+
+
         </code>
       </pre>
     </div>
@@ -703,13 +775,46 @@ if (repeat) s.schedule(f)
       </h2>
     </div>
 
-    <div class="step fadefuture" data-x="14200" data-y="10200" data-z="0">
+    <div class="step fadefuture" data-x="14200" data-y="10100" data-z="0">
+      <span>
+        The <code class="snippet">active</code> field is reset
+        only if <code class="snippet">pending</code> is empty.
+      </span>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadefuture" data-x="14200" data-y="10300" data-z="0">
+      <span>
+        A non-empty event queue always ends up on <code class="snippet">pending</code>.
+      </span>
+    </div>
+
+    <div class="step fadefuture" data-x="14200" data-y="10500" data-z="0">
+      <span>
+        A reactor with a non-empty <code class="snippet">pending</code> always gets the
+        <code class="snippet">active</code> field set.
+      </span>
+    </div>
+
+    <div class="step fadefuture" data-x="14200" data-y="10700" data-z="0">
+      <h2 class="sketch">
+        Liveness
+      </h2>
+      <span>
+        Every delivered event is eventually scheduled.
+      </span>
+    </div>
+
+    <div class="step fadefuture" data-x="14200" data-y="11600" data-z="0">
       <q>
         Which other properties must a reactor scheduler satisfy?
       </q>
     </div>
 
-    <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
+    <div class="step fadealways" data-x="14200" data-y="11600" data-z="0">
       <span style="position: relative; top: -180px; left: 50px;" class="sketch">Liveness</span>
       <span style="position: relative; top: -150px; left: 150px;" class="sketch">Fairness</span>
       <span style="position: relative; top: 150px; left: 0px;" class="sketch">Pluggability</span>
@@ -722,28 +827,88 @@ if (repeat) s.schedule(f)
       </span>
     </div>
 
-    <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
+    <div class="step fadealways" data-x="16200" data-y="11600" data-z="0">
+      <br/>
+      <h2 class="sketch">
+        Pluggability - Pool
+      </h2>
+      <pre class="snippet"
+        style="position: relative; left: 0px; top: 0px">
+        <code class="scala">
+class ExecutorScheduler
+extends Scheduler {
+  def initSchedule(f: Frame) =
+    f.schedulerState =
+      Runnable(f.execute())
+  def schedule(f: Frame) =
+    pool(f.schedulerState)
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="16200" data-y="11600" data-z="0">
+      <br/>
+      <h2 class="sketch">
+        Pluggability - Thread
+      </h2>
+      <pre class="snippet"
+        style="position: relative; left: 0px; top: 0px">
+        <code class="scala">
+def initSchedule(f: Frame) =
+  f.schedulerState = Thread {
+    while(true) {
+      f.lock.wait()
+      f.execute()
+    }
+  }
+def schedule(f: Frame) =
+  f.lock(f.lock.notify())
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="16200" data-y="11600" data-z="0">
+      <br/>
+      <h2 class="sketch">
+        Pluggability
+      </h2>
+      
+      <br/>
+      <br/>
+      <br/>
+      <span>
+        Similarly: timer scheduler, fair scheduler, resource scheduler ...
+      </span>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="14200" data-y="11600" data-z="0">
       <img src="img/reactor-scheduler/batch-perf.png"
         style="position: relative; left: -150px; top: 0px; border: 1px solid #777;" />
     </div>
 
-    <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
+    <div class="step fadealways" data-x="14200" data-y="11600" data-z="0">
       <img src="img/reactor-scheduler/connectors-perf.png"
         style="position: relative; left: 0px; top: 0px; border: 1px solid #777;" />
     </div>
 
-    <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
+    <div class="step fadealways" data-x="14200" data-y="11600" data-z="0">
       <img height="500px" src="img/reactor-scheduler/savina.png"
         style="position: relative; left: 0px; top: 0px; border: 1px solid #777;" />
     </div>
 
-    <div class="step fadealways" data-x="14200" data-y="11200" data-z="400">
+    <div class="step fadealways" data-x="14200" data-y="11500" data-z="400">
       <h1 style="position: relative; left: 200px;">
         Thank you!
       </h1>
     </div>
 
-    <div class="step fadealways" data-x="14200" data-y="10200" data-z="0">
+    <div class="step fadealways" data-x="14200" data-y="11600" data-z="0">
       <img src="img/reactor-scheduler/savina-all.png"
         style="position: relative; left: -250px; top: 0px; border: 1px solid #777;" />
     </div>
