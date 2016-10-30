@@ -712,7 +712,7 @@ drain(c)
       drain(c)
     } else {
       val nc = f.pending.dequeue()
-      if (nc != null) drain(c)
+      if (nc != null) drain(nc)
     }
 
 
@@ -739,10 +739,10 @@ drain(c)
       drain(c)
     } else {
       val nc = f.pending.dequeue()
-      if (nc != null) drain(c)
+      if (nc != null) drain(nc)
     }
   } else if (size > 0)
-      f.pending.enqueue(c)
+    f.pending.enqueue(c)
 }
 
 
@@ -808,7 +808,7 @@ if (repeat) s.schedule(f)
       </span>
     </div>
 
-    <div class="step fadefuture" data-x="14200" data-y="11600" data-z="0">
+    <div class="step fadealways" data-x="14200" data-y="11600" data-z="0">
       <q>
         Which other properties must a reactor scheduler satisfy?
       </q>
