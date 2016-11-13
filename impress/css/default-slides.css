@@ -33,6 +33,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: SecondChances;
+    src: url('../fonts/KGSecondChancesSketch.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
     We start with a good ol' reset.
     That's the one by Eric Meyer http://meyerweb.com/eric/tools/css/reset/
@@ -199,11 +206,11 @@ a:focus {
     margin: 0;
     opacity: 0.3;
 
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition:    opacity 0.5s;
+    -ms-transition:     opacity 0.5s;
+    -o-transition:      opacity 0.5s;
+    transition:         opacity 0.5s;
 }
 
 .impress-enabled .step.active { opacity: 1 }
@@ -454,11 +461,11 @@ a:hover img {
 }
 
 .fadealways.future {
-  opacity: 0.01;
+  opacity: 0.0;
 }
 
 .fadealways.past {
-  opacity: 0.01;
+  opacity: 0.0;
 }
 
 .fadefuture.past {
