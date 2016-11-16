@@ -165,7 +165,7 @@
         It will not be rotated or scaled.
         
     -->
-    <div class="step" data-x="0" data-y="0">
+    <div class="step" data-x="4000" data-y="2000">
       <h3>Bridging the Gap Towards</h3>
       <h2>High-Level Distributed Computing</h2>
 
@@ -198,7 +198,7 @@ spawn(Proto[AnalysisReactor])
       </pre>
     </div>
 
-    <div class="step" data-x="6100" data-y="1980" data-z="-3300">
+    <div class="step fadefuture" data-x="6100" data-y="1980" data-z="-3300">
       <img height="600px" src="img/reactor-model-protocols/reactors-1.svg"/>
     </div>
 
@@ -310,48 +310,131 @@ sysEvents  // Events[SysEvent]
       <img height="600px" src="img/reactor-model-protocols/reactors-5.svg"/>
     </div>
 
-    <div class="step fadefuture" data-x="7400" data-y="2900" data-z="-6000">
-      <pre class="snippet" style="position: relative; left: 0px;">
-        <code class="scala">
-val server =
-  open[(String, Channel[Int])]
-server.events onMatch {
-  case (s, ch) => ch ! s.length
-}
-
-
-
-
-
-        </code>
-      </pre>
-    </div>
-
-    <div class="step fadefuture" data-x="7400" data-y="2900" data-z="-6000">
-      <pre class="snippet" style="position: relative; left: 0px;">
-        <code class="scala">
-val server =
-  open[(String, Channel[Int])]
-server.events onMatch {
-  case (s, ch) => ch ! s.length
-}
-
-val reply = open[Int]
-val req = ("hi", reply.channel)
-server.channel ! req
-reply.events.onEvent(println)
-        </code>
-      </pre>
+    <div class="step fadealways" data-x="6415" data-y="3000" data-z="-7500">
+      <img height="600px" src="img/reactor-model-protocols/event-queue.svg"/>
     </div>
 
     <div class="step fadefuture" data-x="6515" data-y="2900" data-z="-6000">
     </div>
 
-    <div class="step fadefuture" data-x="6215" data-y="3000" data-z="-10000">
-      <img height="600px" src="img/reactor-model-protocols/event-queue.svg"/>
+    <div class="step fadealways" data-x="7500" data-y="2900" data-z="-6000">
+      <img width="1000px" style="position: relative; left: -100px;"
+        src="img/reactor-model-protocols/router-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="12000" data-y="5000" data-z="0">
+    <div class="step fadealways" data-x="7500" data-y="2900" data-z="-6000">
+      <img width="1000px" style="position: relative; left: -100px;"
+        src="img/reactor-model-protocols/router-2.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="7500" data-y="2900" data-z="-6000">
+      <img width="1000px" style="position: relative; left: -100px;"
+        src="img/reactor-model-protocols/router-3.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="7500" data-y="2900" data-z="-6000">
+      <img width="1000px" style="position: relative; left: -100px;"
+        src="img/reactor-model-protocols/router.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="8450" data-y="2900" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def router(p: T => Channel[T]) = {
+  val connector = open[T]
+
+
+
+
+}
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="8450" data-y="2900" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def router(p: T => Channel[T]) = {
+  val connector = open[T]
+  connector.events onEvent { x =>
+    p(x) ! x
+  }
+
+}
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="8450" data-y="2900" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def router(p: T => Channel[T]) = {
+  val connector = open[T]
+  connector.events onEvent { x =>
+    p(x) ! x
+  }
+  connector.channel
+}
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="8450" data-y="2900" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def router(p: T => Channel[T]) = {
+  val connector = open[T]
+  connector.events onEvent { x =>
+    p(x) ! x
+  }
+  connector.channel
+}
+
+def roundRobin(chs: Channel[T]*) = {
+  var i = -1
+  (x: T) => {
+    i = (i + 1) % chs.length
+    chs(i)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="7500" data-y="3200" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+val input: Channel[T] =
+  router(roundRobin(outputs))
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="5500" data-y="2500" data-z="-5000">
       <h1 class="sketch">Reactor model</h1>
 
       <code class="snippet">spawn</code> <span class="sketch">starts a reactor.</span>
@@ -367,382 +450,362 @@ reply.events.onEvent(println)
       <br/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
-      <img width="1000px" style="position: relative; left: -100px;"
-        src="img/reactor-model-protocols/router-1.svg"/>
-    </div>
-
-    <div class="step fadealways" data-x="2000" data-y="0">
-      <img width="1000px" style="position: relative; left: -100px;"
-        src="img/reactor-model-protocols/router-2.svg"/>
-    </div>
-
-    <div class="step fadealways" data-x="2000" data-y="0">
-      <img width="1000px" style="position: relative; left: -100px;"
-        src="img/reactor-model-protocols/router-3.svg"/>
-    </div>
-
-    <div class="step fadealways" data-x="2000" data-y="0">
-      <img width="1000px" style="position: relative; left: -100px;"
-        src="img/reactor-model-protocols/router.svg"/>
-    </div>
-
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-6.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-7.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="400px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="400px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="400px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="400px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-0.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-6.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-7.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-8.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-9.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable-10.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/client-reliable.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-6.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-7.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-8-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-8-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-8.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-9-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-9.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-10-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-10.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-two-way-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-two-way-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-two-way-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-two-way-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-two-way-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-two-way-6.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/reliable-two-way.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/server-reliable-two-way-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/server-reliable-two-way-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/server-reliable-two-way-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/server-reliable-two-way-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/server-reliable-two-way.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/client-reliable-two-way-0.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/client-reliable-two-way-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/client-reliable-two-way-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/client-reliable-two-way-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/client-reliable-two-way-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/client-reliable-two-way.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-pump-0.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-pump-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-pump-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-pump-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-pump.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-0-0.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-0.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2000" data-y="0">
+    <div class="step fadealways" data-x="0" data-y="-1000">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-6.svg"/>
     </div>
