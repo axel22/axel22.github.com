@@ -182,6 +182,191 @@
       </a>
     </div>
 
+    <div class="step persistent" data-x="6000" data-y="2000">
+      <img height="600px" src="img/reactor-model-protocols/reactors.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="6000" data-y="2000">
+      <pre class="snippet" style="position: relative; left: 400px; top: 230px;">
+        <code class="scala">
+class AnalysisReactor
+extends Reactor[String] {
+  var totalLength = 0
+}
+spawn(Proto[AnalysisReactor])
+        </code>
+      </pre>
+    </div>
+
+    <div class="step" data-x="6100" data-y="1980" data-z="-3300">
+      <img height="600px" src="img/reactor-model-protocols/reactors-1.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="6100" data-y="1980" data-z="-3300">
+      <pre class="snippet" style="position: relative; left: 400px; top: 230px;">
+        <code class="scala">
+val ch: Channel[String]
+ch ! "event payload"
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="6570" data-y="1700" data-z="-6000">
+      <img height="600px" src="img/reactor-model-protocols/reactors-2.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="7500" data-y="1700" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+var totalLength = 0
+main
+  .events
+  .onEvent {
+    x => totalLength += x.length
+  }
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="7500" data-y="1700" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+                    // state
+             // main connector
+             // event stream
+             // event handler
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="6515" data-y="2300" data-z="-6000">
+      <img height="600px" src="img/reactor-model-protocols/reactors-3.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="7400" data-y="2300" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+var numSch = 0
+sysEvents
+  .onMatch {
+    case Scheduled =>
+      numSch += 1
+    case Terminated =>
+      println(totalLength / numSch)
+  }
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="7400" data-y="2300" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+var numSch = 0
+sysEvents  // Events[SysEvent]
+  .onMatch {
+    case Scheduled =>
+      numSch += 1
+    case Terminated =>
+      println(totalLength / numSch)
+  }
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="8500" data-y="2000" data-z="-5500">
+      <h2 class="sketch">
+        Serializability
+      </h2>
+      <span>
+        For any single reactor,<br/>
+        at most one handler<br/>
+        can be observably active<br/>
+        at any point in time.
+      </span>
+    </div>
+
+    <div class="step fadealways fadelate" data-x="7500" data-y="2000" data-z="-5500">
+      <img height="300px" width="500px"
+        style="position: relative; top: -130px; left: 80px"
+        src="img/reactor-model-protocols/circled.png"/>
+    </div>
+
+    <div class="step fadealways fadelate" data-x="7500" data-y="2000" data-z="-5500">
+      <img height="320px" width="420px"
+        style="position: relative; top: 220px; left: 10px"
+        src="img/reactor-model-protocols/circled.png"/>
+      <span class="sketch" style="position: relative; top: 20px; left: 30px">
+        No data races!
+      </span>
+    </div>
+
+    <div class="step fadefuture" data-x="6515" data-y="2900" data-z="-6000">
+      <img height="600px" src="img/reactor-model-protocols/reactors-4.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="6515" data-y="2900" data-z="-6000">
+      <img height="600px" src="img/reactor-model-protocols/reactors-5.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="7400" data-y="2900" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+val server =
+  open[(String, Channel[Int])]
+server.events onMatch {
+  case (s, ch) => ch ! s.length
+}
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="7400" data-y="2900" data-z="-6000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+val server =
+  open[(String, Channel[Int])]
+server.events onMatch {
+  case (s, ch) => ch ! s.length
+}
+
+val reply = open[Int]
+val req = ("hi", reply.channel)
+server.channel ! req
+reply.events.onEvent(println)
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="6515" data-y="2900" data-z="-6000">
+    </div>
+
+    <div class="step fadefuture" data-x="6215" data-y="3000" data-z="-10000">
+      <img height="600px" src="img/reactor-model-protocols/event-queue.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="12000" data-y="5000" data-z="0">
+      <h1 class="sketch">Reactor model</h1>
+
+      <code class="snippet">spawn</code> <span class="sketch">starts a reactor.</span>
+      <br/>
+
+      <code class="snippet">Channel[T]</code> <span class="sketch">send an event.</span>
+      <br/>
+
+      <code class="snippet">Events[T]</code> <span class="sketch">delivers events.</span>
+      <br/>
+
+      <code class="snippet">open[T]</code> <span class="sketch">creates a channel.</span>
+      <br/>
+    </div>
+
     <div class="step fadealways" data-x="2000" data-y="0">
       <img width="1000px" style="position: relative; left: -100px;"
         src="img/reactor-model-protocols/router-1.svg"/>
