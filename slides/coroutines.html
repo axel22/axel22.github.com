@@ -62,6 +62,10 @@
 				</section>
 
         <section>
+          <img src="img/coroutines/dont-force.jpg" />
+        </section>
+
+        <section>
           <img src="img/coroutines/halo.jpg" height="640px" />
         </section>
 
@@ -84,12 +88,12 @@
           <h3>Task nodes</h3>
 
           <p class="fragment">
-            They execute a side-effect, and return 
-            <i>running</i>, <i>success</i> or <i>failure</i> status.
+            They are the leaf nodes of a behavior tree.
           </p>
 
           <p class="fragment">
-            They are the leaf nodes of a behavior tree.
+            They execute a side-effect, and return 
+            <i>running</i>, <i>success</i> or <i>failure</i> status.
           </p>
 
           <img class="fragment" src="img/coroutines/task-node.svg" />
@@ -99,12 +103,12 @@
           <h3>Task nodes</h3>
 
           <p>
-            They execute a side-effect, and return 
-            <i>running</i>, <i>success</i> or <i>failure</i> status.
+            They are the leaf nodes of a behavior tree.
           </p>
 
           <p>
-            They are the leaf nodes of a behavior tree.
+            They execute a side-effect, and return 
+            <i>running</i>, <i>success</i> or <i>failure</i> status.
           </p>
 
           <img src="img/coroutines/task-node-2.svg" />
@@ -114,12 +118,12 @@
           <h3>Task nodes</h3>
 
           <p>
-            They execute a side-effect, and return 
-            <i>running</i>, <i>success</i> or <i>failure</i> status.
+            They are the leaf nodes of a behavior tree.
           </p>
 
           <p>
-            They are the leaf nodes of a behavior tree.
+            They execute a side-effect, and return 
+            <i>running</i>, <i>success</i> or <i>failure</i> status.
           </p>
 
           <img src="img/coroutines/task-node-3.svg" />
@@ -473,7 +477,7 @@ double(7)
           <img src="img/coroutines/coroutine-invocation-9.svg" height="380px" />
 
           <p class="fragment">
-            Coroutine is resumed by the caller.<br/>
+            Coroutine <i>invocation</i> is resumed by the caller.<br/>
             Therefore, it is an observable entity in the program.
           </p>
         </section>
@@ -927,7 +931,7 @@ double(7)
 
 <code><pre>
 <span class="hljs-keyword">def</span> loginRequest(): Future[String]
-<span class="hljs-keyword">def</span> httpRequest(): Future[Page]
+<span class="hljs-keyword">def</span> httpRequest(c: String): Future[Page]
 
 </pre></code>
 <code class="fragment"><pre>
@@ -1047,8 +1051,8 @@ async {
 <code><pre>
 
 <span class="hljs-keyword">class</span> Adder <span class="hljs-keyword">extends</span> Reactor[Int] {
-  operands.onEvent { x =>
-    operands.onEvent { y =>
+  operands.once.onEvent { x =>
+    operands.once.onEvent { y =>
       println(x + y)
     }
   }
@@ -1100,7 +1104,7 @@ async {
 </pre></code>
 <code class="fragment"><pre>
     <span class="hljs-keyword">val</span> obs = (cont: () => Unit) =>
-      onEvent(x => { ret = x; cont(x) })
+      onEvent(x => { ret = x; cont() })
 </pre></code>
 <code class="fragment"><pre>
     yieldval(obs)
@@ -1148,7 +1152,7 @@ async {
 <span class="hljs-keyword">val</span> tuples: Gen[(Int, Int)] =
   <span class="hljs-keyword">for</span> {
     a <- choose(0, Int.MaxValue)
-    b <- choose(0, Int.MaxValue)
+    b <- choose(0, a)
   } <span class="hljs-keyword">yield</span> (a, b)
 </pre></code>
 <code class="fragment"><pre>
@@ -1170,11 +1174,18 @@ property(<span class="hljs-string">"comm"</span>) = forAll(tuples) {
 
 property(<span class="hljs-string">"comm"</span>) = {
   <span class="hljs-keyword">val</span> a = choose(0 until Int.MaxValue)
-  <span class="hljs-keyword">val</span> b = choose(0 until Int.MaxValue)
+  <span class="hljs-keyword">val</span> b = choose(0 until a)
   a + b == b + a
 }
 </pre></code>
         </section>
+
+        <section>
+          <h3>Simpler ScalaCheck tests</h3>
+
+          <img src="img/coroutines/backtrack.png" height="400px" />
+        </section>
+
 
         <section>
           <h3>Simpler ScalaCheck tests</h3>
@@ -1218,7 +1229,7 @@ property(<span class="hljs-string">"comm"</span>) = {
         prepare()
 </pre></code>
 <code class="fragment"><pre>
-        backtrack(i.<snap class="hljs-highlighted">snapshot</snap>)
+        backtrack(p.<snap class="hljs-highlighted">snapshot</snap>)
       }
 </pre></code>
 <code class="fragment"><pre>
@@ -1297,7 +1308,7 @@ property {
 </pre></code>
 <code class="fragment"><pre>
 
-<span class="hljs-keyword">val</span> aBitOfWork =
+<span class="hljs-keyword">implicit val</span> aBitOfWork =
   implicitly[TwentyLinesOfCode]
 </pre></code>
         </section>
@@ -1313,6 +1324,26 @@ property {
           <a href="http://github.com/storm-enroute/coroutines" style="font-family: verdana; font-size: 35px;">
             http://github.com/storm-enroute/coroutines
           </a>
+        </section>
+
+        <section>
+          <img src="img/coroutines/bench-tree.png" height="400px"/>
+        </section>
+
+        <section>
+          <img src="img/coroutines/bench-hash.png" height="400px"/>
+        </section>
+
+        <section>
+          <img src="img/coroutines/bench-graph.png" height="400px"/>
+        </section>
+
+        <section>
+          <img src="img/coroutines/bench-misc.png" height="400px"/>
+        </section>
+
+        <section>
+          <img src="img/coroutines/bench-conc.png" height="400px"/>
         </section>
 
         <!-- <section>
