@@ -450,69 +450,250 @@ val input: Channel[T] =
       <br/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-1500">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-1500">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-1500">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-1500">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadefuture" data-x="0" data-y="-1500">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/reactor-model-protocols/server.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="700" data-y="-1750">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Server[T, S] =
+  Channel[(T, Channel[S])]
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="700" data-y="-1750">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Server[T, S] =
+  Channel[(T, Channel[S])]
+
+def server(f: T => S) = {
+  val c = open[(T, Channel[S])]
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="700" data-y="-1750">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Server[T, S] =
+  Channel[(T, Channel[S])]
+
+def server(f: T => S) = {
+  val c = open[(T, Channel[S])]
+  c.events onMatch {
+    case (x, ch) => ch ! f(x)
+  }
+  c.channel
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="700" data-y="-1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def ?[T, S]
+  (s: Server[T, S], x: T): Events[S] = {
+
+
+
+}
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="700" data-y="-1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def ?[T, S]
+  (s: Server[T, S], x: T): Events[S] = {
+  val reply = open[S]
+
+
+}
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="700" data-y="-1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def ?[T, S]
+  (s: Server[T, S], x: T): Events[S] = {
+  val reply = open[S]
+  s ! (x, reply.channel)
+  reply.events
+}
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="700" data-y="-1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def ?[T, S]
+  (s: Server[T, S], x: T): Events[S] = {
+  val reply = open[S]
+  s ! (x, reply.channel)
+  reply.events
+}
+
+val data = mutable.Map(1 -> 2, 3 -> 4)
+val s = server(data)
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="700" data-y="-1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def ?[T, S]
+  (s: Server[T, S], x: T): Events[S] = {
+  val reply = open[S]
+  s ! (x, reply.channel)
+  reply.events
+}
+
+val data = mutable.Map(1 -> 2, 3 -> 4)
+val s = server(data)
+
+(s ? 1) onEvent { x =>
+  println(x)
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-1.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-3.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-4.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-5.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-6.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadealways" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way-7.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-1000">
+    <div class="step fadefuture" data-x="0" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/two-way.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="-200">
+      <img height="500px" style="position: relative; left: -120px;"
+        src="img/reactor-model-protocols/server-two-way-1.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="-200">
+      <img height="500px" style="position: relative; left: -120px;"
+        src="img/reactor-model-protocols/server-two-way-2.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="-200">
+      <img height="500px" style="position: relative; left: -120px;"
+        src="img/reactor-model-protocols/server-two-way-3.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="-200">
+      <img height="500px" style="position: relative; left: -120px;"
+        src="img/reactor-model-protocols/server-two-way-4.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="-200">
+      <img height="500px" style="position: relative; left: -120px;"
+        src="img/reactor-model-protocols/server-two-way-5.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="0" data-y="-200">
+      <img height="500px" style="position: relative; left: -120px;"
+        src="img/reactor-model-protocols/server-two-way.svg"/>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="-1000">
