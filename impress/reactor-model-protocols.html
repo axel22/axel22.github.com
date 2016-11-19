@@ -1096,7 +1096,7 @@ def install[T](
   acks: Events[Long]) {
   var lastStamp, lastAck = 0L
   def canSend = lastStamp - lastAck < window
-  val buffer = new Buffer[T]
+  val queue = new Queue[T]
 
 
 
@@ -1120,12 +1120,12 @@ def install[T](
   acks: Events[Long]) {
   var lastStamp, lastAck = 0L
   def canSend = lastStamp - lastAck < window
-  val buffer = new Buffer[T]
+  val queue = new Queue[T]
   sends onEvent { x =>
     if (canSend) {
       lastStamp += 1
       out ! (x, lastStamp)
-    } else buffer.enqueue(x) }
+    } else queue.enqueue(x) }
 
 
 
@@ -1144,15 +1144,15 @@ def install[T](
   acks: Events[Long]) {
   var lastStamp, lastAck = 0L
   def canSend = lastStamp - lastAck < window
-  val buffer = new Buffer[T]
+  val queue = new Queue[T]
   sends onEvent { x =>
     if (canSend) {
       lastStamp += 1
       out ! (x, lastStamp)
-    } else buffer.enqueue(x) }
+    } else queue.enqueue(x) }
   acks onEvent { stamp =>
     lastAck = math.max(lastAck, stamp)
-    while (buffer.nonEmpty && canSend) {
+    while (queue.nonEmpty && canSend) {
       lastStamp += 1
       out ! (x, lastStamp) } }
 }
@@ -1220,6 +1220,114 @@ def install[T](
         src="img/reactor-model-protocols/server-reliable-two-way.svg"/>
     </div>
 
+    <div class="step fadealways" data-x="2800" data-y="500">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Reliable.TwoWay.Server[I, O] =
+  Server[Reliable.Server[I], Reliable.Server[O]]
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="2800" data-y="500">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Reliable.TwoWay.Server[I, O] =
+  Server[Reliable.Server[I], Reliable.Server[O]]
+
+type Reliable.TwoWay.Req[I, O] =
+  Req[Reliable.Server[I], Reliable.Server[O]]
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="2800" data-y="1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def reliableTwoWayServer[I, O]:
+  Events[TwoWay[O, I]] = {
+  val c = open[Reliable.TwoWay.Req[I, O]]
+
+
+
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="2800" data-y="1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def reliableTwoWayServer[I, O]:
+  Events[TwoWay[O, I]] = {
+  val c = open[Reliable.TwoWay.Req[I, O]]
+  c.events map {
+    case (ins, reply) =>
+
+
+
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="2800" data-y="1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def reliableTwoWayServer[I, O]:
+  Events[TwoWay[O, I]] = {
+  val c = open[Reliable.TwoWay.Req[I, O]]
+  c.events map {
+    case (ins, reply) =>
+      val (outs, connections) = reliableServer[O]
+      reply ! outs
+
+      val inReliable = openReliable(ins)
+      (connections sync inReliable) {
+        (out, in) => (out, in)
+      }
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="2800" data-y="1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def reliableTwoWayServer[I, O]:
+  Events[TwoWay[O, I]] = {
+  val c = open[Reliable.TwoWay.Req[I, O]]
+  c.events map {
+    case (ins, reply) =>
+      val (outs, connections) = reliableServer[O]
+      reply ! outs
+
+      val inReliable = openReliable(ins)
+      (connections sync inReliable) {
+        (out, in) => (out, in)
+      }
+  } flatten
+}
+        </code>
+      </pre>
+    </div>
+
     <div class="step fadealways" data-x="-2800" data-y="0">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/client-reliable-two-way-0.svg"/>
@@ -1250,12 +1358,102 @@ def install[T](
         src="img/reactor-model-protocols/client-reliable-two-way.svg"/>
     </div>
 
+    <div class="step fadealways" data-x="-2800" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def connectReliable[I, O]
+  (s: Reliable.TwoWay.Server[I, O]):
+  Events[TwoWay[I, O]] = {
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="-2800" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def connectReliable[I, O]
+  (s: Reliable.TwoWay.Server[I, O]):
+  Events[TwoWay[I, O]] = {
+  val (ins, connects) = reliableServer[I]
+  (s ? ins) map { outs =>
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="-2800" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def connectReliable[I, O]
+  (s: Reliable.TwoWay.Server[I, O]):
+  Events[TwoWay[I, O]] = {
+  val (ins, connects) = reliableServer[I]
+  (s ? ins) map { outs =>
+    val outc = openReliable(outs)
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="-2800" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def connectReliable[I, O]
+  (s: Reliable.TwoWay.Server[I, O]):
+  Events[TwoWay[I, O]] = {
+  val (ins, connects) = reliableServer[I]
+  (s ? ins) map { outs =>
+    val outc = openReliable(outs)
+    (outc sync connects) { (out, in) =>
+      (out, in)
+    }
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="-2800" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def connectReliable[I, O]
+  (s: Reliable.TwoWay.Server[I, O]):
+  Events[TwoWay[I, O]] = {
+  val (ins, connects) = reliableServer[I]
+  (s ? ins) map { outs =>
+    val outc = openReliable(outs)
+    (outc sync connects) { (out, in) =>
+      (out, in)
+    }
+  } flatten
+}
+        </code>
+      </pre>
+    </div>
+
     <div class="step fadealways" data-x="0" data-y="-4300">
       <h1 class="sketch">
         Wait...
       </h1>
       <span class="sketch">
-        This does not have backpressure...
+        There is no backpressure here...
       </span>
     </div>
 
@@ -1287,6 +1485,70 @@ def install[T](
     <div class="step fadefuture" data-x="4000" data-y="0">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-pump.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="4000" data-y="600">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Pump[T] = (Queue[T], Events[T])
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="4000" data-y="600">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Pump[T] = (Queue[T], Events[T])
+
+def backpressurePump[T]
+  (twoway: TwoWay[T, Int]): Pump[T] = {
+  val (in, pressure) = twoway
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="4000" data-y="600">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Pump[T] = (Queue[T], Events[T])
+
+def backpressurePump[T]
+  (twoway: TwoWay[T, Int]): Pump[T] = {
+  val (in, pressure) = twoway
+  val (queue, xs) = in.toPump
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="4000" data-y="600">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Pump[T] = (Queue[T], Events[T])
+
+def backpressurePump[T]
+  (twoway: TwoWay[T, Int]): Pump[T] = {
+  val (in, pressure) = twoway
+  val (queue, xs) = in.toPump
+  xs.onEvent(x => pressure ! x)
+  (queue, xs)
+}
+        </code>
+      </pre>
     </div>
 
     <div class="step fadealways" data-x="-3900" data-y="0">
@@ -1327,6 +1589,126 @@ def install[T](
     <div class="step fadefuture" data-x="-3900" data-y="0">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/reactor-model-protocols/backpressure-valve-6.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="-3900" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Valve[T] = (Channel[T], Signal[Boolean])
+
+
+
+
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="-3900" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Valve[T] = (Channel[T], Signal[Boolean])
+
+def backpressureValve[T]
+  (twoway: TwoWay[Int, T]): Valve[T] = {
+  val (pressure, out) = twoway
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="-3900" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Valve[T] = (Channel[T], Signal[Boolean])
+
+def backpressureValve[T]
+  (twoway: TwoWay[Int, T]): Valve[T] = {
+  val (pressure, out) = twoway
+  val c = open[T]
+  val sends = c.events.map(x => -1)
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="-3900" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Valve[T] = (Channel[T], Signal[Boolean])
+
+def backpressureValve[T]
+  (twoway: TwoWay[Int, T]): Valve[T] = {
+  val (pressure, out) = twoway
+  val c = open[T]
+  val sends = c.events.map(x => -1)
+  val available = (pressure union sends)
+    .scanPast(0)(_ + _).toSignal
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="-3900" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Valve[T] = (Channel[T], Signal[Boolean])
+
+def backpressureValve[T]
+  (twoway: TwoWay[Int, T]): Valve[T] = {
+  val (pressure, out) = twoway
+  val c = open[T]
+  val sends = c.events.map(x => -1)
+  val available = (pressure union sends)
+    .scanPast(0)(_ + _).toSignal
+  c.events.filter(x => available())
+    .onEvent(x => out ! x)
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="-3900" data-y="700">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Valve[T] = (Channel[T], Signal[Boolean])
+
+def backpressureValve[T]
+  (twoway: TwoWay[Int, T]): Valve[T] = {
+  val (pressure, out) = twoway
+  val c = open[T]
+  val sends = c.events.map(x => -1)
+  val available = (pressure union sends)
+    .scanPast(0)(_ + _).toSignal
+  c.events.filter(x => available())
+    .onEvent(x => out ! x)
+  (c.channel, available)
+}
+        </code>
+      </pre>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="-4750">
