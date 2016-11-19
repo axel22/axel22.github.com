@@ -739,7 +739,7 @@ type TwoWay[I, O] = (Channel[I], Events[O])
 def twoWayServer[I, O]:
   (TwoWay.Server[I, O], Events[TwoWay[O, I]]) = {
   val c = open[TwoWay.Req[I, O]]
-  c.events map {
+  val connections = c.events map {
     case (input, reply) =>
 
 
@@ -1220,7 +1220,7 @@ def install[T](
         src="img/reactor-model-protocols/server-reliable-two-way.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="2800" data-y="500">
+    <div class="step fadealways" data-x="3000" data-y="500">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type Reliable.TwoWay.Server[I, O] =
@@ -1232,7 +1232,7 @@ type Reliable.TwoWay.Server[I, O] =
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="2800" data-y="500">
+    <div class="step fadefuture" data-x="3000" data-y="500">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type Reliable.TwoWay.Server[I, O] =
@@ -1244,7 +1244,7 @@ type Reliable.TwoWay.Req[I, O] =
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="2800" data-y="1100">
+    <div class="step fadealways" data-x="3000" data-y="1100">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def reliableTwoWayServer[I, O]:
@@ -1265,7 +1265,7 @@ def reliableTwoWayServer[I, O]:
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="2800" data-y="1100">
+    <div class="step fadealways" data-x="3000" data-y="1100">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def reliableTwoWayServer[I, O]:
@@ -1286,7 +1286,7 @@ def reliableTwoWayServer[I, O]:
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="2800" data-y="1100">
+    <div class="step fadealways" data-x="3000" data-y="1100">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def reliableTwoWayServer[I, O]:
@@ -1307,7 +1307,7 @@ def reliableTwoWayServer[I, O]:
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="2800" data-y="1100">
+    <div class="step fadefuture" data-x="3000" data-y="1100">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def reliableTwoWayServer[I, O]:
@@ -1487,7 +1487,7 @@ def connectReliable[I, O]
         src="img/reactor-model-protocols/backpressure-pump.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="4000" data-y="600">
+    <div class="step fadealways" data-x="4200" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type Pump[T] = (Queue[T], Events[T])
@@ -1503,7 +1503,7 @@ type Pump[T] = (Queue[T], Events[T])
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="4000" data-y="600">
+    <div class="step fadealways" data-x="4200" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type Pump[T] = (Queue[T], Events[T])
@@ -1519,7 +1519,7 @@ def backpressurePump[T]
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="4000" data-y="600">
+    <div class="step fadealways" data-x="4200" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type Pump[T] = (Queue[T], Events[T])
@@ -1535,7 +1535,7 @@ def backpressurePump[T]
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="4000" data-y="600">
+    <div class="step fadefuture" data-x="4200" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type Pump[T] = (Queue[T], Events[T])
@@ -1711,22 +1711,22 @@ def backpressureValve[T]
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="-1100" data-y="-4750">
+    <div class="step fadealways" data-x="-1100" data-y="-4950">
       <img height="700px" style="position: relative; left: -50px;"
         src="img/reactor-model-protocols/levels.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="-1100" data-y="-4750">
+    <div class="step fadealways" data-x="-1100" data-y="-4950">
       <img height="700px" style="position: relative; left: -50px;"
         src="img/reactor-model-protocols/levels-see-1.svg"/>
     </div>
 
-    <div class="step fadefuture" data-x="-1100" data-y="-4750">
+    <div class="step fadefuture" data-x="-1100" data-y="-4950">
       <img height="700px" style="position: relative; left: -50px;"
         src="img/reactor-model-protocols/levels-see-2.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="0" data-y="-4750">
+    <div class="step fadealways" data-x="0" data-y="-4950">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 val bp = Reactor.backpressureServer()
@@ -1741,7 +1741,7 @@ s.connect() onEvent { valve =>
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="0" data-y="-4750">
+    <div class="step fadefuture" data-x="0" data-y="-4950">
       <h1 class="sketch">
         And from there...
       </h1>
@@ -1757,7 +1757,7 @@ s.connect() onEvent { valve =>
         src="img/reactor-model-protocols/tier-2.svg"/>
     </div>
 
-    <div class="step fadefuture" data-x="0" data-y="-4000" data-z="10000">
+    <div class="step fadefuture" data-x="-5000" data-y="-5000" data-z="10000">
       <h1 class="sketch">Thank you</h1>
 
       <pre class="snippet">
