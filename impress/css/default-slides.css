@@ -69,6 +69,16 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+sup {
+  vertical-align: super;
+  font-size: 60%;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: 60%;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
