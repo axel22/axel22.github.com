@@ -1267,7 +1267,7 @@ def reliableServer[T]:
         src="img/reactor-model-protocols/server-reliable-6.svg"/>
     </div>
 
-    <div class="step fadefuture" data-x="1600" data-y="0">
+    <div class="step fadealways" data-x="1600" data-y="0">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/reactor-model-protocols/server-reliable-7.svg"/>
     </div>
@@ -1450,7 +1450,7 @@ def openReliable[T](server: Reliable.Server[T]):
         src="img/reactor-model-protocols/client-reliable.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="-1800" data-y="1300">
+    <!-- <div class="step fadealways" data-x="-1800" data-y="1300">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def install[T](
@@ -1517,7 +1517,7 @@ def install[T](
       out ! (x, lastStamp) } } }
         </code>
       </pre>
-    </div>
+    </div> -->
 
     <div class="step fadealways" data-x="0" data-y="-3600">
       <img height="500px" style="position: relative; left: -100px;"
@@ -1579,7 +1579,7 @@ def install[T](
         src="img/reactor-model-protocols/server-reliable-two-way.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="3000" data-y="500">
+    <!-- <div class="step fadealways" data-x="3000" data-y="500">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type Reliable.TwoWay.Server[I, O] =
@@ -1601,7 +1601,7 @@ type Reliable.TwoWay.Req[I, O] =
   Req[Reliable.Server[I], Reliable.Server[O]]
         </code>
       </pre>
-    </div>
+    </div> -->
 
     <!-- <div class="step fadealways" data-x="3000" data-y="1100">
       <pre class="snippet" style="position: relative; left: 0px;">
@@ -2091,7 +2091,7 @@ def backpressureValve[T]
 val bp = Reactor.backpressureServer()
 val s = system.spawn(bp)
 
-s.connect() onEvent { valve =>
+s.openBackpressure() onEvent { valve =>
   while (valve.available) {
     valve ! "request"
   }
