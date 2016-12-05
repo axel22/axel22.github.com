@@ -286,6 +286,8 @@ Berlin, Germany, June 2016
 
 ### Reactors
 
+* [Bee-Scala 2016](bee-scala.org)
+\[[Slides](/impress/reactor-model-short-protocols#/step-1)\]
 * [ScalaDays Berlin 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
 Berlin, Germany, June 2016
 \[[Slides](/slides/reactor-model-short.html)\]
@@ -431,6 +433,7 @@ Lausanne, Switzerland, January 2012
 
 ### Program Committees
 
+- [PLACES 2017](http://places17.by.di.fc.ul.pt/committees/)
 - [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
 - [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
 - [HLPP 2016](http://hlpp2016.uni-muenster.de/)
