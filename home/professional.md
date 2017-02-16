@@ -442,6 +442,7 @@ Lausanne, Switzerland, January 2012
 
 ### Reviewing
 
+- [SPAA 2017](https://spaa.acm.org/)
 - [POPL 2017](http://conf.researchr.org/home/POPL-2017)
 - [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
 - [OPODIS 2015](https://opodis2015.irisa.fr/)
