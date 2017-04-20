@@ -35,8 +35,10 @@ Lausanne, Switzerland, July 2014<br/>
 ## Book
 
 * **Learning Concurrent Programming in Scala**
-<a href="https://www.packtpub.com/application-development/learning-concurrent-programming-scala"><img src="/resources/images/small-concurrency-scala-book.jpg" style="float: right; border: 1px solid #888888; padding: 3px; margin-right: 250px; margin-top: -10px;" height="100px" /></a>
-<a href="https://www.amazon.com/Learning-Concurrent-Programming-Scala-Second/dp/1786466899/"><img src="/resources/images/small-concurrency-scala-book-2nd.jpg" style="float: right; border: 1px solid #888888; padding: 3px; margin-right: 150px; margin-top: -10px;" height="100px" /></a>
+<div style="float: right;">
+<a href="https://www.packtpub.com/application-development/learning-concurrent-programming-scala"><img src="/resources/images/small-concurrency-scala-book.jpg" style="border: 1px solid #888888; padding: 3px; margin-right: 16px; margin-top: -10px;" height="100px" /></a>
+<a href="https://www.amazon.com/Learning-Concurrent-Programming-Scala-Second/dp/1786466899/"><img src="/resources/images/small-concurrency-scala-book-2nd.jpg" style="border: 1px solid #888888; padding: 3px; margin-right: 16px; margin-top: -10px;" height="100px" /></a>
+</div>
 <br/>
 Aleksandar Prokopec<br/>
 [Packt Publishing](https://www.packtpub.com/application-development/learning-concurrent-programming-scala)<br/>
