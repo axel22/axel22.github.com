@@ -436,6 +436,7 @@ Lausanne, Switzerland, January 2012
 
 ### Program Committees
 
+- [HLPP 2017](https://hlpp2017.infor.uva.es/)
 - [PLACES 2017](http://places17.by.di.fc.ul.pt/committees/)
 - [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
 - [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
