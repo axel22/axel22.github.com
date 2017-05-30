@@ -9,7 +9,7 @@ div.group {
   padding: 3px;
   background: #eeeeee;
   border: 1px solid #bbbbbb;
-  height: 260px;
+  height: 70px;
 
   filter: saturate(20%);
   
@@ -20,7 +20,7 @@ div.group {
 }
 
 div.group span.maincategory {
-  font-size: 24px;
+  font-size: 16px;
   font-family: Exo;
   color: #4c4c5c;
   text-shadow: 1px 1px #aabbbb;
@@ -43,24 +43,28 @@ div.picblog {
   background: #ffffff;
   background-image: url('/resources/images/quill-feather-small.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 div.picprojects {
   background: #ffffff;
   background-image: url('/resources/images/keyboard-small.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 div.picpersonal {
   background: #ffffff;
   background-image: url('/resources/images/forest-small.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 div.picpro {
   background: #ffffff;
   background-image: url('/resources/images/professional-small.jpg');
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 
