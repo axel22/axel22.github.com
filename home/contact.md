@@ -24,35 +24,32 @@ If you really must, use the *alumni* address:
 
 # ![post](/resources/images/post.png) Mail
 
-If you want to send a letter or a physical item, use the following address:
+If you want to send a letter or a physical item, contact me via e-mail first:
 
 <blockquote style="text-align: left;">
   Aleksandar Prokopec
   <br/>
-  EPFL IC IIF LAMP, BC 360 (Bâtiment BC), Station 14
+  <i>address on request</i>
   <br/>
-  1015 Lausanne, Switzerland
 </blockquote>
 
 
 # ![phone](/resources/images/phone.png) Phone
 
-Office: +41 21 69 31 226
+Office: contact me via e-mail first
 
 
 # ![im](/resources/images/im.png) Instant messaging
 
 ![gtalk](/resources/images/gtalk.png) Hangouts: same as my e-mail
 
-![icqim](/resources/images/icq.png) ICQ: 364354877
-
-![msnim](/resources/images/msn.png) MSN: aco.prokopec (chat only, not e-mails)
-
 ![skype](/resources/images/skype.png) Skype: aleksandarprokopec
 
-Please, avoid using SMS and Whatsapp, as I don't use them lately:
+![twitter](/resources/images/twitter-16.png) Twitter: alexprokopec
 
-![no-whatsapp](/resources/images/no-whatsapp.png) ![no-sms](/resources/images/no-sms.png)
+Please, avoid using SMS, as I don't use it:
+
+![no-sms](/resources/images/no-sms.png)
 
 
 
