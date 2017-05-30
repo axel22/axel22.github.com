@@ -272,17 +272,10 @@ It is devised to soften the learning curve of students who are being introduced 
 # <a id="talks">Talks</a>
 
 
-### Thesis Defense
-
-* [Thesis Defense](https://www.youtube.com/watch?v=mbvdj4qnD-4),
-EPFL, Lausanne, Switzerland, September 2014
-\[[Video](https://www.youtube.com/watch?v=mbvdj4qnD-4)\]
-
-
 ### Coroutines
 
-* [Scala World 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
-Berlin, Germany, June 2016
+* [Scala World 2016](https://scala.world/),
+Penrith, UK, September 2016
 \[[Slides](/slides/coroutines.html)\]
 \[[Video](https://www.youtube.com/watch?v=B3hKOUtc4e0)\]
 
@@ -302,13 +295,6 @@ Zurich, Switzerland, March 2016
 * [Onward! 2015](http://2015.splashcon.org/track/onward2015-papers#program),
 Pittsburgh, Pennsylvania, USA, October 2015
 \[[Slides](/resources/docs/onward15.pdf)\]
-
-
-### Coroutines
-
-* [Scala World 2016](https://scala.world/),
-Penrith, UK, September 2016
-\[[Slides](/slides/coroutines.html)\]
 
 
 ### Thesis Defense
