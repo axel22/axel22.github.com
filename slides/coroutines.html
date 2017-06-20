@@ -899,9 +899,9 @@ double(7)
 <span class="hljs-keyword">val</span> foreach =
   (t: Tree[T], f: T => Unit) =>
     <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>) 
-      foreach(t.left)
+      foreach(t.left, f)
       f(t.elem)
-      foreach(t.right)
+      foreach(t.right, f)
     }
 </pre></code>
         </section>
