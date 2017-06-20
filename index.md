@@ -423,6 +423,7 @@ Lausanne, Switzerland, January 2012
 
 ### Program Committees
 
+- [AGERE! 2017](http://conf.researchr.org/track/agere-2017/agere-2017)
 - [HLPP 2017](https://hlpp2017.infor.uva.es/)
 - [PLACES 2017](http://places17.by.di.fc.ul.pt/committees/)
 - [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
