@@ -388,7 +388,7 @@
       </p>
     </div>
 
-    <div class="step fadefuture" data-x="21000" data-y="0">
+    <div class="step fadefuture" data-x="24000" data-y="0">
       <h2>
         Sample size N?
       </h2>
@@ -403,7 +403,7 @@
       <br/>
     </div>
 
-    <div class="step fadealways" data-x="21000" data-y="0">
+    <div class="step fadealways" data-x="24000" data-y="0">
       <br/>
       <br/>
       <br/>
@@ -415,7 +415,7 @@
       </p>
     </div>
 
-    <div class="step fadefuture" data-x="24000" data-y="0">
+    <div class="step fadefuture" data-x="27000" data-y="0">
       <p>
         But, actors are short-lived.
       </p>
@@ -427,7 +427,7 @@
       <br/>
     </div>
 
-    <div class="step fadealways" data-x="24000" data-y="0">
+    <div class="step fadealways" data-x="27000" data-y="0">
       <br/>
       <br/>
       <br/>
@@ -435,6 +435,59 @@
         How to obtain a sample more quickly?
       </p>
     </div>
+
+    <div class="step fadealways" data-x="30000" data-y="0">
+      <h2>
+        Greedy sampling
+      </h2>
+      <p>
+        Always set the sampling frequency &#x3c6; to a value
+        proportionate to the currently estimated probability.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="30000" data-y="0">
+      <p>
+        Intuition: If the message arrival probability P is high,
+        then more frequent sampling is not detrimental.
+      </p>
+      <br/>
+      <p>
+        I.e. an actor spends more time sampling,
+        but it is likely that messages will arrive during sampling,
+        saving a context switch.
+      </p>
+
+      <img height="150px" src="img/speculative-scheduling/sample-high.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="30000" data-y="0">
+      <p>
+        If the message arrival probability P is low,
+        then less frequent sampling is not detrimental.
+      </p>
+      <br/>
+      <p>
+        I.e. it might take a long time to collect the sample,
+        but it's unlikely that it will help anyway.
+      </p>
+
+      <img height="150px" src="img/speculative-scheduling/sample-low.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="30000" data-y="0">
+      <h2>
+        Greedy sampling
+      </h2>
+      <p>
+        Initially, set the sampling frequency
+        to some small value &#x3c6;<sub>0</sub>.
+        After each sampling, set the sampling frequency to:
+      </p>
+
+      TODO
+    </div>
+
 </div>
 
 <!--
