@@ -245,8 +245,195 @@
       <img height="600px" src="img/speculative-scheduling/actor-execution-9.svg" />
     </div>
 
-    <div class="step" data-x="3000" data-y="0">
-      <p>TODO: Model</p>
+    <div class="step" data-x="12000" data-y="0">
+      <p>1. When should an actor spin?</p>
+      <p>2. How long should an actor spin?</p>
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/delay-bound.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/delay-bound-alternative.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/delay-bound-conclusion.svg" />
+    </div>
+
+    <div class="step fadefuture" data-x="18000" data-y="0">
+      <p style="text-align: center;">d (delay) < c (context switch)</p>
+    </div>
+
+    <div class="step fadealways" data-x="18000" data-y="0">
+      <br/>
+      <br/>
+      <br/>
+      <p style="text-align: center;">How to pick a delay in <0, c>?</p>
+    </div>
+
+    <div class="step fadealways" data-x="18000" data-y="0">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <p style="text-align: center;">
+        Sample the probability P that a message arrives after the delay d.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-0.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-1.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-2.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-3.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <p style="text-align: center;">
+        The actor also needs to spend some time sampling,
+        to figure out what the probability P is.
+      </p>
+      <br/>
+      <p style="text-align: center;">
+        We will assume that the actor samples with some probability &#x3c6;.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-sampling-0.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-sampling-1.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-sampling-2.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-sampling-3.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-tree-sampling.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-solutions-1.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-solutions-2.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <img height="600px" src="img/speculative-scheduling/execution-probability-solutions.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <p style="text-align: center;">
+        <img src="img/speculative-scheduling/speculation.png" />
+      </p>
+
+      <p style="text-align: center;">
+        Conclusion: given a probability p that a message arrives after &#x3b4;,
+        an actor should delay the context switch if:
+      </p>
+
+      <p style="text-align: center;">
+        &#x3b4; < p
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <h2>
+        Speculative idling
+      </h2>
+      <p>
+        Obtain M pairs &#x3b4;<sub>i</sub>, p<sub>i</sub>,
+        and pick the pair with the minimal &#x3b4;<sub>i</sub> - p<sub>i</sub>.
+        If this pair is positive,
+        wait &#x3b4;<sub>i</sub> time before context switching.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <h2>Delay sampling</h2>
+      <p>
+        Before the context switch,
+        with a probability &#x3c6; << 1,
+        wait for the duration of the context switch,
+        and record the times &#x3b4;<sub>i</sub> when a message arrived.
+      </p>
+      <p>
+        After collecting N samples,
+        group the delay times into M buckets,
+        and report the pairs &#x3b4;<sub>i</sub>, p<sub>i</sub>.
+      </p>
+    </div>
+
+    <div class="step fadefuture" data-x="21000" data-y="0">
+      <h2>
+        Sample size N?
+      </h2>
+      <p>
+        For 95% confidence that the sampled probability P
+        lies within 15% of its true value,
+        we need N = 43.
+      </p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <p>
+        For a sampling probability &#x3c6; = 0.01,
+        the expected number of activations per actor is ~4300.
+      </p>
+    </div>
+
+    <div class="step fadefuture" data-x="24000" data-y="0">
+      <p>
+        But, actors are short-lived.
+      </p>
+      <p>
+        In many applications,
+        most actors are not activated 4300 times.
+      </p>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <br/>
+      <br/>
+      <br/>
+      <p>
+        How to obtain a sample more quickly?
+      </p>
     </div>
 </div>
 
