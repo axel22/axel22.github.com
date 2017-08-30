@@ -22,15 +22,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="561.84674"
-     inkscape:cy="427.87362"
+     inkscape:zoom="2.8"
+     inkscape:cx="677.45998"
+     inkscape:cy="630.50476"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="796"
+     inkscape:window-width="529"
      inkscape:window-height="864"
-     inkscape:window-x="0"
+     inkscape:window-x="534"
      inkscape:window-y="16"
      inkscape:window-maximized="0"
      showguides="true"
@@ -374,5 +374,25 @@
          id="tspan11758"
          x="463.04895"
          y="720.12689">d&lt;c</tspan></text>
+    <rect
+       y="323.44696"
+       x="678.97803"
+       height="85.368805"
+       width="128.32841"
+       id="rect6308"
+       style="opacity:0.98999999;fill:#dcdcdc;fill-opacity:1;stroke:#969696;stroke-width:4.14945507;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       xml:space="preserve"
+       style="font-size:88.79975891px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#b4b4b4;fill-opacity:1;stroke:#969696;stroke-opacity:1;font-family:Sans"
+       x="705.52148"
+       y="392.78635"
+       id="text6310"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan6312"
+         x="705.52148"
+         y="392.78635">w<tspan
+   id="tspan6314"
+   style="font-size:65.00091553%;baseline-shift:sub;fill:#b4b4b4;fill-opacity:1;stroke:#969696;stroke-opacity:1" /></tspan></text>
   </g>
 </svg>
