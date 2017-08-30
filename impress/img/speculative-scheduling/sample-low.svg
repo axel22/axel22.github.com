@@ -134,7 +134,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -230,5 +230,40 @@
          x="916.74591"
          id="tspan4579"
          sodipodi:role="line">sample</tspan></text>
+    <rect
+       y="648.73798"
+       x="291.61331"
+       height="89.659302"
+       width="44.778004"
+       id="rect3016"
+       style="opacity:0.98999999;fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:4.3579998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="opacity:0.98999999;fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:4.3579998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3018"
+       width="44.778004"
+       height="89.659302"
+       x="363.0419"
+       y="648.73798" />
+    <rect
+       y="648.73798"
+       x="427.32761"
+       height="89.659302"
+       width="44.778004"
+       id="rect3020"
+       style="opacity:0.98999999;fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:4.3579998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="opacity:0.98999999;fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:4.3579998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3022"
+       width="44.778004"
+       height="89.659302"
+       x="720.18475"
+       y="648.73798" />
+    <rect
+       y="648.73798"
+       x="784.47046"
+       height="89.659302"
+       width="44.778004"
+       id="rect3024"
+       style="opacity:0.98999999;fill:#b4b4b4;fill-opacity:1;stroke:#000000;stroke-width:4.3579998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
   </g>
 </svg>

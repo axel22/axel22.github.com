@@ -461,7 +461,12 @@ h2 {
 }
 
 .small-font {
-  font-size: 35px;
+  font-size: 34px;
+  vertical-align: top;
+}
+
+.very-small-font {
+  font-size: 24px;
   vertical-align: top;
 }
 
@@ -530,4 +535,13 @@ pre.snippet code {
 
 .sketch {
   font-family: SketchBlock;
+}
+
+.sans {
+  font-family: Helvetica;
+}
+
+.small-text {
+  margin-top: 10px;
+  font-size: 22px;
 }

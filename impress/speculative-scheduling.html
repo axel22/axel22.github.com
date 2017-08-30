@@ -165,16 +165,23 @@
         It will not be rotated or scaled.
         
     -->
-    <div class="step" data-x="1000" data-y="0">
+    <div class="step fadealways" data-x="1000" data-y="0">
         <h2>Accelerating by Idling</h2>
         <h3>How Speculative Delays Improve Performance of Message-Oriented Systems</h3>
 
-        <a href="https://github.com/reactors-io/reactors">
-          <img height="52px" src="img/github.png"/>
-        </a>
+        <br/>
+        <p class="small-font">
         <a href="http://axel22.github.io">
-          <span class="small-font">Aleksandar Prokopec</span>
+          Aleksandar Prokopec
         </a>
+        </p>
+        <p class="very-small-font">
+          Oracle Labs Switzerland
+        </p>
+        <p class="very-small-font">
+          August 2017
+        </p>
+        <img height="40px" src="img/speculative-scheduling/oracle.gif" />
     </div>
 
     <!--
@@ -187,11 +194,62 @@
     - benchmarks
     -->
 
+    <div class="step fadealways fadepast" data-x="1000" data-y="0">
+      <h2 class="sans">Safe Harbour</h2>
+      <p class="sans small-text">
+        The following is intended to provide some insight into a line of research
+        in Oracle Labs. It is intended for information purposes only, and may not be
+        incorporated into any contract.
+      </p>
+      <p class="sans small-text">
+        It is not a commitment to deliver any material, code, or functionality,
+        and should not be relied in making purchasing decisions.
+        Oracle reserves the right to alter its development plans and practices
+        at any time, and the development, release, and timing of any features
+        or functionality described in connection with any Oracle product or service
+        remains at the sole discretion of Oracle
+      </p>
+      <p class="sans small-text">
+        Any views expressed in this presentation are my own and do not necessarily
+        reflect the views of Oracle.
+      </p>
+      <br/>
+      <img height="40px" src="img/speculative-scheduling/oracle.gif" />
+    </div>
+
     <div class="step fadealways fadepast" data-x="3000" data-y="0">
       <p>
         Can the performance of a message-oriented system be improved
-        by adding idle execution to actors?
+        by adding periods of idle execution?
       </p>
+    </div>
+
+    <div class="step persistent fadealways" data-x="3000" data-y="1500">
+      <img height="600px" src="img/reactor-model-protocols/reactors.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="3100" data-y="1480" data-z="-3300">
+      <img height="600px" src="img/reactor-model-protocols/reactors-1.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="3570" data-y="1200" data-z="-6000">
+      <img height="600px" src="img/reactor-model-protocols/event-queue.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="3100" data-y="1480" data-z="-3300">
+      <img height="600px" src="img/reactor-model-protocols/reactors-cpu0.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="3100" data-y="1480" data-z="-3300">
+      <img height="600px" src="img/reactor-model-protocols/reactors-cpu1.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="3100" data-y="1480" data-z="-3300">
+      <img height="600px" src="img/reactor-model-protocols/reactors-cpu2.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="3100" data-y="1480" data-z="-3300">
+      <img height="600px" src="img/reactor-model-protocols/reactors-cpu3.svg"/>
     </div>
 
     <div class="step fadealways fadepast" data-x="3000" data-y="0">
@@ -200,6 +258,16 @@
 
     <div class="step fadealways fadepast" data-x="3000" data-y="0">
       <img height="600px" src="img/speculative-scheduling/actor-execution-2.svg" />
+    </div>
+
+    <div class="step fadealways fadepast" data-x="3000" data-y="0">
+      <h2>
+        Context switch
+      </h2>
+      <p>
+        A period of time required
+        for the scheduler to switch the CPU from one actor to another.
+      </p>
     </div>
 
     <div class="step fadealways fadepast" data-x="3000" data-y="0">
@@ -245,9 +313,13 @@
       <img height="600px" src="img/speculative-scheduling/actor-execution-9.svg" />
     </div>
 
-    <div class="step" data-x="12000" data-y="0">
+    <div class="step fadealways" data-x="12000" data-y="0">
       <p>1. When should an actor spin?</p>
       <p>2. How long should an actor spin?</p>
+    </div>
+
+    <div class="step fadealways" data-x="12000" data-y="0">
+      <p>There exists a simple upper bound.</p>
     </div>
 
     <div class="step fadealways" data-x="15000" data-y="0">
@@ -277,10 +349,7 @@
       <br/>
       <br/>
       <br/>
-      <br/>
-      <p style="text-align: center;">
-        Sample the probability P that a message arrives after the delay d.
-      </p>
+      <p style="text-align: center;">Assume that P is the probability that a message arrives after some time d.</p>
     </div>
 
     <div class="step fadealways" data-x="21000" data-y="0">
@@ -305,8 +374,8 @@
 
     <div class="step fadealways" data-x="21000" data-y="0">
       <p style="text-align: center;">
-        The actor also needs to spend some time sampling,
-        to figure out what the probability P is.
+        The actor also needs to occasionally sample P,
+        i.e. spin several times to determine P.
       </p>
       <br/>
       <p style="text-align: center;">
@@ -362,29 +431,45 @@
     </div>
 
     <div class="step fadealways" data-x="21000" data-y="0">
-      <h2>
-        Speculative idling
-      </h2>
+      <h2>Delay sampling</h2>
       <p>
-        Obtain M pairs &#x3b4;<sub>i</sub>, p<sub>i</sub>,
-        and pick the pair with the minimal &#x3b4;<sub>i</sub> - p<sub>i</sub>.
-        If this pair is positive,
-        wait &#x3b4;<sub>i</sub> time before context switching.
+        Before the context switch:
+      </p>
+      <p>
+        1. With probability &#x3c6; << 1, spin c time.
+      </p>
+      <p>
+        2. Record the message arrival times t<sub>i</sub>.
+      </p>
+      <p>
+        3. After collecting N samples,
+        group the delay times into M buckets,
+        and report the pairs &#x3b4;<sub>i</sub>, p<sub>i</sub>.
       </p>
     </div>
 
     <div class="step fadealways" data-x="21000" data-y="0">
-      <h2>Delay sampling</h2>
+      <p style="text-align: center;">
+      <img height="300px" src="img/speculative-scheduling/delay-sampling.svg" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <h2>
+        Speculative idling
+      </h2>
       <p>
-        Before the context switch,
-        with a probability &#x3c6; << 1,
-        wait for the duration of the context switch,
-        and record the times &#x3b4;<sub>i</sub> when a message arrived.
+        Before a context switch:
       </p>
       <p>
-        After collecting N samples,
-        group the delay times into M buckets,
-        and report the pairs &#x3b4;<sub>i</sub>, p<sub>i</sub>.
+        1. Take the last reported M pairs &#x3b4;<sub>i</sub>, p<sub>i</sub>.
+      </p>
+      <p>
+        2. Pick the pair with minimal &#x3b4;<sub>i</sub> - p<sub>i</sub>.
+      </p>
+      <p>
+        3. If the difference is positive,
+           wait &#x3b4;<sub>i</sub> time before context switching.
       </p>
     </div>
 
@@ -442,7 +527,7 @@
       </h2>
       <p>
         Always set the sampling frequency &#x3c6; to a value
-        proportionate to the currently estimated probability.
+        proportionate to the running best probability p<sub>i</sub>.
       </p>
     </div>
 
@@ -534,14 +619,35 @@
 
     <div class="step fadealways" data-x="33000" data-y="0">
       <p style="text-align: center;">
+        <img height="300px" src="img/speculative-scheduling/ping-pong.svg" />
+      </p>
+      <p style="text-align: center;">Ping-Pong</p>
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <p style="text-align: center;">
         <img height="600px" src="img/speculative-scheduling/ping-pong.png" />
       </p>
     </div>
 
     <div class="step fadealways" data-x="33000" data-y="0">
       <p style="text-align: center;">
+        <img height="300px" src="img/speculative-scheduling/thread-ring.svg" />
+      </p>
+      <p style="text-align: center;">Thread Ring</p>
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <p style="text-align: center;">
         <img height="600px" src="img/speculative-scheduling/thread-ring.png" />
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <p style="text-align: center;">
+        <img height="300px" src="img/speculative-scheduling/fjt.svg" />
+      </p>
+      <p style="text-align: center;">Fork Join Throughput</p>
     </div>
 
     <div class="step fadealways" data-x="33000" data-y="0">
