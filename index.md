@@ -419,7 +419,7 @@ Philipp Haller, Aleksandar Prokopec, Heather Miller, Viktor Klang, Roland Kuhn, 
 Lausanne, Switzerland, January 2012
 
 
-# <a id="committees">Conferences and Workshops</a>
+# <a id="committees">Service</a>
 
 ### Program Committees
 
@@ -434,6 +434,7 @@ Lausanne, Switzerland, January 2012
 
 ### Reviewing
 
+- [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [SPAA 2017](https://spaa.acm.org/)
 - [POPL 2017](http://conf.researchr.org/home/POPL-2017)
 - [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
