@@ -67,7 +67,7 @@ Vancouver, Canada, October 2017<br/>
 
 * **Accelerating by Idling: How Speculative Delays Improve Performance of Message-Oriented Systems** <br/>
 Aleksandar Prokopec<br/>
-[EuroPar 2017](http://europar2017.usc.es/#conference-program)<br/>
+[Euro-Par 2017](http://europar2017.usc.es/#conference-program)<br/>
 Santiago de Compostela, Spain, September 2017<br/>
 \[[PDF](http://axel22.github.io/resources/docs/accelerating-idling.pdf)\]
 \[[Link](/publications/accelerating-idling)\]
