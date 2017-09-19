@@ -27,8 +27,8 @@ on standard actor benchmarks.
 ## Links
 
 \[[PDF](/resources/docs/reactor-scheduler.pdf)\]
-\[[BibTex]()\]
-\[[ACM]()\]
+\[[BibTex](resources/docs/bibtex/reactor-scheduler.bib)\]
+\[[ACM](http://dl.acm.org/citation.cfm?id=3001891)\]
 
 
 ## References

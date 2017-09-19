@@ -50,6 +50,13 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Accelerating by Idling: How Speculative Delays Improve Performance of Message-Oriented Systems** <br/>
+Aleksandar Prokopec<br/>
+[EuroPar 2017](http://europar2017.usc.es/#conference-program)<br/>
+Santiago de Compostela, Spain, September 2017<br/>
+\[[PDF](http://axel22.github.io/resources/docs/accelerating-idling.pdf)\]
+\[[Link](/publications/accelerating-idling)\]
+
 * **Pluggable Scheduling for the Reactor Programming Model** <br/>
 Aleksandar Prokopec<br/>
 [AGERE 2016](http://conf.researchr.org/event/agere-2016/agere2016-pluggable-scheduling-for-the-reactor-programming-model)<br/>
