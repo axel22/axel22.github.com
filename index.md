@@ -50,6 +50,21 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Making Collection Operations Optimal with Aggressive JIT Compilation -- Extended Version** <br/>
+Aleksandar Prokopec<br/>
+[AGERE! State-of-the-Art Volume]()<br/>
+October 2017<br/>
+
+* **Encoding the Building Blocks of Communication** <br/>
+Aleksandar Prokopec<br/>
+[Onward! 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)<br/>
+Vancouver, Canada, October 2017<br/>
+
+* **Making Collection Operations Optimal with Aggressive JIT Compilation** <br/>
+Aleksandar Prokopec, David Leopoldseder, Gilles Duboscq, Thomas Wuerthinger<br/>
+[Scala Symposium 2017, co-located with SPLASH](https://2017.splashcon.org/track/scala-2017/scala-2017-papers#program)<br/>
+Vancouver, Canada, October 2017<br/>
+
 * **Accelerating by Idling: How Speculative Delays Improve Performance of Message-Oriented Systems** <br/>
 Aleksandar Prokopec<br/>
 [EuroPar 2017](http://europar2017.usc.es/#conference-program)<br/>

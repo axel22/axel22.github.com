@@ -32,7 +32,6 @@ improvements of up to 2.1x.
 
 ## References
 
-
 Akka documentation (2017). http://akka.io/docs/
 
 Reactors.IO website (2017). http://reactors.io/
