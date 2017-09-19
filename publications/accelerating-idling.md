@@ -26,7 +26,7 @@ improvements of up to 2.1x.
 ## Links
 
 \[[PDF](/resources/docs/accelerating-idling.pdf)\]
-\[[BibTex](resources/docs/bibtex/accelerating-idling.bib)\]
+\[[BibTex](/resources/docs/bibtex/accelerating-idling.bib)\]
 \[[Springer](https://link.springer.com/chapter/10.1007/978-3-319-64203-1_13)\]
 
 
