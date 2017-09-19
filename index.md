@@ -50,7 +50,7 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
-* **Making Collection Operations Optimal with Aggressive JIT Compilation -- Extended Version** <br/>
+* **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
 Aleksandar Prokopec<br/>
 [AGERE! State-of-the-Art Volume]()<br/>
 October 2017<br/>
