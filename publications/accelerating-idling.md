@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Accelerating by Idling: How Speculative Delays Improve Performance of Message-Oriented Systems
+title: Accelerating by Idling -- How Speculative Delays Improve Performance of Message-Oriented Systems
 authors: Aleksandar Prokopec
 venue: Euro-Par 2017
 permalink: /publications/accelerating-idling/index.html
