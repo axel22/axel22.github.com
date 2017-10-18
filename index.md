@@ -295,6 +295,12 @@ It is devised to soften the learning curve of students who are being introduced 
 # <a id="talks">Talks</a>
 
 
+### JIT Optimizations
+
+* [Scala Symposium 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
+\[[Slides](/impress/collection-jit-optimizations)\]
+
+
 ### Coroutines
 
 * [Scala World 2016](https://scala.world/),
@@ -305,6 +311,10 @@ Penrith, UK, September 2016
 
 ### Reactors
 
+* [Onward! 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
+\[[Slides](/impress/encoding-communication)\]
+* [Euro-Par 2017](http://europar2017.usc.es/#conference-program)
+\[[Slides](/impress/speculative-scheduling)\]
 * [Bee-Scala 2016](bee-scala.org)
 \[[Slides](/impress/reactor-model-short-protocols#/step-1)\]
 * [ScalaDays Berlin 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
