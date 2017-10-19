@@ -278,9 +278,6 @@
       <p style="text-align: center;">
         Performance
       </p>
-      <p style="text-align: center;">
-        Conclusion
-      </p>
     </div>
 
     <div class="step fadealways" data-x="6000" data-y="0">
@@ -627,6 +624,304 @@ def computeSum(xs: Array[Int]): Long = {
 }
         </code>
       </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="400px" src="img/aggressive-jit/computeSum-call-graph-0-after-expand.png" />
+      </p>
+
+      <p style="text-align: center;">
+        To optimize, callees must be inlined.
+        First, a call graph is created.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="400px" src="img/aggressive-jit/computeSum-call-graph-0-after-expand-cutoff.png" />
+      </p>
+
+      <p style="text-align: center;">
+        The call graph is expanded incrementally.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="400px" src="img/aggressive-jit/computeSum-call-graph-0-after-expand-inline.png" />
+      </p>
+
+      <p style="text-align: center;">
+        A heuristic is used to inline
+        some of the nodes.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="400px" src="img/aggressive-jit/computeSum-call-graph-0-after-expand-typeswitch.png" />
+      </p>
+
+      <p style="text-align: center;">
+        Polymorphics callsites are represented
+        with typeswitches.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="c">
+@tailrec def foldl[B](
+  s: Int, e: Int, z: B, op: (B, A) => B): B =
+  if (s == e) z
+  else foldl(s + 1, e, <span style="color: green">op</span>(z, <span style="color: green">apply</span>(s)), op)
+
+def foldLeft[B](z: B)(op: (B, A) => B): B =
+  foldl(0, <span style="color: green">length</span>, z, op)
+
+def computeSum(xs: Array[Int]): Long = {
+  val z = BoxesRuntime.<span style="color: #f22;">boxToLong</span>(0L)
+  val res = new ArrayOps(xs).foldLeft(0L)(_ + _)
+  BoxesRuntime.<span style="color: #05f;">unboxToLong</span>(res)
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="400px" src="img/aggressive-jit/computeSum-call-graph-0-after-inline.png" />
+      </p>
+
+      <p style="text-align: center;">
+        Receiver type information improves,
+        so polymorphic callsites are removed.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="c">
+@tailrec def foldl[B](
+  s: Int, e: Int, z: B, op: (B, A) => B): B =
+  if (s == e) z
+  else foldl(s + 1, e, <span style="color: #f22">op</span>(z, <span style="color: #f22">apply</span>(s)), op)
+
+def foldLeft[B](z: B)(op: (B, A) => B): B =
+  foldl(0, <span style="color: #f22">length</span>, z, op)
+
+def computeSum(xs: Array[Int]): Long = {
+  val z = BoxesRuntime.<span style="color: #f22;">boxToLong</span>(0L)
+  val res = new ArrayOps(xs).foldLeft(0L)(_ + _)
+  res.value
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center; position: relative; left: -100px;">
+        <img height="350px" src="img/aggressive-jit/computeSum-call-graph-1-after-expand.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center; position: relative; left: -300px;">
+        <img height="120px" src="img/aggressive-jit/computeSum-call-graph-1-after-inline.png" />
+      </p>
+
+      <br/>
+      <p style="text-align: center;">
+        The expanded part of the call graph
+        cal be completely inlined.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def computeSum(xs: Array[Int]): Long = {
+  val ops = new ArrayOps(xs)
+  var z = 0L
+  var s = 0; val e = ops.array.length
+  while (s < e) {
+    if (s < 0 || s >= ops.array.length)
+      throw new ArrayIndexOutOfBoundsException
+    z = z + ops.array(s)
+    s += 1
+  }
+  val res = new java.lang.Long(e)
+  res.value
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def computeSum(xs: Array[Int]): Long = {
+  val ops = new ArrayOps(xs)
+  var z = 0L
+  var s = 0; val e = ops.array.length
+  while (s < e) {
+
+
+    z = z + ops.array(s)
+    s += 1
+  }
+  val res = new java.lang.Long(e)
+  res.value
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def computeSum(xs: Array[Int]): Long = {
+
+  var z = 0L
+  var s = 0; val e = xs.length
+  while (s < e) {
+
+
+    z = z + xs(s)
+    s += 1
+  }
+
+  e
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <h2 style="text-align: center;">
+        Polymorphic foldLeft
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def computeSum(xs: Seq[Int]): Long = {
+  xs match {
+    case xs: Array[Length] =>
+      var z = 0L
+      var s = 0
+      val e = xs.length
+      while (s < e) {
+        z = z + xs(s)
+        s += 1
+      }
+      e
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="27000" data-y="0">
+      <h2 style="text-align: center;">
+        Case study: map
+      </h2>
+    </div>
+
+    <div class="step fadefuture" data-x="27000" data-y="0">
+      <p style="text-align: center; position: relative;">
+        <img height="600px" src="img/aggressive-jit/mapPlusOne-array-read.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="27500" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+          val x: A = apply(i).asInstanceOf[A]
+          val y: B = f(x)
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="27500" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+          val x: AnyRef = array(i)
+          val y: Int = x.value + 1
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="28000" data-y="0">
+      <p style="text-align: center; position: relative;">
+        <img height="600px" src="img/aggressive-jit/mapPlusOne-array-write.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="28500" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+          val y: B = f(x)
+          result += y
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="28500" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+          val y: Int = x.value + 1
+          outArray(i) = new java.lang.Integer(y)
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="30000" data-y="0">
+      <p style="text-align: center;">
+        Conjecture:
+        <br/>
+        Optimizing the data structure
+        is best left to the static compiler.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <h2 style="text-align: center;">
+        Performance
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <img height="400px" src="img/aggressive-jit/micros-1.png" />
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <img height="400px" src="img/aggressive-jit/micros-2.png" />
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <img height="400px" src="img/aggressive-jit/micros-3.png" />
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <img height="400px" src="img/aggressive-jit/apps.png" />
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <p style="position: relative; left: -240px;">
+        <img height="350px" src="img/aggressive-jit/spark.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <h2 style="text-align: center;">
+        Thank you!
+      </h2>
+      <h3 style="text-align: center;">
+        Questions?
+      </h3>
     </div>
 
 </div>
