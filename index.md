@@ -64,6 +64,8 @@ Vancouver, Canada, October 2017<br/>
 Aleksandar Prokopec, David Leopoldseder, Gilles Duboscq, Thomas Wuerthinger<br/>
 [Scala Symposium 2017, co-located with SPLASH](https://2017.splashcon.org/track/scala-2017/scala-2017-papers#program)<br/>
 Vancouver, Canada, October 2017<br/>
+\[[PDF](http://axel22.github.io/resources/docs/graal-collections.pdf)\]
+\[[Link](/publications/graal-collections)\]
 
 * **Accelerating by Idling: How Speculative Delays Improve Performance of Message-Oriented Systems** <br/>
 Aleksandar Prokopec<br/>
@@ -298,7 +300,7 @@ It is devised to soften the learning curve of students who are being introduced 
 ### JIT Optimizations
 
 * [Scala Symposium 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
-\[[Slides](/impress/collection-jit-optimizations)\]
+\[[Slides](/impress/aggressive-jit)\]
 
 
 ### Coroutines
