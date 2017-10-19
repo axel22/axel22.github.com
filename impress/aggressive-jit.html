@@ -270,9 +270,6 @@
         High-Level Optimizations in Graal
       </p>
       <p style="text-align: center;">
-        Graal Intermediate Representation
-      </p>
-      <p style="text-align: center;">
         Case Study: <code>foldLeft</code>
       </p>
       <p style="text-align: center;">
@@ -535,9 +532,103 @@ def tss(a: Array[Int]): Int = {
 
     <div class="step fadealways" data-x="24000" data-y="0">
       <h2 style="text-align: center;">
-        Graal Intermediate Representation
+        Case Study: foldLeft
       </h2>
     </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+
+
+
+
+
+
+
+def foldLeft[B](z: B)(op: (B, A) => B): B =
+  foldl(0, length, z, op)
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+@tailrec
+def foldl[B](
+  s: Int, e: Int, z: B, op: (B, A) => B
+): B =
+  if (s == e) z
+  else foldl(s + 1, e, op(z, this(s)), op)
+
+def foldLeft[B](z: B)(op: (B, A) => B): B =
+  foldl(0, length, z, op)
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+@tailrec
+def foldl[B](
+  s: Int, e: Int, z: B, op: (B, A) => B
+): B =
+  if (s == e) z
+  else foldl(s + 1, e, op(z, this(s)), op)
+
+def foldLeft[B](z: B)(op: (B, A) => B): B =
+  foldl(0, length, z, op)
+
+def computeSum(xs: Array[Int]): Long =
+  xs.foldLeft(0L)(_ + _)
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="600px" src="img/aggressive-jit/computeSum-after-parsing.png" />
+      </p>
+
+      <pre class="snippet" style="">
+        <code class="scala">
+
+
+
+
+
+def computeSum(xs: Array[Int]): Long =
+  xs.foldLeft(0L)(_ + _)
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="600px" src="img/aggressive-jit/computeSum-after-parsing.png" />
+      </p>
+
+      <pre class="snippet" style="">
+        <code class="scala">
+def computeSum(xs: Array[Int]): Long = {
+  val ops = new ArrayOps(xs)
+  val z = BoxesRuntime.boxToLong(0L)
+  val op = new $$anonfun$computeSum$1
+  val res = ops.foldLeft(0L)(op)
+  BoxesRuntime.unboxToLong(res)
+}
+        </code>
+      </pre>
+    </div>
+
 </div>
 
 <!--
