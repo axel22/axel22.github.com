@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: Making Collection Operations Optimal with Aggressive JIT Compilation
-authors: Aleksandar Prokopec
+authors: Aleksandar Prokopec, David Leopoldseder, Gilles Duboscq, Thomas Wuerthinger
 venue: Scala Symposium 2017
 permalink: /publications/graal-collections/index.html
 ---
