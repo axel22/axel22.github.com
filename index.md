@@ -59,6 +59,8 @@ October 2017<br/>
 Aleksandar Prokopec<br/>
 [Onward! 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)<br/>
 Vancouver, Canada, October 2017<br/>
+\[[PDF](http://axel22.github.io/resources/docs/encoding-communication.pdf)\]
+\[[Link](/publications/encoding-communication)\]
 
 * **Making Collection Operations Optimal with Aggressive JIT Compilation** <br/>
 Aleksandar Prokopec, David Leopoldseder, Gilles Duboscq, Thomas Wuerthinger<br/>

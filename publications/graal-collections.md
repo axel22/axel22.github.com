@@ -70,8 +70,8 @@ UK.
 Regis Blanc. 2015. CafeSAT. (2015). https://github.com/regb/cafesat.
 
 Gilad Bracha, Sun Microsystems, Norman Cohen Ibm, Christian Kemper
-Inprise, Martin Odersky Epfl, David Stoutamire, and Sun Microsystems.
-2003. Adding generics to the java programming language: Public draft
+Inprise, Martin Odersky Epfl, David Stoutamire, and Sun Microsystems. 2003.
+Adding generics to the java programming language: Public draft
 specification, version 2.0. Technical Report.
 
 Eugene Burmako. 2013. Scala Macros: Let Our Powers Combine!: On How
@@ -79,15 +79,14 @@ Rich Syntax and Static Types Work with Metaprogramming. In Proceedings
 of the 4th Workshop on Scala (SCALA ’13). ACM, New York, NY, USA,
 Article 3, 10 pages. https://doi.org/10.1145/2489837.2489840
 
-Pohua P. Chang, Scott A. Mahlke, William Y. Chen, and Wen-mei W. Hwu.
-1992. Profile-guided Automatic Inline Expansion for C Programs. Softw.
-Pract. Exper. 22, 5 (May 1992), 349–369. https://doi.org/10.1002/spe.
-4380220502
+Pohua P. Chang, Scott A. Mahlke, William Y. Chen, and Wen-mei W. Hwu. 1992.
+Profile-guided Automatic Inline Expansion for C Programs. Softw.
+Pract. Exper. 22, 5 (May 1992), 349–369. https://doi.org/10.1002/spe.4380220502
 
 Cliff Click. 1995. Global Code Motion/Global Value Numbering. In Proceedings
 of the ACM SIGPLAN 1995 Conference on Programming Language
-Design and Implementation (PLDI ’95). ACM, New York, NY, USA, 246–
-257. https://doi.org/10.1145/207110.207154
+Design and Implementation (PLDI ’95). ACM, New York, NY, USA, 246–257.
+https://doi.org/10.1145/207110.207154
 
 Cliff Click and Michael Paleczny. 1995. A Simple Graph-based Intermediate
 Representation. In Papers from the 1995 ACM SIGPLAN Workshop on
@@ -96,15 +95,14 @@ https://doi.org/10.1145/202529.202534
 
 L. Peter Deutsch and Allan M. Schiffman. 1984. Efficient Implementation
 of the Smalltalk-80 System. In Proceedings of the 11th ACM SIGACTSIGPLAN
-Symposium on Principles of Programming Languages (POPL
-’84). ACM, New York, NY, USA, 297–302. https://doi.org/10.1145/800017.
-800542
+Symposium on Principles of Programming Languages (POPL ’84).
+ACM, New York, NY, USA, 297–302. https://doi.org/10.1145/800017.800542
 
 Iulian Dragos and Martin Odersky. 2009. Compiling Generics Through Userdirected
 Type Specialization. In Proceedings of the 4th Workshop on the
 Implementation, Compilation, Optimization of Object-Oriented Languages
-and Programming Systems (ICOOOLPS ’09). ACM, New York, NY, USA,
-42–47. https://doi.org/10.1145/1565824.1565830
+and Programming Systems (ICOOOLPS ’09). ACM, New York, NY, USA, 42–47.
+https://doi.org/10.1145/1565824.1565830
 
 Gilles Duboscq, Thomas Würthinger, and Hanspeter Mössenböck. 2014.
 Speculation Without Regret: Reducing Deoptimization Meta-data in the
@@ -117,20 +115,17 @@ Gilles Duboscq, Thomas Würthinger, Lukas Stadler, Christian Wimmer,
 Doug Simon, and Hanspeter Mössenböck. 2013. An Intermediate Representation
 for Speculative Optimizations in a Dynamic Compiler. In
 Proceedings of the 7th ACM Workshop on Virtual Machines and Intermediate
-Languages (VMIL ’13). ACM, New York, NY, USA, 1–10. https:
-//doi.org/10.1145/2542142.2542143
+Languages (VMIL ’13). ACM, New York, NY, USA, 1–10. https://doi.org/10.1145/2542142.2542143
 
 Andy Georges, Dries Buytaert, and Lieven Eeckhout. 2007. Statistically
 Rigorous Java Performance Evaluation. In Proceedings of the 22Nd Annual
 ACM SIGPLAN Conference on Object-oriented Programming Systems and
-Applications (OOPSLA ’07). ACM, New York, NY, USA, 57–76. https:
-//doi.org/10.1145/1297027.1297033
+Applications (OOPSLA ’07). ACM, New York, NY, USA, 57–76. https://doi.org/10.1145/1297027.1297033
 
 Thomas Kotzmann and Hanspeter Mössenböck. 2005. Escape Analysis in
 the Context of Dynamic Compilation and Deoptimization. In Proceedings
 of the 1st ACM/USENIX International Conference on Virtual Execution
-Environments (VEE ’05). ACM, New York, NY, USA, 111–120. https:
-//doi.org/10.1145/1064979.1064996
+Environments (VEE ’05). ACM, New York, NY, USA, 111–120. https://doi.org/10.1145/1064979.1064996
 
 Martin Odersky and Adriaan Moors. 2009. Fighting bit Rot with Types
 (Experience Report: Scala Collections). In IARCS Annual Conference on
@@ -138,8 +133,7 @@ Foundations of Software Technology and Theoretical Computer Science
 SCALA’17, October 22–23, 2017, Vancouver, Canada A.
 (FSTTCS 2009) (Leibniz International Proceedings in Informatics (LIPIcs)),
 Ravi Kannan and K Narayan Kumar (Eds.), Vol. 4. Schloss Dagstuhl–
-Leibniz-Zentrum fuer Informatik, Dagstuhl, Germany, 427–451. https:
-//doi.org/10.4230/LIPIcs.FSTTCS.2009.2338
+Leibniz-Zentrum fuer Informatik, Dagstuhl, Germany, 427–451. https://doi.org/10.4230/LIPIcs.FSTTCS.2009.2338
 
 Simon Peyton Jones and Simon Marlow. 2002. Secrets of the Glasgow
 Haskell Compiler Inliner. J. Funct. Program. 12, 5 (July 2002), 393–434.
@@ -151,8 +145,7 @@ Time Snapshots (Scala ’15). https://doi.org/10.1145/2774975.2774976
 Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, and Martin Odersky. 2011.
 A Generic Parallel Collection Framework. In Proceedings of the 17th
 International Conference on Parallel Processing - Volume Part II (EuroPar’11).
-Springer-Verlag, Berlin, Heidelberg, 136–147. http://dl.acm.org/
-citation.cfm?id=2033408.2033425
+Springer-Verlag, Berlin, Heidelberg, 136–147. http://dl.acm.org/citation.cfm?id=2033408.2033425
 
 Aleksandar Prokopec, Nathan Grasso Bronson, Phil Bagwell, and Martin
 Odersky. 2012. Concurrent Tries with Efficient Non-blocking Snapshots.
@@ -202,8 +195,7 @@ Vector: A Practical General Purpose Immutable Sequence. SIGPLAN Not.
 Bjorn De Sutter, Frank Tip, and Julian Dolby. 2004. Customization of
 Java Library Classes Using Type Constraints and Profile Information.
 In ECOOP 2004 - Object-Oriented Programming, 18th European Conference,
-Oslo, Norway, June 14-18, 2004, Proceedings. 585–610. https:
-//doi.org/10.1007/978-3-540-24851-4_27
+Oslo, Norway, June 14-18, 2004, Proceedings. 585–610. https://doi.org/10.1007/978-3-540-24851-4_27
 
 Vlad Ureche, Cristian Talau, and Martin Odersky. 2013. Miniboxing:
 Improving the Speed to Code Size Tradeoff in Parametric Polymorphism
@@ -212,8 +204,7 @@ Conference on Object Oriented Programming Systems Languages
 &#38; Applications (OOPSLA ’13). ACM, New York, NY, USA, 73–92.
 https://doi.org/10.1145/2509136.2509537
 
-Christian Wimmer. 2008. Automatic Object Inlining in a Java Virtual Machine.
-Trauner.
+Christian Wimmer. 2008. Automatic Object Inlining in a Java Virtual Machine. Trauner.
 
 Thomas Würthinger, Andreas Wöß, Lukas Stadler, Gilles Duboscq, Doug
 Simon, and Christian Wimmer. 2012. Self-optimizing AST Interpreters. In
