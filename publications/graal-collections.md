@@ -212,8 +212,8 @@ Proceedings of the 8th Symposium on Dynamic Languages (DLS ’12). ACM,
 New York, NY, USA, 73–82. https://doi.org/10.1145/2384577.2384587
 
 Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin
-Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, and Ion Stoica.
-2012. Resilient Distributed Datasets: A Fault-tolerant Abstraction for Inmemory
+Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, and Ion Stoica. 2012.
+Resilient Distributed Datasets: A Fault-tolerant Abstraction for Inmemory
 Cluster Computing. In Proceedings of the 9th USENIX Conference
 on Networked Systems Design and Implementation (NSDI’12). USENIX
 Association, Berkeley, CA, USA, 2–2
