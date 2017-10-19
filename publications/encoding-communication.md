@@ -31,15 +31,15 @@ streaming framework, and the performance of these implementations is evaluated.
 
 ## References
 
-2015. Erlang/OTP Documentation. (2015). http://www.erlang.org/
+Erlang/OTP Documentation. (2015). http://www.erlang.org/
 
-2016. Akka Documentation. (2016). http://akka.io/docs/
+Akka Documentation. (2016). http://akka.io/docs/
 
-2016. Akka Streams Documentation. (2016). http://doc.akka.io/docs/akka/2.4.3/scala/stream/index.html
+Akka Streams Documentation. (2016). http://doc.akka.io/docs/akka/2.4.3/scala/stream/index.html
 
-2016. Reactive Streams. (2016). http://www.reactive-streams.org/
+Reactive Streams. (2016). http://www.reactive-streams.org/
 
-2016. Reactors.IO website. (2016). http://reactors.io/ Aleksandar Prokopec
+Reactors.IO website. (2016). http://reactors.io/ Aleksandar Prokopec
 
 Gul Agha. 1986. Actors: A Model of Concurrent Computation in Distributed Systems. MIT Press, Cambridge, MA, USA.
 
@@ -93,12 +93,11 @@ Communication, Process Topologies, and One Sided Communications.
 
 Cédric Fournet and Georges Gonthier. 2002. The Join Calculus: A
 Language for Distributed Mobile Programming. Springer Berlin Hei-
-delberg, Berlin, Heidelberg, 268–332. DOI:http://dx.doi.org/10.1007/
-3-540-45699-6_6
+delberg, Berlin, Heidelberg, 268–332. DOI:http://dx.doi.org/10.1007/3-540-45699-6_6
 
 Andy Georges, Dries Buytaert, and Lieven Eeckhout. 2007. Statistically
-Rigorous Java Performance Evaluation. SIGPLAN Not. 42, 10 (Oct. 2007),
-57–76. DOI:http://dx.doi.org/10.1145/1297105.1297033
+Rigorous Java Performance Evaluation. SIGPLAN Not. 42, 10 (Oct. 2007), 57–76.
+DOI:http://dx.doi.org/10.1145/1297105.1297033
 
 J.Y. Girard. 1972. Interprétation fonctionnelle et élimination des coupures
 de l’arithmétique d’ordre supérieur. https://books.google.hr/books?id=IRcVHAAACAAJ
@@ -111,18 +110,18 @@ without Inversion of Control. In Proc. Joint Modular Languages Con-
 ference (Springer LNCS).
 
 Philipp Haller, Aleksandar Prokopec, Heather Miller, Viktor Klang,
-Roland Kuhn, and Vojin Jovanovic. 2012. Scala Improvement Pro-
-posal: Futures and Promises (SIP-14). http://docs.scala-lang.org/sips/pending/futures-promises.html
+Roland Kuhn, and Vojin Jovanovic. 2012. Scala Improvement Proposal:
+Futures and Promises (SIP-14). http://docs.scala-lang.org/sips/pending/futures-promises.html
 
 Benjamin Hindman, Andy Konwinski, Matei Zaharia, Ali Ghodsi, An-
 thony D. Joseph, Randy Katz, Scott Shenker, and Ion Stoica. 2011.
-Mesos: A Platform for Fine-grained Resource Sharing in the Data Cen-
-ter. In Proceedings of the 8th USENIX Conference on Networked Systems
+Mesos: A Platform for Fine-grained Resource Sharing in the Data Center.
+In Proceedings of the 8th USENIX Conference on Networked Systems
 Design and Implementation (NSDI’11). USENIX Association, Berkeley,
 CA, USA, 295–308. http://dl.acm.org/citation.cfm?id=1972457.1972488
 
-C. A. R. Hoare. 1978. Communicating Sequential Processes. Commun.
-ACM 21, 8 (Aug. 1978), 666–677. DOI:http://dx.doi.org/10.1145/359576.359585
+C. A. R. Hoare. 1978. Communicating Sequential Processes. Commun. ACM 21, 8 (Aug. 1978), 666–677.
+DOI:http://dx.doi.org/10.1145/359576.359585
 
 Shams M. Imam and Vivek Sarkar. 2014. Selectors: Actors with Multiple
 Guarded Mailboxes. In Proceedings of the 4th International Workshop
@@ -142,8 +141,7 @@ http://dx.doi.org/10.1016/0890-5401(92)90008-4
 Thomas D. Newton. 1987. An implementation of Ada tasking. (1987).
 
 Martin Odersky. 2002. An Introduction to Functional Nets. Springer
-Berlin Heidelberg, Berlin, Heidelberg, 333–377. DOI:http://dx.doi.org/
-10.1007/3-540-45699-6_7
+Berlin Heidelberg, Berlin, Heidelberg, 333–377. DOI:http://dx.doi.org/10.1007/3-540-45699-6_7
 
 Martin Odersky and al. 2004. An Overview of the Scala Programming
 Language. Technical Report IC/2004/64. EPFL Lausanne, Switzerland.
@@ -151,8 +149,8 @@ Language. Technical Report IC/2004/64. EPFL Lausanne, Switzerland.
 Benjamin C. Pierce. 2002. Types and Programming Languages. MIT
 Press, Cambridge, MA, USA.
 
-Rob Pike, Dave Presotto, Ken Thompson, and Gerard Holzmann.
-1991. Process Sleep and Wakeup on a Shared-memory Multiprocessor.
+Rob Pike, Dave Presotto, Ken Thompson, and Gerard Holzmann. 1991.
+Process Sleep and Wakeup on a Shared-memory Multiprocessor.
 (1991).
 
 Aleksandar Prokopec. 2014. ScalaMeter Website. (2014). http://scalameter.github.io
@@ -160,8 +158,7 @@ Aleksandar Prokopec. 2014. ScalaMeter Website. (2014). http://scalameter.github.
 Aleksandar Prokopec. 2016. Pluggable Scheduling for the Reactor
 Programming Model. In Proceedings of the 6th International Workshop
 on Programming Based on Actors, Agents, and Decentralized Control
-(AGERE 2016). ACM, New York, NY, USA, 41–50. DOI:http://dx.doi.
-org/10.1145/3001886.3001891
+(AGERE 2016). ACM, New York, NY, USA, 41–50. DOI:http://dx.doi.org/10.1145/3001886.3001891
 Onward!’17, October 25–27, 2017, Vancouver, Canada
 
 Aleksandar Prokopec, Philipp Haller, and Martin Odersky. 2014. Con-
@@ -180,8 +177,8 @@ Using Deficit Round Robin. SIGCOMM Comput. Commun. Rev. 25, 4
 (Oct. 1995), 231–242. DOI:http://dx.doi.org/10.1145/217391.217453
 
 Sriram Srinivasan and Alan Mycroft. 2008. Kilim: Isolation-Typed
-Actors for Java. Springer Berlin Heidelberg, Berlin, Heidelberg, 104–
-128. DOI:http://dx.doi.org/10.1007/978-3-540-70592-5_6
+Actors for Java. Springer Berlin Heidelberg, Berlin, Heidelberg, 104–128.
+DOI:http://dx.doi.org/10.1007/978-3-540-70592-5_6
 
 Robert Virding, Claes Wikström, and Mike Williams. 1996. Concurrent
 Programming in ERLANG (2nd Ed.). Prentice Hall International (UK)
@@ -196,8 +193,8 @@ mentation (NSDI’12). USENIX Association, Berkeley, CA, USA, 2–2.
 http://dl.acm.org/citation.cfm?id=2228298.2228301
 
 Matei Zaharia, Mosharaf Chowdhury, Michael J. Franklin, Scott
-Shenker, and Ion Stoica. 2010. Spark: Cluster Computing with Work-
-ing Sets. In Proceedings of the 2nd USENIX Conference on Hot Topics in
+Shenker, and Ion Stoica. 2010. Spark: Cluster Computing with Working Sets.
+In Proceedings of the 2nd USENIX Conference on Hot Topics in
 Cloud Computing (HotCloud’10). USENIX Association, Berkeley, CA,
 USA, 10–10. http://dl.acm.org/citation.cfm?id=1863103.1863113
 
