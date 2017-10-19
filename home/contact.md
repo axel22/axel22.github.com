@@ -13,14 +13,6 @@ The preferred way to contact me is through e-mail:
   my firstname then a dot my surname then a monkey gmail then a dot com
 </blockquote>
 
-Please, **never** use my EPFL address.
-If you really must, use the *alumni* address:
-
-<blockquote style="text-align: left;">
-  my name then a dot my surname then a monkey alumni dot epfl dot ch
-</blockquote>
-
-
 
 # ![post](/resources/images/post.png) Mail
 
@@ -46,11 +38,4 @@ Office: contact me via e-mail first
 ![skype](/resources/images/skype.png) Skype: aleksandarprokopec
 
 ![twitter](/resources/images/twitter-16.png) Twitter: alexprokopec
-
-Please, avoid using SMS, as I don't use it:
-
-![no-sms](/resources/images/no-sms.png)
-
-
-
 

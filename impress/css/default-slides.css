@@ -503,6 +503,30 @@ a:hover img {
   opacity: 1.0;
 }
 
+.fadefutureslightly.future {
+  opacity: 0.01;
+}
+
+.fadefutureslightly.current {
+  opacity: 1.0;
+}
+
+.fadefutureslightly.past {
+  opacity: 0.3;
+}
+
+.fadepastlightly.future {
+  opacity: 1.0;
+}
+
+.fadepastlightly.current {
+  opacity: 1.0;
+}
+
+.fadepastlightly.past {
+  opacity: 0.3;
+}
+
 .impress-enabled .step.fadelate {
   -webkit-transition: opacity 3s;
   -moz-transition:    opacity 3s;

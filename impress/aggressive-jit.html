@@ -181,7 +181,7 @@
           Oracle Labs Switzerland
         </p>
         <p class="very-small-font">
-          August 2017
+          October 2017
         </p>
         <img height="40px" src="img/speculative-scheduling/oracle.gif" />
     </div>
@@ -192,7 +192,7 @@
     - 
     -->
 
-    <div class="step fadealways fadepast" data-x="1000" data-y="0">
+    <div class="step fadealways" data-x="1000" data-y="0">
       <h2 class="sans">Safe Harbour</h2>
       <p class="sans small-text">
         The following is intended to provide some insight into a line of research
@@ -215,10 +215,328 @@
       <img height="40px" src="img/speculative-scheduling/oracle.gif" />
     </div>
 
-    <div class="step fadealways fadepast" data-x="3000" data-y="0">
+    <div class="step fadefutureslightly" data-x="3000" data-y="0">
       <p>
-        
+        1. A JIT compiler can make Scala collection operations optimal.
       </p>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadefutureslightly" data-x="3000" data-y="0">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <p>
+        2. For this, a JIT compiler is usually a better choice than a static compiler.
+      </p>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadefutureslightly" data-x="3000" data-y="0">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <p>
+        3. Specific optimizations are more easily done by a static compiler.
+      </p>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="6000" data-y="0">
+      <h2 style="text-align: center;">Optimal</h2>
+      <p style="text-align: center;">==</p>
+      <p style="text-align: center;">
+        Same performance as equivalent hand-written code
+        with <code>while</code>-loops,
+        <code>if</code>-statements,
+        stack-local variables and array operations
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="6000" data-y="0">
+      <p style="text-align: center;">
+        High-Level Optimizations in Graal
+      </p>
+      <p style="text-align: center;">
+        Graal Intermediate Representation
+      </p>
+      <p style="text-align: center;">
+        Case Study: <code>foldLeft</code>
+      </p>
+      <p style="text-align: center;">
+        Case Study: <code>map</code>
+      </p>
+      <p style="text-align: center;">
+        Performance
+      </p>
+      <p style="text-align: center;">
+        Conclusion
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="6000" data-y="0">
+      <h2 style="text-align: center;">
+        High-Level Optimizations in Graal
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="9000" data-y="0">
+      <h2 style="text-align: center;">
+        Inlining
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="9000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def sq(x: Double) = x * x
+def tss(xs: List[Double]): Double =
+  if (xs.isEmpty) 0
+  else sq(xs.head) + tss(xs.tail)
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="9000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def sq(x: Double) = x * x
+def tss(xs: List[Double]): Double =
+  if (xs.isEmpty) 0 else {
+    val h = xs.head
+    h * h + tss(xs.tail)
+  }
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="9000" data-y="0">
+      <h2 style="text-align: center;">Inlining is black art.</h2>
+
+      <p style="text-align: center;">How to inline? Simple.</p>
+      <p style="text-align: center;">When to inline? Anything but simple.</p>
+    </div>
+
+    <div class="step fadealways" data-x="12000" data-y="0">
+      <h2 style="text-align: center;">
+        Polymorphic Inlining
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="12000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def tss(xs: Seq[Int]): Int =
+  xs.fold(0)(_ + sq(_))
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="12000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def tss(xs: Seq[Int]): Int =
+  xs.fold(0)(_ + sq(_))
+  |
+  |-> xs: List[Int]      62%
+  |
+  |-> xs: ArrayOps[Int]  34%
+  |
+  \-> xs: Vector[Int]    4%
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="12000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def tss(xs: Seq[Int]): Int =
+  xs match {
+    case xs: List[Int] =>
+      xs.fold(0)(_ + sq(_))
+    case xs: ArrayOps[Int] =>
+      xs.fold(0)(_ + sq(_))
+    case _ =>
+      xs.fold(0)(_ + sq(_))
+  }
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="12000" data-y="0">
+      <p style="text-align: center;">
+        A JIT compiler has access to receiver type profiles.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <h2 style="text-align: center;">
+        Canonicalization
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+val xs: Seq[Int] = 1 :: 2 :: 3
+val s = xs.fold(0)(_ + _)
+val p = s * s
+s * s + 2 * p
+        </code>
+      </pre>
+
+      <p style="text-align: center;">
+        Simplify until convergence.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+val xs: Seq[Int] = 1 :: 2 :: 3
+val s = xs.fold(0)(_ + _)
+val p = s * s
+p + 2 * p
+        </code>
+      </pre>
+
+      <p style="text-align: center;">
+        Global value numbering.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+val xs: Seq[Int] = 1 :: 2 :: 3
+val s = xs.fold(0)(_ + _)
+val p = s * s
+p + (p << 1)
+        </code>
+      </pre>
+
+      <p style="text-align: center;">
+        Strength reduction.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+val xs: Seq[Int] = 1 :: 2 :: 3
+val s = (xs: List[Int]).fold(0)(_ + _)
+val p = s * s
+p + (p << 1)
+        </code>
+      </pre>
+
+      <p style="text-align: center;">
+        Monomorphic invokes.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="15000" data-y="0">
+      <p style="text-align: center;">
+        Canonicalization - many different simplification rules,
+        triggered by localized patterns in the IR.
+      </p>
+
+      <br/>
+
+      <p style="text-align: center;">
+        Usually monotonic, and converging.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="18000" data-y="0">
+      <h2 style="text-align: center;">
+        Partial Escape Analysis
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="18000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def tss(a: Array[Int]): Int = {
+  val it = new ArrayIterator
+  it.current = 0
+  it.array = a
+  var sum = 0
+  while (it.current < it.array.length) {
+    sum += sq(it.array(it.current))
+    it.current += 1
+  }
+  sum
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="18000" data-y="0">
+      <pre class="snippet" style="">
+        <code class="scala">
+def tss(a: Array[Int]): Int = {
+
+  var current = 0
+
+  var sum = 0
+  while (current < a.length) {
+    sum += sq(a(current))
+    current += 1
+  }
+  sum
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="18000" data-y="0">
+      <p style="text-align: center;">
+        See:
+      </p>
+      <p style="text-align: center;">
+        Partial Escape Analysis and Scalar Replacement for Java
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="21000" data-y="0">
+      <h2 style="text-align: center;">
+        Other optimizations
+      </h2>
+      <h3 style="text-align: center;">
+        Path Duplication,
+        Loop Peeling,
+        Conditional Elimination,
+        ...
+      </h3>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <h2 style="text-align: center;">
+        Graal Intermediate Representation
+      </h2>
     </div>
 </div>
 
