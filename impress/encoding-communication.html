@@ -1141,7 +1141,7 @@ type BackpressureEvents[T] =
   (Events[Boolean], Queue[T])
 
 def backpressureServer[T]: (
-  Channel[TwoWay.Req[Int, T]],
+  TwoWay.Server[Int, T],
   Events[BackpressureEvents[T]]
 )
         </code>
