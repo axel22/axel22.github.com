@@ -217,6 +217,19 @@
     </div>
 
     <div class="step fadealways" data-x="3000" data-y="0">
+      <h2 style="text-align: center;">
+        Questions
+      </h2>
+      <p>
+        1. Can two-way reliable backpressure
+           be encoded in the reactor model?
+      </p>
+      <p>
+        2. At what cost?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="3000" data-y="0">
       <h2 class="sketch" style="text-align: center;">
         Reactor model
       </h2>
@@ -1107,10 +1120,13 @@ def openReliable[T](server: Reliable.Server[T]):
         src="img/reactor-model-protocols/backpressure-pump.svg"/>
     </div>
 
-    <div class="step fadealways" data-x="14200" data-y="600">
+    <div class="step fadefuture" data-x="14200" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Pump[T] = (Queue[T], Events[T])
+type BackpressureEvents[T] =
+  (Events[Boolean], Queue[T])
+
+
 
 
 
@@ -1121,10 +1137,13 @@ type Pump[T] = (Queue[T], Events[T])
     <div class="step fadefuture" data-x="14200" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Pump[T] = (Queue[T], Events[T])
+type BackpressureEvents[T] =
+  (Events[Boolean], Queue[T])
 
-def backpressurePump[T]
-  (twoway: TwoWay[T, Int]): Pump[T]
+def backpressureServer[T]: (
+  Channel[TwoWay.Req[Int, T]],
+  Events[BackpressureEvents[T]]
+)
         </code>
       </pre>
     </div>
@@ -1172,7 +1191,9 @@ def backpressurePump[T]
     <div class="step fadefuture" data-x="7000" data-y="700">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Valve[T] = (Channel[T], Signal[Boolean])
+type BackpressureChannel[T] =
+  (Channel[T], Events[Boolean])
+
 
 
 
@@ -1183,10 +1204,12 @@ type Valve[T] = (Channel[T], Signal[Boolean])
     <div class="step fadefuture" data-x="7000" data-y="700">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Valve[T] = (Channel[T], Signal[Boolean])
+type BackpressureChannel[T] =
+  (Channel[T], Events[Boolean])
 
-def backpressureValve[T]
-  (twoway: TwoWay[Int, T]): Valve[T]
+def openBackpressure[T](
+  twoway: TwoWay[Int, T]
+): BackpressureChannel[T]
         </code>
       </pre>
     </div>
@@ -1194,10 +1217,8 @@ def backpressureValve[T]
     <div class="step fadealways" data-x="7000" data-y="2000">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Stream.Req[T] =
-  Channel[TwoWay.Req[Int, T]]
 
-
+  Channel[TwoWay.Server[Int, T]]
         </code>
       </pre>
     </div>
@@ -1205,10 +1226,8 @@ type Stream.Req[T] =
     <div class="step fadealways" data-x="7000" data-y="2000">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Stream.Req[T] =
-  Channel[TwoWay.Req[Int, T]]
-
-type Stream[T] = Channel[Stream.Req[T]]
+type Stream[T] =
+  Channel[TwoWay.Server[Int, T]]
         </code>
       </pre>
     </div>
@@ -1241,6 +1260,12 @@ def scanLeft[T,S](
       <p style="position: relative; left: -140px;">
         <img height="350px" src="img/encoding-communication/apps.png" />
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="7000" data-y="2000">
+      <h2 style="text-align: center;">
+        Thank you!
+      </h2>
     </div>
 
 </div>

@@ -2136,7 +2136,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2277,7 +2277,7 @@
          x="766.84064"
          y="327.34036"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
-         id="tspan3177">valve</tspan></text>
+         id="tspan3177">client</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3222"

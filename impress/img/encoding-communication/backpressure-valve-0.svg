@@ -28,9 +28,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="796"
+     inkscape:window-width="1596"
      inkscape:window-height="864"
-     inkscape:window-x="800"
+     inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0"
      showguides="true"
@@ -2136,7 +2136,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2249,7 +2249,7 @@
          x="766.84064"
          y="327.34036"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
-         id="tspan3177">valve</tspan></text>
+         id="tspan3177">client</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text3222"
@@ -2366,5 +2366,5 @@
            height="1295.4197"
            x="-39.59798"
            y="-255.82164" /></flowRegion><flowPara
-         id="flowPara4571"></flowPara></flowRoot>  </g>
+         id="flowPara4571" /></flowRoot>  </g>
 </svg>
