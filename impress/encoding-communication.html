@@ -1114,43 +1114,6 @@ type Pump[T] = (Queue[T], Events[T])
 
 
 
-
-
-
-
-
-        </code>
-      </pre>
-    </div>
-
-    <div class="step fadealways" data-x="14200" data-y="600">
-      <pre class="snippet" style="position: relative; left: 0px;">
-        <code class="scala">
-type Pump[T] = (Queue[T], Events[T])
-
-def backpressurePump[T]
-  (twoway: TwoWay[T, Int]): Pump[T] = {
-  val (in, pressure) = twoway
-
-
-
-}
-        </code>
-      </pre>
-    </div>
-
-    <div class="step fadealways" data-x="14200" data-y="600">
-      <pre class="snippet" style="position: relative; left: 0px;">
-        <code class="scala">
-type Pump[T] = (Queue[T], Events[T])
-
-def backpressurePump[T]
-  (twoway: TwoWay[T, Int]): Pump[T] = {
-  val (in, pressure) = twoway
-  val (queue, xs) = in.toPump
-
-
-}
         </code>
       </pre>
     </div>
@@ -1161,12 +1124,7 @@ def backpressurePump[T]
 type Pump[T] = (Queue[T], Events[T])
 
 def backpressurePump[T]
-  (twoway: TwoWay[T, Int]): Pump[T] = {
-  val (in, pressure) = twoway
-  val (queue, xs) = in.toPump
-  xs.onEvent(x => pressure ! x)
-  (queue, xs)
-}
+  (twoway: TwoWay[T, Int]): Pump[T]
         </code>
       </pre>
     </div>
@@ -1218,15 +1176,6 @@ type Valve[T] = (Channel[T], Signal[Boolean])
 
 
 
-
-
-
-
-
-
-
-
-
         </code>
       </pre>
     </div>
@@ -1237,98 +1186,61 @@ type Valve[T] = (Channel[T], Signal[Boolean])
 type Valve[T] = (Channel[T], Signal[Boolean])
 
 def backpressureValve[T]
-  (twoway: TwoWay[Int, T]): Valve[T] = {
-  val (pressure, out) = twoway
-
-
-
-
-
-
-
-}
+  (twoway: TwoWay[Int, T]): Valve[T]
         </code>
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="7000" data-y="700">
+    <div class="step fadealways" data-x="7000" data-y="2000">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Valve[T] = (Channel[T], Signal[Boolean])
-
-def backpressureValve[T]
-  (twoway: TwoWay[Int, T]): Valve[T] = {
-  val (pressure, out) = twoway
-  val c = open[T]
-  val sends = c.events.map(x => -1)
+type Stream.Req[T] =
+  Channel[TwoWay.Req[Int, T]]
 
 
-
-
-
-}
         </code>
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="7000" data-y="700">
+    <div class="step fadealways" data-x="7000" data-y="2000">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Valve[T] = (Channel[T], Signal[Boolean])
+type Stream.Req[T] =
+  Channel[TwoWay.Req[Int, T]]
 
-def backpressureValve[T]
-  (twoway: TwoWay[Int, T]): Valve[T] = {
-  val (pressure, out) = twoway
-  val c = open[T]
-  val sends = c.events.map(x => -1)
-  val available = (pressure union sends)
-    .scanPast(0)(_ + _).toSignal
-
-
-
-}
+type Stream[T] = Channel[Stream.Req[T]]
         </code>
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="7000" data-y="700">
+    <div class="step fadealways" data-x="7000" data-y="2000">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Valve[T] = (Channel[T], Signal[Boolean])
+def map[T, S](
+  s: Stream[T], f: T => S): Stream[S]
 
-def backpressureValve[T]
-  (twoway: TwoWay[Int, T]): Valve[T] = {
-  val (pressure, out) = twoway
-  val c = open[T]
-  val sends = c.events.map(x => -1)
-  val available = (pressure union sends)
-    .scanPast(0)(_ + _).toSignal
-  c.events.filter(x => available())
-    .onEvent(x => out ! x)
+def filter[T](
+  s: Stream[T], f: T => Boolean): Stream[T]
 
-}
+def scanLeft[T,S](
+  s: Stream[T], z: S,
+  op: (S, T) => S): Stream[S]
         </code>
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="7000" data-y="700">
-      <pre class="snippet" style="position: relative; left: 0px;">
-        <code class="scala">
-type Valve[T] = (Channel[T], Signal[Boolean])
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <img height="400px" src="img/encoding-communication/single-machine.png" />
+    </div>
 
-def backpressureValve[T]
-  (twoway: TwoWay[Int, T]): Valve[T] = {
-  val (pressure, out) = twoway
-  val c = open[T]
-  val sends = c.events.map(x => -1)
-  val available = (pressure union sends)
-    .scanPast(0)(_ + _).toSignal
-  c.events.filter(x => available())
-    .onEvent(x => out ! x)
-  (c.channel, available)
-}
-        </code>
-      </pre>
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <img height="400px" src="img/encoding-communication/tcp.png" />
+    </div>
+
+    <div class="step fadealways" data-x="33000" data-y="0">
+      <p style="position: relative; left: -140px;">
+        <img height="350px" src="img/encoding-communication/apps.png" />
+      </p>
     </div>
 
 </div>
