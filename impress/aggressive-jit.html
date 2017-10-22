@@ -590,11 +590,13 @@ def computeSum(xs: Array[Int]): Long =
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="24000" data-y="0">
+    <div class="step fadefuture" data-x="23300" data-y="0">
       <p style="text-align: center;">
         <img height="600px" src="img/aggressive-jit/computeSum-after-parsing.png" />
       </p>
+    </div>
 
+    <div class="step fadealways" data-x="23850" data-y="0">
       <pre class="snippet" style="">
         <code class="scala">
 
@@ -608,11 +610,7 @@ def computeSum(xs: Array[Int]): Long =
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="24000" data-y="0">
-      <p style="text-align: center;">
-        <img height="600px" src="img/aggressive-jit/computeSum-after-parsing.png" />
-      </p>
-
+    <div class="step fadealways" data-x="23950" data-y="0">
       <pre class="snippet" style="">
         <code class="scala">
 def computeSum(xs: Array[Int]): Long = {
@@ -691,8 +689,20 @@ def computeSum(xs: Array[Int]): Long = {
 
     <div class="step fadealways" data-x="24000" data-y="0">
       <p style="text-align: center;">
-        <img height="400px" src="img/aggressive-jit/computeSum-call-graph-0-after-inline.png" />
+        <img height="400px" src="img/aggressive-jit/computeSum-call-graph-0-after-expand-typeswitch.png" />
       </p>
+
+      <p style="text-align: center;">
+        Polymorphics callsites are represented
+        with typeswitches.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="24000" data-y="0">
+      <p style="text-align: center;">
+        <img height="300px" src="img/aggressive-jit/computeSum-call-graph-0-after-inline.png" />
+      </p>
+      <br/>
 
       <p style="text-align: center;">
         Receiver type information improves,
@@ -734,7 +744,7 @@ def computeSum(xs: Array[Int]): Long = {
       <br/>
       <p style="text-align: center;">
         The expanded part of the call graph
-        cal be completely inlined.
+        can be completely inlined.
       </p>
     </div>
 
@@ -880,10 +890,11 @@ def computeSum(xs: Seq[Int]): Long = {
 
     <div class="step fadealways" data-x="30000" data-y="0">
       <p style="text-align: center;">
-        Conjecture:
+        Conclusion:
         <br/>
-        Optimizing the data structure
-        is best left to the static compiler.
+        Optimizing the data structures
+        would require whole-program analysis,
+        and is best left to the static compiler.
       </p>
     </div>
 
