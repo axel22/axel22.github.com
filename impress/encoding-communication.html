@@ -486,29 +486,11 @@ F = { f }
 
     <div class="step fadealways" data-x="3000" data-y="0">
       <p>
-        <pre class="snippet" style="position: relative; left: -100px;"><code class="scala">
-{ (spawn(_.onEvent(println)) ! 7, &epsilon;) }
-
-
-
-
-          </code></pre>
-      </p>
-      <p>
         <img height="490px" src="img/encoding-communication/semantics-1.svg" />
       </p>
     </div>
 
     <div class="step fadealways" data-x="3000" data-y="0">
-      <p>
-        <pre class="snippet" style="position: relative; left: -100px;"><code class="scala">
-{ (spawn(_.onEvent(println)) ! 7, &epsilon;) }
-{ (c!7,&epsilon;) | (e.onEvent(println), (c, e, &epsilon;, {})) }
-
-
-
-          </code></pre>
-      </p>
       <p>
         <img height="490px" src="img/encoding-communication/semantics-2.svg" />
       </p>
@@ -516,29 +498,11 @@ F = { f }
 
     <div class="step fadealways" data-x="3000" data-y="0">
       <p>
-        <pre class="snippet" style="position: relative; left: -100px;"><code class="scala">
-{ (spawn(_.onEvent(println)) ! 7, &epsilon;) }
-{ (c!7,&epsilon;) | (e.onEvent(println), (c, e, &epsilon;, {})) }
-{ (&epsilon;,&epsilon;)   | (e.onEvent(println), (c, e, 7, {})) }
-
-
-          </code></pre>
-      </p>
-      <p>
         <img height="490px" src="img/encoding-communication/semantics-3.svg" />
       </p>
     </div>
 
     <div class="step fadealways" data-x="3000" data-y="0">
-      <p>
-        <pre class="snippet" style="position: relative; left: -100px;"><code class="scala">
-{ (spawn(_.onEvent(println)) ! 7, &epsilon;) }
-{ (c!7,&epsilon;) | (e.onEvent(println), (c, e, &epsilon;, {})) }
-{ (&epsilon;,&epsilon;)   | (e.onEvent(println), (c, e, 7, {})) }
-{ (&epsilon;,&epsilon;)   | (&epsilon;, (c, e, 7, {println})) }
-
-          </code></pre>
-      </p>
       <p>
         <img height="490px" src="img/encoding-communication/semantics-4.svg" />
       </p>
@@ -546,17 +510,14 @@ F = { f }
 
     <div class="step fadealways" data-x="3000" data-y="0">
       <p>
-        <pre class="snippet" style="position: relative; left: -100px;"><code class="scala">
-{ (spawn(_.onEvent(println)) ! 7, &epsilon;) }
-{ (c!7,&epsilon;) | (e.onEvent(println), (c, e, &epsilon;, {})) }
-{ (&epsilon;,&epsilon;)   | (e.onEvent(println), (c, e, 7, {})) }
-{ (&epsilon;,&epsilon;)   | (&epsilon;, (c, e, 7, {println})) }
-{ (&epsilon;,&epsilon;)   | (println(7), (c, e, &epsilon;, {})) }
-          </code></pre>
-      </p>
-      <p>
         <img height="490px" src="img/encoding-communication/semantics-5.svg" />
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="3000" data-y="0">
+      <h2 class="sketch" style="text-align: center;">
+        Client-Server Protocol
+      </h2>
     </div>
 
     <div class="step fadealways" data-x="3000" data-y="-1500">
@@ -582,6 +543,24 @@ F = { f }
     <div class="step fadefuture" data-x="3000" data-y="-1500">
       <img height="600px" style="position: relative; left: 0px;"
         src="img/encoding-communication/server.svg"/>
+    </div>
+
+    <div class="step fadealways" data-x="3700" data-y="-1750">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Req[T, S] = (T, Channel[S])
+
+
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
     </div>
 
     <div class="step fadealways" data-x="3700" data-y="-1750">
@@ -739,6 +718,12 @@ val s = server(data)
     </div>
 
     <div class="step fadealways" data-x="10000" data-y="-2400">
+      <h2 class="sketch" style="text-align: center;">
+        Two-way channels
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="10000" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/encoding-communication/two-way-1.svg"/>
     </div>
@@ -794,6 +779,18 @@ val s = server(data)
 type TwoWay.Req[I, O] =
   Req[Channel[I], Channel[O]]
 
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="10700" data-y="-400">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type TwoWay.Req[I, O] =
+  Req[Channel[I], Channel[O]]
+
 type TwoWay.Server[I, O] =
   Channel[TwoWay.Req[I, O]]
         </code>
@@ -819,6 +816,47 @@ type TwoWay.Server[I, O] =
       <img height="500px" style="position: relative; left: -120px;"
         src="img/encoding-communication/server-two-way.svg"/>
     </div>
+
+    <div class="step fadealways" data-x="10500" data-y="600">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type TwoWay[I, O] = (Channel[I], Events[O])
+
+
+
+
+
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="10500" data-y="600">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type TwoWay[I, O] = (Channel[I], Events[O])
+
+def twoWayServer[I, O]:
+  (TwoWay.Server[I, O], Events[TwoWay[O, I]]) = {
+
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
 
     <div class="step fadealways" data-x="10500" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
@@ -911,6 +949,36 @@ def twoWayServer[I, O]:
 def connect[I, O](
   s: TwoWay.Server[I, O]
 ): Events[TwoWay[I, O]] = {
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="9300" data-y="500">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def connect[I, O](
+  s: TwoWay.Server[I, O]
+): Events[TwoWay[I, O]] = {
+  val c = open[I]
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="9300" data-y="500">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def connect[I, O](
+  s: TwoWay.Server[I, O]
+): Events[TwoWay[I, O]] = {
   val c = open[I]
   (s ? c) map { output =>
     (output, c.events)
@@ -943,6 +1011,18 @@ def connect[I, O](
     <div class="step fadealways" data-x="11600" data-y="0">
       <img height="550px" style="position: relative; left: -80px;"
         src="img/encoding-communication/server-reliable-4.svg"/>
+    </div>
+
+    <div class="step fadefuture" data-x="11600" data-y="-400">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Reliable.Req[T] =
+  TwoWay.Req[Long, (T, Long)]
+
+
+
+        </code>
+      </pre>
     </div>
 
     <div class="step fadefuture" data-x="11600" data-y="-400">
