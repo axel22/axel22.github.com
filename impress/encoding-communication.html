@@ -217,15 +217,9 @@
     </div>
 
     <div class="step fadealways" data-x="3000" data-y="0">
-      <h2 style="text-align: center;">
-        Questions
-      </h2>
-      <p>
-        1. Can two-way reliable backpressure
-           be encoded in the reactor model?
-      </p>
-      <p>
-        2. What are the costs?
+      <p style="text-align: center;">
+        Should a message-based programming model
+        have backpressure as a core primitive?
       </p>
     </div>
 
@@ -516,6 +510,34 @@ F = { f }
 
     <div class="step fadealways" data-x="3000" data-y="0">
       <h2 class="sketch" style="text-align: center;">
+        Question
+      </h2>
+      <p style="text-align: center;">
+        How to encode a function
+        that returns a backpressure channel?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="3000" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def backpressure[T]: BackpressureChannel[T]
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="3000" data-y="0">
+      <h2 class="sketch" style="text-align: center;">
+        Idea
+      </h2>
+      <p style="text-align: center;">
+        Encode backpressure as a composition
+        of several simpler protocols.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="3000" data-y="0">
+      <h2 class="sketch" style="text-align: center;">
         Client-Server Protocol
       </h2>
     </div>
@@ -588,7 +610,25 @@ type Req[T, S] = (T, Channel[S])
 
 type Server[T, S] = Channel[Req[T, S]]
 
-def server(f: T => S) = {
+def server(f: T => S): Server[T, S] = {
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="3700" data-y="-1750">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Req[T, S] = (T, Channel[S])
+
+type Server[T, S] = Channel[Req[T, S]]
+
+def server(f: T => S): Server[T, S] = {
   val c = open[Req[T, S]]
 
 
@@ -606,7 +646,25 @@ type Req[T, S] = (T, Channel[S])
 
 type Server[T, S] = Channel[Req[T, S]]
 
-def server(f: T => S) = {
+def server(f: T => S): Server[T, S] = {
+  val c = open[Req[T, S]]
+  c.events onEvent {
+    case (x, ch) => ch ! f(x)
+  }
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="3700" data-y="-1750">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Req[T, S] = (T, Channel[S])
+
+type Server[T, S] = Channel[Req[T, S]]
+
+def server(f: T => S): Server[T, S] = {
   val c = open[Req[T, S]]
   c.events onEvent {
     case (x, ch) => ch ! f(x)
@@ -644,6 +702,26 @@ def ?[T, S]
   (s: Server[T, S], x: T): Events[S] = {
   val reply = open[S]
 
+
+}
+
+
+
+
+
+
+
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="3700" data-y="-1100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def ?[T, S]
+  (s: Server[T, S], x: T): Events[S] = {
+  val reply = open[S]
+  s ! (x, reply.channel)
 
 }
 
@@ -743,6 +821,14 @@ val s = server(data)
         src="img/encoding-communication/two-way-4.svg"/>
     </div>
 
+    <div class="step fadealways" data-x="10000" data-y="-2100">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type TwoWay[I, O] = (Channel[O], Events[I])
+        </code>
+      </pre>
+    </div>
+
     <div class="step fadealways" data-x="10000" data-y="-2400">
       <img height="500px" style="position: relative; left: -120px;"
         src="img/encoding-communication/two-way-5.svg"/>
@@ -792,7 +878,7 @@ type TwoWay.Req[I, O] =
   Req[Channel[I], Channel[O]]
 
 type TwoWay.Server[I, O] =
-  Channel[TwoWay.Req[I, O]]
+  Server[Channel[I], Channel[O]]
         </code>
       </pre>
     </div>
@@ -820,7 +906,7 @@ type TwoWay.Server[I, O] =
     <div class="step fadealways" data-x="10500" data-y="600">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type TwoWay[I, O] = (Channel[I], Events[O])
+type TwoWay[I, O] = (Channel[O], Events[I])
 
 
 
@@ -843,7 +929,7 @@ type TwoWay[I, O] = (Channel[I], Events[O])
 type TwoWay[I, O] = (Channel[I], Events[O])
 
 def twoWayServer[I, O]:
-  (TwoWay.Server[I, O], Events[TwoWay[O, I]]) = {
+  (TwoWay.Server[I, O], Events[TwoWay[O, I]])
 
 
 
@@ -852,7 +938,7 @@ def twoWayServer[I, O]:
 
 
 
-}
+
         </code>
       </pre>
     </div>
@@ -887,7 +973,7 @@ def twoWayServer[I, O]:
   (TwoWay.Server[I, O], Events[TwoWay[O, I]]) = {
   val c = open[TwoWay.Req[I, O]]
   val connections = c.events map {
-    case (input, reply) =>
+    case (input, sender) =>
 
 
 
@@ -907,9 +993,29 @@ def twoWayServer[I, O]:
   (TwoWay.Server[I, O], Events[TwoWay[O, I]]) = {
   val c = open[TwoWay.Req[I, O]]
   val connections = c.events map {
-    case (input, reply) =>
+    case (input, sender) =>
       val output = open[O]
-      reply ! output.channel
+      sender ! output.channel
+      (input, output.events): TwoWay[O, I]
+  }
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadefuture" data-x="10500" data-y="600">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type TwoWay[I, O] = (Channel[I], Events[O])
+
+def twoWayServer[I, O]:
+  (TwoWay.Server[I, O], Events[TwoWay[O, I]]) = {
+  val c = open[TwoWay.Req[I, O]]
+  val connections = c.events map {
+    case (input, sender) =>
+      val output = open[O]
+      sender ! output.channel
       (input, output.events)
   }
   (c.channel, connections)
@@ -1013,11 +1119,11 @@ def connect[I, O](
         src="img/encoding-communication/server-reliable-4.svg"/>
     </div>
 
-    <div class="step fadefuture" data-x="11600" data-y="-400">
+    <div class="step fadealways" data-x="11600" data-y="-400">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Reliable.Req[T] =
-  TwoWay.Req[Long, (T, Long)]
+type ReliableChannel[T] =
+  TwoWay[UID, (T, UID)]
 
 
 
@@ -1028,11 +1134,11 @@ type Reliable.Req[T] =
     <div class="step fadefuture" data-x="11600" data-y="-400">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Reliable.Req[T] =
-  TwoWay.Req[Long, (T, Long)]
+type ReliableChannel[T] =
+  TwoWay[UID, (T, UID)]
 
-type Reliable.Server[T] =
-  TwoWay.Server[Long, (T, Long)]
+type ReliableEvents[T] =
+  TwoWay[(T, UID), UID]
         </code>
       </pre>
     </div>
@@ -1042,11 +1148,10 @@ type Reliable.Server[T] =
         src="img/encoding-communication/server-reliable-5.svg"/>
     </div>
 
-    <div class="step fadefuture" data-x="11800" data-y="700">
+    <div class="step fadefuture" data-x="11800" data-y="500">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-def reliableServer[T]:
-  (Reliable.Server[T], Events[Events[T]])
+def reliable(e: ReliableEvents[T]): Events[T]
         </code>
       </pre>
     </div>
@@ -1119,8 +1224,7 @@ def reliableServer[T]:
     <div class="step fadealways" data-x="8200" data-y="540">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-def openReliable[T](server: Reliable.Server[T]):
-  Events[Channel[T]]
+def reliable(c: ReliableChannel[T]): Channel[T]
         </code>
       </pre>
     </div>
@@ -1208,8 +1312,6 @@ type BackpressureEvents[T] =
 
 
 
-
-
         </code>
       </pre>
     </div>
@@ -1220,10 +1322,8 @@ type BackpressureEvents[T] =
 type BackpressureEvents[T] =
   (Events[Boolean], Queue[T])
 
-def backpressureServer[T]: (
-  TwoWay.Server[Int, T],
-  Events[BackpressureEvents[T]]
-)
+def backpressure[T]
+  (t: TwoWay[T, Int]): BackpressureEvents[T]
         </code>
       </pre>
     </div>
@@ -1276,7 +1376,6 @@ type BackpressureChannel[T] =
 
 
 
-
         </code>
       </pre>
     </div>
@@ -1287,11 +1386,22 @@ type BackpressureChannel[T] =
 type BackpressureChannel[T] =
   (Channel[T], Events[Boolean])
 
-def openBackpressure[T](
-  twoway: TwoWay[Int, T]
-): BackpressureChannel[T]
+def backpressure[T](t: TwoWay[Int, T]):
+  BackpressureChannel[T]
         </code>
       </pre>
+    </div>
+
+    <div class="step fadealways" data-x="7000" data-y="2000">
+      <img height="400px" src="img/encoding-communication/stream.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="7000" data-y="2000">
+      <img height="400px" src="img/encoding-communication/stream-1.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="7000" data-y="2000">
+      <img height="400px" src="img/encoding-communication/stream-2.svg" />
     </div>
 
     <div class="step fadealways" data-x="7000" data-y="2000">
@@ -1324,6 +1434,18 @@ def filter[T](
 def scanLeft[T,S](
   s: Stream[T], z: S,
   op: (S, T) => S): Stream[S]
+
+def batch(s: Stream[T], x: Int): Stream[Seq[T]]
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="7000" data-y="2000">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def lift[T, S]
+  (f: Events[T] => Events[S]):
+    Stream[T] => Stream[S]
         </code>
       </pre>
     </div>
