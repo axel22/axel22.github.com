@@ -259,6 +259,10 @@ types ::=
     </div>
 
     <div class="step fadealways" data-x="3000" data-y="0">
+      <img height="490px" src="img/encoding-communication/pipe.svg" />
+    </div>
+
+    <div class="step fadealways" data-x="3000" data-y="0">
       <h2 class="sketch" style="text-align: center;">
         Reactor model
       </h2>
@@ -1123,7 +1127,7 @@ def connect[I, O](
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type ReliableChannel[T] =
-  TwoWay[UID, (T, UID)]
+  TwoWay[Stamp, (T, Stamp)]
 
 
 
@@ -1135,10 +1139,10 @@ type ReliableChannel[T] =
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 type ReliableChannel[T] =
-  TwoWay[UID, (T, UID)]
+  TwoWay[Stamp, (T, Stamp)]
 
 type ReliableEvents[T] =
-  TwoWay[(T, UID), UID]
+  TwoWay[(T, Stamp), Stamp]
         </code>
       </pre>
     </div>

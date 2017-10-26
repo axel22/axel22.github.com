@@ -183,7 +183,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -224,24 +224,34 @@
     <text
        sodipodi:linespacing="125%"
        id="text4487"
-       y="584.57733"
-       x="384.04163"
+       y="517.76617"
+       x="371.31369"
        style="font-size:79.81760406px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
-         y="584.57733"
-         x="384.04163"
-         id="tspan4489"
-         sodipodi:role="line">let me know</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
-         y="684.34937"
-         x="384.04163"
+         y="517.76617"
+         x="371.31369"
          sodipodi:role="line"
-         id="tspan4912">how I can</tspan><tspan
+         id="tspan3095">Stream</tspan><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
-         y="784.12134"
-         x="384.04163"
+         y="617.53821"
+         x="371.31369"
          sodipodi:role="line"
-         id="tspan4914">connect to you</tspan></text>
+         id="tspan3099">waits until</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         y="717.31018"
+         x="371.31369"
+         sodipodi:role="line"
+         id="tspan3103">it can establish</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         y="817.08221"
+         x="371.31369"
+         sodipodi:role="line"
+         id="tspan3107">backpressure</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         y="916.85419"
+         x="371.31369"
+         sodipodi:role="line"
+         id="tspan3109">to someone</tspan></text>
   </g>
 </svg>
