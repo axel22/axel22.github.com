@@ -238,7 +238,7 @@
     <div class="step fadealways" data-x="1400" data-y="0">
       <img height="600px" src="img/roc/hash-trie-2nd-10.svg">
       <p style="font-size: 28px; position: absolute;">
-        Prokopec et al., Lock-Free Resizable Concurrent Tries, LCPC 2011
+        <i>Prokopec et al.</i>, Lock-Free Resizable Concurrent Tries, LCPC 2011
       </p>
     </div>
 
@@ -286,6 +286,168 @@
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def insert(k: K, v: V, a: Array, d: Int) {
+
+
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i))
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+    case x: Leaf =>
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+    case x: Leaf =>
+      val ch = createChild(x, k, v)
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+    case x: Leaf =>
+      val ch = createChild(x, k, v)
+           CAS(a(i), x, ch)
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+    case x: Leaf =>
+      val ch = createChild(x, k, v)
+      if (!CAS(a(i), x, ch))
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
   val i = index(k, d)
   READ(a(i)) match {
     case ch: Array =>
@@ -300,61 +462,155 @@ def insert(k: K, v: V, a: Array, d: Int) {
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="1100" data-y="0">
-      Lesson 1:
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h1 class="sketch centered">
+        Lesson
+      </h1>
 
-      CAS is a fundamental primitive for building lock-free algorithms.
-    </div>
-
-    <div class="step fadealways" data-x="1100" data-y="0">
-      More closely, CAS serves two purposes.
-    </div>
-
-    <div class="step fadealways" data-x="1100" data-y="0">
-      First: an agreement primitive.
-    </div>
-
-    <div class="step fadealways" data-x="1100" data-y="0">
-      Second: an error-detection primitive.
-    </div>
-
-    <div class="step fadealways" data-x="1100" data-y="0">
-      Atomic snapshot
-    </div>
-
-    <div class="step fadealways" data-x="1100" data-y="0">
-      Lesson 2:
-
-      Although CAS works on single memory locations,
-      it allows efficiently changing global state.
-    </div>
-
-    <div class="step fadealways" data-x="1100" data-y="0">
-      Hash-Trie
-      3rd and 4th levels
-    </div>
-
-    <div class="step fadealways" data-x="1100" data-y="300">
-      <p>
-        In a hash-trie with <b>n</b> elements,
-        what's the probability
-        that a random element is at the depth <b>d</b>?
+      <p class="centered">
+        CAS is a fundamental synchronization primitive
+        for concurrent algorithms.
       </p>
     </div>
 
-    <div class="step fadealways" data-x="1100" data-y="300">
-      <p>
-        In a hash-trie with <b>n</b> elements,
-        what's the probability
-        that a random element is at the depth <b>d</b>?
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        More precisely,
+      </p>
+      <p class="centered">
+        CAS is two primitives at once.
       </p>
     </div>
 
-    <div class="step fadealways" data-x="1100" data-y="0">
-      Lesson 3:
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        An agreement primitive
+      </p>
 
-      Not all CAS operations change the global state,
-      but they can improve performance.
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+      ...
+      val ch = createChild(x, k, v)
+      if (!CAS(a(i), x, <span style="color: #ee0000;">ch</span>))
+        insert(k, v, a, d)
+      ...
+      </code></pre>
+      <img height="100px" style="position: absolute; left: 650px; top: 320px;"
+        src="img/roc/true.svg">
+
+      <p class="centered">
+        All threads agree that the value changed
+        from <i>old</i> to <i>new</i>.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        A failure-detection primitive
+      </p>
+
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+      ...
+      val ch = createChild(x, k, v)
+      if (!CAS(a(i), x, ch))
+        <span style="color: #ee0000;">insert(k, v, a, d)</span>
+      ...
+      </code></pre>
+      <img height="100px" style="position: absolute; left: 650px; top: 320px;"
+        src="img/roc/false.svg">
+
+      <p class="centered">
+        The update failed,
+        and the operation must be restarted.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="600" data-y="0">
+      <img height="600px" src="img/roc/office-mail-1.svg">
+    </div>
+
+    <div class="step fadealways fadelate" data-x="600" data-y="0">
+      <img height="600px" src="img/roc/office-mail.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie-snapshot-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie-snapshot-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie-snapshot.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie-snapshot-invalidate.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie-snapshot-invalidate.svg">
+      <p style="font-size: 26px; position: absolute; text-align: center;">
+        <i>Prokopec et al.</i>, Concurrent Tries with Efficient Non-Blocking Snapshots PPoPP 2012
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="600" data-y="0">
+      <img height="600px" src="img/roc/office-mail-faster-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="600" data-y="0">
+      <img height="600px" src="img/roc/office-mail-faster-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="600" data-y="0">
+      <img height="600px" src="img/roc/office-mail-faster.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/hash-trie-log.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/cache-trie-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/cache-trie-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/cache-trie-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/cache-trie-1-question.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/cache-trie-1.svg">
+      <p style="font-size: 26px; position: absolute; text-align: center;">
+        <i>Prokopec</i>,
+        Cache-Tries: Tries with Constant-Time Operations
+        (in preprint)
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/roc/cache-trie.svg">
+      <p style="font-size: 26px; position: absolute; text-align: center;">
+        <i>Prokopec</i>,
+        Cache-Tries: Tries with Constant-Time Operations
+        (in preprint)
+      </p>
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">

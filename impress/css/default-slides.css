@@ -577,3 +577,7 @@ pre.snippet code {
   margin-top: 10px;
   font-size: 22px;
 }
+
+.centered {
+  text-align: center;
+}
