@@ -614,29 +614,102 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
-      Back in the office
+      <img height="600px" src="img/roc/office-boss.svg">
+    </div>
+
+    <div class="step fadealways fadeinfast" data-x="600" data-y="0">
+      <img height="600px" src="img/roc/office-slam.svg">
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
-      Boss slams the door open
+      <img height="600px" src="img/roc/office-slam-1.svg">
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
-      Task: master server.
-
-      Separate the data between the shards.
+      <img height="600px" src="img/roc/office-slam-2.svg">
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
-      The actor model.
+    <div class="step fadealways fadelate" data-x="600" data-y="0">
+      <img height="600px" src="img/roc/office-slam-3.svg">
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
-      Implement a failure detector in the actor model.
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/shards.svg">
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
-      Implement the master server.
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/shards-fail.svg">
+      <p class="sketch" style="font-size: 40px; position: absolute; text-align: center;">
+        Shard machines can fail.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/shards-restore.svg">
+      <p class="sketch" style="font-size: 40px; position: absolute; text-align: center;">
+        If a shard fails, it should be restored.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">
+        Actor Model
+      </h2>
+      <div style="column-count: 2">
+        <p>
+          <pre class="snippet" style="">
+            <code class="scala">
+terms ::=
+  ...
+  actor(t)
+  t ! t
+  receive()
+            </code>
+          </pre>
+        </p>
+        <p>
+          <pre class="snippet" style="">
+            <code class="scala">
+types ::=
+  ...
+  ActorRef
+
+
+            </code>
+          </pre>
+        </p>
+      </div>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector(shard: ActorRef) = {
+  while (true) {
+    shard ! "ping"
+    after(1 second) { self ! "fail" }
+    receive() match {
+      case "fail" => return true
+      case "live" => // repeat
+    }
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  if (!failureDetector(shard)) {
+    respawn(shard)
+  }
+  shard ! (k, v)
+}
+        </code>
+      </pre>
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
