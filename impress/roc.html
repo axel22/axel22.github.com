@@ -722,10 +722,49 @@ def insert(k: K, v: V) {
         1. A non-trivial distributed program
            runs many message protocols simultaneously.
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/many-protocols-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/many-protocols-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/many-protocols-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/many-protocols.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">
+        Observations
+      </h2>
+
+      <p class="centered">
+        1. A non-trivial distributed program
+           runs many message protocols simultaneously.
+      </p>
       <p class="centered">
         2. In a distributed program,
            the order of message arrivals is not predetermined.
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/many-protocols-client.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/many-protocols-reply.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/many-protocols-failure.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -741,7 +780,7 @@ terms ::=
   spawn(t)
   flow(t)
   t ! t
-  receive()
+  receive(t)
             </code>
           </pre>
         </p>
@@ -758,6 +797,11 @@ types ::=
           </pre>
         </p>
       </div>
+      <p style="font-size: 26px; position: absolute; text-align: center;">
+        <i>Prokopec</i>,
+        Isolates, Channels and Event Streams for Composable Distributed Computing
+        (Onward! 2015)
+      </p>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -767,9 +811,9 @@ def failureDetector
   (shard: Channel[Any]): Events[Failure] =
   flow {
     while (true) {
+      val live: Events[Live] = shard ? Ping
       val timeout: Events[Timeout] =
         clock.timeout(1 second)
-      val live: Events[Live] = shard ? Ping
       choose(live, timeout) match {
         case Live => // repeat
         case Timeout => return Failure
