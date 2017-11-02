@@ -831,6 +831,8 @@ def failureDetector
     <div class="step fadealways" data-x="1500" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
+import algorithms.failureDetector
+
 def insert(k: K, v: V) {
   val shard = shardFor(k)
   val failures = failureDetector(shard)
