@@ -729,19 +729,59 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      The flow model.
+      <h2 class="sketch centered">
+        Flow Model
+      </h2>
+      <div style="column-count: 2">
+        <p>
+          <pre class="snippet" style="">
+            <code class="scala">
+terms ::=
+  ...
+  spawn(t)
+  flow(t)
+  t ! t
+  receive()
+            </code>
+          </pre>
+        </p>
+        <p>
+          <pre class="snippet" style="">
+            <code class="scala">
+types ::=
+  ...
+  Channel[T]
+  Events[T]
+
+
+            </code>
+          </pre>
+        </p>
+      </div>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      Implement the failure detector in the flow model.
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector
+  (shard: Channel[Any]): Events[Failure] =
+  flow {
+    while (true) {
+      val timeout: Events[Timeout] =
+        clock.timeout(1 second)
+      val live: Events[Live] = shard ? Ping
+      choose(live, timeout) match {
+        case Live => // repeat
+        case Timeout => return Failure
+      }
+    }
+  }
+        </code>
+      </pre>
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
       Conversation between Circe and Joe.
-    </div>
-
-    <div class="step fadealways" data-x="1500" data-y="0">
-      show the insert algorithm
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -750,7 +790,7 @@ def insert(k: K, v: V) {
 def insert(k: K, v: V) {
   val shard = shardFor(k)
   val failures = failureDetector(shard)
-  val inserts: Events[Success] = shard ? (k, v)
+  val inserts = shard ? (k, v)
   choose(inserts, failures) match {
     case Success => // done
     case Failure =>
