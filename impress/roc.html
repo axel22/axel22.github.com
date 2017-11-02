@@ -703,24 +703,34 @@ def failureDetector(shard: ActorRef) = {
         <code class="scala">
 def insert(k: K, v: V) {
   val shard = shardFor(k)
-  if (!failureDetector(shard)) {
+  if (failureDetector(shard)) {
     respawn(shard)
   }
-  shard ! (k, v)
+  shard ! (k, v) // this line is never reached
+  assert(receive() == "inserted")
 }
         </code>
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
-      The need for two control flows.
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">
+        Observation
+      </h2>
+
+      <p class="sketch centered">
+        1. 
+      </p>
+      <p class="sketch centered">
+        2. 
+      </p>
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       The flow model.
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       Implement the failure detector in the flow model.
     </div>
 
@@ -728,36 +738,54 @@ def insert(k: K, v: V) {
       Conversation between Circe and Joe.
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       show the insert algorithm
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+  val inserts: Events[Success] = shard ? (k, v)
+  choose(inserts, failures) match {
+    case Success => // done
+    case Failure =>
+      respawn(shard)
+      insert(k, v)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
       failure detection + agreement = progress
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       Failure models.
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       Network models.
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       data center vs IoT
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       Future work: a programming model with a safe spawn and failure detection.
       Admits Byzantine failures.
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       Future work: type systems that verify component properties.
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="-300">
+    <div class="step fadealways" data-x="1500" data-y="-300">
       <h2 style="text-align: center;">
         Thank you!
       </h2>
