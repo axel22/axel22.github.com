@@ -872,8 +872,46 @@ def insert(k: K, v: V) {
       </pre>
     </div>
 
+    <div class="step fadefuture" data-x="2400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+    case x: Leaf =>
+      val ch = createChild(x, k, v)
+      if (!CAS(a(i), x, ch))
+        insert(k, v, a, d)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
     <div class="step fadealways" data-x="1500" data-y="0">
-      failure detection + agreement = progress
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+  val inserts = shard ? (k, v)
+  choose(inserts, failures) match {
+    case Success => // done
+    case Failure =>
+      respawn(shard)
+      insert(k, v)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/distributed-progress.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
