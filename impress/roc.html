@@ -714,12 +714,120 @@ types ::=
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def failureDetector(shard: ActorRef) = {
+  var iteration = 0
+  while (true) {
+
+
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector(shard: ActorRef) = {
+  var iteration = 0
+  while (true) {
+
+
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector(shard: ActorRef) = {
+  var iteration = 0
   while (true) {
     shard ! "ping"
-    after(1 second) { self ! "fail" }
+
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector(shard: ActorRef) = {
+  var iteration = 0
+  while (true) {
+    shard ! "ping"
+    after(1 second) { self ! iteration }
+
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector(shard: ActorRef) = {
+  while (true) {
+    shard ! "ping"
+    after(1 second) { self ! iteration }
     receive() match {
-      case "fail" => return true
-      case "live" => // repeat
+
+
+    }
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector(shard: ActorRef) = {
+  var iteration = 0
+  while (true) {
+    shard ! "ping"
+    after(1 second) { self ! iteration }
+    receive() match {
+      case `iteration` => return true
+
+    }
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def failureDetector(shard: ActorRef) = {
+  var iteration = 0
+  while (true) {
+    shard ! "ping"
+    after(1 second) { self ! iteration }
+    receive() match {
+      case `iteration` => return true
+      case "live" => iteration += 1
     }
   }
 }
@@ -834,27 +942,153 @@ types ::=
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      <pre class="snippet" style="position: relative; left: 0px;">
-        <code class="scala">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
 def failureDetector
   (shard: Channel[Any]): Events[Failure] =
   flow {
+
+
+
+
+
+
+
+
+
+  }
+      </code></pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+def failureDetector
+  (shard: Channel[Any]): Events[Failure] =
+  flow {
+    var iteration = 0
     while (true) {
       val live: Events[Live] = shard ? Ping
-      val timeout: Events[Timeout] =
-        clock.timeout(1 second)
-      choose(live, timeout) match {
-        case Live => // repeat
+
+
+
+
+
+    }
+  }
+      </code></pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+def failureDetector
+  (shard: Channel[Any]): Events[Failure] =
+  flow {
+    var iteration = 0
+    while (true) {
+      val live: Events[Live] = shard ? Ping
+      val fail: Events[Int] = after(1 second)
+
+
+
+
+    }
+  }
+      </code></pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+def failureDetector
+  (shard: Channel[Any]): Events[Failure] =
+  flow {
+    var iteration = 0
+    while (true) {
+      val live: Events[Live] = shard ? Ping
+      val fail: Events[Int] = after(1 second)
+      choose(live, fail) match {
+
+
+      }
+    }
+  }
+      </code></pre>
+    </div>
+
+    <div class="step fadealways fadelate" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+def failureDetector
+  (shard: Channel[Any]): Events[Failure] =
+  flow {
+    var iteration = 0
+    while (true) {
+      val live: Events[Live] = shard ? Ping
+      val fail: Events[Int] = after(1 second)
+      choose(live, fail) match {
+        case Live => iteration += 1
         case Timeout => return Failure
       }
     }
   }
-        </code>
-      </pre>
+      </code></pre>
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
-      TODO: failureDetector specification
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+
+
+
+
+
+
+
+      choose(live, fail)    // variant of receive
+
+
+
+
+
+      </code></pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+def failureDetector
+  (shard: Channel[Any]): Events[Failure] =
+
+
+      //  .------- Program must 'block' here.
+      //  |
+      //  V
+      choose(live, fail) match {
+        case Live => iteration += 1
+        case Timeout => return Failure
+      }
+    }
+  }
+      </code></pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+def failureDetector
+  (shard: Channel[Any]): Events[Failure] =
+
+
+      //  .------- Program must 'block' here.
+      //  |
+      //  V
+      choose(live, fail) match {
+        case Live => iteration += 1
+        case Timeout => return Failure
+      }
+    }
+  }
+      </code></pre>
+      <p style="font-size: 26px; position: absolute; text-align: center;">
+        <i>Prokopec</i>,
+        Implementing Fast First-Class Composable Type-Safe Coroutines with Snapshots
+        Using Metaprogramming
+        (in preprint, 2017)
+      </p>
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
@@ -888,31 +1122,113 @@ import algorithms.failureDetector
 
 def insert(k: K, v: V) {
   val shard = shardFor(k)
+
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+  val inserts = shard ? (k, v)
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
   val failures = failureDetector(shard)
   val inserts = shard ? (k, v)
   choose(inserts, failures) match {
-    case Success => // done
-    case Failure =>
-      respawn(shard)
-      insert(k, v)
+
+
+
+
   }
 }
         </code>
       </pre>
     </div>
 
-    <div class="step fadealways fadelate" data-x="2400" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-def insert(k: K, v: V, a: Array, d: Int) {
-  val i = index(k, d)
-  READ(a(i)) match {
-    case ch: Array =>
-      insert(k, v, ch, d + 1)
-    case x: Leaf =>
-      val ch = createChild(x, k, v)
-      if (!CAS(a(i), x, ch))
-        insert(k, v, a, d)
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+  val inserts = shard ? (k, v)
+  choose(inserts, failures) match {
+    case Success => // done
+
+
+
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+  val inserts = shard ? (k, v)
+  choose(inserts, failures) match {
+    case Success => // done
+    case Failure =>
+      respawn(shard)
+
   }
 }
         </code>
@@ -972,8 +1288,67 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+  val inserts = shard ? (k, v)
+  choose(inserts, failures) match {
+    case Success => // done
+    case Failure =>
+      respawn(shard)
+      insert(k, v)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
       <img height="600px" src="img/roc/distributed-progress.svg">
     </div>
+
+    <div class="step fadealways fadelate" data-x="2400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+    case x: Leaf =>
+      val ch = createChild(x, k, v)
+      if (!CAS(a(i), x, ch))
+        insert(k, v, a, d)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+import algorithms.failureDetector
+
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  val failures = failureDetector(shard)
+  val inserts = shard ? (k, v)
+  choose(inserts, failures) match {
+    case Success => // done
+    case Failure =>
+      respawn(shard)
+      insert(k, v)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
 <!-- 
     <div class="step fadealways" data-x="1500" data-y="0">
       <h2 class="centered">
@@ -1079,13 +1454,8 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      <h2 class="sketch centered">Open Problem</h2>
-      <p class="sketch centered">respawn for the IoT</p>
-    </div>
-
-    <div class="step fadealways" data-x="1500" data-y="0">
       TODO
-      Future work: programming model for correctness.
+      Future work: programming model for easier distributed programming.
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -1094,14 +1464,45 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+type Shard = Channel[Any] {
+  ![(K, V)]
+  receive[Success]
+}
+
+def insert(shard: Shard, k: K, v: V) {
+  val failures = failureDetector(shard)
+  val inserts = shard ? (k, v)
+  choose(inserts, failures) match {
+    case Success => // done
+    case Failure =>
+      respawn(shard)
+      insert(k, v)
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
       TODO
       Future work: a programming model with a safe spawn and failure detection.
       Admits Byzantine failures.
     </div>
 
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Open Problem</h2>
+      <p class="sketch centered">respawn for the IoT</p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Reliability-Oriented Computing</h2>
+    </div>
+
     <div class="step fadealways" data-x="1500" data-y="-300">
       <h2 class="sketch centered">
-        Thank you!
+        Thank you
       </h2>
     </div>
 
