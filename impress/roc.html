@@ -889,6 +889,21 @@ def insert(k: K, v: V) {
   if (failureDetector(shard)) {
     respawn(shard)
   }
+  shard ! (k, v)
+  assert(receive() == "inserted")
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  if (failureDetector(shard)) {
+    respawn(shard)
+  }
   shard ! (k, v) // this line is never reached
   assert(receive() == "inserted")
 }
@@ -1505,10 +1520,15 @@ def insert(k: K, v: V) {
 
     <div class="step fadealways" data-x="1500" data-y="0">
       <h2 class="sketch centered">1. Programming model</h2>
+      <p class="sketch">Multiple control flows</p>
+      <p class="sketch">Channels and event streams</p>
+      <p class="sketch">No inversion of control</p>
+      <p class="sketch">Standard algorithm library</p>
+      <p class="sketch">Optimizations</p>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      <h2 class="sketch centered">2. Fail-safety by design</h2>
+      <h2 class="sketch centered">2. Fail-safety</h2>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -1535,10 +1555,28 @@ def insert(shard: Shard, k: K, v: V) {
 
     <div class="step fadealways" data-x="1500" data-y="0">
       <h2 class="sketch centered">3. Byzantine scheduling</h2>
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def spawn[T](p: =>Unit): Channel[T]
+def respawn[T](c: Channel[T]): Unit
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">3. Byzantine scheduling</h2>
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def spawn[T](p: =>Unit): Channel[T]
+def respawn[T](c: Channel[T]): Unit
+        </code>
+      </pre>
+      <img height="550px" style="position: absolute; bottom: -80px;"
+        src="img/roc/datacenter-iot.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="-300">
-      <h2 class="sketch centered">Reliability-Oriented Computing</h2>
+      <img height="550px" src="img/roc/roc.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="-300">
