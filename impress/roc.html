@@ -1466,7 +1466,7 @@ def insert(k: K, v: V) {
     <div class="step fadealways" data-x="1500" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
-type Shard = Channel[Any] {
+type Shard = Session {
   ![(K, V)]
   receive[Success]
 }
