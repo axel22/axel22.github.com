@@ -714,15 +714,15 @@ types ::=
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def failureDetector(shard: ActorRef) = {
-  var iteration = 0
-  while (true) {
 
 
 
 
 
 
-  }
+
+
+
 }
         </code>
       </pre>
@@ -786,6 +786,7 @@ def failureDetector(shard: ActorRef) = {
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def failureDetector(shard: ActorRef) = {
+  var iteration = 0
   while (true) {
     shard ! "ping"
     after(1 second) { self ! iteration }
@@ -830,6 +831,51 @@ def failureDetector(shard: ActorRef) = {
       case "live" => iteration += 1
     }
   }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+      failureDetector(shard)
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V) {
+  val shard = shardFor(k)
+  if (failureDetector(shard)) {
+    respawn(shard)
+  }
+
+
 }
         </code>
       </pre>
@@ -1288,6 +1334,10 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/roc/distributed-progress.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 import algorithms.failureDetector
@@ -1305,10 +1355,6 @@ def insert(k: K, v: V) {
 }
         </code>
       </pre>
-    </div>
-
-    <div class="step fadealways" data-x="1500" data-y="0">
-      <img height="600px" src="img/roc/distributed-progress.svg">
     </div>
 
     <div class="step fadealways fadelate" data-x="2400" data-y="0">
@@ -1448,19 +1494,21 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      <p class="sketch centered">Asynchronous Network and Byzantine Failures</p>
+      <p class="sketch centered">Asynchronous network and Byzantine failures</p>
       <h2 class="sketch centered">=</h2>
       <h2 class="sketch centered">Internet-of-Things</h2>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      TODO
-      Future work: programming model for easier distributed programming.
+      <h2 class="sketch centered">Future work</h2>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      TODO
-      Future work: type systems that verify component properties.
+      <h2 class="sketch centered">1. Programming model</h2>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">2. Fail-safety by design</h2>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -1486,17 +1534,10 @@ def insert(shard: Shard, k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      TODO
-      Future work: a programming model with a safe spawn and failure detection.
-      Admits Byzantine failures.
+      <h2 class="sketch centered">3. Byzantine scheduling</h2>
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="0">
-      <h2 class="sketch centered">Open Problem</h2>
-      <p class="sketch centered">respawn for the IoT</p>
-    </div>
-
-    <div class="step fadealways" data-x="1500" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="-300">
       <h2 class="sketch centered">Reliability-Oriented Computing</h2>
     </div>
 
