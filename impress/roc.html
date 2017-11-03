@@ -160,10 +160,6 @@
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
-      Office
-    </div>
-
-    <div class="step fadealways" data-x="600" data-y="0">
       <img height="600px" src="img/roc/office-4.svg">
     </div>
 
@@ -475,7 +471,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
 
     <div class="step fadealways" data-x="1400" data-y="0">
       <p class="centered">
-        More precisely,
+        At a closer inspection,
       </p>
       <p class="centered">
         CAS is two primitives at once.
@@ -483,7 +479,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <p class="centered">
+      <p class="centered" style="font-size: 64px;">
         An agreement primitive
       </p>
 
@@ -504,7 +500,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <p class="centered">
+      <p class="centered" style="font-size: 64px;">
         A failure-detection primitive
       </p>
 
@@ -522,6 +518,39 @@ def insert(k: K, v: V, a: Array, d: Int) {
         The update failed,
         and the operation must be restarted.
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/roc/progress.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered" style="font-size: 64px;">
+        Lock-Freedom
+      </p>
+
+      <p class="centered">
+        A concurrent program is lock-free if, given sufficient time,
+        at least one of the threads completes an operation.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def insert(k: K, v: V, a: Array, d: Int) {
+  val i = index(k, d)
+  READ(a(i)) match {
+    case ch: Array =>
+      insert(k, v, ch, d + 1)
+    case x: Leaf =>
+      val ch = createChild(x, k, v)
+      if (!CAS(a(i), x, ch))
+        insert(k, v, a, d)
+  }
+}
+        </code>
+      </pre>
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
@@ -798,7 +827,7 @@ types ::=
         </p>
       </div>
       <p style="font-size: 26px; position: absolute; text-align: center;">
-        <i>Prokopec</i>,
+        <i>Prokopec et al.</i>,
         Isolates, Channels and Event Streams for Composable Distributed Computing
         (Onward! 2015)
       </p>
@@ -825,7 +854,7 @@ def failureDetector
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
-      <img height="600px" src="img/roc/office-chat.svg">
+      TODO: failureDetector specification
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
@@ -872,7 +901,7 @@ def insert(k: K, v: V) {
       </pre>
     </div>
 
-    <div class="step fadefuture" data-x="2400" data-y="0">
+    <div class="step fadealways fadelate" data-x="2400" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def insert(k: K, v: V, a: Array, d: Int) {
@@ -911,32 +940,167 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <p class="centered" style="font-size: 64px;">
+        A failure-detection primitive
+      </p>
+
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+  ...
+  val failures = <span style="color: #ee0000;">failureDetector</span>(shard)
+  ...
+      </code></pre>
+
+      <p class="centered">
+        When a process fails, the program replaces it with an equivalent process.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <p class="centered" style="font-size: 64px;">
+        An agreement primitive
+      </p>
+
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+        ...
+        <span style="color: #ee0000;">respawn</span>(shard)
+        ...
+      </code></pre>
+
+      <p class="centered">
+        All processes must agree about who the replaced process is.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
       <img height="600px" src="img/roc/distributed-progress.svg">
     </div>
-
+<!-- 
     <div class="step fadealways" data-x="1500" data-y="0">
-      Failure models.
+      <h2 class="centered">
+        Fault-freedom
+      </h2>
+
+      <p class="centered">
+        A distributed program is fault-free if, given sufficient time,
+        at least one of the processes fails, or completes an operation.
+      </p>
+    </div>
+ -->
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Synchronous network</h2>
+      <img height="550px" src="img/roc/synchronous-network.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      Network models.
+      <h2 class="sketch centered">Partially synchronous network</h2>
+      <img height="550px" src="img/roc/partially-synchronous-network.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      data center vs IoT
+      <h2 class="sketch centered">Partially synchronous network</h2>
+      <img height="550px" src="img/roc/partially-synchronous-network-1.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Partially synchronous network</h2>
+      <img height="550px" src="img/roc/partially-synchronous-network-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Partially synchronous network</h2>
+      <img height="550px" src="img/roc/partially-synchronous-network-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Asynchronous network</h2>
+      <img height="550px" src="img/roc/asynchronous-network.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Asynchronous network</h2>
+      <img height="550px" src="img/roc/asynchronous-network-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Asynchronous network</h2>
+      <img height="550px" src="img/roc/asynchronous-network-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Asynchronous network</h2>
+      <img height="550px" src="img/roc/asynchronous-network-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Asynchronous network</h2>
+      <img height="550px" src="img/roc/asynchronous-network-4.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Asynchronous network</h2>
+      <br/>
+      <br/>
+      <h1 class="sketch centered">Wi-Fi</h1>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">&nbsp; Fail-Stop Failures</h2>
+      <img height="550px" src="img/roc/fail-stop.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">&nbsp; Fail-Stop Failures</h2>
+      <img height="550px" src="img/roc/fail-stop-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">&nbsp; Byzantine Failures</h2>
+      <img height="550px" src="img/roc/byzantine.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">&nbsp; Byzantine Failures</h2>
+      <img height="550px" src="img/roc/byzantine-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">&nbsp; Byzantine Failures</h2>
+      <img height="550px" src="img/roc/byzantine-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <p class="sketch centered">Asynchronous Network and Byzantine Failures</p>
+      <h2 class="sketch centered">=</h2>
+      <h2 class="sketch centered">Internet-of-Things</h2>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Goal</h2>
+      <p class="sketch centered">respawn for the IoT</p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      TODO
+      Future work: programming model for correctness.
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      TODO
+      Future work: type systems that verify component properties.
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      TODO
       Future work: a programming model with a safe spawn and failure detection.
       Admits Byzantine failures.
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="0">
-      Future work: type systems that verify component properties.
-    </div>
-
     <div class="step fadealways" data-x="1500" data-y="-300">
-      <h2 style="text-align: center;">
+      <h2 class="sketch centered">
         Thank you!
       </h2>
     </div>
