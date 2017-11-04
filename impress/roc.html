@@ -1020,7 +1020,7 @@ def failureDetector
 def failureDetector
   (shard: Channel[Any]): Events[Failure] =
   flow {
-    var iteration = 0
+    var i = 0
     while (true) {
       val live: Events[Live] = shard ? Ping
 
@@ -1038,10 +1038,10 @@ def failureDetector
 def failureDetector
   (shard: Channel[Any]): Events[Failure] =
   flow {
-    var iteration = 0
+    var i = 0
     while (true) {
       val live: Events[Live] = shard ? Ping
-      val fail: Events[Int] = after(1 second)
+      val fail: Events[Int] = after(1 second, i)
 
 
 
@@ -1056,10 +1056,10 @@ def failureDetector
 def failureDetector
   (shard: Channel[Any]): Events[Failure] =
   flow {
-    var iteration = 0
+    var i = 0
     while (true) {
       val live: Events[Live] = shard ? Ping
-      val fail: Events[Int] = after(1 second)
+      val fail: Events[Int] = after(1 second, i)
       choose(live, fail)
 
 
@@ -1087,18 +1087,18 @@ def failureDetector
       </code></pre>
     </div>
 
-    <div class="step fadealways fadelate" data-x="1500" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
 def failureDetector
   (shard: Channel[Any]): Events[Failure] =
   flow {
-    var iteration = 0
+    var i = 0
     while (true) {
       val live: Events[Live] = shard ? Ping
-      val fail: Events[Int] = after(1 second)
+      val fail: Events[Int] = after(1 second, i)
       choose(live, fail) match {
-        case Live => iteration += 1
-        case Timeout => return Failure
+        case Live => i += 1
+        case `i` => return Failure
       }
     }
   }
@@ -1115,8 +1115,8 @@ def failureDetector
       //  |
       //  V
       choose(live, fail) match {
-        case Live => iteration += 1
-        case Timeout => return Failure
+        case Live => i += 1
+        case `i` => return Failure
       }
     }
   }
@@ -1131,8 +1131,8 @@ def failureDetector
       //  |
       //  V
       choose(live, fail) match {
-        case Live => iteration += 1
-        case Timeout => return Failure
+        case Live => i += 1
+        case `i` => return Failure
       }
       </code></pre>
       <p style="font-size: 26px; position: absolute; text-align: center;">
