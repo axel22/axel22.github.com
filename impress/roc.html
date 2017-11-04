@@ -917,8 +917,8 @@ def insert(k: K, v: V) {
       </h2>
 
       <p class="centered">
-        1. A non-trivial distributed program
-           runs many message protocols simultaneously.
+        1. Distributed programs
+           run many message protocols simultaneously.
       </p>
     </div>
 
@@ -944,12 +944,11 @@ def insert(k: K, v: V) {
       </h2>
 
       <p class="centered">
-        1. A non-trivial distributed program
-           runs many message protocols simultaneously.
+        1. Distributed programs
+           run many message protocols simultaneously.
       </p>
       <p class="centered">
-        2. In a distributed program,
-           the order of message arrivals is not predetermined.
+        2. The order of message arrivals is not predetermined.
       </p>
     </div>
 
@@ -971,28 +970,24 @@ def insert(k: K, v: V) {
       </h2>
       <div style="column-count: 2">
         <p>
-          <pre class="snippet" style="">
-            <code class="scala">
+          <pre class="snippet" style=""><code class="scala">
 terms ::=
   ...
   spawn(t)
   flow(t)
   t ! t
   receive(t)
-            </code>
-          </pre>
+            </code></pre>
         </p>
         <p>
-          <pre class="snippet" style="">
-            <code class="scala">
+          <pre class="snippet" style=""><code class="scala">
 types ::=
   ...
   Channel[T]
   Events[T]
-
-
-            </code>
-          </pre>
+  
+  
+            </code></pre>
         </p>
       </div>
       <p style="font-size: 26px; position: absolute; text-align: center;">
@@ -1065,28 +1060,10 @@ def failureDetector
     while (true) {
       val live: Events[Live] = shard ? Ping
       val fail: Events[Int] = after(1 second)
-      choose(live, fail) match {
+      choose(live, fail)
 
 
-      }
-    }
-  }
-      </code></pre>
-    </div>
-
-    <div class="step fadealways fadelate" data-x="1500" data-y="0">
-      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
-def failureDetector
-  (shard: Channel[Any]): Events[Failure] =
-  flow {
-    var iteration = 0
-    while (true) {
-      val live: Events[Live] = shard ? Ping
-      val fail: Events[Int] = after(1 second)
-      choose(live, fail) match {
-        case Live => iteration += 1
-        case Timeout => return Failure
-      }
+      
     }
   }
       </code></pre>
@@ -1110,15 +1087,15 @@ def failureDetector
       </code></pre>
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="0">
+    <div class="step fadealways fadelate" data-x="1500" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
 def failureDetector
   (shard: Channel[Any]): Events[Failure] =
-
-
-      //  .------- Program must 'block' here.
-      //  |
-      //  V
+  flow {
+    var iteration = 0
+    while (true) {
+      val live: Events[Live] = shard ? Ping
+      val fail: Events[Int] = after(1 second)
       choose(live, fail) match {
         case Live => iteration += 1
         case Timeout => return Failure
@@ -1143,6 +1120,20 @@ def failureDetector
       }
     }
   }
+      </code></pre>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;"><code class="scala">
+
+
+      //  .------- Program must 'block' here.
+      //  |
+      //  V
+      choose(live, fail) match {
+        case Live => iteration += 1
+        case Timeout => return Failure
+      }
       </code></pre>
       <p style="font-size: 26px; position: absolute; text-align: center;">
         <i>Prokopec</i>,
@@ -1515,7 +1506,25 @@ def insert(k: K, v: V) {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
-      <h2 class="sketch centered">Future work</h2>
+      <h2 class="sketch centered">Future challenges</h2>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">1. Programming model</h2>
+      <p class="sketch">Multiple control flows</p>
+      <p class="sketch">Channels and event streams</p>
+      <p class="sketch">&nbsp;</p>
+      <p class="sketch">&nbsp;</p>
+      <p class="sketch">&nbsp;</p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">1. Programming model</h2>
+      <p class="sketch">Multiple control flows</p>
+      <p class="sketch">Channels and event streams</p>
+      <p class="sketch">No inversion of control</p>
+      <p class="sketch">&nbsp;</p>
+      <p class="sketch">&nbsp;</p>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -1524,7 +1533,16 @@ def insert(k: K, v: V) {
       <p class="sketch">Channels and event streams</p>
       <p class="sketch">No inversion of control</p>
       <p class="sketch">Standard algorithm library</p>
-      <p class="sketch">Optimizations</p>
+      <p class="sketch">&nbsp;</p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">1. Programming model</h2>
+      <p class="sketch">Multiple control flows</p>
+      <p class="sketch">Channels and event streams</p>
+      <p class="sketch">No inversion of control</p>
+      <p class="sketch">Standard algorithm library</p>
+      <p class="sketch">Compiler optimizations</p>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
