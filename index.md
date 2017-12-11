@@ -50,6 +50,11 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
+Aleksandar Prokopec<br/>
+[17th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2012)](https://conf.researchr.org/home/ppopp-2018)<br/>
+Vienna, Austria, February 2018<br/>
+
 * **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
 Aleksandar Prokopec<br/>
 [AGERE! State-of-the-Art Volume]()<br/>
