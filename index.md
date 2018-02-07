@@ -50,6 +50,18 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
+Aleksandar Prokopec<br/>
+[23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2018)](https://conf.researchr.org/home/ppopp-2018)<br/>
+Vienna, Austria, February 2018<br/>
+
+* **Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
+Aleksandar Prokopec<br/>
+[arXiv](https://arxiv.org/abs/1712.09636)<br/>
+Tech Report<br/>
+\[[PDF](http://axel22.github.io/resources/docs/analysis-cachetries.pdf)\]
+\[[Link](/publications/analysis-cachetries)\]
+
 * **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
 Aleksandar Prokopec<br/>
 [AGERE! State-of-the-Art Volume]()<br/>
