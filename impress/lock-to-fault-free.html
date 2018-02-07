@@ -476,36 +476,186 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/lock-free/cache-trie-3.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/lock-free/cache-trie-2.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-1.svg">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/lock-free/cache-trie-1-question.svg">
+      <h1>Problem 1</h1>
+      <h3>Consistency</h3>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/lock-free/cache-trie-1.svg">
-      <p style="font-size: 26px; position: absolute; text-align: center;">
-        <i>Prokopec</i>,
-        Cache-Tries: Tries with Constant-Time Operations
-        (in preprint)
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-4.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-5.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-6.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-7.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-linearizability-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-linearizability-1-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-3-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-3-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-inconsistent-3-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-linearizability-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-linearizability-2-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Solution</h2>
+      <p>Freeze before removing nodes.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-good-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-good-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-good-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-good-4.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Invariant</h2>
+
+      <p>&forall; n &in; Node, <br/> &not; frozen(n) &rArr; reachable(root, n)</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>If an operation observes a frozen node, then it executes the slow path.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Problem 2</h2>
+      <h3>Cache depth</h3>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective-3.svg">
+    </div>
+
+    <div class="step fadealways fadelate" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective.svg">
+    </div>
+
+    <div class="step fadealways" data-x="2200" data-y="100" data-rotate="90">
+      <img height="600px" src="img/lock-free/probability.png">
+    </div>
+
+    <div class="step fadealways" data-x="2200" data-y="100" data-rotate="90">
+      <img height="600px" src="img/lock-free/probability2.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective-4.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective-4.svg">
+      <p style="font-size: 28px; position: absolute;">
+        <i>Prokopec</i>, Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations, PPoPP 2018
       </p>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/lock-free/cache-trie.svg">
-      <p style="font-size: 26px; position: absolute; text-align: center;">
-        <i>Prokopec</i>,
-        Cache-Tries: Tries with Constant-Time Operations
-        (in preprint)
+      <h2>Problem 3</h2>
+      <h3>Optimality</h3>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Are cache-tries O(1)?</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>
+        If we show that the most populated pair of levels is at O(log n),
+        and that the expected key depth is O(log n),
+        then cache-tries run in O(1)?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective-5.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Key depth distribution</p>
+      <img height="90px" src="img/lock-free/probability-formula.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Key depth expectation</p>
+      <img height="90px" src="img/lock-free/expectation-formula.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Expected cache depth</p>
+      <img height="100px" src="img/lock-free/depth-formula.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Expected cache depth</p>
+      <img height="100px" src="img/lock-free/depth-formula.png">
+      <p style="font-size: 28px; position: absolute;">
+        <i>Prokopec</i>, Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations, Tech Report
       </p>
     </div>
 
