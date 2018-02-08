@@ -604,6 +604,15 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <img height="600px" src="img/lock-free/probability2.png">
     </div>
 
+    <div class="step fadealways" data-x="2200" data-y="100" data-rotate="90">
+      <h2>Solution</h2>
+      <p>Periodically sample the trie,<br/>and adjust the cache depth.</p>
+    </div>
+
+    <div class="step fadealways" data-x="2200" data-y="100" data-rotate="90">
+      <img height="600px" src="img/lock-free/probability2.png">
+    </div>
+
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-perspective-4.svg">
     </div>
@@ -657,6 +666,26 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <p style="font-size: 28px; position: absolute;">
         <i>Prokopec</i>, Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations, Tech Report
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-footprint.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-single-lookup.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-multi-lookup.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-single-insert.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-multi-insert.png">
     </div>
 
 </div>
