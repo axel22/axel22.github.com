@@ -589,3 +589,7 @@ pre.snippet code {
 .centered {
   text-align: center;
 }
+
+.bullet-list {
+  list-style: disc;
+}
