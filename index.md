@@ -471,6 +471,8 @@ Lausanne, Switzerland, January 2012
 
 ### Program Committees
 
+- [Scala 2018](https://conf.researchr.org/track/scala-2018/scala-2018-papers)
+- [HLPP 2018](http://www.univ-orleans.fr/lifo/equipes/LMV/hlpp2018/index.php?id=0)
 - [AGERE! 2017](http://conf.researchr.org/track/agere-2017/agere-2017)
 - [HLPP 2017](https://hlpp2017.infor.uva.es/)
 - [PLACES 2017](http://places17.by.di.fc.ul.pt/committees/)
@@ -482,6 +484,7 @@ Lausanne, Switzerland, January 2012
 
 ### Reviewing
 
+- [Journal of Logical and Algebraic Methods in Programming 2018](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [SPAA 2017](https://spaa.acm.org/)
 - [POPL 2017](http://conf.researchr.org/home/POPL-2017)
