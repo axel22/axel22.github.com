@@ -663,6 +663,11 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Expected percentage of elements in the most populated pair of levels</p>
+      <img height="60px" src="img/lock-free/expected-most-populated.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth expectation</p>
       <img height="90px" src="img/lock-free/expectation-formula.png">
     </div>
@@ -673,8 +678,11 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <p>Expected cache depth</p>
-      <img height="100px" src="img/lock-free/depth-formula.png">
+      <p>Conclusion: cache-trie operations run in expected O(1).</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Conclusion: cache-trie operations run in expected O(1).</p>
       <p style="font-size: 28px; position: absolute;">
         <i>Prokopec</i>, Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations, Tech Report
       </p>
@@ -889,7 +897,7 @@ def GREAD(loc, gen) = {
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/gcas-linearizability-3.svg">
       <p style="font-size: 26px; position: absolute; text-align: center;">
-        <i>Prokopec et al.</i>, Concurrent Tries with Efficient Non-Blocking Snapshots PPoPP 2012
+        <i>Prokopec et al.</i>, Concurrent Tries with Efficient Non-Blocking Snapshots, PPoPP 2012
       </p>
     </div>
 
@@ -911,6 +919,10 @@ def GREAD(loc, gen) = {
 
     <div class="step fadealways fadelate" data-x="600" data-y="0">
       <img height="600px" src="img/lock-free/office-slam-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h1>Future work</h1>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
@@ -966,11 +978,11 @@ def GREAD(loc, gen) = {
       <img height="150px" src="img/lock-free/distributed-log.svg">
       <p>
         <pre class="snippet" style=""><code class="scala">
-def append[T](x: T, log: Ref[List[T]]) {
+def append[T](log: Ref[List[T]], x: T) {
   val ov = READ(log)
   val nv = x :: ov
   if (!CAS(log, ov, nv))
-    append(x, log)
+    append(log, x)
 }
         </code></pre>
       </p>
@@ -980,11 +992,11 @@ def append[T](x: T, log: Ref[List[T]]) {
       <img height="150px" src="img/lock-free/distributed-log-2.svg">
       <p>
         <pre class="snippet" style=""><code class="scala">
-def append[T](x: T, log: Ref[List[T]]) {
+def append[T](log: Ref[List[T]], x: T) {
   val ov = READ(log)
   val nv = x :: ov
   if (!CAS(log, ov, nv))
-    append(x, log)
+    append(log, x)
 }
         </code></pre>
       </p>
@@ -1024,12 +1036,115 @@ def append[T](x: T, log: Ref[List[T]]) {
       </p>
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="0">
+    <div class="step fadealways fadelate" data-x="1500" data-y="0">
       <img height="300px" src="img/lock-free/distributed-log-trans.svg">
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="0">
-      <h1>Future work</h1>
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>
+        Let's say that between any pair of CASes,
+        at most f transient cells fail.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+def append(log: Ref[List[Trans[T]]], x: T) {
+  val replicas = READ(log)
+  val newReplicas =
+    for (r <- replicas) yield
+      if (WRITE(r, x :: READ(r))) r
+      else restoreOne(replicas)
+  if (!CAS(log, replicas, newReplicas))
+    append(log, x)
+}
+        </code></pre>
+      </p>
+    </div>
+
+    <div class="step fadealways fadelate" data-x="1500" data-y="0">
+      <img height="300px" src="img/lock-free/distributed-log-trans-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>
+        For throughput, we want to maintain the suffix of the log in persistent memory,
+        and then asynchronously flush it into the replicas.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>
+        Append must meet a specification.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+def append(log: Ref[List[Trans[T]]], x: T):
+  { content(log) = xs }
+  { content(log) = x :: xs }
+        </code></pre>
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>Distributed programming models and compilation techniques</p>
+      <p style="font-size: 26px;">
+        <i>Prokopec, Odersky</i>, Isolates, channels and event streams for composable distributed programming, Onward 2015
+      </p>
+      <p style="font-size: 26px;">
+        <i>Prokopec, Liu</i>, Theory and practice of coroutines with snapshots, under submission
+      </p>
+      <p style="font-size: 26px;">
+        <i>Prokopec et al.</i>, Making Collection Operations Optimal with Aggressive JIT Compilation, Scala 2017
+      </p>
+      <p style="font-size: 26px;">
+        <i>Prokopec, Wuerthinger</i>, A Generic Priority-Based Inlining Algorithm, patent pending
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>Distributed programming models and compilation techniques</p>
+      <p style="font-size: 30px;">
+        What are the "right" programming primitives
+        for building composable distributed systems?
+      </p>
+      <p style="font-size: 30px;">
+        How to capture them in a programming language?
+      </p>
+      <p style="font-size: 30px;">
+        How can compilation techniques make
+        these languages efficient?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>Type systems for concurrent and distributed computing</p>
+      <p style="font-size: 30px;">
+        How can type systems help build robust distributed systems?
+      </p>
+      <p style="font-size: 30px;">
+        How can separation logic be used to specify and validate
+        fault-tolerant distributed systems?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <p>Distributed execution and algorithms</p>
+      <p style="font-size: 30px;">
+        How can we make blockchain and other consensus algorithms more efficient?
+      </p>
+      <p style="font-size: 30px;">
+        How can a distributed language runtime
+        support high-level distributed languages?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="300">
+      <img height="550px" src="img/lock-free/thanks.svg">
     </div>
 
 </div>

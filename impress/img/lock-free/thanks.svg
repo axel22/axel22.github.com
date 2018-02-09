@@ -3090,7 +3090,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3152,7 +3152,7 @@
          x="35.865456"
          y="956.70844"
          style="font-size:45.95427322px;text-align:start;line-height:1.25;text-anchor:start"
-         id="tspan18459">Tiark Rompf</tspan><tspan
+         id="tspan18459">Fengyun Liu</tspan><tspan
          sodipodi:role="line"
          x="35.865456"
          y="1014.1512"
