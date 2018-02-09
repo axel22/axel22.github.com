@@ -22,14 +22,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.96002247"
-     inkscape:cx="1001.9733"
-     inkscape:cy="459.60379"
+     inkscape:zoom="0.48001124"
+     inkscape:cx="749.55932"
+     inkscape:cy="585.22128"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2556"
-     inkscape:window-height="1564"
+     inkscape:window-width="1596"
+     inkscape:window-height="864"
      inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0"
@@ -2442,7 +2442,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3012,29 +3012,29 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:51.02865219px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.2757163"
+       style="font-size:51.02865219px;font-style:normal;font-weight:normal;line-height:1.25;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:sans-serif"
        x="1074.1322"
        y="165.8326"
        id="text22462"><tspan
          sodipodi:role="line"
          x="1074.1322"
          y="165.8326"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Sketch Block';-inkscape-font-specification:'Sketch Block';text-align:center;text-anchor:middle;stroke-width:1.2757163"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
          id="tspan22515">That in-memory</tspan><tspan
          sodipodi:role="line"
          x="1074.1322"
-         y="230.11674"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Sketch Block';-inkscape-font-specification:'Sketch Block';text-align:center;text-anchor:middle;stroke-width:1.2757163"
+         y="232.64182"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
          id="tspan22545">key-store we have,</tspan><tspan
          sodipodi:role="line"
          x="1074.1322"
-         y="294.40088"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Sketch Block';-inkscape-font-specification:'Sketch Block';text-align:center;text-anchor:middle;stroke-width:1.2757163"
-         id="tspan22549">I want it running</tspan><tspan
+         y="296.42764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         id="tspan22549">it has to run</tspan><tspan
          sodipodi:role="line"
          x="1074.1322"
-         y="358.68503"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Sketch Block';-inkscape-font-specification:'Sketch Block';text-align:center;text-anchor:middle;stroke-width:1.2757163"
+         y="360.21344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
          id="tspan22553">in the Cloud.</tspan></text>
     <g
        id="g22418-1"

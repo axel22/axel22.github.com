@@ -817,7 +817,10 @@ def GCAS(loc, ov, nv) = atomic {
 def GCAS(loc, ov, nv) = {
   gen = READ(root.gen)
   if (ov.gen == gen)
-    return CAS(loc, ov, nv)
+    if CAS(ov.txn, NoTxn, nv)
+      CAS(loc, ov, txn)
+      return true
+    else return false
   else return false
 }
         </code>
@@ -888,6 +891,145 @@ def GREAD(loc, gen) = {
       <p style="font-size: 26px; position: absolute; text-align: center;">
         <i>Prokopec et al.</i>, Concurrent Tries with Efficient Non-Blocking Snapshots PPoPP 2012
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="600" data-y="0">
+      <img height="600px" src="img/lock-free/office-boss.svg">
+    </div>
+
+    <div class="step fadealways fadeinfast" data-x="600" data-y="0">
+      <img height="600px" src="img/lock-free/office-slam.svg">
+    </div>
+
+    <div class="step fadealways" data-x="600" data-y="0">
+      <img height="600px" src="img/lock-free/office-slam-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="600" data-y="0">
+      <img height="600px" src="img/lock-free/office-slam-2.svg">
+    </div>
+
+    <div class="step fadealways fadelate" data-x="600" data-y="0">
+      <img height="600px" src="img/lock-free/office-slam-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+    terms ::=
+      ...
+      proc t
+      Ref[T]
+      READ(t)
+      CAS(t, t, t)
+        </code></pre>
+      </p>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+    terms ::=
+      ...
+      proc t
+      Ref[T]
+      READ(t)
+      CAS(t, t, t)
+        </code></pre>
+      </p>
+      <p>
+        Processes fail, but memory is eternal.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="550px" src="img/lock-free/datacenter-iot.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="150px" src="img/lock-free/distributed-log.svg">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+
+
+
+
+
+
+        </code></pre>
+      </p>
+    </div>
+
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="150px" src="img/lock-free/distributed-log.svg">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+def append[T](x: T, log: Ref[List[T]]) {
+  val ov = READ(log)
+  val nv = x :: ov
+  if (!CAS(log, ov, nv))
+    append(x, log)
+}
+        </code></pre>
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="150px" src="img/lock-free/distributed-log-2.svg">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+def append[T](x: T, log: Ref[List[T]]) {
+  val ov = READ(log)
+  val nv = x :: ov
+  if (!CAS(log, ov, nv))
+    append(x, log)
+}
+        </code></pre>
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+    terms ::=
+      ...
+      proc t
+      Ref[T]
+      READ(t)
+      CAS(t, t, t)
+
+        </code></pre>
+      </p>
+      <p>
+        But <span style="font-family: 'Andale Mono', Console;">Ref</span> is costly.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <p>
+        <pre class="snippet" style=""><code class="scala">
+    terms ::=
+      ...
+      proc t
+      Ref[T]
+      READ(t)
+      CAS(t, t, t)
+      Trans[T]
+        </code></pre>
+      </p>
+      <p>
+        Transient memory is cheap, but fails.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="300px" src="img/lock-free/distributed-log-trans.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h1>Future work</h1>
     </div>
 
 </div>
