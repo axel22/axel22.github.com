@@ -23,7 +23,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="780.9757"
+     inkscape:cx="283.17253"
      inkscape:cy="625.85867"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -4026,7 +4026,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4077,10 +4077,10 @@
        id="text9743"
        y="443.95581"
        x="1219.5459"
-       style="font-size:67.43681335px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
+       style="font-size:67.43681335000000843px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d20000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
        xml:space="preserve"><tspan
          id="tspan9745"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block;fill:#d20000;fill-opacity:1"
          y="443.95581"
          x="1219.5459"
          sodipodi:role="line">Type systems</tspan></text>

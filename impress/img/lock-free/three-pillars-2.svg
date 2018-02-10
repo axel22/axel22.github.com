@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="three-pillars.svg">
+   sodipodi:docname="three-pillars-1.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -23,7 +23,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35355339"
-     inkscape:cx="780.9757"
+     inkscape:cx="283.17253"
      inkscape:cy="625.85867"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -4026,7 +4026,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4040,7 +4040,7 @@
        transform="matrix(0.65365093,-0.75679619,0.75679619,0.65365093,-2709.9093,445.4649)" />
     <text
        xml:space="preserve"
-       style="font-size:67.43681335px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
+       style="font-size:67.43681335000000843px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#c80000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
        x="764.16919"
        y="780.5387"
        id="text8362"
@@ -4048,12 +4048,12 @@
          sodipodi:role="line"
          x="764.16919"
          y="780.5387"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block;fill:#c80000;fill-opacity:1"
          id="tspan8467">Execution runtime</tspan><tspan
          sodipodi:role="line"
          x="764.16919"
          y="864.83472"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;font-family:Sketch Block;-inkscape-font-specification:Sketch Block;fill:#c80000;fill-opacity:1"
          id="tspan10681">and algorithms</tspan></text>
     <text
        sodipodi:linespacing="125%"
