@@ -1086,14 +1086,6 @@ def GREAD(loc, gen) = {
       </p>
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="0">
-      <h1 class="sketch centered">Research summary</h1>
-    </div>
-
-    <div class="step fadealways" data-x="1500" data-y="0">
-      <img height="600px" src="img/lock-free/research-summary.svg">
-    </div>
-
     <div class="step fadealways" data-x="600" data-y="0">
       <img height="600px" src="img/lock-free/office-boss.svg">
     </div>
@@ -1115,10 +1107,30 @@ def GREAD(loc, gen) = {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <h1 class="sketch centered">Research summary</h1>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/lock-free/research-summary.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
       <h1 class="sketch centered">Future work</h1>
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <p class="centered">
+        Develop language support
+        for robust IoT and Cloud computing.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/lock-free/three-pillars.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Programming model</h2>
       <p>
         <pre class="snippet" style=""><code class="scala">
     terms ::=
@@ -1133,6 +1145,7 @@ def GREAD(loc, gen) = {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Programming model</h2>
       <p>
         <pre class="snippet" style=""><code class="scala">
     terms ::=
@@ -1149,6 +1162,7 @@ def GREAD(loc, gen) = {
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Programming model</h2>
       <img height="550px" src="img/lock-free/datacenter-iot.svg">
     </div>
 
@@ -1208,7 +1222,7 @@ def append[T](log: Ref[List[T]], x: T) {
         </code></pre>
       </p>
       <p>
-        But <span style="font-family: 'Andale Mono', Console;">Ref</span> is costly.
+        But a distributed <span style="font-family: 'Andale Mono', Console;">Ref</span> is costly.
       </p>
     </div>
 
@@ -1229,11 +1243,11 @@ def append[T](log: Ref[List[T]], x: T) {
       </p>
     </div>
 
-    <div class="step fadealways fadelate" data-x="1500" data-y="0">
+    <div class="step fadealways" data-x="1500" data-y="0">
       <img height="300px" src="img/lock-free/distributed-log-trans.svg">
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="300">
+<!--     <div class="step fadealways" data-x="1500" data-y="300">
       <p>
         Let's say that between any pair of CASes,
         at most f transient cells fail.
@@ -1272,8 +1286,10 @@ def append(log: Ref[List[Trans[T]]], x: T) {
         Append must meet a specification.
       </p>
     </div>
+ -->
 
-    <div class="step fadealways" data-x="1500" data-y="300">
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Type systems</h2>
       <p>
         <pre class="snippet" style=""><code class="scala">
 def append(log: Ref[List[Trans[T]]], x: T):
@@ -1281,71 +1297,51 @@ def append(log: Ref[List[Trans[T]]], x: T):
   { content(log) = x :: xs }
         </code></pre>
       </p>
+      <p class="centered">
+        Does append meet the specification
+        in the presence of failures?
+      </p>
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="300">
-      <p>Distributed programming models and compilation techniques</p>
-      <ul>
-        <li class="bullet-list"><p style="font-size: 26px;">
-          <i>Prokopec, Odersky</i>, Isolates, channels and event streams for composable distributed programming, Onward 2015
-        </p></li>
-        <li class="bullet-list"><p style="font-size: 26px;">
-          <i>Prokopec, Liu</i>, Theory and practice of coroutines with snapshots, under submission
-        </p></li>
-        <li class="bullet-list"><p style="font-size: 26px;">
-          <i>Prokopec et al.</i>, Making Collection Operations Optimal with Aggressive JIT Compilation, Scala 2017
-        </p></li>
-        <li class="bullet-list"><p style="font-size: 26px;">
-          <i>Prokopec, Wuerthinger</i>, A Generic Priority-Based Inlining Algorithm, patent pending
-        </p></li>
-      </ul>
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Execution runtime</h2>
+      <img height="550px" src="img/lock-free/fail-stop.svg">
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="300">
-      <p>Distributed programming models and compilation techniques</p>
-      <ul>
-        <li class="bullet-list"><p style="font-size: 30px;">
-          What are the "right" programming primitives
-          for building composable distributed systems?
-        </p></li>
-        <li class="bullet-list"><p style="font-size: 30px;">
-          How to capture them in a programming language?
-        </p></li>
-        <li class="bullet-list"><p style="font-size: 30px;">
-          How can compilation techniques make
-          these languages efficient?
-        </p></li>
-      </ul>
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Execution runtime</h2>
+      <img height="550px" src="img/lock-free/fail-stop-1.svg">
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="300">
-      <p>Type systems for concurrent and distributed computing</p>
-      <ul>
-        <li class="bullet-list"><p style="font-size: 30px;">
-          How can type systems help build robust distributed systems?
-        </p></li>
-        <li class="bullet-list"><p style="font-size: 30px;">
-          How can separation logic be used to specify and validate
-          fault-tolerant distributed systems?
-        </p></li>
-      </ul>
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Execution runtime</h2>
+      <img height="550px" src="img/lock-free/byzantine.svg">
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="300">
-      <p>Distributed execution and algorithms</p>
-      <ul>
-        <li class="bullet-list"><p style="font-size: 30px;">
-          How can we make blockchain and other consensus algorithms more efficient?
-        </p></li>
-        <li class="bullet-list"><p style="font-size: 30px;">
-          How can a distributed language runtime
-          support high-level distributed languages?
-        </p></li>
-      </ul>
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Execution runtime</h2>
+      <img height="550px" src="img/lock-free/byzantine-1.svg">
     </div>
 
-    <div class="step fadealways" data-x="1500" data-y="300">
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Execution runtime</h2>
+      <img height="550px" src="img/lock-free/byzantine-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <h2 class="sketch centered">Execution runtime</h2>
+      <p class="centered">
+        How to transparently schedule processes
+        on devices that are susceptible to Byzantine faults?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="-300">
       <img height="550px" src="img/lock-free/thanks.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="-300">
+      <h1 class="sketch centered">Thank you.</h1>
     </div>
 
 </div>
