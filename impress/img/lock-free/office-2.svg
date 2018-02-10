@@ -28,10 +28,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1372"
-     inkscape:window-height="1340"
-     inkscape:window-x="2064"
-     inkscape:window-y="80"
+     inkscape:window-width="1596"
+     inkscape:window-height="864"
+     inkscape:window-x="0"
+     inkscape:window-y="16"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true" />
@@ -1758,7 +1758,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2084,18 +2084,7 @@
          sodipodi:role="line"
          id="tspan4356"
          x="105.79178"
-         y="484.99814">Joe</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text4358"
-       y="561.65833"
-       x="44.588745"
-       style="font-size:67.25619507px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sketch Block;-inkscape-font-specification:Sketch Block"
-       xml:space="preserve"><tspan
-         y="561.65833"
-         x="44.588745"
-         id="tspan4360"
-         sodipodi:role="line">(not average)</tspan></text>
+         y="484.99814">Bob</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:101.50618744px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"

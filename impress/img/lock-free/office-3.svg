@@ -28,10 +28,10 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1372"
-     inkscape:window-height="1340"
-     inkscape:window-x="2064"
-     inkscape:window-y="80"
+     inkscape:window-width="1596"
+     inkscape:window-height="864"
+     inkscape:window-x="0"
+     inkscape:window-y="16"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true" />
@@ -1758,7 +1758,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2084,6 +2084,6 @@
          sodipodi:role="line"
          id="tspan4356"
          x="105.79178"
-         y="484.99814">Joe</tspan></text>
+         y="484.99814">Bob</tspan></text>
   </g>
 </svg>
