@@ -9,7 +9,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="cache-trie-snapshots-immutable-5-2.svg"
+   sodipodi:docname="cache-trie-snapshots-immutable-5-2-1.svg"
    inkscape:version="0.48.4 r9939"
    version="1.1"
    id="svg2"
@@ -3576,7 +3576,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4686,5 +4686,17 @@
          x="770.21783"
          id="tspan11850"
          sodipodi:role="line">READ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:79.17779541px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
+       x="1127.47"
+       y="997.18402"
+       id="text11037"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan11039"
+         x="1127.47"
+         y="997.18402"
+         style="-inkscape-font-specification:Sketch Block;font-family:Sketch Block;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Scenario 2</tspan></text>
   </g>
 </svg>

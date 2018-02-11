@@ -3252,7 +3252,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4242,6 +4242,6 @@
          id="tspan36878"
          x="1142.6901"
          y="961.92969"
-         style="font-size:58.96965408px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.25;font-family:Andale Mono;-inkscape-font-specification:Andale Mono">..</tspan></text>
+         style="font-size:58.96965408px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.25;font-family:Andale Mono;-inkscape-font-specification:Andale Mono">59</tspan></text>
   </g>
 </svg>

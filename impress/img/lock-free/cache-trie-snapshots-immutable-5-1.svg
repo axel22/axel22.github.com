@@ -3576,7 +3576,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -4722,5 +4722,17 @@
          x="1000.882"
          y="924.3772"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sketch Block;-inkscape-font-specification:Sketch Block">G</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:79.17779541px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
+       x="1130.7097"
+       y="997.43951"
+       id="text11037"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan11039"
+         x="1130.7097"
+         y="997.43951"
+         style="-inkscape-font-specification:Sketch Block;font-family:Sketch Block;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Scenario 1</tspan></text>
   </g>
 </svg>

@@ -747,6 +747,10 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <img height="600px" src="img/lock-free/cache-trie-good-4.svg">
     </div>
 
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-good-5-0.svg">
+    </div>
+
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-good-5.svg">
     </div>
@@ -758,7 +762,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-good-7.svg">
     </div>
-
+ -->
     <div class="step fadealways" data-x="1600" data-y="0">
       <h2>Invariant</h2>
 
@@ -831,13 +835,13 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <p>Are cache-tries O(1)?</p>
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <p>
         If we show that the most populated pair of levels is at O(log n),
         and that the expected key depth is O(log n),
         then cache-tries run in O(1)?
       </p>
-    </div>
+    </div> -->
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-perspective-5-1.svg">
@@ -860,19 +864,28 @@ def insert(k: K, v: V, a: Array, d: Int) {
     <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth expectation</p>
       <img height="90px" src="img/lock-free/expectation-formula.png">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Key depth expectation</p>
+      <img height="90px" src="img/lock-free/expectation-formula.png">
       <p>Expected cache depth</p>
       <img height="100px" src="img/lock-free/depth-formula.png">
+      <br/>
+      <br/>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <p>Conclusion: cache-trie operations run in expected O(1).</p>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <p>Conclusion: cache-trie operations run in expected O(1).</p>
+      <p>Key depth expectation</p>
+      <img height="90px" src="img/lock-free/expectation-formula.png">
+      <p>Expected cache depth</p>
+      <img height="100px" src="img/lock-free/depth-formula.png">
+      <p>Cache-tries run in expected O(1).</p>
       <p style="font-size: 28px; position: absolute;">
         <i>Prokopec</i>, Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations, Tech Report
       </p>
@@ -888,6 +901,9 @@ def insert(k: K, v: V, a: Array, d: Int) {
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/lock-free/bench-multi-lookup.png">
+      <p class="centered">
+        Lookup - 1.5x slower than CHM.
+      </p>
     </div>
 
 <!--     <div class="step fadealways" data-x="1600" data-y="0">
@@ -896,6 +912,9 @@ def insert(k: K, v: V, a: Array, d: Int) {
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/lock-free/bench-multi-insert.png">
+      <p class="centered">
+        Insert - 2x faster than CHM.
+      </p>
     </div>
 
     <div class="step fadealways" data-x="600" data-y="0">
@@ -914,24 +933,44 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <img height="600px" src="img/lock-free/hash-trie.svg">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/hash-trie-snapshot-2.svg">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/hash-trie-snapshot-1.svg">
     </div>
-
+ -->
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/hash-trie-snapshot.svg">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/lock-free/hash-trie-snapshot-invalidate.svg">
+      <img height="600px" src="img/lock-free/hash-trie-snapshot-0.svg">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/hash-trie-snapshot-invalidate.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/hash-trie-snapshot-generations.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/hash-trie-snapshot-generations-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/hash-trie-snapshot-generations-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/hash-trie-snapshot-generations-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/hash-trie-snapshot-generations-4.svg">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -1023,7 +1062,7 @@ def GCAS(loc, ov, nv) = atomic {
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/lock-free/cache-trie-snapshots-immutable-1.svg">
+      <img height="600px" src="img/lock-free/cache-trie-snapshots-immutable-0.svg">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -1073,9 +1112,18 @@ def GCAS(loc, ov, nv) = {
     <div class="step fadealways" data-x="1600" data-y="0">
       <h2>Problem</h2>
       <h3>Lookups should be wait-free</h3>
+      <br/>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Problem</h2>
+      <h3>Lookups should be wait-free</h3>
+      <p style="font-size: 26px;">
+        <i>Prokopec et al.</i>, Concurrent Tries with Efficient Non-Blocking Snapshots, PPoPP 2012
+      </p>
+    </div>
+
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def GCAS(loc, ov, nv) = {
@@ -1136,7 +1184,7 @@ def GREAD(loc, gen) = {
       </p>
     </div>
 
-    <div class="step fadealways" data-x="600" data-y="0">
+ -->    <div class="step fadealways" data-x="600" data-y="0">
       <img height="600px" src="img/lock-free/office-boss.svg">
     </div>
 
@@ -1169,6 +1217,10 @@ def GREAD(loc, gen) = {
 
     <div class="step fadealways" data-x="1500" data-y="0">
       <img height="600px" src="img/lock-free/three-pillars.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <img height="600px" src="img/lock-free/three-pillars-3.svg">
     </div>
 
     <div class="step fadealways" data-x="1500" data-y="0">
