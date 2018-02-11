@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="cache-trie-perspective-5.svg">
+   sodipodi:docname="cache-trie-perspective-5-1.svg">
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -4613,39 +4613,41 @@
        style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotM);marker-end:url(#Arrow1Mend)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart);marker-end:none"
-       d="m 1079.9926,435.82272 178.2512,0"
+       d="m 1079.9926,435.82272 211.8044,0"
        id="path9787"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:73.9211731px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
-       x="1268.5844"
+       x="1297.9434"
        y="465.64536"
        id="text10641"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan10643"
-         x="1268.5844"
+         x="1297.9434"
          y="465.64536"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Serif;-inkscape-font-specification:Serif">a*logn</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Serif;-inkscape-font-specification:Serif">d<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan11163">cache</tspan></tspan></text>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path11153"
-       d="m 1199.5257,672.79197 136.3097,0"
+       d="m 1199.5257,672.79197 211.8044,0"
        style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Mstart);marker-end:none" />
     <text
        sodipodi:linespacing="125%"
        id="text11155"
        y="700.51752"
-       x="1350.2729"
+       x="1415.2822"
        style="font-size:73.9211731px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Serif;-inkscape-font-specification:Serif"
          y="700.51752"
-         x="1350.2729"
+         x="1415.2822"
          id="tspan11157"
-         sodipodi:role="line">b*logn</tspan></text>
+         sodipodi:role="line">E[d]</tspan></text>
   </g>
 </svg>

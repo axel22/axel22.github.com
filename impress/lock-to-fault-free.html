@@ -274,7 +274,8 @@
     <div class="step fadealways" data-x="1400" data-y="0">
       <h2 class="sketch">The DAO contract</h2>
       <p>
-        Reentrancy problem: contract operations were not linearizable.
+        Contract operations were not linearizable
+        - a concurrency bug.
       </p>
     </div>
 
@@ -721,10 +722,10 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <img height="600px" src="img/lock-free/cache-trie-linearizability-2.svg">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-linearizability-2-1.svg">
     </div>
-
+ -->
     <div class="step fadealways" data-x="1600" data-y="0">
       <h2>Solution</h2>
       <p>Freeze before removing nodes.</p>
@@ -746,7 +747,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <img height="600px" src="img/lock-free/cache-trie-good-4.svg">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-good-5.svg">
     </div>
 
@@ -757,7 +758,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-good-7.svg">
     </div>
-
+ -->
     <div class="step fadealways" data-x="1600" data-y="0">
       <h2>Invariant</h2>
 
@@ -839,6 +840,10 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/cache-trie-perspective-5-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-perspective-5.svg">
     </div>
 
@@ -873,21 +878,21 @@ def insert(k: K, v: V, a: Array, d: Int) {
       </p>
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/lock-free/bench-footprint.png">
-    </div>
+    </div> -->
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/lock-free/bench-single-lookup.png">
-    </div>
+    </div> -->
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/lock-free/bench-multi-lookup.png">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/lock-free/bench-single-insert.png">
-    </div>
+    </div> -->
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/lock-free/bench-multi-insert.png">
@@ -930,21 +935,6 @@ def insert(k: K, v: V, a: Array, d: Int) {
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <pre class="snippet" style="position: relative; left: 0px;">
-        <code class="scala">
-def GCAS(loc, ov, nv) = atomic {
-  cur = READ(loc)
-  gen = READ(root.gen)
-  if (cur == ov && loc.gen == gen) {
-    WRITE(loc, nv)
-    return true
-  } else return false
-}
-        </code>
-      </pre>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-snapshots-1.svg">
     </div>
 
@@ -966,6 +956,66 @@ def GCAS(loc, ov, nv) = atomic {
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-snapshots-6.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def GCAS(loc, ov, nv) = atomic {
+
+
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def GCAS(loc, ov, nv) = atomic {
+  cur = READ(loc)
+  gen = READ(root.gen)
+
+
+
+
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def GCAS(loc, ov, nv) = atomic {
+  cur = READ(loc)
+  gen = READ(root.gen)
+  if (cur == ov && loc.gen == gen) {
+    WRITE(loc, nv)
+    return true
+  }
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def GCAS(loc, ov, nv) = atomic {
+  cur = READ(loc)
+  gen = READ(root.gen)
+  if (cur == ov && loc.gen == gen) {
+    WRITE(loc, nv)
+    return true
+  } else return false
+}
+        </code>
+      </pre>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
