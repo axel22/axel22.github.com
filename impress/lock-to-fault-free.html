@@ -374,6 +374,12 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="sketch centered">
+        Concurrent hash-tries.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
       <img height="600px" src="img/lock-free/cas-2.svg">
     </div>
 
@@ -436,7 +442,7 @@
       <img height="600px" src="img/lock-free/hash-trie-2nd.svg">
     </div>
 
-    <div class="step fadealways" data-x="1400" data-y="0">
+<!--     <div class="step fadealways" data-x="1400" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def insert(k: K, v: V, a: Array, d: Int) {
@@ -616,7 +622,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
       </pre>
     </div>
 
-    <div class="step fadealways" data-x="1400" data-y="0">
+ -->    <div class="step fadealways" data-x="1400" data-y="0">
       <p class="centered" style="font-size: 64px;">
         Lock-Freedom
       </p>
@@ -891,32 +897,6 @@ def insert(k: K, v: V, a: Array, d: Int) {
       </p>
     </div>
 
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="400px" src="img/lock-free/bench-footprint.png">
-    </div> -->
-
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="400px" src="img/lock-free/bench-single-lookup.png">
-    </div> -->
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="400px" src="img/lock-free/bench-multi-lookup.png">
-      <p class="centered">
-        Lookup - 1.5x slower than CHM.
-      </p>
-    </div>
-
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="400px" src="img/lock-free/bench-single-insert.png">
-    </div> -->
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="400px" src="img/lock-free/bench-multi-insert.png">
-      <p class="centered">
-        Insert - 2x faster than CHM.
-      </p>
-    </div>
-
     <div class="step fadealways" data-x="600" data-y="0">
       <img height="600px" src="img/lock-free/office-mail-1.svg">
     </div>
@@ -973,7 +953,7 @@ def insert(k: K, v: V, a: Array, d: Int) {
       <img height="600px" src="img/lock-free/hash-trie-snapshot-generations-4.svg">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-snapshots-1.svg">
     </div>
 
@@ -995,9 +975,9 @@ def insert(k: K, v: V, a: Array, d: Int) {
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-snapshots-6.svg">
-    </div>
+    </div> -->
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def GCAS(loc, ov, nv) = atomic {
@@ -1056,7 +1036,7 @@ def GCAS(loc, ov, nv) = atomic {
         </code>
       </pre>
     </div>
-
+ -->
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/lock-free/cache-trie-snapshots-immutable.svg">
     </div>
@@ -1093,7 +1073,7 @@ def GCAS(loc, ov, nv) = atomic {
       <img height="600px" src="img/lock-free/cache-trie-snapshots-immutable-5-2-1.svg">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def GCAS(loc, ov, nv) = {
@@ -1108,7 +1088,7 @@ def GCAS(loc, ov, nv) = {
         </code>
       </pre>
     </div>
-
+ -->
     <div class="step fadealways" data-x="1600" data-y="0">
       <h2>Problem</h2>
       <h3>Lookups should be wait-free</h3>
@@ -1212,6 +1192,14 @@ def GREAD(loc, gen) = {
       <p class="centered">
         Develop language support
         for robust IoT and Cloud computing.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1500" data-y="0">
+      <p class="centered">
+        Hypothesis: lock-freedom
+        is even more important
+        for distributed computing.
       </p>
     </div>
 
@@ -1452,6 +1440,32 @@ def append(log: Ref[List[Trans[T]]], x: T):
 
     <div class="step fadealways" data-x="1500" data-y="-300">
       <h1 class="sketch centered">Thank you.</h1>
+    </div>
+
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-footprint.png">
+    </div> -->
+
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-single-lookup.png">
+    </div> -->
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-multi-lookup.png">
+      <p class="centered">
+        Lookup - 1.5x slower than CHM.
+      </p>
+    </div>
+
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-single-insert.png">
+    </div> -->
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/lock-free/bench-multi-insert.png">
+      <p class="centered">
+        Insert - 2x faster than CHM.
+      </p>
     </div>
 
 </div>

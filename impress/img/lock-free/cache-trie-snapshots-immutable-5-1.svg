@@ -4681,7 +4681,7 @@
          y="908.53815"
          x="678.63214"
          id="tspan11770"
-         sodipodi:role="line">58</tspan></text>
+         sodipodi:role="line">59</tspan></text>
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
@@ -4701,7 +4701,7 @@
          y="920.49426"
          x="761.87317"
          id="tspan11776"
-         sodipodi:role="line">NoTxn</tspan></text>
+         sodipodi:role="line">null</tspan></text>
     <path
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
