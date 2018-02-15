@@ -273,6 +273,12 @@
 
     <div class="step fadealways" data-x="1400" data-y="0">
       <h2 class="sketch">The DAO contract</h2>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="sketch">The DAO contract</h2>
       <p>
         Contract operations were not linearizable
         - a concurrency bug.
@@ -1465,6 +1471,67 @@ def append(log: Ref[List[Trans[T]]], x: T):
       <img height="400px" src="img/lock-free/bench-multi-insert.png">
       <p class="centered">
         Insert - 2x faster than CHM.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def GCAS(loc, ov, nv) = {
+  if (!CAS(ov.txn, NoTxn, nv)) return false
+  gen = READ(root.gen)
+  if (ov.gen == gen) {
+    if (CAS(loc, ov, nv)) {
+      return true
+    } else
+      // fail -- restore previous state
+  } else
+    // fail -- restore previous state
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <pre class="snippet" style="position: relative; left: 0px;">
+        <code class="scala">
+def GREAD(loc, gen) = {
+  val ov = READ(loc)
+  val txn = READ(ov.txn)
+  if (txn != NoTxn) {
+    if (ov.gen != gen)
+      // restore previous state
+  }
+  return ov
+}
+        </code>
+      </pre>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/gcas-linearizability.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/gcas-linearizability-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/gcas-linearizability-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/gcas-linearizability-4.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/gcas-linearizability-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/lock-free/gcas-linearizability-3.svg">
+      <p style="font-size: 26px; position: absolute; text-align: center;">
+        <i>Prokopec et al.</i>, Concurrent Tries with Efficient Non-Blocking Snapshots, PPoPP 2012
       </p>
     </div>
 
