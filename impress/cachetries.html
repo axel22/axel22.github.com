@@ -306,7 +306,11 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="sketch centered">History</h2>
       <ul style="font-size: 0.75em;">
+        <li class="bullet-list">
+          Implemented in at least 7 languages.
+        </li>
         <li class="bullet-list">
           <i>Prokopec et al.</i>,
           Concurrent tries with efficient non-blocking snapshots
@@ -318,9 +322,6 @@
         <li class="bullet-list">
           <i>Oshman and Shavit</i>,
           The SkipTrie: Low-Depth Concurrent Search without Rebalancing
-        </li>
-        <li class="bullet-list">
-          Implemented in at least 7 languages.
         </li>
       </ul>
     </div>
@@ -589,16 +590,19 @@
       <p>Are cache-tries O(1)?</p>
     </div>
 
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Goal</h2>
       <p>
-        If we show that the most populated pair of levels is at O(log n),
-        and that the expected key depth is O(log n),
-        then cache-tries run in O(1)?
+        Show that a typical key is O(1) steps away from the cache.
       </p>
-    </div> -->
+    </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/cachetries/cache-trie-perspective-5-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-perspective-5-1-log.svg">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -606,8 +610,22 @@
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Goal</h2>
+      <p>
+        Show that a typical key is O(1) steps away from the cache.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Subgoal 1</h2>
+      <p>
+        Expected key depth is at log<sub>16</sub> n.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth distribution</p>
-      <img height="90px" src="img/cachetries/probability-formula.png">
+      <img height="80px" src="img/cachetries/probability-formula.png">
       <br/>
       <br/>
       <br/>
@@ -615,28 +633,34 @@
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth distribution</p>
-      <img height="90px" src="img/cachetries/probability-formula.png">
+      <img height="80px" src="img/cachetries/probability-formula.png">
       <p>Key depth expectation</p>
-      <img height="90px" src="img/cachetries/expectation-formula.png">
+      <img height="80px" src="img/cachetries/expectation-formula.png">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <p>Expected percentage of elements in the most populated pair of levels</p>
+      <h2>Subgoal 2</h2>
+      <p>
+        There always exists a pair of consecutive
+        depths with "many" keys.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Expected percentage of elements in the most populated pair of depths</p>
       <img height="60px" src="img/cachetries/expected-most-populated.png">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <p>Key depth expectation</p>
-      <img height="90px" src="img/cachetries/expectation-formula.png">
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <h2>Subgoal 3</h2>
+      <p>
+        Such a depth is at log<sub>16</sub> n.
+      </p>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth expectation</p>
-      <img height="90px" src="img/cachetries/expectation-formula.png">
+      <img height="80px" src="img/cachetries/expectation-formula.png">
       <p>Expected cache depth</p>
       <img height="100px" src="img/cachetries/depth-formula.png">
       <br/>
@@ -645,7 +669,7 @@
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth expectation</p>
-      <img height="90px" src="img/cachetries/expectation-formula.png">
+      <img height="80px" src="img/cachetries/expectation-formula.png">
       <p>Expected cache depth</p>
       <img height="100px" src="img/cachetries/depth-formula.png">
       <p>Cache-tries run in expected O(1).</p>
@@ -684,6 +708,30 @@
       <p class="centered">
         Insert - 2x faster than CHM.
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h1 class="sketch centered">Summary</h1>
+      <ul style="font-size: 0.9em;">
+        <li class="bullet-list">
+          A novel non-blocking hash-trie design
+        </li>
+        <li class="bullet-list">
+          Lock-free path caching algorithm
+        </li>
+        <li class="bullet-list">
+          Proof for expected O(1) running time
+        </li>
+        <li class="bullet-list">
+          Compared to CHM,
+          ~2x faster insertion,
+          ~2x slower lookup
+        </li>
+        <li class="bullet-list">
+          Compared to previous non-blocking tries,
+          5x faster at 1 million elements
+        </li>
+      </ul>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
