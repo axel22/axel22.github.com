@@ -593,3 +593,11 @@ pre.snippet code {
 .bullet-list {
   list-style: disc;
 }
+
+.bullet-none {
+  list-style: none;
+}
+
+.faded {
+  opacity: 0.3;
+}

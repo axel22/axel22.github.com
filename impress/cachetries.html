@@ -163,19 +163,47 @@
           Oracle Labs
         </a>
       </p>
+      <img height="40px" src="img/speculative-scheduling/oracle.gif" />
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <h1 class="sketch">Roadmap</h1>
+      <h1 class="centered sketch">Roadmap</h1>
       <ul>
-        <li class="bullet-list">
+        <li class="bullet-none">
           Recap: lock-free hash-tries
         </li>
-        <li class="bullet-list">
-          Caches: from O(log n) to O(1)
+        <li class="bullet-none">
+          Problem statement
         </li>
-        <li class="bullet-list">
+        <li class="bullet-none">
+          Main idea: Path caching
+        </li>
+        <li class="bullet-none">
           Performance evaluation
+        </li>
+        <li class="bullet-none">
+          Summary and conclusion
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h1 class="centered sketch">Roadmap</h1>
+      <ul>
+        <li class="bullet-none">
+          Recap: lock-free hash-tries
+        </li>
+        <li class="bullet-none faded">
+          Problem statement
+        </li>
+        <li class="bullet-none faded">
+          Main idea: Path caching
+        </li>
+        <li class="bullet-none faded">
+          Performance evaluation
+        </li>
+        <li class="bullet-none faded">
+          Summary and conclusion
         </li>
       </ul>
     </div>
@@ -209,9 +237,9 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <p class="sketch centered">
-        Concurrent hash-tries.
-      </p>
+      <h1 class="sketch centered">
+        Non-blocking hash-tries
+      </h1>
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
@@ -233,7 +261,7 @@
     <div class="step fadealways" data-x="1400" data-y="0">
       <img height="600px" src="img/cachetries/hash-trie-2nd-10.svg">
       <p style="font-size: 28px; position: absolute;">
-        Lock-Free Resizable Concurrent Tries, LCPC 2011
+        <i>Prokopec et al.</i>, Lock-Free Resizable Concurrent Tries, LCPC 2011
       </p>
     </div>
 
@@ -277,6 +305,28 @@
       <img height="600px" src="img/cachetries/hash-trie-2nd.svg">
     </div>
 
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/hash-trie-log.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h1 class="sketch centered">
+        Problem statement
+      </h1>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        How to make basic operations asymptotically faster?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h1 class="sketch centered">
+        Main idea:<br/>Path caching
+      </h1>
+    </div>
+
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/cachetries/hash-trie-log.svg">
     </div>
@@ -287,6 +337,30 @@
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/cachetries/cache-trie-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h1 class="sketch centered">
+        Research questions
+      </h1>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>How to keep the cache consistent?</p>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>How to keep the cache consistent?</p>
+      <p>What is optimal cache depth?</p>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>How to keep the cache consistent?</p>
+      <p>What is optimal cache depth?</p>
+      <p>Does asymptotic complexity change?</p>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -371,6 +445,20 @@
       <img height="600px" src="img/cachetries/cache-trie-good-4.svg">
     </div>
 
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Rule</h2>
+      <p>No operation can mutate a frozen memory location in the node.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Freeze linearization point</h2>
+      <p>The CAS that freezes the last non-frozen location in the node.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-2.svg">
+    </div>
+
 <!--     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="600px" src="img/cachetries/cache-trie-good-5-0.svg">
     </div>
@@ -390,11 +478,32 @@
     <div class="step fadealways" data-x="1600" data-y="0">
       <h2>Invariant</h2>
 
-      <p>&forall; n &in; Node, <br/> &not; frozen(n) &rArr; reachable(root, n)</p>
+      <p>A node that is not frozen is reachable.</p>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Invariant</h2>
+
+      <p>A frozen node may be unreachable.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-4.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Policy</h2>
+
       <p>If an operation observes a frozen node, then it executes the slow path.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>
+        Operations are non-blocking and linearizable.
+      </h2>
+      <p>
+        Details and proof in the paper.
+      </p>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -471,6 +580,16 @@
     <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth distribution</p>
       <img height="90px" src="img/cachetries/probability-formula.png">
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <p>Key depth distribution</p>
+      <img height="90px" src="img/cachetries/probability-formula.png">
+      <p>Key depth expectation</p>
+      <img height="90px" src="img/cachetries/expectation-formula.png">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -481,7 +600,6 @@
     <div class="step fadealways" data-x="1600" data-y="0">
       <p>Key depth expectation</p>
       <img height="90px" src="img/cachetries/expectation-formula.png">
-      <br/>
       <br/>
       <br/>
       <br/>
@@ -504,8 +622,14 @@
       <img height="100px" src="img/cachetries/depth-formula.png">
       <p>Cache-tries run in expected O(1).</p>
       <p style="font-size: 28px; position: absolute;">
-        <i>Tech report:</i> Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations, Tech Report
+        <i>Tech report:</i> Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h1 class="sketch centered">
+        Evaluation
+      </h1>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
