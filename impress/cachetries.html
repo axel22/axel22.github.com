@@ -327,10 +327,10 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <h2>Proposed hash trie</h2>
+      <h2>Proposed data structure</h2>
       <p>
-        New design with
-        fewer indirections and a lower memory footprint.
+        New hash-trie design with fewer indirections
+        (i.e. fewer cache misses).
       </p>
     </div>
 
@@ -682,29 +682,57 @@
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <h1 class="sketch centered">
+        Memory footprint
+      </h1>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/cachetries/bench-footprint-1.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/cachetries/bench-footprint-2.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/cachetries/bench-footprint.png">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="400px" src="img/cachetries/bench-single-lookup.png">
+      <h1 class="sketch centered">
+        Lookup performance
+      </h1>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/cachetries/bench-multi-lookup-1.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/cachetries/bench-multi-lookup-2.png">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/cachetries/bench-multi-lookup.png">
-      <p class="centered">
-        Lookup - 1.5x slower than CHM.
-      </p>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="400px" src="img/cachetries/bench-single-insert.png">
+      <h1 class="sketch centered">
+        Insert performance
+      </h1>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/cachetries/bench-multi-insert-1.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="400px" src="img/cachetries/bench-multi-insert-2.png">
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <img height="400px" src="img/cachetries/bench-multi-insert.png">
-      <p class="centered">
-        Insert - 2x faster than CHM.
-      </p>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -722,11 +750,11 @@
         <li class="bullet-list">
           Compared to CHM,
           ~2x faster insertion,
-          ~2x slower lookup
+          ~1.5x-2x slower lookup
         </li>
         <li class="bullet-list">
           Compared to previous non-blocking tries,
-          5x faster at 1 million elements
+          up to 5x faster
         </li>
       </ul>
     </div>
