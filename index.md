@@ -54,6 +54,7 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec<br/>
 [23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2018)](https://conf.researchr.org/home/ppopp-2018)<br/>
 Vienna, Austria, February 2018<br/>
+<b><i>Best paper finalist</i></b><br/>
 \[[PDF](http://axel22.github.io/resources/docs/p137-prokopec.pdf)\]
 \[[Link](/publications/cachetries)\]
 
@@ -164,7 +165,7 @@ New Orleans, Louisiana, February 2012<br/>
 Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
 [The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)<br/>
 Fort Collins, Colorado, September 2011<br/>
-*Best Paper Presentation Award*<br/>
+<b><i>Best Paper Presentation Award</b></i><br/>
 \[[PDF](/resources/docs/ctries-techreport.pdf)\]
 \[[Link](/publications/lock-free-resizeable-concurrent-tries)\]
 
