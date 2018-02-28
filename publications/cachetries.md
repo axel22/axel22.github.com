@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Cache-Tries: Concurrent Lock-Free Hash-Tries with Constant-Time Operations
+title: Cache-Tries -- Concurrent Lock-Free Hash-Tries with Constant-Time Operations
 authors: Aleksandar Prokopec
 venue: PPoPP 2018
 permalink: /publications/cachetries/index.html
