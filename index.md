@@ -54,6 +54,8 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec<br/>
 [23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2018)](https://conf.researchr.org/home/ppopp-2018)<br/>
 Vienna, Austria, February 2018<br/>
+\[[PDF](http://axel22.github.io/resources/docs/p137-prokopec.pdf)\]
+\[[Link](/publications/cachetries)\]
 
 * **Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
 Aleksandar Prokopec<br/>
