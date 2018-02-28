@@ -165,7 +165,7 @@ New Orleans, Louisiana, February 2012<br/>
 Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
 [The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)<br/>
 Fort Collins, Colorado, September 2011<br/>
-<b><i>Best Paper Presentation Award</b></i><br/>
+<b><i>Best Paper Presentation Award</i></b><br/>
 \[[PDF](/resources/docs/ctries-techreport.pdf)\]
 \[[Link](/publications/lock-free-resizeable-concurrent-tries)\]
 
