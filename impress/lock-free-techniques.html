@@ -788,7 +788,7 @@ def GCAS(loc, ov, nv) = atomic {
 def GCAS(loc, ov, nv) = atomic {
   cur = READ(loc)
   gen = READ(root.gen)
-  if (cur == ov && loc.gen == gen) {
+  if (cur == ov && loc.gen <= gen) {
     WRITE(loc, nv)
     return true
   }
@@ -804,7 +804,7 @@ def GCAS(loc, ov, nv) = atomic {
 def GCAS(loc, ov, nv) = atomic {
   cur = READ(loc)
   gen = READ(root.gen)
-  if (cur == ov && loc.gen == gen) {
+  if (cur == ov && loc.gen <= gen) {
     WRITE(loc, nv)
     return true
   } else return false
@@ -877,13 +877,13 @@ def GCAS(loc, ov, nv) = {
       <img height="600px" src="img/lock-free/cache-trie-snapshots-immutable-5-2-1.svg">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+<!--     <div class="step fadealways" data-x="1600" data-y="0">
       <pre class="snippet" style="position: relative; left: 0px;">
         <code class="scala">
 def GCAS(loc, ov, nv) = {
   if (!CAS(ov.txn, NoTxn, nv)) return false
   gen = READ(root.gen)
-  if (ov.gen == gen) {
+  if (ov.gen <= gen) {
     if (CAS(loc, ov, nv)) {
       return true
     } else
@@ -931,7 +931,7 @@ def GREAD(loc, gen) = {
       <img height="600px" src="img/lock-free/gcas-linearizability-3.svg">
     </div>
 
-    <div class="step fadealways" data-x="1600" data-y="0">
+ -->    <div class="step fadealways" data-x="1600" data-y="0">
       <h1 class="sketch centered">What about other data structures</h1>
     </div>
 
