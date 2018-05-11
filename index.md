@@ -487,6 +487,7 @@ Lausanne, Switzerland, January 2012
 
 ### Reviewing
 
+- [EuroPar 2018](https://europar2018.org)
 - [Journal of Logical and Algebraic Methods in Programming 2018](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [SPAA 2017](https://spaa.acm.org/)
