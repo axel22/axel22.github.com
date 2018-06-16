@@ -55,7 +55,7 @@ Aleksandar Prokopec, Fengyun Liu<br/>
 [arXiv](https://arxiv.org/abs/1806.01405)<br/>
 Tech Report, 2018<br/>
 \[[PDF](http://axel22.github.io/resources/docs/soundness-coroutines.pdf)\]
-\[[Link](/publications/soundness-coroutines)\]
+\[[Link](/publications/soundness-of-coroutines-with-snapshots)\]
 
 * **Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
 Aleksandar Prokopec<br/>
