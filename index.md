@@ -53,7 +53,7 @@ London, UK, November 2014<br/>
 * **On the Soundness of Coroutines with Snapshots** <br/>
 Aleksandar Prokopec, Fengyun Liu<br/>
 [arXiv](https://arxiv.org/abs/1806.01405)<br/>
-Tech Report<br/>
+Tech Report, 2018<br/>
 \[[PDF](http://axel22.github.io/resources/docs/soundness-coroutines.pdf)\]
 \[[Link](/publications/soundness-coroutines)\]
 
@@ -68,7 +68,7 @@ Vienna, Austria, February 2018<br/>
 * **Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
 Aleksandar Prokopec<br/>
 [arXiv](https://arxiv.org/abs/1712.09636)<br/>
-Tech Report<br/>
+Tech Report, 2017<br/>
 \[[PDF](http://axel22.github.io/resources/docs/analysis-cachetries.pdf)\]
 \[[Link](/publications/analysis-cachetries)\]
 
