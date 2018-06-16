@@ -50,6 +50,13 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **On the Soundness of Coroutines with Snapshots** <br/>
+Aleksandar Prokopec, Fengyun Liu<br/>
+[arXiv](https://arxiv.org/abs/1806.01405)<br/>
+Tech Report<br/>
+\[[PDF](http://axel22.github.io/resources/docs/soundness-coroutines.pdf)\]
+\[[Link](/publications/soundness-coroutines)\]
+
 * **Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
 Aleksandar Prokopec<br/>
 [23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2018)](https://conf.researchr.org/home/ppopp-2018)<br/>
