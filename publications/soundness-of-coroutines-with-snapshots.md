@@ -34,8 +34,8 @@ to the simply-typed lambda calculus with references.
 [1] Akka. Akka documentation, 2011. http://akka.io/docs/
 
 [2] Konrad Anton and Peter Thiemann. Towards Deriving Type Systems and Implementations
-for Coroutines, pages 63–79. Springer Berlin Heidelberg, Berlin, Heidelberg,
-2010. URL: http://dx.doi.org/10.1007/978-3-642-17164-2_6, doi:10.1007/978-3-642-17164-2_6
+for Coroutines, pages 63–79. Springer Berlin Heidelberg, Berlin, Heidelberg, 2010.
+URL: http://dx.doi.org/10.1007/978-3-642-17164-2_6, doi:10.1007/978-3-642-17164-2_6
 
 [3] Kenichi Asai and Chihiro Uehara. Selective cps transformation for shift and reset. In
 Proceedings of the ACM SIGPLAN Workshop on Partial Evaluation and Program Manipulation,
@@ -46,8 +46,8 @@ web servers. In International Conference on Parallel Processing, 2004. ICPP 2004
 pages 134–142 vol.1, Aug 2004. doi:10.1109/ICPP.2004.1327913
 
 [5] Gérard Berry and Georges Gonthier. The ESTEREL Synchronous Programming Language:
-Design, Semantics, Implementation. Sci. Comput. Program., 19(2):87–152, November
-1992. URL: http://dx.doi.org/10.1016/0167-6423(92)90005-V, doi:10.1016/0167-6423(92)90005-V
+Design, Semantics, Implementation. Sci. Comput. Program., 19(2):87–152, November 1992.
+URL: http://dx.doi.org/10.1016/0167-6423(92)90005-V, doi:10.1016/0167-6423(92)90005-V
 
 [6] G.M. Birtwhistle, O.J. Dahl, B. Myhrhaug, and K. Nygaard. Simula Begin. Chartwell-Bratt
 Ltd, 1979.
@@ -147,8 +147,8 @@ USA, 2017. ACM. URL: http://doi.acm.org/10.1145/3133850.3133865, doi:10.1145/
 [34] Aleksandar Prokopec. Reactors.io website, 2018. URL: http://reactors.io
 
 [35] Aleksandar Prokopec, Phil Bagwell, Tiark Rompf, and Martin Odersky. A generic parallel
-collection framework. In Proceedings of the 17th international conference on Parallel processing
-- Volume Part II, Euro-Par’11, pages 136–147, Berlin, Heidelberg, 2011. SpringerVerlag.
+collection framework. In Proceedings of the 17th international conference on Parallel processing - Volume Part II,
+Euro-Par’11, pages 136–147, Berlin, Heidelberg, 2011. SpringerVerlag.
 URL: http://dl.acm.org/citation.cfm?id=2033408.2033425
 
 [36] Aleksandar Prokopec, Philipp Haller, and Martin Odersky. Containers and aggregates,
