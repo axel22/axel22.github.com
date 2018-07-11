@@ -6,6 +6,7 @@ venue: ECOOP 2018
 permalink: /publications/theory-and-practice-of-coroutines-with-snapshots/index.html
 ---
 
+![Coroutines](https://github.com/axel22/axel22.github.com/blob/master/resources/images/coroutines-64.png)
 
 ## Abstract
 
