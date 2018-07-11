@@ -31,6 +31,7 @@ and improvements of up to 6x compared to other approaches.
 
 ## Links
 
+\[[PDF](/resources/docs/coroutines-ecoop.pdf)\]
 \[[BibTex](/resources/docs/bibtex/theory-and-practice-of-coroutines-with-snapshots.bib)\]
 
 ## References
