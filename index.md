@@ -54,6 +54,7 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec, Fengyun Liu<br/>
 [The European Conference on Object-Oriented Programming (ECOOP 2018)](https://conf.researchr.org/home/ecoop-2018)<br/>
 Amsterdam, Netherlands, 2018<br/>
+\[[PDF](/resources/docs/coroutines-ecoop.pdf)\]
 \[[Link](/publications/theory-and-practice-of-coroutines-with-snapshots)\]
 
 * **On the Soundness of Coroutines with Snapshots** <br/>
