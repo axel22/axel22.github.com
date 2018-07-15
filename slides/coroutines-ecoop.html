@@ -569,6 +569,8 @@ foreach(1 :: Nil, println)
 
           <br/>
           <p class="fragment" align="center"><code>Array[List[T]]</code></p>
+          <br/>
+          <p class="fragment" align="center">How to traverse this data structure?</p>
         </section>
 
         <section>
@@ -673,7 +675,7 @@ foreach(1 :: Nil, println)
 </pre></code>
 <code><pre>
 <span class="hljs-keyword">val</span> i: <span class="hljs-highlighted">T</span> <~> Unit =
-  inArray.start(Array(List(1)))
+  inArray.start(Array(List(x)))
 </pre></code>
         </section>
 
@@ -682,8 +684,20 @@ foreach(1 :: Nil, println)
             Example: Async-Await
           </h2>
 
-          <p align="center">
-          </p>
+<code><pre>
+<span class="hljs-keyword">def</span> await[R]:
+  Future[R] ~> (Future[_], R) =
+</pre></code>
+<code class="fragment"><pre>
+  coroutine { (f: Future[R]) =>
+</pre></code>
+<code class="fragment"><pre>
+    yieldval(f)
+</pre></code>
+<code class="fragment"><pre>
+    f.getValue
+  }
+</pre></code>
         </section>
 
         <section>
@@ -692,7 +706,17 @@ foreach(1 :: Nil, println)
           </h2>
 
           <p align="center">
+            Snapshots increase the expressive power of coroutines.
           </p>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> i: Int <~> Unit =
+  inList.start(List(1))
+</pre></code>
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> j: Int <~> Unit =
+  i.<span class="hljs-highlighted">snapshot</span>
+</pre></code>
         </section>
 
         <section>
@@ -700,7 +724,49 @@ foreach(1 :: Nil, println)
             Example: Backtracking
           </h2>
 
-          <p align="center">
+<code class="fragment"><pre>
+<span class="hljs-keyword">type</span> EnvSetter = () => Unit
+</pre></code>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">type</span> Program = List[EnvSetter] <~> Int
+</pre></code>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">def</span> bt(p: Program) =
+</pre></code>
+<code class="fragment"><pre>
+  <span class="hljs-keyword">if</span> (p.resume)
+    <span class="hljs-keyword">for</span> (env <- p.value) {
+      env()
+      bt(p.snapshot)
+    }
+</pre></code>
+<code class="fragment"><pre>
+  <span class="hljs-keyword">else</span>
+    println(p.result)
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Example: Backtracking
+          </h2>
+
+<code class="fragment"><pre>
+check {
+</pre></code>
+<code class="fragment"><pre>
+  <span class="hljs-keyword">val</span> a = choose(0 until Int.MaxValue)
+  <span class="hljs-keyword">val</span> b = choose(0 until Int.MaxValue)
+</pre></code>
+<code class="fragment"><pre>
+  assert(a * b == b * a)
+}
+</pre></code>
+
+          <p align="center" class="fragment">
+            No need for monads and input generators.
           </p>
         </section>
 
@@ -743,33 +809,6 @@ foreach(1 :: Nil, println)
             Questions?
           </h3>
         </section>
-
-        <section>
-          <img src="img/coroutines/bench-tree.png" height="400px"/>
-        </section>
-
-        <section>
-          <img src="img/coroutines/bench-hash.png" height="400px"/>
-        </section>
-
-        <section>
-          <img src="img/coroutines/bench-graph.png" height="400px"/>
-        </section>
-
-        <section>
-          <img src="img/coroutines/bench-misc.png" height="400px"/>
-        </section>
-
-        <section>
-          <img src="img/coroutines/bench-conc.png" height="400px"/>
-        </section>
-
-        <!-- <section>
-          <h3>Performance</h3>
-
-          TODO: Copy in the charts later if there's enough time.
-        </section> -->
-
 			</div>
 
 		</div>
