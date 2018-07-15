@@ -213,8 +213,8 @@
           </p>
 
 <code class="fragment"><pre>
-<span class="hljs-keyword">val</span> double = (x: Int) => x + x
-
+<span class="hljs-keyword">val</span> foreach =
+  (b: List[T], f: T => Unit) =>
 </pre></code>
         </section>
 
@@ -228,8 +228,12 @@
           </p>
 
 <code><pre>
-<span class="hljs-keyword">val</span> double = (x: Int) => x + x
-double(7)
+<span class="hljs-keyword">val</span> foreach =
+  (b: List[T], f: T => Unit) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      f(b.head)
+      b = b.tail
+    }
 </pre></code>
         </section>
 
@@ -243,11 +247,16 @@ double(7)
           </p>
 
 <code><pre>
-<span class="hljs-keyword">val</span> double = (x: Int) => x + x
-14
+<span class="hljs-keyword">val</span> foreach =
+  (b: List[T], f: T => Unit) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      f(b.head)
+      b = b.tail
+    }
+foreach(1 :: Nil, println)
 </pre></code>
 
-          <p align="center">
+          <p align="center" class="fragment">
             A subroutine call exists, but cannot be observed.
           </p>
         </section>
@@ -257,13 +266,35 @@ double(7)
             Coroutine
           </h2>
 
+          <img src="img/zipper.jpg" height="200px" />
+<code><pre>
+<span class="hljs-keyword">def</span> zip[T, S]
+  (xs: List[T], ys: List[S])
+  : List[(T, S)]
+</pre></code>
+
+          <p align="center">
+            The <code>foreach</code> does not allow traversing two lists simultaneously,
+            e.g. to implement a <code>zip</code> function.
+          </p>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Coroutine
+          </h2>
+
           <p>
             A generalization of a subroutine.
           </p>
 
-<code><pre>
-<span class="hljs-keyword">val</span> double = <span class="hljs-highlighted">coroutine</span> { (x: Int) =>
-  x + x
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> inList = <span class="hljs-highlighted">coroutine</span> {
+  (b: List[T], f: T => Unit) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      f(b.head)
+      b = b.tail
+    }
 }
 </pre></code>
         </section>
@@ -278,16 +309,221 @@ double(7)
           </p>
 
 <code><pre>
-<span class="hljs-keyword">val</span> double = <span class="hljs-highlighted">coroutine</span> { (x: Int) =>
-  <span class="hljs-highlighted">yieldval</span>(x)
-  <span class="hljs-highlighted">yieldval</span>(x)
+<span class="hljs-keyword">val</span> inList = <span class="hljs-highlighted">coroutine</span> {
+  (b: List[T]) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      <span class="hljs-highlighted">yieldval</span>(b.head)
+      b = b.tail
+    }
 }
 </pre></code>
 
           <p class="fragment">
-            Unlike a subroutine, a coroutine call can be observed.
+            A yield-point suspends the coroutine and gives a value to the caller.
           </p>
         </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+<span class="hljs-keyword">val</span> inList = <span class="hljs-highlighted">coroutine</span> {
+  (b: List[T]) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      <span class="hljs-highlighted">yieldval</span>(b.head)
+      b = b.tail
+    }
+}
+</pre></code>
+<code><pre>
+<span class="hljs-keyword">val</span> i = inList.<span class="hljs-highlighted">start</span>(7)
+</pre></code>
+
+          <p class="fragment">
+            Value <code>i</code> is a coroutine instance.
+          </p>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+<span class="hljs-keyword">val</span> inList = <span class="hljs-highlighted">coroutine</span> {
+  (b: List[T]) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      <span class="hljs-highlighted">yieldval</span>(b.head)
+      b = b.tail
+    }
+}
+</pre></code>
+<code><pre>
+<span class="hljs-keyword">val</span> i = inList.<span class="hljs-highlighted">start</span>(7)
+<span class="hljs-keyword">while</span> (i.<span class="hljs-highlighted">resume</span>) println(i.<span class="hljs-highlighted">value</span>)
+</pre></code>
+        </section>
+
+<!--
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+ <span class="hljs-red">&uarr;</span>yieldval(x)
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)<span class="hljs-green">&uarr;</span>
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+ <span class="hljs-green">&uarr;</span>yieldval(x)
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-red">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-green">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value<span class="hljs-green">&uarr;</span> }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)<span class="hljs-green">&uarr;</span>
+  yieldval(x)
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-red">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-green">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)<span class="hljs-red">&uarr;</span>
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value<span class="hljs-green">&uarr;</span> }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)<span class="hljs-green">&uarr;</span>
+}
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-red">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)
+}<span class="hljs-red">&uarr;</span>
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume<span class="hljs-green">&uarr;</span>) { sum += i.value }
+</pre></code>
+        </section>
+
+        <section>
+          <h3>Calling a coroutine</h3>
+
+<code><pre>
+
+<span class="hljs-keyword">val</span> double = coroutine { (x: Int) =>
+  yieldval(x)
+  yieldval(x)
+}<span class="hljs-red">&uarr;</span>
+
+<span class="hljs-keyword">val</span> i = double.start(7)
+<span class="hljs-keyword">var</span> sum = 0
+<span class="hljs-keyword">while</span> (i.resume) { sum += i.value }
+<span class="hljs-green">&uarr;</span>
+</pre></code>
+        </section>
+-->
 
         <section>
           <h2 align="center">
@@ -300,7 +536,7 @@ double(7)
           </p>
 
           <p align="center">
-            Implementation using the metaprogramming support.
+            Our implementation relies solely on the metaprogramming support.
           </p>
         </section>
 
@@ -308,6 +544,10 @@ double(7)
           <h2 align="center">
             Delimited
           </h2>
+
+          <p align="center">
+            Yielding is only allow inside <code>coroutine</code> scopes.
+          </p>
 
 <code class="fragment"><pre>
 
