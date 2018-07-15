@@ -546,7 +546,7 @@ foreach(1 :: Nil, println)
           </h2>
 
           <p align="center">
-            Yielding is only allow inside <code>coroutine</code> scopes.
+            Yielding is only allowed inside <code>coroutine</code> scopes.
           </p>
 
 <code class="fragment"><pre>
@@ -561,12 +561,58 @@ foreach(1 :: Nil, println)
 </pre></code>
         </section>
 
+
         <section>
           <h2 align="center">
             Stackful
           </h2>
 
-<code class="fragment"><pre>
+          <br/>
+          <p class="fragment" align="center"><code>Array[List[T]]</code></p>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Stackful
+          </h2>
+
+<code><pre>
+
+  <span class="hljs-keyword">val</span> inArray = <span class="hljs-highlighted">coroutine</span> {
+    (t: Array[List[T]]) =>
+
+
+
+
+
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Stackful
+          </h2>
+
+<code><pre>
+
+  <span class="hljs-keyword">val</span> inArray = <span class="hljs-highlighted">coroutine</span> {
+    (t: Array[List[T]]) =>
+    <span class="hljs-keyword">var</span> i = 0
+    <span class="hljs-keyword">while</span> (i < t.length) {
+      // Traverse the list t(i)
+      i += 1
+    }
+  }
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Stackful
+          </h2>
+
+<code><pre>
 
   <span class="hljs-keyword">val</span> inArray = <span class="hljs-highlighted">coroutine</span> {
     (t: Array[List[T]]) =>
@@ -577,6 +623,10 @@ foreach(1 :: Nil, println)
     }
   }
 </pre></code>
+
+          <p align="center" class="fragment">
+            Stackful coroutines enable code reuse.
+          </p>
         </section>
 
         <section>
@@ -590,10 +640,40 @@ foreach(1 :: Nil, println)
           </p>
 
 <code class="fragment"><pre>
-<span class="hljs-keyword">val</span> plyList:
+<span class="hljs-keyword">val</span> inList:
   List[T] ~> (<span class="hljs-highlighted">T</span>, Unit)
-<span class="hljs-keyword">val</span> plyArray:
+</pre></code>
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> inArray:
   Array[List[T]] ~> (<span class="hljs-highlighted">T</span>, Unit)
+</pre></code>
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> i =
+  inArray.start(Array(List(1)))
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Type-Safe
+          </h2>
+
+          <p align="center">
+            <code>inArray</code> is allowed to call <code>inList</code>
+            because they yield the same type.
+          </p>
+
+<code><pre>
+<span class="hljs-keyword">val</span> inList:
+  List[T] ~> (<span class="hljs-highlighted">T</span>, Unit)
+</pre></code>
+<code><pre>
+<span class="hljs-keyword">val</span> inArray:
+  Array[List[T]] ~> (<span class="hljs-highlighted">T</span>, Unit)
+</pre></code>
+<code><pre>
+<span class="hljs-keyword">val</span> i: <span class="hljs-highlighted">T</span> <~> Unit =
+  inArray.start(Array(List(1)))
 </pre></code>
         </section>
 
