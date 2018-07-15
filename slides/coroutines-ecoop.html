@@ -775,8 +775,189 @@ check {
             Implementation
           </h2>
 
+<code><pre>
+<span class="hljs-keyword">val</span> inList = <span class="hljs-highlighted">coroutine</span> {
+  (b: List[T]) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      <span class="hljs-highlighted">yieldval</span>(b.head)
+      b = b.tail
+    }
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Implementation
+          </h2>
+
           <p align="center">
+            Step 1: normalization
           </p>
+
+<code><pre>
+<span class="hljs-keyword">var</span> x_0 = b != Nil
+<span class="hljs-keyword">while</span> (x_0) {
+  <span class="hljs-keyword">var</span> x_1 = b.head
+  <span class="hljs-keyword">var</span> x_2 = yieldval(x_1)
+  <span class="hljs-keyword">var</span> x_3 = b.tail
+  b = x_3
+  x_0 = b != Nil
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Implementation
+          </h2>
+
+          <p align="center">
+            Step 2: CFG conversion
+          </p>
+
+          <img src="img/coroutines/cfg.png" />
+        </section>
+
+        <section>
+          <h2 align="center">
+            Implementation
+          </h2>
+
+          <p align="center">
+            Step 3: CFG splitting
+          </p>
+
+          <img src="img/coroutines/segments.png" />
+        </section>
+
+        <section>
+          <h2 align="center">
+            Implementation
+          </h2>
+
+          <p align="center">
+            Step 4: AST reconstruction
+          </p>
+
+<code><pre>
+<span class="hljs-keyword">class</span> $anon
+<span class="hljs-keyword">extends</span> Coroutine1[List[T], T, Unit] {
+  <span class="hljs-keyword">def</span> ep0(i: Instance[T, Unit]): Unit = ...
+  <span class="hljs-keyword">def</span> ep1(i: Instance[T, Unit]): Unit = ...
+  <span class="hljs-keyword">def</span> entry(i: Instance[T, Unit]): Unit =
+    i <span class="hljs-keyword">match</span> {
+      <span class="hljs-keyword">case</span> 0 => ep0(i)
+      <span class="hljs-keyword">case</span> 1 => ep1(i)
+    }
+  }
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Implementation
+          </h2>
+
+          <p align="center">
+            Instance represents the coroutine instance.
+          </p>
+
+<code><pre>
+<span class="hljs-keyword">class</span> Instance[Y, R] {
+  <span class="hljs-keyword">var</span> _live: Boolean = true
+  <span class="hljs-keyword">var</span> _value: Y = <span class="hljs-keyword">null</span>
+  <span class="hljs-keyword">var</span> _result: R = <span class="hljs-keyword">null</span>
+  <span class="hljs-keyword">var</span> _refs: Array[AnyRef]
+  <span class="hljs-keyword">var</span> _vals: Array[Int]
+  // ... and a few more things ...
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Optimizations
+          </h2>
+
+          <br/>
+          <p align="center">
+            Maintaining the coroutine instance state is expensive,
+            so optimizations must reduce amount of memory accesses.
+          </p>
+
+          <br/>
+          <p align="center" class="fragment">
+            We found that the following optimizations improve performance by up to 2x.
+          </p>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Must-Load Optimization
+          </h2>
+
+          <br/>
+          <p align="center">
+            A variable must only be loaded if the segment uses it.
+          </p>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">var</span> x_0 = b != Nil
+<span class="hljs-keyword">while</span> (x_0) {
+  <span class="hljs-keyword">var</span> x_1 = b.head
+  yieldval(x_1)
+  <span class="hljs-keyword">var</span> x_2 = b.tail <span class="hljs-highlighted">// not load x_0, x_1</span>
+  b = x_2
+  x_0 = b != Nil
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Was-Changed Optimization
+          </h2>
+
+          <br/>
+          <p align="center">
+            A variable must only be stored if the exit point observes its write.
+          </p>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">var</span> x_0 = b != Nil
+<span class="hljs-keyword">while</span> (x_0) {
+  <span class="hljs-keyword">var</span> x_1 = b.head <span class="hljs-highlighted">// not store b 1st time</span>
+  yieldval(x_1)
+  <span class="hljs-keyword">var</span> x_2 = b.tail
+  b = x_2
+  x_0 = b != Nil
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Is-Needed Optimization
+          </h2>
+
+          <br/>
+          <p align="center">
+            A variable must only be stored if it remains in scope
+            up to a transitively reachable segment that needs it.
+          </p>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">var</span> x_0 = b != Nil
+<span class="hljs-keyword">while</span> (x_0) {
+  <span class="hljs-keyword">var</span> x_1 = b.head
+  yieldval(x_1) <span class="hljs-highlighted">// not store x_0, x_1</span>
+  <span class="hljs-keyword">var</span> x_2 = b.tail
+  b = x_2
+  x_0 = b != Nil
+}
+</pre></code>
         </section>
 
         <section>
@@ -784,8 +965,31 @@ check {
             Evaluation
           </h2>
 
-          <p align="center">
-          </p>
+          <img height="450px" src="img/coroutines/tree-iterator.png" />
+        </section>
+
+        <section>
+          <h2 align="center">
+            Evaluation
+          </h2>
+
+          <img height="450px" src="img/coroutines/hash-iterator.png" />
+        </section>
+
+        <section>
+          <h2 align="center">
+            Evaluation
+          </h2>
+
+          <img height="450px" src="img/coroutines/async.png" />
+        </section>
+
+        <section>
+          <h2 align="center">
+            Evaluation
+          </h2>
+
+          <img height="450px" src="img/coroutines/check.png" />
         </section>
 
         <section>
@@ -793,8 +997,12 @@ check {
             Contributions
           </h2>
 
-          <p align="center">
-          </p>
+          <ul>
+            <li>New form of coroutines - <i>coroutines with snapshots</i></li>
+            <li>Implementation in Scala using the metaprogramming API</li>
+            <li>Evaluation that shows that the approach is feasible</li>
+            <li>Formalization and soundness proof in &lambda;&zigrarr; calculus</li>
+          </ul>
         </section>
 
         <section>
