@@ -72,13 +72,13 @@
           </h2>
 
 <code class="" ><pre>
-        <span class="hljs-keyword">val</span> foreach =
-          (t: Tree[T], f: T => Unit) =>
-            <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>) 
-              foreach(t.left, f)
-              f(t.elem)
-              foreach(t.right, f)
-            }
+    <span class="hljs-keyword">val</span> foreach =
+      (t: Tree[T], f: T => Unit) =>
+        <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>) 
+          foreach(t.left, f)
+          f(t.elem)
+          foreach(t.right, f)
+        }
 </pre></code>
         </section>
 
@@ -88,14 +88,14 @@
           </h2>
 
 <code><pre>
-        <span class="hljs-keyword">val</span> iterator =
-          { (t: Tree[T]) ~>
-            <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>) 
-              foreach(t.left)
-              <span class="hljs-highlighted">yield</span>(t.elem)
-              foreach(t.right)
-            }
-          }
+    <span class="hljs-keyword">val</span> iterator =
+      { (t: Tree[T]) ~>
+        <span class="hljs-keyword">if</span> (t != <span class="hljs-keyword">null</span>) 
+          foreach(t.left)
+          <span class="hljs-highlighted">yield</span>(t.elem)
+          foreach(t.right)
+        }
+      }
 </pre></code>
         </section>
 
@@ -105,10 +105,10 @@
           </h2>
 
 <code><pre>
-      <span class="hljs-keyword">val</span> r: Future[Json] = request()
-      r.onSuccess(json => {
-        println(json)
-      })
+  <span class="hljs-keyword">val</span> r: Future[Json] = request()
+  r.onSuccess(json => {
+    println(json)
+  })
 </pre></code>
         </section>
 
@@ -118,9 +118,9 @@
           </h2>
 
 <code><pre>
-      <span class="hljs-keyword">val</span> r: Future[Json] = request()
-      <span class="hljs-keyword">val</span> json = <span class="hljs-highlighted">await</span>(r)
-      println(json)
+  <span class="hljs-keyword">val</span> r: Future[Json] = request()
+  <span class="hljs-keyword">val</span> json = <span class="hljs-highlighted">await</span>(r)
+  println(json)
 </pre></code>
         </section>
 
@@ -130,12 +130,12 @@
           </h2>
 
 <code><pre>
-      <span class="hljs-keyword">val</span> pass = <span class="hljs-highlighted">receive</span>()
-      <span class="hljs-keyword">assert</span>(isCorrect(pass))
-      <span class="hljs-keyword">while</span>(true) <span class="hljs-highlighted">receive</span>() <span class="hljs-keyword">match</span> {
-        <span class="hljs-keyword">case</span> Url(p) => serve(p)
-        <span class="hljs-keyword">case</span> Logout => stop()
-      }
+    <span class="hljs-keyword">val</span> pass = <span class="hljs-highlighted">receive</span>()
+    <span class="hljs-keyword">assert</span>(isCorrect(pass))
+    <span class="hljs-keyword">while</span>(true) <span class="hljs-highlighted">receive</span>() <span class="hljs-keyword">match</span> {
+      <span class="hljs-keyword">case</span> Url(p) => serve(p)
+      <span class="hljs-keyword">case</span> Logout => stop()
+    }
 </pre></code>
         </section>
 
@@ -145,23 +145,24 @@
           </h2>
 
 <code><pre>
-      <span class="hljs-keyword">var</span> e = mouse.<span class="hljs-highlighted">get</span>
-      <span class="hljs-keyword">while</span> (!e.isDown) e = mouse.<span class="hljs-highlighted">get</span>
-      <span class="hljs-keyword">val</span> c = <span class="hljs-keyword">new</span> Curve
-      <span class="hljs-keyword">while</span> (e.isDown) {
-        c.add(e.x, e.y)
-        e = mouse.<span class="hljs-highlighted">get</span>
-      }
+    <span class="hljs-keyword">var</span> e = mouse.<span class="hljs-highlighted">get</span>
+    <span class="hljs-keyword">while</span> (!e.isDown) e = mouse.<span class="hljs-highlighted">get</span>
+    <span class="hljs-keyword">val</span> c = <span class="hljs-keyword">new</span> Curve
+    <span class="hljs-keyword">while</span> (e.isDown) {
+      c.add(e.x, e.y)
+      e = mouse.<span class="hljs-highlighted">get</span>
+    }
 </pre></code>
         </section>
 
         <section>
           <h2 align="center">
-            Goal 2
+            Other examples
           </h2>
 
           <p align="center">
-            Runtime modifications must not be necessary.
+            I/O, symmetric coroutines, backtracking,
+            monads, continuations.
           </p>
         </section>
 
@@ -171,7 +172,17 @@
           </h2>
 
           <p align="center">
-            Runtime modifications must not be necessary.
+            No VM modifications.
+          </p>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Goal 2
+          </h2>
+
+          <p align="center">
+            No VM modifications.
           </p>
           <br/>
           <p align="center">
@@ -188,13 +199,99 @@
           </h2>
 
           <p align="center">
-            Achieve reasonably high performance.
+            Achieve reasonable performance.
           </p>
         </section>
 
         <section>
           <h2 align="center">
-            Our proposed model
+            Coroutine
+          </h2>
+
+          <p>
+            A generalization of a subroutine.
+          </p>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> double = (x: Int) => x + x
+
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Coroutine
+          </h2>
+
+          <p>
+            A generalization of a subroutine.
+          </p>
+
+<code><pre>
+<span class="hljs-keyword">val</span> double = (x: Int) => x + x
+double(7)
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Coroutine
+          </h2>
+
+          <p>
+            A generalization of a subroutine.
+          </p>
+
+<code><pre>
+<span class="hljs-keyword">val</span> double = (x: Int) => x + x
+14
+</pre></code>
+
+          <p align="center">
+            A subroutine call exists, but cannot be observed.
+          </p>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Coroutine
+          </h2>
+
+          <p>
+            A generalization of a subroutine.
+          </p>
+
+<code><pre>
+<span class="hljs-keyword">val</span> double = <span class="hljs-highlighted">coroutine</span> { (x: Int) =>
+  x + x
+}
+</pre></code>
+        </section>
+
+        <section>
+          <h2 align="center">
+            Coroutine
+          </h2>
+
+          <p>
+            A generalization of a subroutine.
+          </p>
+
+<code><pre>
+<span class="hljs-keyword">val</span> double = <span class="hljs-highlighted">coroutine</span> { (x: Int) =>
+  <span class="hljs-highlighted">yieldval</span>(x)
+  <span class="hljs-highlighted">yieldval</span>(x)
+}
+</pre></code>
+
+          <p class="fragment">
+            Unlike a subroutine, a coroutine call can be observed.
+          </p>
+        </section>
+
+        <section>
+          <h2 align="center">
+            The proposed coroutine model
           </h2>
 
           <p align="center">
@@ -212,8 +309,16 @@
             Delimited
           </h2>
 
-          <p align="center">
-          </p>
+<code class="fragment"><pre>
+
+  <span class="hljs-keyword">val</span> inList = <span class="hljs-highlighted">coroutine</span> {
+    (b: List[T]) =>
+    <span class="hljs-keyword">while</span> (b != Nil) {
+      <span class="hljs-highlighted">yieldval</span>(b.head)
+      b = b.tail
+    }
+  }
+</pre></code>
         </section>
 
         <section>
@@ -221,8 +326,17 @@
             Stackful
           </h2>
 
-          <p align="center">
-          </p>
+<code class="fragment"><pre>
+
+  <span class="hljs-keyword">val</span> inArray = <span class="hljs-highlighted">coroutine</span> {
+    (t: Array[List[T]]) =>
+    <span class="hljs-keyword">var</span> i = 0
+    <span class="hljs-keyword">while</span> (i < t.length) {
+      <span class="hljs-highlighted">inList</span>(t(i))
+      i += 1
+    }
+  }
+</pre></code>
         </section>
 
         <section>
@@ -231,7 +345,16 @@
           </h2>
 
           <p align="center">
+            <code>inArray</code> is allowed to call <code>inList</code>
+            because they yield the same type.
           </p>
+
+<code class="fragment"><pre>
+<span class="hljs-keyword">val</span> plyList:
+  List[T] ~> (<span class="hljs-highlighted">T</span>, Unit)
+<span class="hljs-keyword">val</span> plyArray:
+  Array[List[T]] ~> (<span class="hljs-highlighted">T</span>, Unit)
+</pre></code>
         </section>
 
         <section>
