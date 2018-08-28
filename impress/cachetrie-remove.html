@@ -149,7 +149,6 @@
 <div id="impress">
 
     <div class="step fadealways" data-x="0" data-y="0">
-      <h2>Cache-Tries</h2>
       <p>Efficient Lock-Free Removing and Compaction for the Cache-Trie Data Structure</p>
 
       <br/>
@@ -168,44 +167,27 @@
 
     <div class="step fadealways" data-x="1400" data-y="0">
       <h1 class="centered sketch">Roadmap</h1>
-      <ul>
+      <ul class="centered">
         <li class="bullet-none">
-          Recap of lock-free hash-tries
+          Recap of cache-tries
         </li>
         <li class="bullet-none">
-          Problem statement
+          Lock-free remove operation
         </li>
         <li class="bullet-none">
-          Accelerating tries with caching
+          Lock-free compaction
         </li>
         <li class="bullet-none">
           Performance evaluation
         </li>
         <li class="bullet-none">
-          Summary and conclusion
+          Conclusion
         </li>
       </ul>
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <h1 class="centered sketch">Roadmap</h1>
-      <ul>
-        <li class="bullet-none">
-          Recap of lock-free hash-tries
-        </li>
-        <li class="bullet-none faded">
-          Problem statement
-        </li>
-        <li class="bullet-none faded">
-          Accelerating tries with caching
-        </li>
-        <li class="bullet-none faded">
-          Performance evaluation
-        </li>
-        <li class="bullet-none faded">
-          Summary and conclusion
-        </li>
-      </ul>
+      <h1 class="centered sketch">Hash tries</h1>
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
@@ -237,32 +219,7 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <h1 class="sketch centered">
-        Non-blocking hash-tries
-      </h1>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/cas-2.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/cas-1.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/cas.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
       <img height="600px" src="img/cachetries/hash-trie-2nd-10.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/hash-trie-2nd-10.svg">
-      <p style="font-size: 28px; position: absolute;">
-        <i>Prokopec et al.</i>, Lock-Free Resizable Concurrent Tries, LCPC 2011
-      </p>
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
@@ -306,6 +263,96 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/hash-trie-log.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h1 class="centered sketch">Cache-tries</h1>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-3-hash.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="sketch centered">Question</h2>
+      <p class="centered">How to keep the cache and the trie consistent?</p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-1-midflight.svg">
+
+      <p>
+        <br/>
+      </p>
+      <br/>
+      <br/>
+      <p>
+        <br/>
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-1-midflight.svg">
+
+      <p>Rule: first update the trie, and then update the cache.</p>
+      <p>
+        If a thread does not see a key in the cache,
+        it can still find it in the trie.
+       </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="sketch centered">Observation</h2>
+      <p class="centered">Lookup and insert run in O(1) time.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="sketch centered">Question</h2>
+      <p class="centered">How to implement a remove operation that runs in O(1) time?</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h1 class="sketch centered">Thank you!</h1>
+      <h2 class="centered">Questions?</h2>
+    </div>
+
+    <!-- Additional material -->
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h1 class="sketch centered">
+        Non-blocking hash-tries
+      </h1>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cas-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cas-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/cas.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <img height="600px" src="img/cachetries/hash-trie-2nd-10.svg">
+      <p style="font-size: 28px; position: absolute;">
+        <i>Prokopec et al.</i>, Lock-Free Resizable Concurrent Tries, LCPC 2011
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
       <h2 class="sketch centered">History</h2>
       <ul style="font-size: 0.75em;">
         <li class="bullet-list">
@@ -332,10 +379,6 @@
         New hash-trie design with fewer indirections
         (i.e. fewer cache misses).
       </p>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/hash-trie-log.svg">
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
@@ -761,10 +804,6 @@
           up to 5x faster
         </li>
       </ul>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h1 class="sketch centered">Thank you.</h1>
     </div>
 
 </div>
