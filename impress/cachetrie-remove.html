@@ -321,8 +321,180 @@
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-inconsistent-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-inconsistent-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-linearizability-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Solution</h2>
+      <p>Freeze before removing nodes.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2>Rule</h2>
+      <p>No operation can mutate a frozen memory location in the node.</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-4.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-4-xn.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-good-5.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2 class="sketch centered">Remove algorithm</h2>
+      
+      <ol class="">
+        <li class="">
+          1. Locate node N with key via cache.
+        </li>
+        <li class="">
+          2. Otherwise, locate N with the trie.
+        </li>
+        <li class="">
+          3. CAS to remove the key.
+        </li>
+        <li class="">
+          4. Traverse node to check if empty.
+        </li>
+        <li class="">
+          5. If not empty, done.
+        </li>
+        <li class="">
+          6. Freeze the node's subtree.
+        </li>
+        <li class="">
+          7. Announce compaction with X-node.
+        </li>
+        <li class="">
+          8. CAS a new compacted node.
+        </li>
+      </ol>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2 class="sketch centered">Counter optimization</h2>
+
+      <p class="">
+        4. Traverse node to check if empty.
+      </p>
+
+      <br/>
+      <p>
+        To avoid traversing the node after every remove,
+        we add an eventually consistent counter to each node.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2 class="sketch centered">Counter optimization</h2>
+
+      <p>...</p>
+      <p>
+        4. Decrease counter.
+      </p>
+      <p class="">
+        5. If counter is 0, traverse node to check if empty.
+      </p>
+      <p>...</p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-remove-1.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-remove-2.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <img height="600px" src="img/cachetries/cache-trie-remove-3.svg">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0" data-rotate="0">
+      <p>
+        As more and more elements are removed,
+        more and more levels are unnecessarily traversed.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0" data-rotate="0">
+      <img height="600px" src="img/cachetries/probability2.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0" data-rotate="0">
+      <h2 class="sketch centered">Cache adjustment</h2>
+
+      <p>
+        1. If key not in cache, increase counter.
+        <br/>
+        2. If counter large, sample depths.
+        <br/>
+        3. Adjust the trie accordingly.
+      </p>
+      <br/>
+      <p>
+        This ensures an O(1) running time.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2 class="sketch centered">Evaluation</h2>
+      <p class="centered">
+        <img class="centered" height="400px" src="img/cachetries/xeon-remove-1.png">
+        <img class="centered" height="50px" src="img/cachetries/legend.png">
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2 class="sketch centered">Evaluation</h2>
+      <img style="position: relative; left: -200px;" height="400px" src="img/cachetries/xeon-remove-2.png">
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
       <h1 class="sketch centered">Thank you!</h1>
-      <h2 class="centered">Questions?</h2>
+      <h2 class="sketch centered">Questions?</h2>
     </div>
 
     <!-- Additional material -->
@@ -437,93 +609,6 @@
       <p>How to keep the cache consistent?</p>
       <p>What is optimal cache depth?</p>
       <p>Does asymptotic complexity change?</p>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h1>Problem 1</h1>
-      <h3>Consistency</h3>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-1.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-2.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3.svg">
-    </div>
-<!-- 
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-4.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-5.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-6.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-7.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-linearizability-1.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-linearizability-1-1.svg">
-    </div> -->
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3-1.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3-2.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-inconsistent-3-3.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-linearizability-2.svg">
-    </div>
-
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-linearizability-2-1.svg">
-    </div>
- -->
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>Solution</h2>
-      <p>Freeze before removing nodes.</p>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-1.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-2.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-3.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-4.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>Rule</h2>
-      <p>No operation can mutate a frozen memory location in the node.</p>
     </div>
 
 <!--     <div class="step fadealways" data-x="1600" data-y="0">
