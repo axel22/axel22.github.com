@@ -162,7 +162,7 @@
           Oracle Labs
         </a>
       </p>
-      <img height="40px" src="img/speculative-scheduling/oracle.gif" />
+      <!-- <img height="40px" src="img/speculative-scheduling/oracle.gif" /> -->
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
@@ -417,6 +417,41 @@
         <li class="">
           8. CAS a new compacted node.
         </li>
+        <br/>
+      </ol>
+    </div>
+
+    <div class="step fadealways" data-x="1600" data-y="0">
+      <h2 class="sketch centered">Remove algorithm</h2>
+      
+      <ol class="">
+        <li class="">
+          1. Locate node N with key via cache.
+        </li>
+        <li class="">
+          2. Otherwise, locate N with the trie.
+        </li>
+        <li class="">
+          3. CAS to remove the key.
+        </li>
+        <li class="">
+          4. Traverse node to check if empty.
+        </li>
+        <li class="">
+          5. If not empty, done.
+        </li>
+        <li class="">
+          6. Freeze the node's subtree.
+        </li>
+        <li class="">
+          7. Announce compaction with X-node.
+        </li>
+        <li class="">
+          8. CAS a new compacted node.
+        </li>
+        <li class="">
+          9. Resume from 4. at the parent.
+        </li>
       </ol>
     </div>
 
@@ -519,12 +554,6 @@
     <!-- Additional material -->
 
     <div class="step fadealways" data-x="1400" data-y="0">
-      <h1 class="sketch centered">
-        Non-blocking hash-tries
-      </h1>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
       <img height="600px" src="img/cachetries/cas-2.svg">
     </div>
 
@@ -534,161 +563,6 @@
 
     <div class="step fadealways" data-x="1400" data-y="0">
       <img height="600px" src="img/cachetries/cas.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/hash-trie-2nd-10.svg">
-      <p style="font-size: 28px; position: absolute;">
-        <i>Prokopec et al.</i>, Lock-Free Resizable Concurrent Tries, LCPC 2011
-      </p>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <h2 class="sketch centered">History</h2>
-      <ul style="font-size: 0.75em;">
-        <li class="bullet-list">
-          Implemented in at least 7 languages.
-        </li>
-        <li class="bullet-list">
-          <i>Prokopec et al.</i>,
-          Concurrent tries with efficient non-blocking snapshots
-        </li>
-        <li class="bullet-list">
-          <i>Areias and Rocha</i>,
-          A Lock-Free Hash Trie Design for Concurrent Tabled Logic Programs
-        </li>
-        <li class="bullet-list">
-          <i>Oshman and Shavit</i>,
-          The SkipTrie: Low-Depth Concurrent Search without Rebalancing
-        </li>
-      </ul>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <h2>Proposed data structure</h2>
-      <p>
-        New hash-trie design with fewer indirections
-        (i.e. fewer cache misses).
-      </p>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <h1 class="sketch centered">
-        Problem statement
-      </h1>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <p class="centered">
-        How to make basic operations asymptotically faster?
-      </p>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <h1 class="sketch centered">
-        Main idea:<br/>Path caching
-      </h1>
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/hash-trie-log.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-3.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-3-hash.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1400" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-1.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h1 class="sketch centered">
-        Research questions
-      </h1>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <p>How to keep the cache consistent?</p>
-      <br/>
-      <br/>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <p>How to keep the cache consistent?</p>
-      <p>What is optimal cache depth?</p>
-      <br/>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <p>How to keep the cache consistent?</p>
-      <p>What is optimal cache depth?</p>
-      <p>Does asymptotic complexity change?</p>
-    </div>
-
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>Freeze linearization point</h2>
-      <p>The CAS that freezes the last non-frozen location in the node.</p>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-2.svg">
-    </div>
- -->
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-5-0.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-5.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-6.svg">
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-7.svg">
-    </div>
- -->
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>Invariant</h2>
-
-      <p>A node that is not frozen is reachable.</p>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>Invariant</h2>
-
-      <p>A frozen node may be unreachable.</p>
-    </div>
-
-<!--     <div class="step fadealways" data-x="1600" data-y="0">
-      <img height="600px" src="img/cachetries/cache-trie-good-4.svg">
-    </div>
- -->
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>Policy</h2>
-
-      <p>If an operation observes a frozen node, then it executes the slow path.</p>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>
-        Operations are non-blocking and linearizable.
-      </h2>
-      <p>
-        Details and proof in the paper.
-      </p>
-    </div>
-
-    <div class="step fadealways" data-x="1600" data-y="0">
-      <h2>Problem 2</h2>
-      <h3>Cache depth</h3>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
@@ -906,6 +780,27 @@
         <li class="bullet-list">
           Compared to previous non-blocking tries,
           up to 5x faster
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="sketch centered">History</h2>
+      <ul style="font-size: 0.75em;">
+        <li class="bullet-list">
+          Implemented in at least 7 languages.
+        </li>
+        <li class="bullet-list">
+          <i>Prokopec et al.</i>,
+          Concurrent tries with efficient non-blocking snapshots
+        </li>
+        <li class="bullet-list">
+          <i>Areias and Rocha</i>,
+          A Lock-Free Hash Trie Design for Concurrent Tabled Logic Programs
+        </li>
+        <li class="bullet-list">
+          <i>Oshman and Shavit</i>,
+          The SkipTrie: Low-Depth Concurrent Search without Rebalancing
         </li>
       </ul>
     </div>
