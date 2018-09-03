@@ -50,10 +50,17 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Efficient Lock-Free Removing and Compaction for the Cache-Trie Data Structure** <br/>
+Aleksandar Prokopec<br/>
+[24th International European Conference on Parallel and Distributed Computing (Euro-Par 2018)](https://europar2018.org)<br/>
+Turin, Italy, August 2018<br/>
+\[[PDF](/resources/docs/cachetrie-remove.pdf)\]
+\[[Link](/publications/cachetrie-remove)\]
+
 * **Theory and Practice of Coroutines with Snapshots** <br/>
 Aleksandar Prokopec, Fengyun Liu<br/>
 [The European Conference on Object-Oriented Programming (ECOOP 2018)](https://conf.researchr.org/home/ecoop-2018)<br/>
-Amsterdam, Netherlands, 2018<br/>
+Amsterdam, Netherlands, July 2018<br/>
 \[[PDF](/resources/docs/coroutines-ecoop.pdf)\]
 \[[Link](/publications/theory-and-practice-of-coroutines-with-snapshots)\]
 
