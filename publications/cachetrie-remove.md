@@ -24,6 +24,7 @@ the parallelism level and the hardware architecture.
 
 \[[PDF](/resources/docs/cachetrie-remove.pdf)\]
 \[[BibTex](/resources/docs/bibtex/cachetrie-remove.bib)\]
+\[[Springer](https://www.springerprofessional.de/efficient-lock-free-removing-and-compaction-for-the-cache-trie-d/16055534)\]
 
 ## References
 
