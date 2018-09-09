@@ -79,17 +79,19 @@ Vienna, Austria, February 2018<br/>
 \[[PDF](http://axel22.github.io/resources/docs/p137-prokopec.pdf)\]
 \[[Link](/publications/cachetries)\]
 
+* **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
+Aleksandar Prokopec<br/>
+[Programming with Actors: State-of-the-Art and Research Perspectives]()<br/>
+August 2018<br/>
+\[[PDF](http://axel22.github.io/resources/docs/reactor-scheduler-special-issue.pdf)\]
+\[[Link](/publications/reactor-scheduling-extended)\]
+
 * **Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
 Aleksandar Prokopec<br/>
 [arXiv](https://arxiv.org/abs/1712.09636)<br/>
 Tech Report, 2017<br/>
 \[[PDF](http://axel22.github.io/resources/docs/analysis-cachetries.pdf)\]
 \[[Link](/publications/analysis-cachetries)\]
-
-* **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
-Aleksandar Prokopec<br/>
-[AGERE! State-of-the-Art Volume]()<br/>
-October 2017<br/>
 
 * **Encoding the Building Blocks of Communication** <br/>
 Aleksandar Prokopec<br/>
