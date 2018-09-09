@@ -24,7 +24,7 @@ our implementation against the Akka actor framework, and show up to
 ## Links
 
 \[[PDF](/resources/docs/reactor-scheduler-special-issue.pdf)\]
-\[[BibTex](/resources/docs/bibtex/cachetries.bib)\]
+\[[BibTex](/resources/docs/bibtex/)\]
 \[[Springer](https://www.springer.com/us/book/9783030003012)\]
 
 
