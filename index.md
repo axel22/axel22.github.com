@@ -81,7 +81,7 @@ Vienna, Austria, February 2018<br/>
 
 * **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
 Aleksandar Prokopec<br/>
-[Programming with Actors: State-of-the-Art and Research Perspectives]()<br/>
+[Programming with Actors: State-of-the-Art and Research Perspectives](https://www.springer.com/us/book/9783030003012)<br/>
 August 2018<br/>
 \[[PDF](http://axel22.github.io/resources/docs/reactor-scheduler-special-issue.pdf)\]
 \[[Link](/publications/reactor-scheduling-extended)\]
