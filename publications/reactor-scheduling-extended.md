@@ -2,7 +2,7 @@
 layout: publication
 title: Pluggable Scheduling for the Reactor Programming Model
 authors: Aleksandar Prokopec
-venue: Programming with Actors: State-of-the-Art and Research Perspectives, 2018
+venue: Programming with Actors, State-of-the-Art and Research Perspectives, 2018
 permalink: /publications/reactor-scheduling-extended/index.html
 ---
 
