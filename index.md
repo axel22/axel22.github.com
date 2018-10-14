@@ -337,6 +337,11 @@ It is devised to soften the learning curve of students who are being introduced 
 # <a id="talks">Talks</a>
 
 
+### GraalVM
+
+* [Voxxed Days Zurich](https://voxxeddays.com/zurich/)
+
+
 ### JIT Optimizations
 
 * [Scala Symposium 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
