@@ -497,6 +497,7 @@ Lausanne, Switzerland, January 2012
 
 ### Program Committees
 
+- [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
 - [Scala 2018](https://conf.researchr.org/track/scala-2018/scala-2018-papers)
 - [HLPP 2018](http://www.univ-orleans.fr/lifo/equipes/LMV/hlpp2018/index.php?id=0)
 - [AGERE! 2017](http://conf.researchr.org/track/agere-2017/agere-2017)
@@ -510,6 +511,7 @@ Lausanne, Switzerland, January 2012
 
 ### Reviewing
 
+- [POPL 2019](https://popl19.sigplan.org/)
 - [EuroPar 2018](https://europar2018.org)
 - [Journal of Logical and Algebraic Methods in Programming 2018](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
