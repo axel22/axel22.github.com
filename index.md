@@ -362,7 +362,7 @@ Penrith, UK, September 2016
 \[[Slides](/impress/encoding-communication)\]
 * [Euro-Par 2017](http://europar2017.usc.es/#conference-program)
 \[[Slides](/impress/speculative-scheduling)\]
-* [Bee-Scala 2016](bee-scala.org)
+* [Bee-Scala 2016](http://2016.bee-scala.org/)
 \[[Slides](/impress/reactor-model-short-protocols#/step-1)\]
 * [ScalaDays Berlin 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
 Berlin, Germany, June 2016
