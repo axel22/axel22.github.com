@@ -50,6 +50,13 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **An Optimization-Driven Incremental Inline Substitution Algorithm for Just-In-Time Compilers** <br/>
+Aleksandar Prokopec, Gilles Duboscq, David Leopoldseder, Thomas Wuerthinger<br/>
+[International Symposium on Code Generation and Optimization (CGO 2019)](http://cgo.org/cgo2019)<br/>
+Washington DC, USA 2019<br/>
+\[[PDF](/resources/docs/prio-inliner-cgo.pdf)\]
+\[[Link](/publications/prio-inliner-cgo)\]
+
 * **Efficient Lock-Free Removing and Compaction for the Cache-Trie Data Structure** <br/>
 Aleksandar Prokopec<br/>
 [24th International European Conference on Parallel and Distributed Computing (Euro-Par 2018)](https://europar2018.org)<br/>
