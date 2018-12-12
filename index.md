@@ -21,7 +21,6 @@ where I received a doctoral degree in 2014.
 
 # <a id="publications">Publications</a>
 
-
 ## PhD Thesis
 
 * **Data Structures and Algorithms for Data-Parallel Computing in a Managed Runtime**<br/>
@@ -555,7 +554,7 @@ I worked on the following courses:
 
 You can find my [reading journal here](/home/reading/).
 
-You can see a list of my [awards and honours here](/home/awards/).
+[Google Scholar Profile](https://scholar.google.ch/citations?user=0oaksewAAAAJ&hl=en&oi=ao).
 
 {% include technologies.htm %}
 
