@@ -34,10 +34,12 @@ surpassing state-of-the-art inlining approaches with speedups ranging from 5% up
 
 
 LLVM Cost-Benefit Estimation Implementation at GitHub. (2018).
-https://github.com/llvm-mirror/llvm/blob/88ab6705571782fa664ecfa71b2f959a0daf2d78/lib/Analysis/InlineCost.cpp
+https://github.com/llvm-mirror/llvm/blob/
+88ab6705571782fa664ecfa71b2f959a0daf2d78/lib/Analysis/InlineCost.cpp
 
 LLVM Inliner Implementation at GitHub. (2018).
-https://github.com/llvm-mirror/llvm/blob/6f1d64eb934e12ca5e8dcd378f88d1e6b80e8c55/lib/Transforms/IPO/Inliner.cpp
+https://github.com/llvm-mirror/llvm/blob/
+6f1d64eb934e12ca5e8dcd378f88d1e6b80e8c55/lib/Transforms/IPO/Inliner.cpp
 
 Open-source Graal Repository at GitHub. (2018).
 http://github.com/graalvm/graal
@@ -55,7 +57,7 @@ New York, NY, USA, 52–64. https://doi.org/10.1145/
 351397.351416
 
 Andrew Ayers, Richard Schooler, and Robert Gottlieb.
-1997. Aggressive Inlining. In Proceedings of the ACM
+Aggressive Inlining. In Proceedings of the ACM
 SIGPLAN 1997 Conference on Programming Language
 Design and Implementation (PLDI ’97). ACM, New York,
 NY, USA, 134–145. https://doi.org/10.1145/258915.
@@ -130,7 +132,7 @@ Reduction of Operator Strength. Commun. ACM 20, 11
 359888
 
 Keith D. Cooper, Timothy J. Harvey, and Todd Waterman.
-2008. An Adaptive Strategy for Inline Substitution. In
+An Adaptive Strategy for Inline Substitution. In
 Proceedings of the Joint European Conferences on Theory
 and Practice of Software 17th International Conference
 on Compiler Construction (CC’08/ETAPS’08). SpringerVerlag,
@@ -149,7 +151,7 @@ Methods. Springer Berlin Heidelberg, Berlin, Heidelberg,
 
 Gilles Duboscq, Thomas Würthinger, Lukas Stadler, Christian
 Wimmer, Doug Simon, and Hanspeter Mössenböck.
-2013. An Intermediate Representation for Speculative
+An Intermediate Representation for Speculative
 Optimizations in a Dynamic Compiler. In Proceedings of
 the 7th ACM Workshop on Virtual Machines and Intermediate
 Languages (VMIL ’13). ACM, New York, NY,
@@ -188,7 +190,7 @@ Publishing Co., Inc., Boston, MA, USA.
 
 
 Andy Georges, Dries Buytaert, and Lieven Eeckhout.
-2007. Statistically Rigorous Java Performance Evaluation.
+Statistically Rigorous Java Performance Evaluation.
 In Proceedings of the 22Nd Annual ACM SIGPLAN
 Conference on Object-oriented Programming Systems and
 Applications (OOPSLA ’07). ACM, New York, NY, USA,
@@ -280,7 +282,7 @@ http://dl.acm.org/citation.cfm?id=977395.977673
 
 David Leopoldseder, Lukas Stadler, Thomas Würthinger,
 Josef Eisl, Doug Simon, and Hanspeter Mössenböck.
-2018. Dominance-based Duplication Simulation (DBDS):
+Dominance-based Duplication Simulation (DBDS):
 Code Duplication to Enable Compiler Optimizations. In
 Proceedings of the 2018 International Symposium on
 Code Generation and Optimization (CGO 2018). ACM,
@@ -385,7 +387,7 @@ Aleksandar Prokopec. 2018. Reactors.IO Website. (2018).
 http://reactors.io
 
 Aleksandar Prokopec, Phil Bagwell, and Martin Odersky.
-2011. Cache-Aware Lock-Free Concurrent Hash Tries.
+Cache-Aware Lock-Free Concurrent Hash Tries.
 Technical Report.
 
 Aleksandar Prokopec, Phil Bagwell, and Martin Odersky.
@@ -409,7 +411,7 @@ New York, NY, USA, 151–160. https://doi.org/10.1145/
 2145816.2145836
 
 Aleksandar Prokopec, Philipp Haller, and Martin Odersky.
-2014. Containers and Aggregates, Mutators and Isolates
+Containers and Aggregates, Mutators and Isolates
 for Reactive Programming. In Proceedings of the Fifth Annual
 Scala Workshop (SCALA ’14). ACM, New York, NY,
 USA, 51–61. https://doi.org/10.1145/2637647.2637656
@@ -522,7 +524,7 @@ International Symposium on Code Generation and Optimization
 165, 10 pages. https://doi.org/10.1145/2544137.2544157
 
 Edwin Steiner, Andreas Krall, and Christian Thalinger.
-2007. Adaptive Inlining and On-stack Replacement in
+Adaptive Inlining and On-stack Replacement in
 the CACAO Virtual Machine. In Proceedings of the 5th
 International Symposium on Principles and Practice of
 Programming in Java (PPPJ ’07). ACM, New York,
