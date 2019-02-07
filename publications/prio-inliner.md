@@ -224,7 +224,7 @@ cfm?id=1764606.1764620
 
 Philipp Haller, Aleksandar Prokopec, Heather Miller,
 Viktor Klang, Roland Kuhn, and Vojin Jovanovic.
-2012. Scala Improvement Proposal: Futures and
+Scala Improvement Proposal: Futures and
 Promises (SIP-14). http://docs.scala-lang.org/sips/
 pending/futures-promises.html
 
@@ -317,7 +317,7 @@ ACM 55, 5 (May 2012), 66–73. https://doi.org/10.1145/
 2160718.2160735
 
 Michael Paleczny, Christopher Vick, and Cliff Click.
-2001. The Java hotspotTM Server Compiler. In Proceedings
+The Java hotspotTM Server Compiler. In Proceedings
 of the 2001 Symposium on JavaTM Virtual
 Machine Research and Technology Symposium - Volume
 1 (JVM’01). USENIX Association, Berkeley, CA, USA,
@@ -391,7 +391,7 @@ Cache-Aware Lock-Free Concurrent Hash Tries.
 Technical Report.
 
 Aleksandar Prokopec, Phil Bagwell, and Martin Odersky.
-2011. Lock-Free Resizeable Concurrent Tries. Springer
+Lock-Free Resizeable Concurrent Tries. Springer
 Berlin Heidelberg, Berlin, Heidelberg, 156–170. https:
 //doi.org/10.1007/978-3-642-36036-7_11
 
