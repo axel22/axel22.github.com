@@ -53,8 +53,8 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec, Gilles Duboscq, David Leopoldseder, Thomas Wuerthinger<br/>
 [International Symposium on Code Generation and Optimization (CGO 2019)](http://cgo.org/cgo2019)<br/>
 Washington DC, USA 2019<br/>
-\[[PDF](/resources/docs/prio-inliner-cgo.pdf)\]
-\[[Link](/publications/prio-inliner-cgo)\]
+\[[PDF](/resources/docs/prio-inliner-final.pdf)\]
+\[[Link](/publications/prio-inliner)\]
 
 * **Efficient Lock-Free Removing and Compaction for the Cache-Trie Data Structure** <br/>
 Aleksandar Prokopec<br/>
