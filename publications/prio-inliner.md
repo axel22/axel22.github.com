@@ -28,7 +28,7 @@ surpassing state-of-the-art inlining approaches with speedups ranging from 5% up
 
 ## Links
 
-\[[PDF](/resources/docs/prio-inliner.pdf)\]
+\[[PDF](/resources/docs/prio-inliner-final.pdf)\]
 \[[BibTex](/resources/docs/bibtex/prio-inliner.bib)\]
 \[[ACM]()\]
 
