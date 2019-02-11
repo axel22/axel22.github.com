@@ -509,6 +509,7 @@ Lausanne, Switzerland, January 2012
 ### Program Committees
 
 - [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
+- [HLPP 2019](https://www.ida.liu.se/conferences/hlpp2019/)
 - [Scala 2018](https://conf.researchr.org/track/scala-2018/scala-2018-papers)
 - [HLPP 2018](http://www.univ-orleans.fr/lifo/equipes/LMV/hlpp2018/index.php?id=0)
 - [AGERE! 2017](http://conf.researchr.org/track/agere-2017/agere-2017)
