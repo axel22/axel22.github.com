@@ -21,7 +21,6 @@ where I received a doctoral degree in 2014.
 
 # <a id="publications">Publications</a>
 
-
 ## PhD Thesis
 
 * **Data Structures and Algorithms for Data-Parallel Computing in a Managed Runtime**<br/>
@@ -50,10 +49,24 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **An Optimization-Driven Incremental Inline Substitution Algorithm for Just-In-Time Compilers** <br/>
+Aleksandar Prokopec, Gilles Duboscq, David Leopoldseder, Thomas Wuerthinger<br/>
+[International Symposium on Code Generation and Optimization (CGO 2019)](http://cgo.org/cgo2019)<br/>
+Washington DC, USA 2019<br/>
+\[[PDF](/resources/docs/prio-inliner-final.pdf)\]
+\[[Link](/publications/prio-inliner)\]
+
+* **Efficient Lock-Free Removing and Compaction for the Cache-Trie Data Structure** <br/>
+Aleksandar Prokopec<br/>
+[24th International European Conference on Parallel and Distributed Computing (Euro-Par 2018)](https://europar2018.org)<br/>
+Turin, Italy, August 2018<br/>
+\[[PDF](/resources/docs/cachetrie-remove.pdf)\]
+\[[Link](/publications/cachetrie-remove)\]
+
 * **Theory and Practice of Coroutines with Snapshots** <br/>
 Aleksandar Prokopec, Fengyun Liu<br/>
 [The European Conference on Object-Oriented Programming (ECOOP 2018)](https://conf.researchr.org/home/ecoop-2018)<br/>
-Amsterdam, Netherlands, 2018<br/>
+Amsterdam, Netherlands, July 2018<br/>
 \[[PDF](/resources/docs/coroutines-ecoop.pdf)\]
 \[[Link](/publications/theory-and-practice-of-coroutines-with-snapshots)\]
 
@@ -72,17 +85,19 @@ Vienna, Austria, February 2018<br/>
 \[[PDF](http://axel22.github.io/resources/docs/p137-prokopec.pdf)\]
 \[[Link](/publications/cachetries)\]
 
+* **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
+Aleksandar Prokopec<br/>
+[Programming with Actors: State-of-the-Art and Research Perspectives](https://www.springer.com/us/book/9783030003012)<br/>
+August 2018<br/>
+\[[PDF](http://axel22.github.io/resources/docs/reactor-scheduler-special-issue.pdf)\]
+\[[Link](/publications/reactor-scheduling-extended)\]
+
 * **Analysis of Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
 Aleksandar Prokopec<br/>
 [arXiv](https://arxiv.org/abs/1712.09636)<br/>
 Tech Report, 2017<br/>
 \[[PDF](http://axel22.github.io/resources/docs/analysis-cachetries.pdf)\]
 \[[Link](/publications/analysis-cachetries)\]
-
-* **Pluggable Scheduling for the Reactor Programming Model -- Extended Version** <br/>
-Aleksandar Prokopec<br/>
-[AGERE! State-of-the-Art Volume]()<br/>
-October 2017<br/>
 
 * **Encoding the Building Blocks of Communication** <br/>
 Aleksandar Prokopec<br/>
@@ -328,6 +343,11 @@ It is devised to soften the learning curve of students who are being introduced 
 # <a id="talks">Talks</a>
 
 
+### GraalVM
+
+* [Voxxed Days Zurich](https://voxxeddays.com/zurich/)
+
+
 ### JIT Optimizations
 
 * [Scala Symposium 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
@@ -348,7 +368,7 @@ Penrith, UK, September 2016
 \[[Slides](/impress/encoding-communication)\]
 * [Euro-Par 2017](http://europar2017.usc.es/#conference-program)
 \[[Slides](/impress/speculative-scheduling)\]
-* [Bee-Scala 2016](bee-scala.org)
+* [Bee-Scala 2016](http://2016.bee-scala.org/)
 \[[Slides](/impress/reactor-model-short-protocols#/step-1)\]
 * [ScalaDays Berlin 2016](http://event.scaladays.org/scaladays-berlin-2016#!#schedulePopupExtras-7628),
 Berlin, Germany, June 2016
@@ -488,6 +508,8 @@ Lausanne, Switzerland, January 2012
 
 ### Program Committees
 
+- [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
+- [HLPP 2019](https://www.ida.liu.se/conferences/hlpp2019/)
 - [Scala 2018](https://conf.researchr.org/track/scala-2018/scala-2018-papers)
 - [HLPP 2018](http://www.univ-orleans.fr/lifo/equipes/LMV/hlpp2018/index.php?id=0)
 - [AGERE! 2017](http://conf.researchr.org/track/agere-2017/agere-2017)
@@ -501,6 +523,7 @@ Lausanne, Switzerland, January 2012
 
 ### Reviewing
 
+- [POPL 2019](https://popl19.sigplan.org/)
 - [EuroPar 2018](https://europar2018.org)
 - [Journal of Logical and Algebraic Methods in Programming 2018](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
@@ -532,7 +555,7 @@ I worked on the following courses:
 
 You can find my [reading journal here](/home/reading/).
 
-You can see a list of my [awards and honours here](/home/awards/).
+[Google Scholar Profile](https://scholar.google.ch/citations?user=0oaksewAAAAJ&hl=en&oi=ao).
 
 {% include technologies.htm %}
 
