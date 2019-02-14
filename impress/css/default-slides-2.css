@@ -115,13 +115,15 @@ body {
     font-family: 'PT Sans', sans-serif;
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
+    background: rgb(255, 255, 255);
+/*  
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 255, 255)), to(rgb(235, 235, 235)));
     background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
     background:    -moz-radial-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
     background:     -ms-radial-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
     background:      -o-radial-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
     background:         radial-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
+*/
 }
 
 /*
@@ -227,74 +229,74 @@ a:focus {
 
 /*
     These 'slide' step styles were heavily inspired by HTML5 Slides:
-    http://html5slides.googlecode.com/svn/trunk/styles.css
+  http://html5slides.googlecode.com/svn/trunk/styles.css
 
-    ;)
+  ;)
 
-    They cover everything what you see on first three steps of the demo.
+  They cover everything what you see on first three steps of the demo.
 */
 .slide {
-    display: block;
+  display: block;
 
-    width: 900px;
-    height: 700px;
-    padding: 40px 60px;
+  width: 900px;
+  height: 700px;
+  padding: 40px 60px;
 
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
 
-    color: rgb(102, 102, 102);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+  color: rgb(102, 102, 102);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 30px;
-    line-height: 36px;
-    letter-spacing: -1px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -1px;
 }
 
 .slide q {
-    display: block;
-    font-size: 50px;
-    line-height: 72px;
+  display: block;
+  font-size: 50px;
+  line-height: 72px;
 
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .slide q strong {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 /*
-    The last step is an overview.
-    There is no content in it, so we make sure it's not visible because we want
-    to be able to click on other steps.
+  The last step is an overview.
+  There is no content in it, so we make sure it's not visible because we want
+  to be able to click on other steps.
 
 */
 #overview { display: none }
 
 /*
-    We also make other steps visible and give them a pointer cursor using the
-    `impress-on-` class.
+  We also make other steps visible and give them a pointer cursor using the
+  `impress-on-` class.
 */
 .impress-on-overview .step {
-    opacity: 1;
-    cursor: pointer;
+  opacity: 1;
+  cursor: pointer;
 }
 
 
 /*
-    Now, when we have all the steps styled let's give users a hint how to navigate
-    around the presentation.
+  Now, when we have all the steps styled let's give users a hint how to navigate
+  around the presentation.
 
-    The best way to do this would be to use JavaScript, show a delayed hint for a
-    first time users, then hide it and store a status in cookie or localStorage...
+  The best way to do this would be to use JavaScript, show a delayed hint for a
+  first time users, then hide it and store a status in cookie or localStorage...
 
-    But I wanted to have some CSS fun and avoid additional scripting...
+  But I wanted to have some CSS fun and avoid additional scripting...
 
-    Let me explain it first, so maybe the transition magic will be more readable
-    when you read the code.
+  Let me explain it first, so maybe the transition magic will be more readable
+  when you read the code.
 
     First of all I wanted the hint to appear only when user is idle for a while.
     You can't detect the 'idle' state in CSS, but I delayed a appearing of the
@@ -460,6 +462,10 @@ h2 {
   font-size: 70px;
 }
 
+h3 {
+  font-size: 60px;
+}
+
 .small-font {
   font-size: 34px;
   vertical-align: top;
@@ -515,6 +521,17 @@ a:hover img {
   opacity: 0.3;
 }
 
+.fadepast.future {
+  opacity: 0.01;
+}
+
+.fadepast.current {
+  opacity: 1.0;
+}
+
+.fadepast.past {
+  opacity: 1.0;
+}
 .fadepastlightly.future {
   opacity: 1.0;
 }
@@ -573,6 +590,10 @@ pre.snippet code {
   width: 1070px;
 }
 
+pre code.hljs {
+  background-color: transparent;
+}
+
 .sketch {
   font-family: SketchBlock;
 }
@@ -600,6 +621,10 @@ pre.snippet code {
 
 .faded {
   opacity: 0.3;
+}
+
+.numbered-list {
+  list-style: decimal;
 }
 
 .very-small-font {
