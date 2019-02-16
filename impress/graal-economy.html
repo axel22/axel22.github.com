@@ -256,7 +256,10 @@
       <br/>
       <ul>
         <li class="bullet-list">
-          Loop-safepoint elimination
+          Lock elimination
+        </li>
+        <li class="bullet-list">
+          Adding and removing loop-safepoints
         </li>
         <li class="bullet-list">
           Replacing guards with deopt stubs
@@ -265,16 +268,61 @@
           Frame-state assignment
         </li>
         <li class="bullet-list">
-          Escape analysis and read elimination
+          Partial loop unrolling
         </li>
         <li class="bullet-list">
-          Tail duplication
+          Deoptimization grouping
         </li>
         <li class="bullet-list">
-          Loop unswitching, peeling, unrolling
+          Second lowering
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Graal Frontend (Low Part)</h3>
+      <br/>
+
+      <p>
+        Mostly lowering and scheduling.
+      </p>
+      <br/>
+      <ul>
+        <li class="bullet-list">
+          Third lowering
         </li>
         <li class="bullet-list">
-          First lowering
+          Logic-to-control-flow
+        </li>
+        <li class="bullet-list">
+          Simplification
+        </li>
+        <li class="bullet-list">
+          Floating reads reduction
+        </li>
+        <li class="bullet-list">
+          Dead code elimination
+        </li>
+        <li class="bullet-list">
+          Scheduling to basic blocks
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Graal Economy Frontend</h3>
+      <br/>
+
+      <ul>
+        <li class="bullet-list">
+          High tier: bytecode parsing, simplification, lowering
+        </li>
+        <li class="bullet-list">
+          Mid tier: adding loop-safepoints, guards-to-deopts, lowering,
+          frame-state assignment
+        </li>
+        <li class="bullet-list">
+          Low tier: lowering, fixed, scheduling
         </li>
       </ul>
     </div>
