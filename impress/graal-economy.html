@@ -163,7 +163,121 @@
       <img height="120px" src="img/oracle-labs.png" />
     </div>
 
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Multi-Tier Compilation</h3>
+      <br/>
 
+      <ul>
+        <li class="bullet-list">
+          Multi-tier compilation smooths the warmup curve
+          in JIT compilers.
+        </li>
+        <li class="bullet-list">
+          In HotSpot, C1 is the first-tier compiler,
+          C2 is the second-tier.
+        </li>
+        <li class="bullet-list">
+          In GraalVM, C1 is the first-tier compiler,
+          Graal is the second-tier.
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="centered">Graal as the first-tier compiler?</h2>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Graal IR</h3>
+      <br/>
+
+      <p class="centered">
+        <img height="520px" src="img/aggressive-jit/computeSum-after-round-0-closeup.png" />
+      </p>
+      <p class="centered">
+        Based on "sea-of-nodes".
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Graal Compiler</h3>
+      <br/>
+
+      <ul>
+        <li class="bullet-list">
+          Frontend: high-, mid- and low-part.
+        </li>
+        <li class="bullet-list">
+          Backend: low-level optimizations, register allocation, code generation.
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Graal Frontend (High Part)</h3>
+      <br/>
+
+      <p>
+        IR nodes are close to Java bytecode.
+      </p>
+      <br/>
+      <ul>
+        <li class="bullet-list">
+          Bytecode parsing
+        </li>
+        <li class="bullet-list">
+          Simplification
+        </li>
+        <li class="bullet-list">
+          Inlining
+        </li>
+        <li class="bullet-list">
+          Escape analysis and read elimination
+        </li>
+        <li class="bullet-list">
+          Tail duplication
+        </li>
+        <li class="bullet-list">
+          Loop unswitching, peeling, unrolling
+        </li>
+        <li class="bullet-list">
+          First lowering
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Graal Frontend (Mid Part)</h3>
+      <br/>
+
+      <p>
+        Optimizations unrelated to bytecode.
+      </p>
+      <br/>
+      <ul>
+        <li class="bullet-list">
+          Loop-safepoint elimination
+        </li>
+        <li class="bullet-list">
+          Replacing guards with deopt stubs
+        </li>
+        <li class="bullet-list">
+          Frame-state assignment
+        </li>
+        <li class="bullet-list">
+          Escape analysis and read elimination
+        </li>
+        <li class="bullet-list">
+          Tail duplication
+        </li>
+        <li class="bullet-list">
+          Loop unswitching, peeling, unrolling
+        </li>
+        <li class="bullet-list">
+          First lowering
+        </li>
+      </ul>
+    </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
       <h1 class="sketch centered">Thank you.</h1>
