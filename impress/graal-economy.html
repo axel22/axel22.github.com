@@ -247,6 +247,36 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Partial Escape Analysis and Inlining</h3>
+      <br/>
+
+      <br/>
+      <img height="60px" src="img/economy/pea-static.png" />
+      <img height="320px" src="img/economy/pea.png" />
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Partial Escape Analysis and Inlining</h3>
+      <br/>
+
+      <img height="460px" src="img/economy/pea-after.png" />
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Tail Duplication and Simplification</h3>
+      <br/>
+
+      <img height="460px" src="img/economy/duplication-before.png" />
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Tail Duplication and Simplification</h3>
+      <br/>
+
+      <img height="460px" src="img/economy/duplication-after.png" />
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
       <h3 class="centered">Graal Frontend (Mid Part)</h3>
       <br/>
 
@@ -280,6 +310,67 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Safepoints</h3>
+      <br/>
+
+      <br/>
+      <p class="centered">
+        <img height="340px" src="img/economy/safepoint-before.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Safepoints</h3>
+      <br/>
+
+      <p class="centered">
+       <img height="380px" src="img/economy/safepoint-after.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Replacing guards with stubs</h3>
+      <br/>
+
+      <br/>
+      <p class="centered">
+        <img height="380px" src="img/economy/guard-before.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Replacing guards with stubs</h3>
+      <br/>
+
+      <p class="centered">
+        <img height="420px" src="img/economy/guard-after.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Frame-State Assignment</h3>
+      <br/>
+
+      <br/>
+      <p class="centered">
+        <img height="240px" src="img/economy/frame-before.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Frame-State Assignment</h3>
+      <br/>
+
+      <p class="centered">
+        <img height="120px" src="img/economy/frame-after-loop.png" />
+      </p>
+      <br/>
+      <p class="centered">
+        <img height="120px" src="img/economy/frame-after-frame.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
       <h3 class="centered">Graal Frontend (Low Part)</h3>
       <br/>
 
@@ -310,6 +401,15 @@
     </div>
 
     <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Scheduling of Nodes</h3>
+
+      <p class="centered">
+        <img height="640px" src="img/economy/cfg-ir.png" />
+        <img height="640px" src="img/economy/cfg.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
       <h3 class="centered">Graal Economy Frontend</h3>
       <br/>
 
@@ -325,6 +425,158 @@
           Low tier: lowering, fixed, scheduling
         </li>
       </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="centered">Evaluation</h2>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Evaluation</h3>
+      <br/>
+
+      <ul>
+        <li class="bullet-list">
+          Compare peak performance, warmup and code size.
+        </li>
+        <li class="bullet-list">
+          Warmup comparisons are tricky.
+        </li>
+        <li class="bullet-list">
+          Graal codebase is currently always compiled with the first-tier compiler!
+        </li>
+        <li class="bullet-list">
+          Compare C1, C1+C2, C1+GraalCE, C1+GraalEE, C1+GraalEconomy.
+        </li>
+        <li class="bullet-list">
+          DaCapo and Scalabench suites.
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/fop-warmup.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/h2-warmup.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/luindex-warmup.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/actors-warmup.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/factorie-warmup.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/scalac-warmup.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/avrora-peak.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/fop-peak.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/h2-peak.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/actors-peak.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/factorie-peak.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/scalac-peak.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <p class="centered">
+        <img height="460px" src="img/economy/scalariform-peak.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Evaluation Conclusions</h3>
+      <br/>
+
+      <ul>
+        <li class="bullet-list">
+          Eco has faster warmup than Graal even in C1+Eco mode.
+        </li>
+        <li class="bullet-list">
+          On DaCapo, C1 and Eco are within 1-2x of peak performance.
+        </li>
+        <li class="bullet-list">
+          On Scalabench, C1 and Eco are within 2.5-5.5x of peak performance.
+        </li>
+        <li class="bullet-list">
+          On 9 out of 22, C1 is <20% faster.
+        </li>
+        <li class="bullet-list">
+          On 5 out of 22, Eco is <20% faster.
+        </li>
+        <li class="bullet-list">
+          Code size is reasonable (close to C1).
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h3 class="centered">Future Steps</h3>
+      <br/>
+
+      <ul>
+        <li class="bullet-list">
+          Tuning: enabling optimizations, changing register allocation, etc.
+        </li>
+        <li class="bullet-list">
+          Replacing snippets with runtime stubs
+        </li>
+        <li class="bullet-list">
+          To solve the warmup problem, compile Graal ahead-of-time (libgraal)
+        </li>
+      </ul>
+    </div>
+
+    <div class="step fadealways" data-x="1400" data-y="0">
+      <h2 class="centered">Graal Economy can replace C1.</h2>
     </div>
 
     <div class="step fadealways" data-x="1600" data-y="0">
