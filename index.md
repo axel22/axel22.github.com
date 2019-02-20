@@ -49,10 +49,15 @@ London, UK, November 2014<br/>
 
 ## Conference Papers
 
+* **Renaissance: Benchmarking Suite for Parallel Applications on the JVM** <br/>
+Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
+[Programming Language Design and Implementation (PLDI 2019)](https://pldi19.sigplan.org)<br/>
+Phoenix, Arizona, USA, June 2019<br/>
+
 * **An Optimization-Driven Incremental Inline Substitution Algorithm for Just-In-Time Compilers** <br/>
 Aleksandar Prokopec, Gilles Duboscq, David Leopoldseder, Thomas Wuerthinger<br/>
 [International Symposium on Code Generation and Optimization (CGO 2019)](http://cgo.org/cgo2019)<br/>
-Washington DC, USA 2019<br/>
+Washington DC, USA, February 2019<br/>
 \[[PDF](/resources/docs/prio-inliner-final.pdf)\]
 \[[Link](/publications/prio-inliner)\]
 
