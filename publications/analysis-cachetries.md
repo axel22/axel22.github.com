@@ -26,7 +26,7 @@ and prove that the running time of the basic operations becomes O(1).
 
 \[[PDF](/resources/docs/analysis-cachetries.pdf)\]
 \[[BibTex](/resources/docs/bibtex/analysis-cachetries.bib)\]
-
+\[[arXiv](https://arxiv.org/abs/1712.09636)\]
 
 ## References
 
