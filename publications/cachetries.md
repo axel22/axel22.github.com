@@ -35,6 +35,7 @@ with respect to the previous hash trie variants.
 
 \[[PDF](/resources/docs/p137-prokopec.pdf)\]
 \[[BibTex](/resources/docs/bibtex/cachetries.bib)\]
+\[[ACM](https://dl.acm.org/citation.cfm?id=3178498)\]
 
 
 ## References
