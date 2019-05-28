@@ -54,6 +54,13 @@ Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tům
 [Programming Language Design and Implementation (PLDI 2019)](https://pldi19.sigplan.org)<br/>
 Phoenix, Arizona, USA, June 2019<br/>
 
+* **Enhancing Program Execution Using Optimization-Driven Inlining** <br/>
+Aleksandar Prokopec, Thomas Wuerthinger<br/>
+[United States Patent 10261765](http://www.freepatentsonline.com/10261765.html)<br/>
+April 2019<br/>
+\[[PDF](/resources/docs/patent-US10261765B1.pdf)\]
+\[[Link](/publications/patent-prio-inliner)\]
+
 * **An Optimization-Driven Incremental Inline Substitution Algorithm for Just-In-Time Compilers** <br/>
 Aleksandar Prokopec, Gilles Duboscq, David Leopoldseder, Thomas Wuerthinger<br/>
 [International Symposium on Code Generation and Optimization (CGO 2019)](http://cgo.org/cgo2019)<br/>
