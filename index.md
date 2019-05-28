@@ -47,7 +47,7 @@ London, UK, November 2014<br/>
 \[[Link](/publications/learning-concurrent-programming-in-scala)\]
 
 
-## Publications
+## Articles
 
 * **Renaissance: Benchmarking Suite for Parallel Applications on the JVM** <br/>
 Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
