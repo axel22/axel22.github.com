@@ -33,6 +33,8 @@ surpassing state-of-the-art inlining approaches with speedups ranging from 5% up
 \[[ACM](https://dl.acm.org/citation.cfm?id=3314893)\]
 
 
+## References
+
 LLVM Cost-Benefit Estimation Implementation at GitHub. (2018).
 https://github.com/llvm-mirror/llvm/blob/
 88ab6705571782fa664ecfa71b2f959a0daf2d78/lib/Analysis/InlineCost.cpp
