@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: On Evaluating the Renaissance Benchmarking Suite: Variety, Performance, and Complexity
+title: On Evaluating the Renaissance Benchmarking Suite -- Variety, Performance, and Complexity
 authors: Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder
 venue: arXiv
 permalink: /publications/on-evaluating-renaissance/index.html
