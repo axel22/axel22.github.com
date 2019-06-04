@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Renaissance: Benchmarking Suite for Parallel Applications on the JVM
+title: Renaissance -- Benchmarking Suite for Parallel Applications on the JVM
 authors: Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder
 venue: PLDI 2019
 permalink: /publications/renaissance/index.html
