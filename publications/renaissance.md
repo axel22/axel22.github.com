@@ -32,6 +32,9 @@ benchmark suites shows a more prominent impact on the Renaissance workloads than
 \[[BibTex]()\]
 \[[ACM]()\]
 
+
+## References
+
 SPECjvm2008. https://www.spec.org/jvm2008/.
 
 SPECjvm2008 User’s Guide. https://www.spec.org/jvm2008/docs/UserGuide.html
