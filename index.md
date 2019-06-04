@@ -53,6 +53,15 @@ London, UK, November 2014<br/>
 Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
 [Programming Language Design and Implementation (PLDI 2019)](https://pldi19.sigplan.org)<br/>
 Phoenix, Arizona, USA, June 2019<br/>
+\[[PDF](/resources/docs/pldi19main-renaissance-final.pdf)\]
+\[[Link](/publications/renaissance)\]
+
+* **On Evaluating the Renaissance Benchmarking Suite: Variety, Performance, and Complexity** <br/>
+Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
+[arXiv](https://arxiv.org/abs/1903.10267)<br/>
+Tech Report, 2019<br/>
+\[[PDF](/resources/docs/on-evaluating-renaissance.pdf)\]
+\[[Link](/publications/on-evaluating-renaissance)\]
 
 * **Enhancing Program Execution Using Optimization-Driven Inlining** <br/>
 Aleksandar Prokopec, Thomas Wuerthinger<br/>
