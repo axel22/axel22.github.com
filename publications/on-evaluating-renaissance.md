@@ -27,6 +27,8 @@ new compiler optimizations. We then present the obtained measurements in detail.
 \[[arXiv](https://arxiv.org/abs/1903.10267)\]
 
 
+## References
+
 SPECjvm2008. https://www.spec.org/jvm2008/.
 
 SPECjvm2008 User’s Guide. https://www.spec.org/jvm2008/docs/UserGuide.html
