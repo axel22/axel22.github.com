@@ -29,8 +29,8 @@ benchmark suites shows a more prominent impact on the Renaissance workloads than
 ## Links
 
 \[[PDF](/resources/docs/pldi19main-renaissance-final.pdf)\]
-\[[BibTex]()\]
-\[[ACM]()\]
+\[[BibTex](/resources/docs/bibtex/renaissance.bib)\]
+\[[ACM](https://dl.acm.org/citation.cfm?id=3314637)\]
 
 
 ## References
