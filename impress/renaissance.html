@@ -174,49 +174,102 @@
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
-      <p class="centered">
-        <img height="140px" src="img/renaissance/alexpro.jpg" />
-        <img height="140px" src="img/renaissance/rosa.jpg" />
-        <img height="140px" src="img/renaissance/david.jpg" />
-        <img height="140px" src="img/renaissance/gilles.jpeg" />
-        <img height="140px" src="img/renaissance/petr.jpeg" />
-        <img height="140px" src="img/renaissance/lubomir.jpeg" />
-        <img height="140px" src="img/renaissance/yudi.jpg" />
-        <img height="140px" src="img/renaissance/alexv.jpeg" />
-        <img height="140px" src="img/renaissance/doug.jpeg" />
-        <img height="140px" src="img/renaissance/thomas.jpeg" />
-        <img height="140px" src="img/renaissance/walter.jpeg" />
-      </p>
-
-      <p class="centered">
-        <img height="160px" src="img/renaissance/usi.png" />
-        <img height="120px" src="img/renaissance/jku.png" />
-        <img height="120px" src="img/renaissance/charles.jpg" />
-        <img height="100px" src="img/renaissance/upb.png" />
-        <img height="120px" src="img/renaissance/oracle-labs.png" />
-      </p>
-    </div>
-
-    <div class="step fadealways" data-x="0" data-y="0">
       <h1 class="centered">
         Motivation
       </h1>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
-      <h1 class="centered">
-        Goals
-      </h1>
+      <h3 class="centered">
+        JVM Is Evolving
+      </h3>
 
-      <p>
-        ...
-      </p>
+      <ul class="small-font">
+        <li class="bullet-list">
+          New JVM features: concurrency, lambdas, method-handles, non-blocking I/O, ...
+        </li>
+        <li class="bullet-list">
+          New paradigms: data-parallelism, fork-join, streams,
+          asynchronous programming with futures, transactional memory, ...
+        </li>
+        <li class="bullet-list">
+          New frameworks: Big Data (Spark), stream-processing (JDK8 Streams, Rx),
+          actors (Akka), network communication (Netty) ...
+        </li>
+        <li class="bullet-list">
+          Common theme: concurrency and parallelism.
+        </li>
+        <li class="bullet-list">
+          Are there new kinds of applications to optimize?
+        </li>
+      </ul>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
       <h1 class="centered">
         Selection methodology
       </h1>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Goals
+      </h2>
+      <br/>
+
+      <ul class="small-font">
+        <li class="bullet-list">
+          Modern concurrency - cover many different styles.
+        </li>
+        <li class="bullet-list">
+          Realistic workloads - widely-used frameworks,
+          production usages, existing benchmarks, mining.
+        </li>
+        <li class="bullet-list">
+          Workload diversity - stress different JVM features.
+        </li>
+        <li class="bullet-list">
+          Deterministic execution - to the extend possible.
+        </li>
+        <li class="bullet-list">
+          Open-source availability - licensing, debugging, source inspection.
+        </li>
+      </ul>
+
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Goals
+      </h2>
+      <br/>
+
+      <ul class="small-font">
+        <li class="bullet-list">
+          Modern concurrency - cover many different styles.
+        </li>
+        <li class="bullet-list">
+          Realistic workloads - widely-used frameworks,
+          production usages, existing benchmarks, mining.
+        </li>
+        <li class="bullet-list">
+          Workload diversity - stress different JVM features.
+        </li>
+        <li class="bullet-list">
+          Deterministic execution - to the extend possible.
+        </li>
+        <li class="bullet-list">
+          Open-source availability - licensing, debugging, source inspection.
+        </li>
+      </ul>
+
+      <br/>
+      <p class="centered">
+        Gathered around 100 workloads, and used them to select 21 benchmarks.
+      </p>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
@@ -227,12 +280,29 @@
 
     <div class="step fadealways" data-x="0" data-y="0">
       <h3 class="centered">
-        PCA: Metrics
+        Metrics
       </h3>
       <br/>
 
       <p class="centered">
         <img height="550px" src="img/renaissance/metrics.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h3 class="centered">
+        PCA
+      </h3>
+      <br/>
+
+      <p class="centered">
+        Normalization over reference cycles.
+      </p>
+      <p class="centered">
+        Standardization to a [-1, 1] range.
+      </p>
+      <p class="centered">
+        Principal component analysis.
       </p>
     </div>
 
@@ -552,6 +622,98 @@
       <h1 class="centered">
         Process
       </h1>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <p class="centered">
+        <img src="img/renaissance/website.png"
+          style="position: relative; left: -320px; box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);" />
+      </p>
+      <br/>
+      <p class="centered">
+        <a href="https://renaissance.dev">renaissance.dev</a>
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h3 class="centered">
+        Open-Source Process
+      </h3>
+      <br/>
+
+      <p class="centered">
+        <ul class="small-font">
+          <li class="bullet-list">
+            Source code public, PRs welcome!
+          </li>
+          <li class="bullet-list">
+            Community can propose new benchmarks.
+          </li>
+          <li class="bullet-list">
+            Committee votes on benchmarks for the next release.
+          </li>
+          <li class="bullet-list">
+            Harness with detailed analyses for benchmark characterization.
+          </li>
+        </ul>
+      </p>
+
+      <br/>
+      <br/>
+      <br/>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h3 class="centered">
+        Open-Source Process
+      </h3>
+      <br/>
+
+      <p class="centered">
+        <ul class="small-font">
+          <li class="bullet-list">
+            Source code public, PRs welcome!
+          </li>
+          <li class="bullet-list">
+            Community can propose new benchmarks.
+          </li>
+          <li class="bullet-list">
+            Committee votes on benchmarks for the next release.
+          </li>
+          <li class="bullet-list">
+            Harness with detailed analyses for benchmark characterization.
+          </li>
+        </ul>
+      </p>
+
+      <br/>
+      <p class="centered">
+        Goal: keep improving and evolving the suite in an open manner.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <p class="centered">
+        <img height="140px" src="img/renaissance/alexpro.jpg" />
+        <img height="140px" src="img/renaissance/rosa.jpg" />
+        <img height="140px" src="img/renaissance/david.jpg" />
+        <img height="140px" src="img/renaissance/gilles.jpeg" />
+        <img height="140px" src="img/renaissance/petr.jpeg" />
+        <img height="140px" src="img/renaissance/lubomir.jpeg" />
+        <img height="140px" src="img/renaissance/yudi.jpg" />
+        <img height="140px" src="img/renaissance/alexv.jpeg" />
+        <img height="140px" src="img/renaissance/doug.jpeg" />
+        <img height="140px" src="img/renaissance/thomas.jpeg" />
+        <img height="140px" src="img/renaissance/walter.jpeg" />
+      </p>
+
+      <p class="centered">
+        <img height="160px" src="img/renaissance/usi.png" />
+        <img height="120px" src="img/renaissance/jku.png" />
+        <img height="120px" src="img/renaissance/charles.jpg" />
+        <img height="100px" src="img/renaissance/upb.png" />
+        <img height="120px" src="img/renaissance/oracle-labs.png" />
+      </p>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
