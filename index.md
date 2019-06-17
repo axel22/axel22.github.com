@@ -47,12 +47,33 @@ London, UK, November 2014<br/>
 \[[Link](/publications/learning-concurrent-programming-in-scala)\]
 
 
-## Conference Papers
+## Articles
+
+* **Renaissance: Benchmarking Suite for Parallel Applications on the JVM** <br/>
+Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
+[Programming Language Design and Implementation (PLDI 2019)](https://pldi19.sigplan.org)<br/>
+Phoenix, Arizona, USA, June 2019<br/>
+\[[PDF](/resources/docs/pldi19main-renaissance-final.pdf)\]
+\[[Link](/publications/renaissance)\]
+
+* **On Evaluating the Renaissance Benchmarking Suite: Variety, Performance, and Complexity** <br/>
+Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
+[arXiv](https://arxiv.org/abs/1903.10267)<br/>
+Tech Report, 2019<br/>
+\[[PDF](/resources/docs/on-evaluating-renaissance.pdf)\]
+\[[Link](/publications/on-evaluating-renaissance)\]
+
+* **Enhancing Program Execution Using Optimization-Driven Inlining** <br/>
+Aleksandar Prokopec, Thomas Wuerthinger<br/>
+[United States Patent 10261765](http://www.freepatentsonline.com/10261765.html)<br/>
+April 2019<br/>
+\[[PDF](/resources/docs/patent-US10261765B1.pdf)\]
+\[[Link](/publications/patent-prio-inliner)\]
 
 * **An Optimization-Driven Incremental Inline Substitution Algorithm for Just-In-Time Compilers** <br/>
 Aleksandar Prokopec, Gilles Duboscq, David Leopoldseder, Thomas Wuerthinger<br/>
 [International Symposium on Code Generation and Optimization (CGO 2019)](http://cgo.org/cgo2019)<br/>
-Washington DC, USA 2019<br/>
+Washington DC, USA, February 2019<br/>
 \[[PDF](/resources/docs/prio-inliner-final.pdf)\]
 \[[Link](/publications/prio-inliner)\]
 
@@ -509,6 +530,8 @@ Lausanne, Switzerland, January 2012
 ### Program Committees
 
 - [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
+- [AAMAS 2019](http://aamas2019.encs.concordia.ca)
+- [PASS 2019](https://2019.ecoop.org/home/PASS-ECOOP-2019)
 - [HLPP 2019](https://www.ida.liu.se/conferences/hlpp2019/)
 - [Scala 2018](https://conf.researchr.org/track/scala-2018/scala-2018-papers)
 - [HLPP 2018](http://www.univ-orleans.fr/lifo/equipes/LMV/hlpp2018/index.php?id=0)
