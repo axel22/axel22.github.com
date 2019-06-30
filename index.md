@@ -363,16 +363,21 @@ It is devised to soften the learning curve of students who are being introduced 
 
 # <a id="talks">Talks</a>
 
+### JIT Optimizations
+
+* Renaissance: Benchmarking Suite for Parallel Applications on the JVM, [PLDI 2019](https://pldi19.sigplan.org/program/program-pldi-2019)
+\[[Slides](/impress/renaissance)\]
+
+* [CGO 2019](http://www.cgo.org/cgo2019/program/)
+\[[Slides](/impress/inliner)\]
+
+* [Scala Symposium 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
+\[[Slides](/impress/aggressive-jit)\]
+
 
 ### GraalVM
 
 * [Voxxed Days Zurich](https://voxxeddays.com/zurich/)
-
-
-### JIT Optimizations
-
-* [Scala Symposium 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
-\[[Slides](/impress/aggressive-jit)\]
 
 
 ### Coroutines
