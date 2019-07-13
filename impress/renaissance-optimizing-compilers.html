@@ -62,6 +62,37 @@
     
 -->
 
+<!--
+
+Abstract:
+
+To demonstrate that a compiler optimization, a memory management algorithm or a synchronization
+technique is useful, a VM researcher needs benchmarks that demonstrate the desired behavior, and
+at the same time capture representative aspects of real-world applications. Identifying a good
+benchmark can be hard: on one hand, real-world applications shun workloads that are not
+optimized, while on the other, VM practitioners do not invest efforts into workloads that are
+not widely adopted.
+
+Nevertheless, during the last decade, multiple new programming paradigms appeared on the JVM,
+including functional programming, Big Data processing, parallel and concurrent programming,
+message-passing, stream processing, and machine learning. The JVM has evolved as a platform as
+well – new features, such as method handles, variable handles, the invokedynamic instruction,
+lambdas, atomic and relaxed memory operations, present new challenges for JIT compilers and
+runtime environments. Existing major benchmark suites do not capture the new kinds of
+applications, because they were made in a time when these workloads did not yet exist. Thus, to
+enable the pending Renaissance for VM and compiler research, new benchmarks are needed. The
+Renaissance Benchmark Suite is an ongoing, open-source effort to collect representative
+real-world workloads, and to determine which ones are beneficial for the research and
+development of VMs.
+
+In this talk, I will present the recent release of the Renaissance Suite, and contrast
+Renaissance against the existing benchmark suites. I will show how the selected set of
+benchmarks helped us identify new optimizations for the Graal JIT compiler. I will conclude the
+talk by summarizing the open challenges for JIT compilers, and the future goals for the
+Renaissance Suite.
+
+-->
+
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -616,6 +647,30 @@
       <p class="centered">
         <img height="630px" src="img/renaissance/hot-methods.png" style="position: relative; left: -80px;" />
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h1 class="centered">
+        Open challenges
+      </h1>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Inlining consequential code
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Better profiling
+      </h2>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Memory layout specialization
+      </h2>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
