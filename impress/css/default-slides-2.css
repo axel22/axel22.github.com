@@ -630,3 +630,8 @@ pre code.hljs {
 .very-small-font {
   font-size: 28px;
 }
+
+pre.large-snippet {
+  font-family: AndaleMono, monospace;
+  font-size: 40px;
+}
