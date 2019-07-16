@@ -140,9 +140,9 @@
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1142"
-     inkscape:window-height="1400"
-     inkscape:window-x="2294"
+     inkscape:window-width="1916"
+     inkscape:window-height="1040"
+     inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0"
      units="px" />
@@ -187,7 +187,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Andale Mono';-inkscape-font-specification:'Andale Mono';stroke-width:1.31301892"
          id="flowPara2445">  buf(last) = <flowSpan
    style="fill:#ff6600"
-   id="flowSpan5820">&quot;get&quot;</flowSpan></flowPara><flowPara
+   id="flowSpan5820">&quot;inc&quot;</flowSpan></flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Andale Mono';-inkscape-font-specification:'Andale Mono';stroke-width:1.31301892"
          id="flowPara2447">  last++</flowPara><flowPara
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Andale Mono';-inkscape-font-specification:'Andale Mono';stroke-width:1.31301892"

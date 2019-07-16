@@ -275,8 +275,8 @@
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="3436"
-     inkscape:window-height="1400"
+     inkscape:window-width="1916"
+     inkscape:window-height="1040"
      inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0"
@@ -298,6 +298,13 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-138.24999)">
+    <rect
+       style="opacity:0.9;fill:#559aff;fill-opacity:0.15571776;stroke:#004be8;stroke-width:0.56499997;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3.38999982, 0.56499997000000002;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect23072"
+       width="191.06697"
+       height="64.066963"
+       x="10.205358"
+       y="151.29016" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.04655457px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -332,7 +339,7 @@
          x="3.7797613"
          y="194.92174"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Andale Mono';-inkscape-font-specification:'Andale Mono';stroke-width:0.26458332"
-         id="tspan13425">  .map(p -&gt; medianByAge(p))</tspan><tspan
+         id="tspan13425">  .map(p -&gt; medianByHeight(p))</tspan><tspan
          sodipodi:role="line"
          x="3.7797613"
          y="206.36052"
@@ -622,13 +629,6 @@
        height="7.1815615"
        x="111.20939"
        y="273.63223" />
-    <rect
-       style="opacity:0.9;fill:#559aff;fill-opacity:0.15571776;stroke:#004be8;stroke-width:0.56499997;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:3.38999982, 0.56499997000000002;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect23072"
-       width="191.06697"
-       height="64.066963"
-       x="10.205358"
-       y="151.29016" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"

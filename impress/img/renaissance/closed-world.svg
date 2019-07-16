@@ -140,9 +140,9 @@
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1716"
-     inkscape:window-height="1400"
-     inkscape:window-x="1720"
+     inkscape:window-width="1916"
+     inkscape:window-height="1040"
+     inkscape:window-x="0"
      inkscape:window-y="16"
      inkscape:window-maximized="0"
      units="px" />
@@ -154,7 +154,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -193,6 +193,6 @@
          x="3.7797613"
          y="229.88454"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Andale Mono';-inkscape-font-specification:'Andale Mono';stroke-width:0.26458332"
-         id="tspan13425">  .map(p -&gt; medianByAge(p))</tspan></text>
+         id="tspan13425">  .map(p -&gt; medianByHeight(p))</tspan></text>
   </g>
 </svg>
