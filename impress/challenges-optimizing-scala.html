@@ -195,38 +195,13 @@ Renaissance Suite.
 
     <div class="step fadealways" data-x="0" data-y="0">
       <h2 class="centered">
-        Optimization
+        Inlining
       </h2>
 
       <br/>
       <p class="centered">
-        Transformation of the program,
-        such that the new program uses fewer resources,
-        but produces the same results given the same inputs.
-      </p>
-    </div>
-
-    <div class="step fadealways" data-x="0" data-y="0">
-      <h2 class="centered">
-        Partial Evaluation
-      </h2>
-
-      <br/>
-      <p class="centered">
-        Optimization in which static parts of the program
-        are precomputed at compile time.
-      </p>
-    </div>
-
-    <div class="step fadealways" data-x="0" data-y="0">
-      <h2 class="centered">
-        Read Elimination
-      </h2>
-
-      <br/>
-      <p class="centered">
-        Optimization that replaces the memory read at some address
-        with a value previously written to that address.
+        Optimization that replaces the call to a method
+        with the body of that method.
       </p>
     </div>
 
@@ -237,8 +212,8 @@ Renaissance Suite.
 
       <br/>
       <p class="centered">
-        Optimization that replaces the call to a method
-        with the body of that method.
+        Crucial question:
+        when should you inline the method into the callsite?
       </p>
     </div>
 
@@ -304,6 +279,51 @@ Renaissance Suite.
 
       <br/>
       <p class="centered">
+        <img src="img/renaissance/call-tree-3b.svg.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Scala sum
+      </h2>
+
+      <br/>
+      <p class="centered">
+        Why not immediately inline foldLeft into sum,
+        instead of propagating the types through the call tree?
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="2000" data-y="1500">
+      <p class="centered">
+        1. Don't inline until you're sure you want to.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="2000" data-y="1500">
+      <p class="centered">
+        2. Dataflow analysis improves performance.
+      </p>
+    </div>
+
+    <div class="step fadepast" data-x="2400" data-y="1500">
+      <img src="img/feedback/deep-trials.png"/>
+    </div>
+
+    <div class="step" data-x="3400" data-y="1500">
+    </div>
+
+    <div class="step" data-x="5000" data-y="1500">
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Scala sum
+      </h2>
+
+      <br/>
+      <p class="centered">
         <img src="img/renaissance/call-tree-5.svg.png" />
       </p>
     </div>
@@ -324,7 +344,10 @@ Renaissance Suite.
         Speculation
       </h2>
 
+      <br/>
       <p class="centered">
+        We don't know what the concrete implementations
+        of this or num.plus, so we'll gamble.
       </p>
     </div>
 
@@ -374,7 +397,7 @@ Renaissance Suite.
 
     <div class="step fadealways" data-x="0" data-y="0">
       <h2 class="centered">
-        The Inlining Gamble
+        Clustering
       </h2>
 
       <br/>
@@ -389,7 +412,7 @@ Renaissance Suite.
 
     <div class="step fadealways" data-x="0" data-y="0">
       <h2 class="centered">
-        The Inlining Gamble
+        Clustering
       </h2>
 
       <br/>
@@ -404,7 +427,7 @@ Renaissance Suite.
 
     <div class="step fadealways" data-x="2000" data-y="0">
       <p class="centered">
-        Callsite clustering results in better performance.
+        3. Callsite clustering improves performance.
       </p>
     </div>
 
@@ -432,10 +455,33 @@ Renaissance Suite.
         Profile Pollution
       </h2>
 
+      <br/>
+      <p class="centered">
+        <img src="img/renaissance/call-tree-12.svg.png" />
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Profile Pollution
+      </h2>
+
+      <br/>
+      <p class="centered">
+        Compiling the caller sometimes injects the necessary type information,
+        amending profile pollution problems.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Profile Pollution
+      </h2>
+
 <pre class="large-snippet" style=""><code class="scala">
-while ({g = _hashes(e); g != 0})
+while ({g = hashes(e); g != 0})
   if (g == h) {
-    val q = _keys(e)
+    val q = keys(e)
     if (q eq k) return e
     if (<span style="color: red">q equals k</span>) return e
   }
@@ -445,6 +491,12 @@ while ({g = _hashes(e); g != 0})
       <p class="small-text centered" style="position: relative; left: -100px;">
         https://github.com/scala/scala/blob/2.13.x/src/library/scala/collection/mutable/AnyRefMap.scala#L126
       </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h1 class="centered">
+        Thank you!
+      </h1>
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
@@ -499,10 +551,42 @@ while ({g = _hashes(e); g != 0})
 
 
     <div class="step fadealways" data-x="0" data-y="0">
-      <h1 class="centered">
-        Thank you!
-      </h1>
+      <h2 class="centered">
+        Optimization
+      </h2>
+
+      <br/>
+      <p class="centered">
+        Transformation of the program,
+        such that the new program uses fewer resources,
+        but produces the same results given the same inputs.
+      </p>
     </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Partial Evaluation
+      </h2>
+
+      <br/>
+      <p class="centered">
+        Optimization in which static parts of the program
+        are precomputed at compile time.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Read Elimination
+      </h2>
+
+      <br/>
+      <p class="centered">
+        Optimization that replaces the memory read at some address
+        with a value previously written to that address.
+      </p>
+    </div>
+
 </div>
 
 <!--
