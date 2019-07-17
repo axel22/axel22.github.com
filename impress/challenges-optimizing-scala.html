@@ -329,6 +329,12 @@ Renaissance Suite.
     </div>
 
     <div class="step fadealways" data-x="0" data-y="0">
+      <p class="centered">
+        3. Apply other optimizations in the call tree, whenever you can.
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
       <h2 class="centered">
         Read Elimination
       </h2>
@@ -425,9 +431,43 @@ Renaissance Suite.
       </p>
     </div>
 
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Clustering
+      </h2>
+
+      <br/>
+      <p class="centered">
+        Heuristic: don't inline a method,
+        unless you're also planning to inline most
+        of what that method would inline if it were
+        the target of the compilation.
+      </p>
+      <br/>
+      <p class="small-text centered">
+        An Optimization-Driven Incremental Inline Substitution Algorithm for Just-In-Time Compilers
+        (CGO'19)
+      </p>
+    </div>
+
+    <div class="step fadealways" data-x="0" data-y="0">
+      <h2 class="centered">
+        Clustering
+      </h2>
+
+      <br/>
+      <p class="centered">
+        <img src="img/renaissance/call-tree-12.svg.png" />
+      </p>
+      <p class="small-text centered">
+        An Optimization-Driven Incremental Inline Substitution Algorithm for Just-In-Time Compilers
+        (CGO'19)
+      </p>
+    </div>
+
     <div class="step fadealways" data-x="2000" data-y="0">
       <p class="centered">
-        3. Callsite clustering improves performance.
+        4. Callsite clustering improves performance.
       </p>
     </div>
 
