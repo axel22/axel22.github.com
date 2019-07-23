@@ -371,6 +371,9 @@ It is devised to soften the learning curve of students who are being introduced 
 * [CGO 2019](http://www.cgo.org/cgo2019/program/)
 \[[Slides](/impress/inliner)\]
 
+* [Graal Workshop](https://graalworkshop.github.io/2019/)
+\[[Slides](/impress/graal-economy)\]
+
 * [Scala Symposium 2017](https://2017.onward-conference.org/event/onward-2017-onward-papers-encoding-the-building-blocks-of-communication)
 \[[Slides](/impress/aggressive-jit)\]
 
