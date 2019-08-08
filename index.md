@@ -556,6 +556,7 @@ Lausanne, Switzerland, January 2012
 ### Reviewing
 
 - [POPL 2019](https://popl19.sigplan.org/)
+- [Journal of Computer Languages, COLA 2019](https://www.journals.elsevier.com/journal-of-computer-languages)
 - [EuroPar 2018](https://europar2018.org)
 - [Journal of Logical and Algebraic Methods in Programming 2018](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
 - [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
