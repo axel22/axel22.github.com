@@ -538,6 +538,7 @@ Lausanne, Switzerland, January 2012
 ### Program Committees
 
 - [EuroSys 2020](https://www.eurosys2020.org/)
+- [AAMAS 2020](https://aamas2020.conference.auckland.ac.nz)
 - [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
 - [AAMAS 2019](http://aamas2019.encs.concordia.ca)
 - [PASS 2019](https://2019.ecoop.org/home/PASS-ECOOP-2019)
