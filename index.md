@@ -538,7 +538,7 @@ Lausanne, Switzerland, January 2012
 ### Program Committees
 
 - [EuroSys 2020](https://www.eurosys2020.org/)
-- [MPLR 2020)(https://mplr2020.cs.manchester.ac.uk)
+- [MPLR 2020](https://mplr2020.cs.manchester.ac.uk)
 - [HLPP 2020](https://hlpp2020.dcc.fc.up.pt)
 - [AAMAS 2020](https://aamas2020.conference.auckland.ac.nz)
 - [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
