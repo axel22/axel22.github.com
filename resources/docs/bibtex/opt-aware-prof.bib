@@ -1,0 +1,20 @@
+@article{10.1145/3591473,
+author = {Basso, Matteo and Prokopec, Aleksandar and Ros\`{a}, Andrea and Binder, Walter},
+title = {Optimization-Aware Compiler-Level Event Profiling},
+year = {2023},
+issue_date = {June 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {45},
+number = {2},
+issn = {0164-0925},
+url = {https://doi.org/10.1145/3591473},
+doi = {10.1145/3591473},
+abstract = {Tracking specific events in a program’s execution, such as object allocation or lock acquisition, is at the heart of dynamic analysis. Despite the apparent simplicity of this task, quantifying these events is challenging due to the presence of compiler optimizations. Profiling perturbs the optimizations that the compiler would normally do—a profiled program usually behaves differently than the original one.In this article, we propose a novel technique for quantifying compiler-internal events in the optimized code, reducing the profiling perturbation on compiler optimizations. Our technique achieves this by instrumenting the program from within the compiler, and by delaying the instrumentation until the point in the compilation pipeline after which no subsequent optimizations can remove the events. We propose two different implementation strategies of our technique based on path-profiling, and a modification to the standard path-profiling algorithm that facilitates the use of the proposed strategies in a modern just-in-time (JIT) compiler. We use our technique to analyze the behaviour of the optimizations in Graal, a state-of-the-art compiler for the Java Virtual Machine, identifying the reasons behind a performance improvement of a specific optimization, and the causes behind an unexpected slowdown of another. Finally, our evaluation results show that the two proposed implementations result in a significantly lower execution-time overhead w.r.t.&nbsp;a naive implementation.},
+journal = {ACM Trans. Program. Lang. Syst.},
+month = {jun},
+articleno = {10},
+numpages = {50},
+keywords = {compiler-IR instrumentation, code optimization, debugging, just-in-time compilers, profiling, Dynamic analysis}
+}
+

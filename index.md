@@ -4,14 +4,14 @@ title: Professional info
 permalink: /index.html
 ---
 
-I am a principal researcher at Oracle Labs,
-working on the [Graal language infrastructure project](https://github.com/graalvm/).
+I am a senior research manager at Oracle Labs,
+working on the [GraalVM](https://www.graalvm.org/) platform.
 My research is focused on composable, scalable and modular
 programming language abstractions for large-scale distributed computing,
+compiler optimizations and optimizing compilers,
 as well as implementation of frameworks, languages and runtimes for distributed programming.
 
-Previously, I worked at Google on cloud computing infrastructure and big data analytics
-for Google Maps.
+Previously, I worked at Google on cloud computing infrastructure and big data analytics for Google Maps.
 Before that, I was working as a research assistant in the School of Computer
 and Communication Sciences at the [EPFL](http://www.epfl.ch) in Switzerland,
 in the [LAMP](http://lamp.epfl.ch) laboratory on [Scala](http://www.scala-lang.org)
@@ -48,6 +48,70 @@ London, UK, November 2014<br/>
 
 
 ## Articles
+
+* **Optimization-Aware Compiler-Level Event Profiling** <br/>
+Matteo Basso, Aleksandar Prokopec, Andrea Rosa, Walter Binder<br/>
+[ACM Transactions on Programming Languages and Systems (TOPLAS), Volume 45, Issue 2](https://dl.acm.org/toc/toplas/2023/45/2)<br/>
+June, 2023<br/>
+\[[PDF](/resources/docs/opt-aware-prof.pdf)\]
+\[[Link](/publications/opt-aware-prof)\]
+
+* **GraalVM Compiler Benchmark Results Dataset (Data Artifact)** <br/>
+Lubomír Bulej, Vojtech Horký, Michele Tucci, Petr Tuma, François Farquet, David Leopoldseder, Aleksandar Prokopec<br/>
+[ACM/SPEC International Conference on Performance Engineering (ICPE 2023)](https://icpe2023.spec.org/)<br/>
+Coimbra, Portugal, April 2023<br/>
+\[[PDF](/resources/docs/graalvm-dataset-23.pdf)\]
+\[[Link](/publications/graalvm-dataset-23)\]
+
+* **Inlining-Benefit Prediction with Interprocedural Partial Escape Analysis** <br/>
+Matthew Edwin Weingarten, Theodoros Theodoridis, Aleksandar Prokopec<br/>
+[Virtual Machines and Language Implementations 2022 (VMIL 2022)](https://2022.splashcon.org/home/vmil-2022)<br/>
+Auckland, New Zealand, December 2022<br/>
+\[[PDF](/resources/docs/ipea-vmil.pdf)\]
+\[[Link](/publications/ipea-vmil)\]
+
+* **Implicit state machines** <br/>
+Fengyun Liu, Aleksandar Prokopec<br/>
+[Languages, Compilers, Tools and Theory of Embedded Systems 2022 (LCTES 2022)](https://pldi22.sigplan.org/track/LCTES-2022)<br/>
+San Diego, California, June 2022<br/>
+\[[PDF](/resources/docs/ism.pdf)\]
+\[[Link](/publications/ism)\]
+
+* <span style="font-size: 1.5em;">🥇</span> **Non-Blocking Interpolation Search Trees with Doubly-Logarithmic Running Time** <br/>
+Trevor Brown, Aleksandar Prokopec, Dan Alistarh<br/>
+[Principles and Practice of Parallel Programming 2020 (PPoPP 2020)](https://ppopp20.sigplan.org/)<br/>
+San Diego, California, February 2020<br/>
+🥇 <b><i>Best Paper Award</i></b> 🥇 <br/>
+\[[PDF](/resources/docs/c-ist-ppopp.pdf)\]
+\[[Link](/publications/c-ist)\]
+
+* **Duet Benchmarking: Improving Measurement Accuracy in the Cloud** <br/>
+Lubomír Bulej, Vojtech Horký, Petr Tuma, François Farquet, Aleksandar Prokopec<br/>
+[Proceedings of the ACM/SPEC International Conference on Performance Engineering (ICPE 2020)](https://icpe2020.spec.org/)<br/>
+Edmonton, Canada, 2020<br/>
+\[[PDF](/resources/docs/duet-benchmarking-icpe.pdf)\]
+\[[Link](/publications/duet-benchmarking-icpe)\]
+
+* **Renaissance: Benchmarking Suite for Parallel Applications on the JVM** <br/>
+Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
+[Software Engineering 2020 (SE 2020)](https://icpe2020.spec.org/)<br/>
+Innsbruck, Austria, 2020<br/>
+\[[PDF](/resources/docs/renaissance-se.pdf)\]
+\[[Link](/publications/renaissance-se)\]
+
+* **Analysis and Evaluation of Non-Blocking Interpolation Search Trees** <br/>
+Aleksandar Prokopec, Trevor Brown, Dan Alistarh<br/>
+[arXiv](https://arxiv.org/abs/2001.00413)<br/>
+Tech Report, 2020<br/>
+\[[PDF](/resources/docs/analysis-c-ist-arxiv.pdf)\]
+\[[Link](/publications/analysis-c-ist)\]
+
+* **Duet Benchmarking: Improving Measurement Accuracy in the Cloud (Extended Version)** <br/>
+Lubomír Bulej, Vojtech Horký, Petr Tuma, François Farquet, Aleksandar Prokopec<br/>
+[arXiv](https://arxiv.org/abs/2001.05811)<br/>
+Tech Report, 2020<br/>
+\[[PDF](/resources/docs/duet-benchmarking-arxiv.pdf)\]
+\[[Link](/publications/duet-benchmarking-tech-report)\]
 
 * **Renaissance: Benchmarking Suite for Parallel Applications on the JVM** <br/>
 Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
@@ -98,11 +162,11 @@ Tech Report, 2018<br/>
 \[[PDF](http://axel22.github.io/resources/docs/soundness-coroutines.pdf)\]
 \[[Link](/publications/soundness-of-coroutines-with-snapshots)\]
 
-* **Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
+* <span style="font-size: 1.5em;">🥈</span> **Cache-Tries: Concurrent Lock-Free Hash Tries with Constant-Time Operations** <br/>
 Aleksandar Prokopec<br/>
 [23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2018)](https://conf.researchr.org/home/ppopp-2018)<br/>
 Vienna, Austria, February 2018<br/>
-<b><i>Best paper finalist</i></b><br/>
+🥈 <b><i>Best Paper Finalist</i></b> 🥈 <br/>
 \[[PDF](http://axel22.github.io/resources/docs/p137-prokopec.pdf)\]
 \[[Link](/publications/cachetries)\]
 
@@ -211,11 +275,11 @@ New Orleans, Louisiana, February 2012<br/>
 \[[PDF](/resources/docs/ctries-snapshot.pdf)\]
 \[[Link](/publications/concurrent-tries-with-snapshots)\]
 
-* **Lock-Free Resizeable Concurrent Tries**<br/>
+* <span style="font-size: 1.5em;">🥇</span> **Lock-Free Resizeable Concurrent Tries**<br/>
 Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
 [The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)<br/>
 Fort Collins, Colorado, September 2011<br/>
-<b><i>Best Paper Presentation Award</i></b><br/>
+🥇 <b><i>Best Paper Presentation Award</i></b> 🥇 <br/>
 \[[PDF](/resources/docs/ctries-techreport.pdf)\]
 \[[Link](/publications/lock-free-resizeable-concurrent-tries)\]
 
@@ -241,6 +305,58 @@ Aleksandar Prokopec<br/>
 Zagreb, Croatia, May 2009<br/>
 \[[PDF](/resources/docs/diplomski.pdf)\] (in Croatian)
 
+
+# <a id="committees">Service</a>
+
+### Program Chairs
+
+- [VMIL 2022](https://dl.acm.org/doi/proceedings/10.1145/3563838)
+
+### Program Committees
+
+- [CC 2023](https://conf.researchr.org/home/CC-2023)
+- [VMIL 2022](https://dl.acm.org/journal/topc)
+- [HLPP 2023](https://www.cs.ubbcluj.ro/hlpp2023/)
+- [HLPP 2022](https://hlpp2022.dcc.fc.up.pt/)
+- [EuroSys 2020](https://www.eurosys2020.org/)
+- [MPLR 2020](https://mplr2020.cs.manchester.ac.uk)
+- [HLPP 2020](https://hlpp2020.dcc.fc.up.pt)
+- [AAMAS 2020](https://aamas2020.conference.auckland.ac.nz)
+- [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
+- [AAMAS 2019](http://aamas2019.encs.concordia.ca)
+- [PASS 2019](https://2019.ecoop.org/home/PASS-ECOOP-2019)
+- [HLPP 2019](https://www.ida.liu.se/conferences/hlpp2019/)
+- [Scala 2018](https://conf.researchr.org/track/scala-2018/scala-2018-papers)
+- [HLPP 2018](http://www.univ-orleans.fr/lifo/equipes/LMV/hlpp2018/index.php?id=0)
+- [AGERE! 2017](http://conf.researchr.org/track/agere-2017/agere-2017)
+- [HLPP 2017](https://hlpp2017.infor.uva.es/)
+- [PLACES 2017](http://places17.by.di.fc.ul.pt/committees/)
+- [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
+- [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
+- [HLPP 2016](http://hlpp2016.uni-muenster.de/)
+- [Scala 2014](http://lampwww.epfl.ch/~hmiller/scala2014/index.html)
+- [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
+
+### Reviewing
+
+- [TOPC 2021](https://dl.acm.org/journal/topc)
+- [ISMM 2021](https://conf.researchr.org/home/ismm-2021)
+- [Journal of Parallel and Distributed Computing 2021](https://www.sciencedirect.com/journal/journal-of-parallel-and-distributed-computing/vol/150/suppl/C)
+- [TOCS 2020](https://dl.acm.org/toc/tocs/2020/38/1-2)
+- [POPL 2019](https://popl19.sigplan.org/)
+- [Journal of Computer Languages, COLA 2019](https://www.journals.elsevier.com/journal-of-computer-languages)
+- [EuroPar 2018](https://europar2018.org)
+- [Journal of Logical and Algebraic Methods in Programming 2018](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
+- [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
+- [SPAA 2017](https://spaa.acm.org/)
+- [POPL 2017](http://conf.researchr.org/home/POPL-2017)
+- [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
+- [OPODIS 2015](https://opodis2015.irisa.fr/)
+- [Transactions on Computers (2015)](http://www.computer.org/web/tc)
+- [HLPP 2014](https://sites.google.com/site/hlpp2014amsterdam/)
+- [ECOOP 2013](http://www.lirmm.fr/ecoop13/)
+- [ScalaDays 2010](http://days2010.scala-lang.org/)
+- [ICADIWT 2009](http://www.dirf.org/diwt2009/)
 
 
 # <a id="projects">Projects</a>
@@ -531,47 +647,6 @@ Lausanne, Switzerland, April 2012
 * [SIP-14: Futures and Promises](http://docs.scala-lang.org/sips/pending/futures-promises.html)<br/>
 Philipp Haller, Aleksandar Prokopec, Heather Miller, Viktor Klang, Roland Kuhn, and Vojin Jovanovic<br/>
 Lausanne, Switzerland, January 2012
-
-
-# <a id="committees">Service</a>
-
-### Program Committees
-
-- [EuroSys 2020](https://www.eurosys2020.org/)
-- [MPLR 2020](https://mplr2020.cs.manchester.ac.uk)
-- [HLPP 2020](https://hlpp2020.dcc.fc.up.pt)
-- [AAMAS 2020](https://aamas2020.conference.auckland.ac.nz)
-- [EuroSys 2019](https://www.eurosys2019.org/) (shadow)
-- [AAMAS 2019](http://aamas2019.encs.concordia.ca)
-- [PASS 2019](https://2019.ecoop.org/home/PASS-ECOOP-2019)
-- [HLPP 2019](https://www.ida.liu.se/conferences/hlpp2019/)
-- [Scala 2018](https://conf.researchr.org/track/scala-2018/scala-2018-papers)
-- [HLPP 2018](http://www.univ-orleans.fr/lifo/equipes/LMV/hlpp2018/index.php?id=0)
-- [AGERE! 2017](http://conf.researchr.org/track/agere-2017/agere-2017)
-- [HLPP 2017](https://hlpp2017.infor.uva.es/)
-- [PLACES 2017](http://places17.by.di.fc.ul.pt/committees/)
-- [AGERE! 2016](http://2016.splashcon.org/track/agere2016)
-- [ICPADS 2016](http://grid.hust.edu.cn/icpads2016/)
-- [HLPP 2016](http://hlpp2016.uni-muenster.de/)
-- [Scala 2014](http://lampwww.epfl.ch/~hmiller/scala2014/index.html)
-- [Scala 2013](http://lampwww.epfl.ch/~hmiller/scala2013/)
-
-### Reviewing
-
-- [POPL 2019](https://popl19.sigplan.org/)
-- [Journal of Computer Languages, COLA 2019](https://www.journals.elsevier.com/journal-of-computer-languages)
-- [EuroPar 2018](https://europar2018.org)
-- [Journal of Logical and Algebraic Methods in Programming 2018](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
-- [Journal of Logical and Algebraic Methods in Programming 2017](https://www.journals.elsevier.com/journal-of-logical-and-algebraic-methods-in-programming/)
-- [SPAA 2017](https://spaa.acm.org/)
-- [POPL 2017](http://conf.researchr.org/home/POPL-2017)
-- [PPL (2016)](http://www.worldscientific.com/worldscinet/ppl)
-- [OPODIS 2015](https://opodis2015.irisa.fr/)
-- [Transactions on Computers (2015)](http://www.computer.org/web/tc)
-- [HLPP 2014](https://sites.google.com/site/hlpp2014amsterdam/)
-- [ECOOP 2013](http://www.lirmm.fr/ecoop13/)
-- [ScalaDays 2010](http://days2010.scala-lang.org/)
-- [ICADIWT 2009](http://www.dirf.org/diwt2009/)
 
 
 # <a id="teaching">Teaching</a>

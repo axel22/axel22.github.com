@@ -1,0 +1,18 @@
+@inproceedings{10.1145/3332466.3374542,
+author = {Brown, Trevor and Prokopec, Aleksandar and Alistarh, Dan},
+title = {Non-Blocking Interpolation Search Trees with Doubly-Logarithmic Running Time},
+year = {2020},
+isbn = {9781450368186},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3332466.3374542},
+doi = {10.1145/3332466.3374542},
+abstract = {Balanced search trees typically use key comparisons to guide their operations, and achieve logarithmic running time. By relying on numerical properties of the keys, interpolation search achieves lower search complexity and better performance. Although interpolation-based data structures were investigated in the past, their non-blocking concurrent variants have received very little attention so far.In this paper, we propose the first non-blocking implementation of the classic interpolation search tree (IST) data structure. For arbitrary key distributions, the data structure ensures worst-case O(log n + p) amortized time for search, insertion and deletion traversals. When the input key distributions are smooth, lookups run in expected O(log log n + p) time, and insertion and deletion run in expected amortized O(log log n + p) time, where p is a bound on the number of threads. To improve the scalability of concurrent insertion and deletion, we propose a novel parallel rebuilding technique, which should be of independent interest.We evaluate whether the theoretical improvements translate to practice by implementing the concurrent interpolation search tree, and benchmarking it on uniform and nonuniform key distributions, for dataset sizes in the millions to billions of keys. Relative to the state-of-the-art concurrent data structures, the concurrent interpolation search tree achieves performance improvements of up to 15\% under high update rates, and of up to 50\% under moderate update rates. Further, ISTs exhibit up to 2X less cache-misses, and consume 1.2 -- 2.6X less memory compared to the next best alternative on typical dataset sizes. We find that the results are surprisingly robust to distributional skew, which suggests that our data structure can be a promising alternative to classic concurrent search structures.},
+booktitle = {Proceedings of the 25th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+pages = {276–291},
+numpages = {16},
+keywords = {search trees, interpolation, concurrent data structures, non-blocking algorithms},
+location = {San Diego, California},
+series = {PPoPP '20}
+}
+

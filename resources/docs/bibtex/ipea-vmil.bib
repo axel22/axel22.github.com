@@ -1,0 +1,18 @@
+@inproceedings{10.1145/3563838.3567677,
+author = {Weingarten, Matthew Edwin and Theodoridis, Theodoros and Prokopec, Aleksandar},
+title = {Inlining-Benefit Prediction with Interprocedural Partial Escape Analysis},
+year = {2022},
+isbn = {9781450399128},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3563838.3567677},
+doi = {10.1145/3563838.3567677},
+abstract = {Inlining is the primary facilitating mechanism for intraprocedural Partial Escape Analysis (PEA), which allows for the removal of object allocations on a branch-by-branch basis and is critical for performance in object-oriented languages. Prior work used interprocedural Escape Analysis to make inlining decisions, but it discarded control-flow-sensitivity when crossing procedure boundaries, and did not weigh other metrics to model the cost-benefit of inlining, resulting in unpredictable inlining decisions and suboptimal performance. Our work addresses these issues and introduces a novel Interprocedural Partial Escape Analysis algorithm (IPEA) to predict the inlining benefits, and improve the cost-benefit model of an existing optimization-driven inliner. We evaluate the implementation of IPEA in GraalVM Native Image, on industry-standard benchmark suites Dacapo, ScalaBench, and Renaissance. Out of 36 benchmarks with a geometric mean runtime improvement of 1.79\%, 6 benchmarks achieve an improvement of over 5\% with a geomean of 9.10\% and up to 24.62\%, while also reducing code size and compilation times compared to existing approaches.},
+booktitle = {Proceedings of the 14th ACM SIGPLAN International Workshop on Virtual Machines and Intermediate Languages},
+pages = {13–24},
+numpages = {12},
+keywords = {compilers, escape analysis, inlining, graalvm},
+location = {Auckland, New Zealand},
+series = {VMIL 2022}
+}
+
