@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Renaissance - Benchmarking Suite for Parallel Applications on the JVM
+title: Renaissance - Benchmarking Suite for Parallel Applications on the JVM (Experience Report)
 authors: Prokopec, Aleksandar and Rosà, Andrea and Leopoldseder, David and Duboscq, Gilles and Tu̇ma, Petr and Studener, Martin and Bulej, Lubomír and Zheng, Yudi and Villazón, Alex and Simon, Doug and Würthinger, Thomas and Binder, Walter
 venue: Software Engineering 2020
 permalink: /publications/renaissance-se/index.html

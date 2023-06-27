@@ -81,7 +81,7 @@ San Diego, California, June 2022<br/>
 Trevor Brown, Aleksandar Prokopec, Dan Alistarh<br/>
 [Principles and Practice of Parallel Programming 2020 (PPoPP 2020)](https://ppopp20.sigplan.org/)<br/>
 San Diego, California, February 2020<br/>
-🥇 <b><i>Best Paper Award</i></b> 🥇 <br/>
+🏆 <b><i>Best Paper Award</i></b> 🏆 <br/>
 \[[PDF](/resources/docs/c-ist-ppopp.pdf)\]
 \[[Link](/publications/c-ist)\]
 
@@ -92,7 +92,7 @@ Edmonton, Canada, 2020<br/>
 \[[PDF](/resources/docs/duet-benchmarking-icpe.pdf)\]
 \[[Link](/publications/duet-benchmarking-icpe)\]
 
-* **Renaissance: Benchmarking Suite for Parallel Applications on the JVM** <br/>
+* **Renaissance: Benchmarking Suite for Parallel Applications on the JVM (Experience Report)** <br/>
 Aleksandar Prokopec, Andrea Rosà, David Leopoldseder, Gilles Duboscq, Petr Tůma, Martin Studener, Lubomir Bulej, Yudi Zheng, Alex Villazón, Doug Simon, Thomas Wuerthinger, Walter Binder<br/>
 [Software Engineering 2020 (SE 2020)](https://icpe2020.spec.org/)<br/>
 Innsbruck, Austria, 2020<br/>
@@ -166,7 +166,7 @@ Tech Report, 2018<br/>
 Aleksandar Prokopec<br/>
 [23rd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPOPP 2018)](https://conf.researchr.org/home/ppopp-2018)<br/>
 Vienna, Austria, February 2018<br/>
-🥈 <b><i>Best Paper Finalist</i></b> 🥈 <br/>
+🏆 <b><i>Best Paper Finalist</i></b> 🏆 <br/>
 \[[PDF](http://axel22.github.io/resources/docs/p137-prokopec.pdf)\]
 \[[Link](/publications/cachetries)\]
 
@@ -279,7 +279,7 @@ New Orleans, Louisiana, February 2012<br/>
 Aleksandar Prokopec, Phil Bagwell, Martin Odersky<br/>
 [The 24th International Workshop on Languages and Compilers for Parallel Computing (LCPC 2011)](http://lcpc11.cs.colostate.edu/)<br/>
 Fort Collins, Colorado, September 2011<br/>
-🥇 <b><i>Best Paper Presentation Award</i></b> 🥇 <br/>
+🏆 <b><i>Best Paper Presentation Award</i></b> 🏆 <br/>
 \[[PDF](/resources/docs/ctries-techreport.pdf)\]
 \[[Link](/publications/lock-free-resizeable-concurrent-tries)\]
 
@@ -299,7 +299,7 @@ London, UK, August 2009<br/>
 
 ## Master Thesis
 
-* **Prilagodljivi genetski algoritam (An Adaptive Genetic Algorithm)**<br/>
+* **An Adaptive Genetic Algorithm**<br/>
 Aleksandar Prokopec<br/>
 [Faculty of Electrical Engineering and Computing](http://www.fer.unizg.hr/)<br/>
 Zagreb, Croatia, May 2009<br/>
