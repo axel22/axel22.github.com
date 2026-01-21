@@ -4,7 +4,7 @@ title: Professional info
 permalink: /index.html
 ---
 
-I am a senior research manager at Oracle Labs,
+I am a software development director at Oracle Labs,
 working on the [GraalVM](https://www.graalvm.org/) platform.
 My research is focused on composable, scalable and modular
 programming language abstractions for large-scale distributed computing,
